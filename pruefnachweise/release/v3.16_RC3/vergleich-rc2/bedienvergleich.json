@@ -1,0 +1,206 @@
+{
+  "files": [
+    {
+      "file": "/Users/stefanmauron/Desktop/99_old/UTG-LE_Operating_Model_v3.16_RC2.html",
+      "sha256": "b034bcc892018a7b3b5c64f801b92f7589c99a7a8c4b8486fe81e241caabe6ab"
+    },
+    {
+      "file": "/Users/stefanmauron/Documents/ngGEVER/version 3.3/40 Misc/03 UTG-Transformation/02_art-le_konfigurator/dist/UTG-LE_Operating_Model_v3.16_RC3.html",
+      "sha256": "cc48d64d0365a2e4b64473151add6a9e6131b5c403191a34fc8d0035f95e6522"
+    }
+  ],
+  "steps": [
+    {
+      "name": "Initial defaults",
+      "referenceHash": "792d5c898b535a1fcd9bbeb36ebea310b615009b039d95cb2e5edc8c2e9f3f21",
+      "candidateHash": "792d5c898b535a1fcd9bbeb36ebea310b615009b039d95cb2e5edc8c2e9f3f21",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Import 20 teams / 40 products with all matrix fields",
+      "referenceHash": "963a0f6190c3e54e2438de077b224eea551269928be8cd53dc8deea56b0a59b0",
+      "candidateHash": "963a0f6190c3e54e2438de077b224eea551269928be8cd53dc8deea56b0a59b0",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Select team in matrix",
+      "referenceHash": "963a0f6190c3e54e2438de077b224eea551269928be8cd53dc8deea56b0a59b0",
+      "candidateHash": "963a0f6190c3e54e2438de077b224eea551269928be8cd53dc8deea56b0a59b0",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Change matrix note",
+      "referenceHash": "736a614ca25eb32689cb438b1909542ca51b02eea5cde0a8ae28d2f4904b751f",
+      "candidateHash": "736a614ca25eb32689cb438b1909542ca51b02eea5cde0a8ae28d2f4904b751f",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Change technical responsibility",
+      "referenceHash": "e6da71ba195bfb8100a1648c6992e567e0f96bbaddb35cc465f8548840234595",
+      "candidateHash": "e6da71ba195bfb8100a1648c6992e567e0f96bbaddb35cc465f8548840234595",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Explicit execution: not required",
+      "referenceHash": "e6da71ba195bfb8100a1648c6992e567e0f96bbaddb35cc465f8548840234595",
+      "candidateHash": "e6da71ba195bfb8100a1648c6992e567e0f96bbaddb35cc465f8548840234595",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Restore inherited execution",
+      "referenceHash": "49aa38667122f2a6538ba926f7b146fbe759b0028dd179ae8ac3ae9b87e8bd3a",
+      "candidateHash": "49aa38667122f2a6538ba926f7b146fbe759b0028dd179ae8ac3ae9b87e8bd3a",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Confirm agreement",
+      "referenceHash": "4e41162ba93d371696a0f97c8b15f65093507bd24fb9b84e8798f3c4465ce1ab",
+      "candidateHash": "4e41162ba93d371696a0f97c8b15f65093507bd24fb9b84e8798f3c4465ce1ab",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Change ART rule after confirmation",
+      "referenceHash": "739a0196da5b85855c50fa3a699e36f4928aa22a2dfc7302b6387a59e4d4caf4",
+      "candidateHash": "739a0196da5b85855c50fa3a699e36f4928aa22a2dfc7302b6387a59e4d4caf4",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Change shared team DoD",
+      "referenceHash": "80fdd9db069f8ebb68b67ec691ea927cea88bdbe9f900aabf7a40d2521e049ca",
+      "candidateHash": "80fdd9db069f8ebb68b67ec691ea927cea88bdbe9f900aabf7a40d2521e049ca",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Assess team criterion",
+      "referenceHash": "ad31db43512d4bdbac628848523d3e963aded783d1feda42e4d035ae967a067d",
+      "candidateHash": "ad31db43512d4bdbac628848523d3e963aded783d1feda42e4d035ae967a067d",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Create individual product through UI",
+      "referenceHash": "ea83839ead8cb9b9384d712cc5a710c5e9fd06d045bf53d9eab43da280bbcee4",
+      "candidateHash": "ea83839ead8cb9b9384d712cc5a710c5e9fd06d045bf53d9eab43da280bbcee4",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Create team and assign product through UI",
+      "referenceHash": "54b4ed998f8f61605cdac150587f0ef7204513aa9dc81104dba1af4f15068eb4",
+      "candidateHash": "54b4ed998f8f61605cdac150587f0ef7204513aa9dc81104dba1af4f15068eb4",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Rename activity and edit description",
+      "referenceHash": "bc1ef2340d1fd2308aa5425d805aa828ecd6fbd2a953be32218ebbab14dc3218",
+      "candidateHash": "bc1ef2340d1fd2308aa5425d805aa828ecd6fbd2a953be32218ebbab14dc3218",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Delete created team through UI",
+      "referenceHash": "c63b5f46a4210b2e60814183e0bfef13414c45f604d08821ec962c19b58edd99",
+      "candidateHash": "c63b5f46a4210b2e60814183e0bfef13414c45f604d08821ec962c19b58edd99",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Delete created product through UI",
+      "referenceHash": "c7f5cf6e9ee163d5cad2babe22496d2c009e5e30abf54684b2544de5768aec06",
+      "candidateHash": "c7f5cf6e9ee163d5cad2babe22496d2c009e5e30abf54684b2544de5768aec06",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Reload retains all functional data",
+      "referenceHash": "c7f5cf6e9ee163d5cad2babe22496d2c009e5e30abf54684b2544de5768aec06",
+      "candidateHash": "c7f5cf6e9ee163d5cad2babe22496d2c009e5e30abf54684b2544de5768aec06",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "RC3 export imported by both versions",
+      "referenceHash": "c7f5cf6e9ee163d5cad2babe22496d2c009e5e30abf54684b2544de5768aec06",
+      "candidateHash": "c7f5cf6e9ee163d5cad2babe22496d2c009e5e30abf54684b2544de5768aec06",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "RC2 export imported by both versions",
+      "referenceHash": "c7f5cf6e9ee163d5cad2babe22496d2c009e5e30abf54684b2544de5768aec06",
+      "candidateHash": "c7f5cf6e9ee163d5cad2babe22496d2c009e5e30abf54684b2544de5768aec06",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Reset defaults through UI",
+      "referenceHash": "792d5c898b535a1fcd9bbeb36ebea310b615009b039d95cb2e5edc8c2e9f3f21",
+      "candidateHash": "792d5c898b535a1fcd9bbeb36ebea310b615009b039d95cb2e5edc8c2e9f3f21",
+      "rawEqual": true,
+      "functionalEqual": true
+    },
+    {
+      "name": "Restore edited export after reset",
+      "referenceHash": "c7f5cf6e9ee163d5cad2babe22496d2c009e5e30abf54684b2544de5768aec06",
+      "candidateHash": "c7f5cf6e9ee163d5cad2babe22496d2c009e5e30abf54684b2544de5768aec06",
+      "rawEqual": true,
+      "functionalEqual": true
+    }
+  ],
+  "errors": [],
+  "exports": [
+    {
+      "filename": "UTG-LE_Konfiguration_v3.16_RC2.json",
+      "sha256": "551c53cfbaccda5f7bdc736bd46868983ad49b2592eaec4cd6e85cb507b14273",
+      "format": "utg-le-complete",
+      "version": 4,
+      "appVersion": "3.16",
+      "releaseStage": "RC2",
+      "exported": "2026-11-06T13:00:00.000Z",
+      "functionalHash": "a5159a09ee991153d099c36d6bd15333605cdc28d8c54063a73d4a8b11bc0c12"
+    },
+    {
+      "filename": "UTG-LE_Konfiguration_v3.16_RC3.json",
+      "sha256": "09bf8997bd87f18997ab276b3f507cca659c792b4626eae6f52ac6d30cdfe39f",
+      "format": "utg-le-complete",
+      "version": 4,
+      "appVersion": "3.16",
+      "releaseStage": "RC3",
+      "exported": "2026-11-06T13:00:00.000Z",
+      "functionalHash": "a5159a09ee991153d099c36d6bd15333605cdc28d8c54063a73d4a8b11bc0c12"
+    }
+  ],
+  "exportDifferences": [
+    {
+      "path": "$.releaseStage",
+      "reference": "RC2",
+      "candidate": "RC3"
+    }
+  ],
+  "storageKeys": [
+    [
+      "gever-art-leistungsmatrix-v1",
+      "gever-art-v3-config",
+      "gever-art-v34-decisions"
+    ],
+    [
+      "utg-le-v317:gever-art-leistungsmatrix-v1",
+      "utg-le-v317:gever-art-v3-config",
+      "utg-le-v317:gever-art-v34-decisions"
+    ]
+  ],
+  "browser": "156.0.8078.80",
+  "platform": "darwin",
+  "success": true
+}

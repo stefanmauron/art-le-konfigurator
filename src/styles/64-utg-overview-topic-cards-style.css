@@ -1,0 +1,37 @@
+#utg-page-5 > #v3overview {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+#v3overview > .utg-overview-card {
+  background: #fff;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 22px #20344905;
+  padding: var(--space-6, 24px);
+  margin: 0 0 24px;
+  min-width: 0;
+}
+#v3overview > .utg-overview-card > h2:first-child {
+  margin-top: 0;
+}
+#utg-art-summary > #v3stats {
+  margin-bottom: 16px;
+}
+#utg-team-audit-content {
+  overflow-x: auto;
+}
+@media (max-width: 760px) {
+  #v3overview > .utg-overview-card {
+    padding: 18px;
+    margin-bottom: 18px;
+  }
+}
+@media print {
+  #v3overview > .utg-overview-card {
+    box-shadow: none;
+  }
+}

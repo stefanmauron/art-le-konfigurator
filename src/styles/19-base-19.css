@@ -1,0 +1,42 @@
+.utg-team-audit {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #d4dce5;
+  border-radius: 12px;
+  background: #fff;
+}
+.utg-team-audit h2 {
+  margin: 0 0 8px;
+  font-size: var(--text-title);
+}
+.utg-team-audit .utg-muted {
+  color: #526477;
+  font-size: var(--text-body);
+}
+.utg-team-audit table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 14px;
+  font-size: var(--text-body);
+}
+.utg-team-audit th,
+.utg-team-audit td {
+  border-bottom: 1px solid #e2e7ed;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.utg-team-audit .utg-team-name {
+  font-weight: 700;
+}
+.utg-team-audit .utg-open {
+  font-weight: 700;
+  color: #a04d1b;
+}
+.utg-team-audit .utg-audit-details {
+  margin-top: 12px;
+}
+.utg-team-audit summary {
+  cursor: pointer;
+  font-weight: 600;
+}

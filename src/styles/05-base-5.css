@@ -1,0 +1,84 @@
+.v3 {
+  background: #fff;
+  border: 1px solid #d9e2ea;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 18px 0;
+}
+.v3nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.v3nav button.active {
+  background: #163e56;
+  color: white;
+}
+.v3scroll {
+  overflow: auto;
+}
+.v3 table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 980px;
+  font-size: var(--text-small);
+}
+.v3 td,
+.v3 th {
+  border-bottom: 1px solid #dce4eb;
+  padding: 9px;
+  text-align: left;
+}
+.v3 th {
+  background: #eef3f7;
+}
+.v3 input,
+.v3 select {
+  padding: 7px;
+  max-width: 100%;
+  width: 100%;
+}
+.v3 textarea {
+  width: 100%;
+  min-height: 50px;
+}
+.v3bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: end;
+  margin: 14px 0;
+}
+.v3bar label {
+  display: grid;
+  gap: 4px;
+  font-size: var(--text-small);
+}
+.v3bar select {
+  min-width: 150px;
+}
+.v3hint {
+  font-size: var(--text-body);
+  color: #5c6e7c;
+}
+.v3card {
+  padding: 12px;
+  border: 1px solid #dce4eb;
+  border-radius: 8px;
+  margin: 8px 0;
+}
+.v3grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.v3grid div {
+  padding: 15px;
+  background: #edf4f7;
+  border-radius: 8px;
+}
+@media (max-width: 800px) {
+  .v3grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

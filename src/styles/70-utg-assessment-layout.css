@@ -1,0 +1,32 @@
+#utg-design-criteria th:nth-child(1) {
+  width: 24%;
+}
+#utg-design-criteria th:nth-child(2) {
+  width: 52%;
+}
+#utg-design-criteria th:nth-child(3) {
+  width: 24%;
+}
+#utg-page-5 #utg-design-overview th:nth-child(n) {
+  width: auto;
+}
+#utg-page-5 #utg-design-overview th:first-child {
+  width: 12%;
+}
+#utg-page-5 #utg-design-overview th:last-child {
+  width: 150px;
+}
+.utg-assessment-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.utg-assessment-item h3 {
+  margin: 0 0 8px;
+}
+.utg-assessment-item p {
+  margin: 8px 0;
+  white-space: pre-wrap;
+}
+.utg-assessment-item label {
+  margin: 12px 0 !important;
+}

@@ -1,0 +1,258 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #17263d;
+  background: #f4f6fa;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+header {
+  background: #142944;
+  color: white;
+  padding: 22px 30px;
+}
+header h1 {
+  margin: 0;
+  font-size: var(--text-title);
+}
+header p {
+  margin: 7px 0 0;
+  color: #cbd8e8;
+  font-size: var(--text-body);
+}
+.shell {
+  max-width: 1550px;
+  margin: auto;
+  padding: 22px;
+}
+.toolbar,
+.panel {
+  background: white;
+  border: 1px solid #dce3ec;
+  border-radius: 12px;
+  padding: 17px;
+  margin-bottom: 16px;
+}
+.toolbar {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+button,
+.filebtn {
+  border: 1px solid #c9d4e2;
+  background: white;
+  border-radius: 7px;
+  padding: 10px 13px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #19314e;
+}
+button:hover,
+.filebtn:hover {
+  background: #edf3fa;
+}
+.primary {
+  background: #1462ac;
+  color: white;
+  border-color: #1462ac;
+}
+.primary:hover {
+  background: #0e4e8b;
+}
+input,
+select {
+  border: 1px solid #cad5e1;
+  border-radius: 6px;
+  padding: 9px;
+  font: inherit;
+  background: white;
+  color: #1b2d43;
+}
+input[type="text"] {
+  min-width: 190px;
+}
+.muted {
+  font-size: var(--text-small);
+  color: #607085;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 16px;
+}
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  margin: 5px 0;
+}
+.team.active {
+  background: #e5f0fc;
+  border-color: #6fa8e1;
+}
+.team span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sectiontitle {
+  font-size: var(--text-body);
+  font-weight: bold;
+  margin: 0 0 12px;
+}
+.teamtools {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.stages {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(95px, 1fr));
+  gap: 5px;
+  margin: 12px 0 18px;
+}
+.stage {
+  border-radius: 7px;
+  padding: 10px 7px;
+  text-align: center;
+  font-size: var(--text-small);
+  background: #e5effc;
+}
+.stage:nth-child(2) {
+  background: #dceefa;
+}
+.stage:nth-child(3) {
+  background: #edf4f8;
+}
+.stage:nth-child(4) {
+  background: #fff1c9;
+}
+.stage:nth-child(5) {
+  background: #ffe1d1;
+}
+.stage:nth-child(6) {
+  background: #ffdbe0;
+}
+.stage:nth-child(7) {
+  background: #eadcff;
+}
+.stage b {
+  display: block;
+  margin-bottom: 5px;
+}
+.scroll {
+  overflow-x: auto;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: var(--text-body);
+}
+th,
+td {
+  border-bottom: 1px solid #e4e9ef;
+  padding: 9px;
+  text-align: left;
+  vertical-align: middle;
+}
+th {
+  background: #f3f6fa;
+  color: #344963;
+  position: sticky;
+  top: 0;
+}
+td select {
+  width: 100%;
+  min-width: 130px;
+  font-size: var(--text-small);
+  padding: 7px;
+}
+.activity {
+  font-weight: 600;
+  min-width: 210px;
+}
+.phase {
+  color: #52647a;
+  min-width: 115px;
+}
+.notes {
+  min-width: 185px;
+  width: 100%;
+  font-size: var(--text-small);
+}
+.pill {
+  display: inline-block;
+  background: #eff3f8;
+  padding: 4px 7px;
+  border-radius: 5px;
+  font-size: var(--text-small);
+}
+.status {
+  margin-left: auto;
+  color: #476b81;
+  font-size: var(--text-small);
+}
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0;
+}
+.stat {
+  background: #f2f6fb;
+  padding: 10px 13px;
+  border-radius: 8px;
+  font-size: var(--text-small);
+}
+.stat strong {
+  display: block;
+  font-size: var(--text-title);
+  margin-bottom: 3px;
+}
+.hint {
+  font-size: var(--text-small);
+  line-height: 1.55;
+  color: #586b80;
+}
+.empty {
+  padding: 45px;
+  text-align: center;
+  color: #62758c;
+}
+.actions {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.tag {
+  font-size: var(--text-small);
+  color: #617389;
+}
+.footer {
+  padding: 10px 0 25px;
+  font-size: var(--text-small);
+  color: #68798b;
+}
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .stages {
+    overflow-x: auto;
+    display: flex;
+  }
+  .stage {
+    min-width: 130px;
+  }
+  .shell {
+    padding: 12px;
+  }
+}

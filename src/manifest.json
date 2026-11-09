@@ -1,0 +1,1082 @@
+[
+  {
+    "key": "style-000",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/01-base-1.css",
+    "referenceLine": 3
+  },
+  {
+    "key": "style-001",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/02-base-2.css",
+    "referenceLine": 5
+  },
+  {
+    "key": "style-002",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/03-base-3.css",
+    "referenceLine": 5
+  },
+  {
+    "key": "style-003",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/04-base-4.css",
+    "referenceLine": 7
+  },
+  {
+    "key": "style-004",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/05-base-5.css",
+    "referenceLine": 9
+  },
+  {
+    "key": "style-005",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/06-base-6.css",
+    "referenceLine": 9
+  },
+  {
+    "key": "style-006",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/07-base-7.css",
+    "referenceLine": 9
+  },
+  {
+    "key": "style-007",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/08-base-8.css",
+    "referenceLine": 11
+  },
+  {
+    "key": "style-008",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/09-base-9.css",
+    "referenceLine": 13
+  },
+  {
+    "key": "style-009",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/10-base-10.css",
+    "referenceLine": 15
+  },
+  {
+    "key": "style-010",
+    "kind": "style",
+    "attributes": " id=\"utg-toolbar-typography-v384\"",
+    "id": "utg-toolbar-typography-v384",
+    "source": "src/styles/11-utg-toolbar-typography-v384.css",
+    "referenceLine": 15
+  },
+  {
+    "key": "style-011",
+    "kind": "style",
+    "attributes": " id=\"utg-secondary-lane-v3918\"",
+    "id": "utg-secondary-lane-v3918",
+    "source": "src/styles/12-utg-secondary-lane-v3918.css",
+    "referenceLine": 33
+  },
+  {
+    "key": "style-012",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/13-base-13.css",
+    "referenceLine": 40
+  },
+  {
+    "key": "style-013",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/14-base-14.css",
+    "referenceLine": 40
+  },
+  {
+    "key": "style-014",
+    "kind": "style",
+    "attributes": " id=\"utg-activity-actions-style\"",
+    "id": "utg-activity-actions-style",
+    "source": "src/styles/15-utg-activity-actions-style.css",
+    "referenceLine": 40
+  },
+  {
+    "key": "style-015",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/16-base-16.css",
+    "referenceLine": 44
+  },
+  {
+    "key": "style-016",
+    "kind": "style",
+    "attributes": " id=\"utg-rule-refinement\"",
+    "id": "utg-rule-refinement",
+    "source": "src/styles/17-utg-rule-refinement.css",
+    "referenceLine": 49
+  },
+  {
+    "key": "style-017",
+    "kind": "style",
+    "attributes": " id=\"utg-criteria-action-spacing\"",
+    "id": "utg-criteria-action-spacing",
+    "source": "src/styles/18-utg-criteria-action-spacing.css",
+    "referenceLine": 76
+  },
+  {
+    "key": "script-000",
+    "kind": "script",
+    "attributes": " id=\"utg-flow-definition\"",
+    "id": "utg-flow-definition",
+    "source": "src/domain/flow.js",
+    "referenceLine": 81
+  },
+  {
+    "key": "script-001",
+    "kind": "script",
+    "attributes": " id=\"utg-operating-model-review\"",
+    "id": "utg-operating-model-review",
+    "source": "src/domain/operating-model-review.js",
+    "referenceLine": 81
+  },
+  {
+    "key": "script-002",
+    "kind": "script",
+    "attributes": " id=\"utg-save-feedback-controller\"",
+    "id": "utg-save-feedback-controller",
+    "source": "src/ui/components/save-feedback.js",
+    "referenceLine": 100
+  },
+  {
+    "key": "script-003",
+    "kind": "script",
+    "attributes": " id=\"utg-storage-api\"",
+    "id": "utg-storage-api",
+    "source": "src/infrastructure/storage/browser-repository.js",
+    "referenceLine": 122
+  },
+  {
+    "key": "script-004",
+    "kind": "script",
+    "attributes": " id=\"utg-file-operations\"",
+    "id": "utg-file-operations",
+    "source": "src/infrastructure/files/file-operations.js",
+    "referenceLine": 174
+  },
+  {
+    "key": "script-005",
+    "kind": "script",
+    "attributes": " id=\"utg-flow-ux-core\"",
+    "id": "utg-flow-ux-core",
+    "source": "src/application/workspace-context.js",
+    "referenceLine": 189
+  },
+  {
+    "key": "script-006",
+    "kind": "script",
+    "attributes": " id=\"utg-pending-inputs-316\"",
+    "id": "utg-pending-inputs-316",
+    "source": "src/application/drafts/pending-inputs.js",
+    "referenceLine": 256
+  },
+  {
+    "key": "script-007",
+    "kind": "script",
+    "attributes": " id=\"utg-matrix-transactions-315\"",
+    "id": "utg-matrix-transactions-315",
+    "source": "src/application/commands/matrix-transactions.js",
+    "referenceLine": 276
+  },
+  {
+    "key": "script-008",
+    "kind": "script",
+    "attributes": " id=\"utg-design-criteria-data\"",
+    "id": "utg-design-criteria-data",
+    "source": "src/domain/design-criteria.js",
+    "referenceLine": 289
+  },
+  {
+    "key": "script-009",
+    "kind": "script",
+    "attributes": " id=\"utg-flow-standard-3152\"",
+    "id": "utg-flow-standard-3152",
+    "source": "src/domain/flow-standard.js",
+    "referenceLine": 320
+  },
+  {
+    "key": "script-010",
+    "kind": "script",
+    "attributes": " id=\"utg-canonical-defaults\"",
+    "id": "utg-canonical-defaults",
+    "source": "src/defaults/canonical-defaults.js",
+    "referenceLine": 340
+  },
+  {
+    "key": "script-011",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/infrastructure/migrations/initialize-configuration.js",
+    "referenceLine": 447
+  },
+  {
+    "key": "script-012",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/infrastructure/migrations/seven-state-flow.js",
+    "referenceLine": 460
+  },
+  {
+    "key": "script-013",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/infrastructure/migrations/retired-service-fields.js",
+    "referenceLine": 506
+  },
+  {
+    "key": "script-014",
+    "kind": "script",
+    "attributes": " id=\"utg-service-data\"",
+    "id": "utg-service-data",
+    "source": "src/application/commands/service-data.js",
+    "referenceLine": 506
+  },
+  {
+    "key": "script-015",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/ui/pages/operating-model.js",
+    "referenceLine": 514
+  },
+  {
+    "key": "script-016",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/ui/pages/matrix.js",
+    "referenceLine": 525
+  },
+  {
+    "key": "script-017",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/application/state/team-selection.js",
+    "referenceLine": 536
+  },
+  {
+    "key": "script-018",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/ui/create-workspace.js",
+    "referenceLine": 548
+  },
+  {
+    "key": "script-019",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/ui/editors/rule-details.js",
+    "referenceLine": 583
+  },
+  {
+    "key": "script-020",
+    "kind": "script",
+    "attributes": " id=\"crud-v35\"",
+    "id": "crud-v35",
+    "source": "src/ui/editors/team-product-editor.js",
+    "referenceLine": 618
+  },
+  {
+    "key": "script-021",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/ui/components/reset-dialog.js",
+    "referenceLine": 640
+  },
+  {
+    "key": "script-022",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/ui/editors/catalog-editor.js",
+    "referenceLine": 650
+  },
+  {
+    "key": "script-023",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/ui/editors/activity-editor.js",
+    "referenceLine": 689
+  },
+  {
+    "key": "script-024",
+    "kind": "script",
+    "attributes": " id=\"utg-assign-fix-v385\"",
+    "id": "utg-assign-fix-v385",
+    "source": "src/ui/editors/product-assignment-editor.js",
+    "referenceLine": 726
+  },
+  {
+    "key": "script-025",
+    "kind": "script",
+    "attributes": " id=\"utg-service-live-sync-v3810\"",
+    "id": "utg-service-live-sync-v3810",
+    "source": "src/application/state/service-sync.js",
+    "referenceLine": 759
+  },
+  {
+    "key": "style-018",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/19-base-19.css",
+    "referenceLine": 770
+  },
+  {
+    "key": "script-026",
+    "kind": "script",
+    "attributes": " id=\"utg-open-assignments-core\"",
+    "id": "utg-open-assignments-core",
+    "source": "src/domain/open-assignments.js",
+    "referenceLine": 777
+  },
+  {
+    "key": "script-027",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/ui/pages/review.js",
+    "referenceLine": 790
+  },
+  {
+    "key": "script-028",
+    "kind": "script",
+    "attributes": " id=\"utg-shared-method-validation\"",
+    "id": "utg-shared-method-validation",
+    "source": "src/domain/method-validation.js",
+    "referenceLine": 830
+  },
+  {
+    "key": "script-029",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/ui/pages/interface-review.js",
+    "referenceLine": 850
+  },
+  {
+    "key": "script-030",
+    "kind": "script",
+    "attributes": " id=\"utg-integrated-quality-v3911\"",
+    "id": "utg-integrated-quality-v3911",
+    "source": "src/ui/pages/integrated-quality.js",
+    "referenceLine": 870
+  },
+  {
+    "key": "script-031",
+    "kind": "script",
+    "attributes": " id=\"utg-responsibility-contracts-3912\"",
+    "id": "utg-responsibility-contracts-3912",
+    "source": "src/ui/editors/responsibility-editor.js",
+    "referenceLine": 901
+  },
+  {
+    "key": "script-032",
+    "kind": "script",
+    "attributes": " id=\"utg-storage-location-v3917\"",
+    "id": "utg-storage-location-v3917",
+    "source": "src/ui/components/storage-location.js",
+    "referenceLine": 922
+  },
+  {
+    "key": "style-019",
+    "kind": "style",
+    "attributes": " id=\"utg-responsibility-overlay-style\"",
+    "id": "utg-responsibility-overlay-style",
+    "source": "src/styles/20-utg-responsibility-overlay-style.css",
+    "referenceLine": 922
+  },
+  {
+    "key": "script-033",
+    "kind": "script",
+    "attributes": " id=\"utg-responsibility-inline-v3101\"",
+    "id": "utg-responsibility-inline-v3101",
+    "source": "src/ui/components/responsibility-visibility.js",
+    "referenceLine": 928
+  },
+  {
+    "key": "style-020",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/21-base-21.css",
+    "referenceLine": 964
+  },
+  {
+    "key": "script-034",
+    "kind": "script",
+    "attributes": "",
+    "id": null,
+    "source": "src/ui/pages/layer-selection.js",
+    "referenceLine": 967
+  },
+  {
+    "key": "style-021",
+    "kind": "style",
+    "attributes": " id=\"utg-unified-design\"",
+    "id": "utg-unified-design",
+    "source": "src/styles/22-utg-unified-design.css",
+    "referenceLine": 1001
+  },
+  {
+    "key": "style-022",
+    "kind": "style",
+    "attributes": " id=\"utg-workspace-design\"",
+    "id": "utg-workspace-design",
+    "source": "src/styles/23-utg-workspace-design.css",
+    "referenceLine": 1069
+  },
+  {
+    "key": "script-035",
+    "kind": "script",
+    "attributes": " id=\"utg-workspace-interactions\"",
+    "id": "utg-workspace-interactions",
+    "source": "src/ui/workspace-interactions.js",
+    "referenceLine": 1089
+  },
+  {
+    "key": "style-023",
+    "kind": "style",
+    "attributes": " id=\"utg-consistency-design\"",
+    "id": "utg-consistency-design",
+    "source": "src/styles/24-utg-consistency-design.css",
+    "referenceLine": 1133
+  },
+  {
+    "key": "style-024",
+    "kind": "style",
+    "attributes": " id=\"utg-design-criteria-style\"",
+    "id": "utg-design-criteria-style",
+    "source": "src/styles/25-utg-design-criteria-style.css",
+    "referenceLine": 1249
+  },
+  {
+    "key": "script-036",
+    "kind": "script",
+    "attributes": " id=\"utg-design-criteria-ui\"",
+    "id": "utg-design-criteria-ui",
+    "source": "src/ui/editors/design-criteria-editor.js",
+    "referenceLine": 1249
+  },
+  {
+    "key": "style-025",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/26-base-26.css",
+    "referenceLine": 1288
+  },
+  {
+    "key": "style-026",
+    "kind": "style",
+    "attributes": " id=\"utg-config-section-info-style\"",
+    "id": "utg-config-section-info-style",
+    "source": "src/styles/27-utg-config-section-info-style.css",
+    "referenceLine": 1290
+  },
+  {
+    "key": "script-037",
+    "kind": "script",
+    "attributes": " id=\"utg-config-section-info\"",
+    "id": "utg-config-section-info",
+    "source": "src/ui/components/section-info.js",
+    "referenceLine": 1296
+  },
+  {
+    "key": "style-027",
+    "kind": "style",
+    "attributes": " id=\"utg-matrix-info-style\"",
+    "id": "utg-matrix-info-style",
+    "source": "src/styles/28-utg-matrix-info-style.css",
+    "referenceLine": 1319
+  },
+  {
+    "key": "script-038",
+    "kind": "script",
+    "attributes": " id=\"utg-matrix-info\"",
+    "id": "utg-matrix-info",
+    "source": "src/ui/components/matrix-info.js",
+    "referenceLine": 1319
+  },
+  {
+    "key": "style-028",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/29-base-29.css",
+    "referenceLine": 1347
+  },
+  {
+    "key": "style-029",
+    "kind": "style",
+    "attributes": " id=\"utg-final-register-info-style\"",
+    "id": "utg-final-register-info-style",
+    "source": "src/styles/30-utg-final-register-info-style.css",
+    "referenceLine": 1347
+  },
+  {
+    "key": "script-039",
+    "kind": "script",
+    "attributes": " id=\"utg-final-register-info\"",
+    "id": "utg-final-register-info",
+    "source": "src/ui/components/context-info.js",
+    "referenceLine": 1351
+  },
+  {
+    "key": "script-040",
+    "kind": "script",
+    "attributes": " id=\"utg-activity-description-preview\"",
+    "id": "utg-activity-description-preview",
+    "source": "src/ui/components/description-preview.js",
+    "referenceLine": 1378
+  },
+  {
+    "key": "style-030",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/31-base-31.css",
+    "referenceLine": 1388
+  },
+  {
+    "key": "style-031",
+    "kind": "style",
+    "attributes": " id=\"utg-shared-help-and-descriptions\"",
+    "id": "utg-shared-help-and-descriptions",
+    "source": "src/styles/32-utg-shared-help-and-descriptions.css",
+    "referenceLine": 1388
+  },
+  {
+    "key": "style-032",
+    "kind": "style",
+    "attributes": " id=\"utg-description-expand-icon\"",
+    "id": "utg-description-expand-icon",
+    "source": "src/styles/33-utg-description-expand-icon.css",
+    "referenceLine": 1399
+  },
+  {
+    "key": "style-033",
+    "kind": "style",
+    "attributes": " id=\"utg-shared-disclosure-size\"",
+    "id": "utg-shared-disclosure-size",
+    "source": "src/styles/34-utg-shared-disclosure-size.css",
+    "referenceLine": 1407
+  },
+  {
+    "key": "style-034",
+    "kind": "style",
+    "attributes": " id=\"utg-crud-search-actions\"",
+    "id": "utg-crud-search-actions",
+    "source": "src/styles/35-utg-crud-search-actions.css",
+    "referenceLine": 1420
+  },
+  {
+    "key": "style-035",
+    "kind": "style",
+    "attributes": " id=\"utg-design-v313\"",
+    "id": "utg-design-v313",
+    "source": "src/styles/36-utg-design-v313.css",
+    "referenceLine": 1429
+  },
+  {
+    "key": "script-041",
+    "kind": "script",
+    "attributes": " id=\"utg-design-interactions-v313\"",
+    "id": "utg-design-interactions-v313",
+    "source": "src/ui/components/actions-and-drawers.js",
+    "referenceLine": 1478
+  },
+  {
+    "key": "style-036",
+    "kind": "style",
+    "attributes": " id=\"utg-v313-disclosure-hit-area\"",
+    "id": "utg-v313-disclosure-hit-area",
+    "source": "src/styles/37-utg-v313-disclosure-hit-area.css",
+    "referenceLine": 1493
+  },
+  {
+    "key": "style-037",
+    "kind": "style",
+    "attributes": " id=\"utg-blue-palette-finish\"",
+    "id": "utg-blue-palette-finish",
+    "source": "src/styles/38-utg-blue-palette-finish.css",
+    "referenceLine": 1497
+  },
+  {
+    "key": "style-038",
+    "kind": "style",
+    "attributes": " id=\"utg-policy-actions-v313\"",
+    "id": "utg-policy-actions-v313",
+    "source": "src/styles/39-utg-policy-actions-v313.css",
+    "referenceLine": 1497
+  },
+  {
+    "key": "style-039",
+    "kind": "style",
+    "attributes": " id=\"utg-overview-metrics-spacing\"",
+    "id": "utg-overview-metrics-spacing",
+    "source": "src/styles/40-utg-overview-metrics-spacing.css",
+    "referenceLine": 1503
+  },
+  {
+    "key": "style-040",
+    "kind": "style",
+    "attributes": " id=\"utg-assign-products-colors\"",
+    "id": "utg-assign-products-colors",
+    "source": "src/styles/41-utg-assign-products-colors.css",
+    "referenceLine": 1506
+  },
+  {
+    "key": "style-041",
+    "kind": "style",
+    "attributes": " id=\"utg-unified-button-palette\"",
+    "id": "utg-unified-button-palette",
+    "source": "src/styles/42-utg-unified-button-palette.css",
+    "referenceLine": 1511
+  },
+  {
+    "key": "style-042",
+    "kind": "style",
+    "attributes": " id=\"utg-policy-actions-alignment\"",
+    "id": "utg-policy-actions-alignment",
+    "source": "src/styles/43-utg-policy-actions-alignment.css",
+    "referenceLine": 1526
+  },
+  {
+    "key": "style-043",
+    "kind": "style",
+    "attributes": " id=\"utg-flow-criteria-height\"",
+    "id": "utg-flow-criteria-height",
+    "source": "src/styles/44-utg-flow-criteria-height.css",
+    "referenceLine": 1535
+  },
+  {
+    "key": "script-042",
+    "kind": "script",
+    "attributes": " id=\"utg-flow-criteria-data\"",
+    "id": "utg-flow-criteria-data",
+    "source": "src/domain/flow-criteria.js",
+    "referenceLine": 1544
+  },
+  {
+    "key": "style-044",
+    "kind": "style",
+    "attributes": " id=\"utg-flow-criteria-ui\"",
+    "id": "utg-flow-criteria-ui",
+    "source": "src/styles/45-utg-flow-criteria-ui.css",
+    "referenceLine": 1569
+  },
+  {
+    "key": "script-043",
+    "kind": "script",
+    "attributes": " id=\"utg-flow-criteria-ui\"",
+    "id": "utg-flow-criteria-ui",
+    "source": "src/ui/editors/flow-criteria-editor.js",
+    "referenceLine": 1576
+  },
+  {
+    "key": "script-044",
+    "kind": "script",
+    "attributes": " id=\"utg-config-next-footer\"",
+    "id": "utg-config-next-footer",
+    "source": "src/ui/components/next-footer.js",
+    "referenceLine": 1596
+  },
+  {
+    "key": "script-045",
+    "kind": "script",
+    "attributes": " id=\"utg-review-navigation\"",
+    "id": "utg-review-navigation",
+    "source": "src/application/review-navigation.js",
+    "referenceLine": 1600
+  },
+  {
+    "key": "style-045",
+    "kind": "style",
+    "attributes": " id=\"utg-catalog-create-spacing\"",
+    "id": "utg-catalog-create-spacing",
+    "source": "src/styles/46-utg-catalog-create-spacing.css",
+    "referenceLine": 1605
+  },
+  {
+    "key": "style-046",
+    "kind": "style",
+    "attributes": " id=\"utg-catalog-cards-v3141\"",
+    "id": "utg-catalog-cards-v3141",
+    "source": "src/styles/47-utg-catalog-cards-v3141.css",
+    "referenceLine": 1609
+  },
+  {
+    "key": "style-047",
+    "kind": "style",
+    "attributes": " id=\"utg-service-row-actions\"",
+    "id": "utg-service-row-actions",
+    "source": "src/styles/48-utg-service-row-actions.css",
+    "referenceLine": 1630
+  },
+  {
+    "key": "style-048",
+    "kind": "style",
+    "attributes": " id=\"utg-header-version-alignment\"",
+    "id": "utg-header-version-alignment",
+    "source": "src/styles/49-utg-header-version-alignment.css",
+    "referenceLine": 1633
+  },
+  {
+    "key": "style-049",
+    "kind": "style",
+    "attributes": " id=\"utg-management-vision\"",
+    "id": "utg-management-vision",
+    "source": "src/styles/50-utg-management-vision.css",
+    "referenceLine": 1637
+  },
+  {
+    "key": "style-050",
+    "kind": "style",
+    "attributes": " id=\"utg-app-type-and-navigation\"",
+    "id": "utg-app-type-and-navigation",
+    "source": "src/styles/51-utg-app-type-and-navigation.css",
+    "referenceLine": 1658
+  },
+  {
+    "key": "style-051",
+    "kind": "style",
+    "attributes": " id=\"utg-about-window-style\"",
+    "id": "utg-about-window-style",
+    "source": "src/styles/52-utg-about-window-style.css",
+    "referenceLine": 1674
+  },
+  {
+    "key": "script-046",
+    "kind": "script",
+    "attributes": " id=\"utg-about-window\"",
+    "id": "utg-about-window",
+    "source": "src/ui/components/about-dialog.js",
+    "referenceLine": 1694
+  },
+  {
+    "key": "style-052",
+    "kind": "style",
+    "attributes": " id=\"utg-about-blue-palette\"",
+    "id": "utg-about-blue-palette",
+    "source": "src/styles/53-utg-about-blue-palette.css",
+    "referenceLine": 1701
+  },
+  {
+    "key": "style-053",
+    "kind": "style",
+    "attributes": " id=\"utg-header-meta-consistency\"",
+    "id": "utg-header-meta-consistency",
+    "source": "src/styles/54-utg-header-meta-consistency.css",
+    "referenceLine": 1715
+  },
+  {
+    "key": "style-054",
+    "kind": "style",
+    "attributes": " id=\"utg-header-responsive-layout\"",
+    "id": "utg-header-responsive-layout",
+    "source": "src/styles/55-utg-header-responsive-layout.css",
+    "referenceLine": 1722
+  },
+  {
+    "key": "style-055",
+    "kind": "style",
+    "attributes": " id=\"utg-version-info-trigger\"",
+    "id": "utg-version-info-trigger",
+    "source": "src/styles/56-utg-version-info-trigger.css",
+    "referenceLine": 1733
+  },
+  {
+    "key": "style-056",
+    "kind": "style",
+    "attributes": " id=\"utg-version-button-dark\"",
+    "id": "utg-version-button-dark",
+    "source": "src/styles/57-utg-version-button-dark.css",
+    "referenceLine": 1736
+  },
+  {
+    "key": "style-057",
+    "kind": "style",
+    "attributes": " id=\"utg-about-credit\"",
+    "id": "utg-about-credit",
+    "source": "src/styles/58-utg-about-credit.css",
+    "referenceLine": 1743
+  },
+  {
+    "key": "style-058",
+    "kind": "style",
+    "attributes": " id=\"utg-credit-instant-tooltip\"",
+    "id": "utg-credit-instant-tooltip",
+    "source": "src/styles/59-utg-credit-instant-tooltip.css",
+    "referenceLine": 1748
+  },
+  {
+    "key": "style-059",
+    "kind": "style",
+    "attributes": " id=\"utg-storage-status-dot\"",
+    "id": "utg-storage-status-dot",
+    "source": "src/styles/60-utg-storage-status-dot.css",
+    "referenceLine": 1755
+  },
+  {
+    "key": "style-060",
+    "kind": "style",
+    "attributes": " id=\"utg-file-menu-width\"",
+    "id": "utg-file-menu-width",
+    "source": "src/styles/61-utg-file-menu-width.css",
+    "referenceLine": 1759
+  },
+  {
+    "key": "style-061",
+    "kind": "style",
+    "attributes": " id=\"utg-menu-dialog-consistency\"",
+    "id": "utg-menu-dialog-consistency",
+    "source": "src/styles/62-utg-menu-dialog-consistency.css",
+    "referenceLine": 1764
+  },
+  {
+    "key": "style-062",
+    "kind": "style",
+    "attributes": " id=\"utg-numbered-navigation\"",
+    "id": "utg-numbered-navigation",
+    "source": "src/styles/63-utg-numbered-navigation.css",
+    "referenceLine": 1780
+  },
+  {
+    "key": "script-047",
+    "kind": "script",
+    "attributes": " id=\"utg-overview-topic-cards\"",
+    "id": "utg-overview-topic-cards",
+    "source": "src/ui/pages/overview-cards.js",
+    "referenceLine": 1795
+  },
+  {
+    "key": "style-063",
+    "kind": "style",
+    "attributes": " id=\"utg-overview-topic-cards-style\"",
+    "id": "utg-overview-topic-cards-style",
+    "source": "src/styles/64-utg-overview-topic-cards-style.css",
+    "referenceLine": 1806
+  },
+  {
+    "key": "script-048",
+    "kind": "script",
+    "attributes": " id=\"utg-operating-model-topic-cards\"",
+    "id": "utg-operating-model-topic-cards",
+    "source": "src/ui/pages/operating-model-cards.js",
+    "referenceLine": 1815
+  },
+  {
+    "key": "style-064",
+    "kind": "style",
+    "attributes": " id=\"utg-operating-model-topic-cards-style\"",
+    "id": "utg-operating-model-topic-cards-style",
+    "source": "src/styles/65-utg-operating-model-topic-cards-style.css",
+    "referenceLine": 1823
+  },
+  {
+    "key": "style-065",
+    "kind": "style",
+    "attributes": " id=\"utg-overview-action-columns\"",
+    "id": "utg-overview-action-columns",
+    "source": "src/styles/66-utg-overview-action-columns.css",
+    "referenceLine": 1836
+  },
+  {
+    "key": "style-066",
+    "kind": "style",
+    "attributes": " id=\"utg-overview-balanced-layout\"",
+    "id": "utg-overview-balanced-layout",
+    "source": "src/styles/67-utg-overview-balanced-layout.css",
+    "referenceLine": 1851
+  },
+  {
+    "key": "script-049",
+    "kind": "script",
+    "attributes": " id=\"utg-checks-initial-result\"",
+    "id": "utg-checks-initial-result",
+    "source": "src/application/initialize-checks.js",
+    "referenceLine": 1862
+  },
+  {
+    "key": "style-067",
+    "kind": "style",
+    "attributes": " id=\"utg-compact-team-reports\"",
+    "id": "utg-compact-team-reports",
+    "source": "src/styles/68-utg-compact-team-reports.css",
+    "referenceLine": 1867
+  },
+  {
+    "key": "style-068",
+    "kind": "style",
+    "attributes": " id=\"utg-collapsible-findings\"",
+    "id": "utg-collapsible-findings",
+    "source": "src/styles/69-utg-collapsible-findings.css",
+    "referenceLine": 1880
+  },
+  {
+    "key": "script-050",
+    "kind": "script",
+    "attributes": " id=\"utg-collapsible-art-table\"",
+    "id": "utg-collapsible-art-table",
+    "source": "src/ui/components/collapsible-art-table.js",
+    "referenceLine": 1886
+  },
+  {
+    "key": "style-069",
+    "kind": "style",
+    "attributes": " id=\"utg-assessment-layout\"",
+    "id": "utg-assessment-layout",
+    "source": "src/styles/70-utg-assessment-layout.css",
+    "referenceLine": 1897
+  },
+  {
+    "key": "script-051",
+    "kind": "script",
+    "attributes": " id=\"utg-policy-editor-3144\"",
+    "id": "utg-policy-editor-3144",
+    "source": "src/ui/editors/policy-editor.js",
+    "referenceLine": 1902
+  },
+  {
+    "key": "style-070",
+    "kind": "style",
+    "attributes": " id=\"utg-flow-experience-3144\"",
+    "id": "utg-flow-experience-3144",
+    "source": "src/styles/71-utg-flow-experience-3144.css",
+    "referenceLine": 1911
+  },
+  {
+    "key": "script-052",
+    "kind": "script",
+    "attributes": " id=\"utg-flow-experience-init\"",
+    "id": "utg-flow-experience-init",
+    "source": "src/application/initialize-workspace.js",
+    "referenceLine": 1922
+  },
+  {
+    "key": "style-071",
+    "kind": "style",
+    "attributes": "",
+    "id": null,
+    "source": "src/styles/72-base-72.css",
+    "referenceLine": 1923
+  },
+  {
+    "key": "style-072",
+    "kind": "style",
+    "attributes": " id=\"utg-pending-inputs-style\"",
+    "id": "utg-pending-inputs-style",
+    "source": "src/styles/73-utg-pending-inputs-style.css",
+    "referenceLine": 1924
+  },
+  {
+    "key": "style-073",
+    "kind": "style",
+    "attributes": " id=\"utg-file-menu-trigger-fix\"",
+    "id": "utg-file-menu-trigger-fix",
+    "source": "src/styles/74-utg-file-menu-trigger-fix.css",
+    "referenceLine": 1925
+  },
+  {
+    "key": "script-053",
+    "kind": "script",
+    "attributes": " id=\"utg-header-storage-status\"",
+    "id": "utg-header-storage-status",
+    "source": "src/ui/components/storage-status.js",
+    "referenceLine": 1931
+  },
+  {
+    "key": "style-074",
+    "kind": "style",
+    "attributes": " id=\"utg-header-storage-status-style\"",
+    "id": "utg-header-storage-status-style",
+    "source": "src/styles/75-utg-header-storage-status-style.css",
+    "referenceLine": 1936
+  },
+  {
+    "key": "style-075",
+    "kind": "style",
+    "attributes": " id=\"utg-save-feedback-style\"",
+    "id": "utg-save-feedback-style",
+    "source": "src/styles/76-utg-save-feedback-style.css",
+    "referenceLine": 1941
+  },
+  {
+    "key": "script-054",
+    "kind": "script",
+    "attributes": " id=\"utg-save-feedback-init\"",
+    "id": "utg-save-feedback-init",
+    "source": "src/application/initialize-feedback.js",
+    "referenceLine": 1946
+  },
+  {
+    "key": "script-055",
+    "kind": "script",
+    "attributes": " id=\"utg-flow-standard-ui-3152\"",
+    "id": "utg-flow-standard-ui-3152",
+    "source": "src/ui/editors/flow-standard-editor.js",
+    "referenceLine": 1948
+  },
+  {
+    "key": "style-076",
+    "kind": "style",
+    "attributes": " id=\"utg-flow-standard-layout-3152\"",
+    "id": "utg-flow-standard-layout-3152",
+    "source": "src/styles/77-utg-flow-standard-layout-3152.css",
+    "referenceLine": 1978
+  },
+  {
+    "key": "style-077",
+    "kind": "style",
+    "attributes": " id=\"utg-flow-evidence-layout-3152\"",
+    "id": "utg-flow-evidence-layout-3152",
+    "source": "src/styles/78-utg-flow-evidence-layout-3152.css",
+    "referenceLine": 1981
+  },
+  {
+    "key": "style-078",
+    "kind": "style",
+    "attributes": " id=\"utg-agreement-renewal-style\"",
+    "id": "utg-agreement-renewal-style",
+    "source": "src/styles/79-utg-agreement-renewal-style.css",
+    "referenceLine": 1987
+  }
+]

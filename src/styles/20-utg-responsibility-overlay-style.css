@@ -1,0 +1,26 @@
+#utg-responsibility-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: var(--text-body);
+  cursor: pointer;
+  margin-left: 12px;
+}
+.utg-task-responsibilities {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-top: 0;
+  border-top: 0;
+  font-size: var(--text-small);
+  line-height: 1.5;
+  color: var(--muted, #667085);
+}
+.utg-task-responsibilities span {
+  display: block !important;
+  overflow-wrap: anywhere;
+}
+.utg-task-responsibilities b {
+  font-weight: 600;
+  color: inherit;
+}

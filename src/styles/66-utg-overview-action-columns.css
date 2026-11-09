@@ -1,0 +1,93 @@
+/* Row actions stay at the right edge; descriptions use the remaining space. */
+#utg-health-issues ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+#utg-health-issues ul > li,
+#utg-checks .utg-check:has(> .utg-fix-link) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  align-items: start;
+  gap: 12px 24px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+#utg-health-issues ul > li > span,
+#utg-checks .utg-check > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+#utg-page-5 .utg-fix-link {
+  width: 100%;
+  margin: 0;
+  white-space: normal;
+  text-align: left;
+  justify-content: flex-start;
+  min-height: 36px;
+}
+#utg-page-5
+  :is(
+    #utg-contract-report,
+    #utg-interface-3907,
+    #utg-design-overview,
+    #utg-team-audit
+  )
+  table {
+  table-layout: fixed;
+  width: 100%;
+  min-width: 1050px;
+}
+#utg-page-5
+  :is(
+    #utg-contract-report,
+    #utg-interface-3907,
+    #utg-design-overview,
+    #utg-team-audit
+  )
+  :is(th, td):last-child {
+  width: 240px;
+  vertical-align: top;
+  text-align: left;
+}
+#utg-page-5
+  :is(#utg-contract-report, #utg-interface-3907, #utg-design-overview)
+  td:last-child
+  > button,
+#utg-page-5 #utg-interface-rows td:last-child .actions > button {
+  width: 100%;
+  min-height: 36px;
+  margin: 0;
+  white-space: normal;
+  text-align: left;
+  justify-content: flex-start;
+}
+#utg-page-5 #utg-interface-rows td:last-child .actions {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  margin: 0;
+}
+#utg-contract-rows td p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+#utg-page-5 #utg-team-audit summary {
+  box-sizing: border-box;
+  width: 100%;
+  white-space: normal;
+}
+#utg-page-5 #utg-design-overview th:nth-child(6) {
+  width: 240px;
+}
+@media (max-width: 760px) {
+  #utg-health-issues ul > li,
+  #utg-checks .utg-check:has(> .utg-fix-link) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  #utg-page-5 .utg-fix-link {
+    width: min(100%, 240px);
+    justify-self: end;
+  }
+}

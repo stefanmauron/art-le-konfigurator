@@ -1,0 +1,4 @@
+#utg-masterdata
+  :is(#utg-add-provider, #utg-add-embedding, #utg-add-interaction) {
+  margin-top: 16px;
+}

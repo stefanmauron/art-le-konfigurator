@@ -1,0 +1,131 @@
+#utg-nav {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 7px;
+  background: #f4f6fa;
+  padding: 10px 0 14px;
+}
+#utg-nav button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-height: 77px;
+  text-align: left;
+  font-size: var(--text-body);
+}
+#utg-nav button small {
+  font-size: var(--text-small);
+  font-weight: 400;
+  color: #63758a;
+}
+#utg-nav button.active {
+  background: #163e56;
+  color: white;
+  border-color: #163e56;
+}
+#utg-nav button.active small {
+  color: #d6e6f1;
+}
+.utg-page[hidden] {
+  display: none !important;
+}
+.utg-intro {
+  background: #fff;
+  border: 1px solid #dce3ec;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin: 0 0 16px;
+}
+.utg-intro h2 {
+  margin: 0 0 7px;
+  font-size: var(--text-title);
+}
+.utg-intro p {
+  margin: 0;
+  color: #52647a;
+  font-size: var(--text-body);
+  line-height: 1.55;
+}
+.utg-next {
+  margin: 12px 0 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.utg-next button {
+  background: #1462ac;
+  color: #fff;
+}
+.utg-linkage {
+  background: #f4f8fc;
+  border: 1px solid #d8e4f0;
+  padding: 16px;
+  border-radius: 9px;
+  margin: 12px 0;
+}
+.utg-linkage h3 {
+  margin: 0 0 8px;
+}
+.utg-chain {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+.utg-chain > div {
+  background: white;
+  border: 1px solid #dce3ec;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: var(--text-small);
+  line-height: 1.5;
+}
+.utg-chain b {
+  display: block;
+  margin-bottom: 5px;
+}
+.utg-check {
+  padding: 11px 13px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: var(--text-body);
+}
+.utg-check:last-child {
+  border-bottom: 0;
+}
+.utg-check strong {
+  color: #8b4e15;
+}
+.utg-ok {
+  color: #2d6079;
+}
+.utg-config-hint {
+  font-size: var(--text-small);
+  color: #566b80;
+  margin: 8px 0 14px;
+}
+.utg-page #v3services,
+.utg-page #v3policies,
+.utg-page #v3overview,
+.utg-page #v3matrix {
+  margin: 12px 0;
+}
+.utg-toolbar {
+  margin: 0 0 15px;
+}
+.utg-page #operating-model {
+  margin: 0 0 15px;
+}
+@media (max-width: 850px) {
+  #utg-nav {
+    display: flex;
+    overflow-x: auto;
+  }
+  #utg-nav button {
+    min-width: 170px;
+  }
+  .utg-chain {
+    grid-template-columns: 1fr 1fr;
+  }
+}

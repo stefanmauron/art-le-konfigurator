@@ -1,0 +1,41 @@
+{
+  "bundleSha256": "827644997f5d838950b2d4e0e4a4399e2dafa5dbfec4ac301d495e8973267877",
+  "results": [
+    {
+      "name": "lint",
+      "exitCode": 0
+    },
+    {
+      "name": "build",
+      "exitCode": 0
+    },
+    {
+      "name": "domain",
+      "exitCode": 0
+    },
+    {
+      "name": "flow",
+      "exitCode": 0
+    },
+    {
+      "name": "edges",
+      "exitCode": 0
+    },
+    {
+      "name": "contract",
+      "exitCode": 0
+    },
+    {
+      "name": "known-findings",
+      "exitCode": 0
+    },
+    {
+      "name": "reference-base",
+      "exitCode": 0
+    },
+    {
+      "name": "candidate-base",
+      "exitCode": 0
+    }
+  ]
+}

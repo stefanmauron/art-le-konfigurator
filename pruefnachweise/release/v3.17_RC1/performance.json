@@ -1,0 +1,141 @@
+{
+  "rounds": 5,
+  "warmupRounds": 1,
+  "teams": 20,
+  "products": 40,
+  "protocol": "file:",
+  "platform": "darwin",
+  "browser": "156.0.8078.80",
+  "results": {
+    "reference": [
+      {
+        "start": 312.35883399999966,
+        "teamSwitch": 202.8774999999987,
+        "save": 223.77916699999878,
+        "openEditor": 44.68287500000042,
+        "export": 64.14341700000114,
+        "import": 423.94474999999875
+      },
+      {
+        "start": 313.84712500000023,
+        "teamSwitch": 198.2249580000007,
+        "save": 226.01795800000036,
+        "openEditor": 33.06116699999984,
+        "export": 62.943333999999595,
+        "import": 445.0166250000002
+      },
+      {
+        "start": 309.0713750000032,
+        "teamSwitch": 201.411333,
+        "save": 223.02350000000297,
+        "openEditor": 44.88458300000275,
+        "export": 67.35162499999933,
+        "import": 423.2246669999986
+      },
+      {
+        "start": 315.84137499999997,
+        "teamSwitch": 200.43762499999866,
+        "save": 223.33508300000176,
+        "openEditor": 36.052041999999346,
+        "export": 63.34716599999956,
+        "import": 439.38433299999815
+      },
+      {
+        "start": 316.02908300000126,
+        "teamSwitch": 198.21066699999938,
+        "save": 222.9822920000006,
+        "openEditor": 43.41600000000108,
+        "export": 63.019374999999854,
+        "import": 424.2261670000007
+      }
+    ],
+    "candidate": [
+      {
+        "start": 313.8150420000002,
+        "teamSwitch": 202.88695800000005,
+        "save": 224.44287500000064,
+        "openEditor": 34.473957999999584,
+        "export": 63.56129099999998,
+        "import": 424.40008299999954
+      },
+      {
+        "start": 316.3312499999993,
+        "teamSwitch": 196.9954170000001,
+        "save": 222.7972090000003,
+        "openEditor": 35.12137499999881,
+        "export": 63.125332999999955,
+        "import": 427.0383330000004
+      },
+      {
+        "start": 313.0059999999994,
+        "teamSwitch": 198.44683299999997,
+        "save": 222.4177920000002,
+        "openEditor": 33.99924999999894,
+        "export": 66.11612500000047,
+        "import": 427.3835419999996
+      },
+      {
+        "start": 322.4065410000003,
+        "teamSwitch": 198.37891699999818,
+        "save": 222.6185829999995,
+        "openEditor": 50.47724999999991,
+        "export": 62.63704199999847,
+        "import": 427.00679200000013
+      },
+      {
+        "start": 312.8062089999985,
+        "teamSwitch": 202.12487500000134,
+        "save": 225.63458300000275,
+        "openEditor": 33.94166699999914,
+        "export": 63.37850000000253,
+        "import": 426.0639579999988
+      }
+    ]
+  },
+  "comparisons": [
+    {
+      "action": "start",
+      "referenceMedianMs": 313.84712500000023,
+      "candidateMedianMs": 313.8150420000002,
+      "toleranceMs": 100,
+      "passed": true
+    },
+    {
+      "action": "teamSwitch",
+      "referenceMedianMs": 200.43762499999866,
+      "candidateMedianMs": 198.44683299999997,
+      "toleranceMs": 100,
+      "passed": true
+    },
+    {
+      "action": "save",
+      "referenceMedianMs": 223.33508300000176,
+      "candidateMedianMs": 222.7972090000003,
+      "toleranceMs": 100,
+      "passed": true
+    },
+    {
+      "action": "openEditor",
+      "referenceMedianMs": 43.41600000000108,
+      "candidateMedianMs": 34.473957999999584,
+      "toleranceMs": 100,
+      "passed": true
+    },
+    {
+      "action": "export",
+      "referenceMedianMs": 63.34716599999956,
+      "candidateMedianMs": 63.37850000000253,
+      "toleranceMs": 100,
+      "passed": true
+    },
+    {
+      "action": "import",
+      "referenceMedianMs": 424.2261670000007,
+      "candidateMedianMs": 427.00679200000013,
+      "toleranceMs": 100,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "bundleSha256": "827644997f5d838950b2d4e0e4a4399e2dafa5dbfec4ac301d495e8973267877"
+}

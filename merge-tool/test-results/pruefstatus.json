@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-08",
+  "unitTests": 39,
+  "browserGroups": 19,
+  "randomVariants": 200,
+  "domainEqualAfterImportExport": true,
+  "originalConfiguratorUnchanged": true,
+  "originalConfiguratorSha256": "cc48d64d0365a2e4b64473151add6a9e6131b5c403191a34fc8d0035f95e6522",
+  "deliveredToolSha256": "f6d5f8ee96a0eadc5a03c9837865240ee37a7df67ec3837b5ab31846123479d4",
+  "existingRegressions": "PASS",
+  "diffCheck": "PASS",
+  "newDocumentLinkErrors": 0,
+  "existingMissingLinkTargets": 80,
+  "toolVersion": "1.0.1",
+  "mixedConflictVariants": 100,
+  "additionalActualRoundtrips": 21,
+  "retainedPredecessorSha256": "fb43ed9e42f921dd832a7c163e97a45235d36968b4402fd14c707d3beb8b8f8d",
+  "correctedFindings": [
+    "Tätigkeitsname bei gleicher ID geändert",
+    "Vertauschte Tätigkeitsnamen"
+  ]
+}

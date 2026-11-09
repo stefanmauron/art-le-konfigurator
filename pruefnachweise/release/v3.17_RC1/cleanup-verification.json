@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-06",
+  "version": "3.17 RC1",
+  "bundleSha256": "827644997f5d838950b2d4e0e4a4399e2dafa5dbfec4ac301d495e8973267877",
+  "bundleUnchanged": true,
+  "originalReleaseEvidenceUnchanged": true,
+  "userDeletedRootRC2And99OldNotRestored": true,
+  "movedActiveDriversAndHelpers": 10,
+  "removedObsoleteFiles": 247,
+  "removedObsoleteBytes": 1930439,
+  "unit": {
+    "bundleSha256": "827644997f5d838950b2d4e0e4a4399e2dafa5dbfec4ac301d495e8973267877",
+    "results": [
+      {
+        "name": "lint",
+        "exitCode": 0
+      },
+      {
+        "name": "build",
+        "exitCode": 0
+      },
+      {
+        "name": "domain",
+        "exitCode": 0
+      },
+      {
+        "name": "flow",
+        "exitCode": 0
+      },
+      {
+        "name": "edges",
+        "exitCode": 0
+      },
+      {
+        "name": "contract",
+        "exitCode": 0
+      },
+      {
+        "name": "known-findings",
+        "exitCode": 0
+      },
+      {
+        "name": "reference-base",
+        "exitCode": 0
+      },
+      {
+        "name": "candidate-base",
+        "exitCode": 0
+      }
+    ]
+  },
+  "build": {
+    "passed": 22,
+    "failed": 0,
+    "referenceSha256": "b034bcc892018a7b3b5c64f801b92f7589c99a7a8c4b8486fe81e241caabe6ab",
+    "bundleSha256": "827644997f5d838950b2d4e0e4a4399e2dafa5dbfec4ac301d495e8973267877",
+    "reproducible": true
+  },
+  "domain": {
+    "passed": 2821,
+    "failed": 0,
+    "seed": 20261106,
+    "randomizedConfigurations": 128,
+    "sourceImports": true
+  },
+  "methodParity": {
+    "cases": 94,
+    "referenceFailures": 49,
+    "candidateFailures": 49,
+    "identical": true,
+    "productFindingsRemainOpen": true
+  },
+  "browser": {
+    "functionalAndLayoutPassed": 56,
+    "pixelComparisonsSkipped": 45,
+    "reason": "Application bytes unchanged. Original 45 pixel-equality proofs retained; fresh strict screenshot attempt showed nondeterministic rendering. No new pixel-equality claim.",
+    "flowControlPassed": 71,
+    "flowEdgesPassed": 15,
+    "flowGroupsPassed": 13,
+    "errors": []
+  },
+  "roundtrip": {
+    "previousVerifiedSetupChecks": 23,
+    "checksIncludingInheritedSetup": 51,
+    "newChecks": 28,
+    "resumedSetup": true,
+    "teams": 20,
+    "products": 40,
+    "payloadHashes": {
+      "beforeExport": "94e386b1f9faa1b5b2c6e8cad76c33f74dd89b8d341f6a443daba1d6bfc2d6f4",
+      "exportFile": "94e386b1f9faa1b5b2c6e8cad76c33f74dd89b8d341f6a443daba1d6bfc2d6f4",
+      "afterExport": "94e386b1f9faa1b5b2c6e8cad76c33f74dd89b8d341f6a443daba1d6bfc2d6f4",
+      "afterReset": "02e9c5a9ce4eecbe1f8189d3dfdd4ffc5bf7c8019192a55f7de458c8bd8552f1",
+      "afterImport": "94e386b1f9faa1b5b2c6e8cad76c33f74dd89b8d341f6a443daba1d6bfc2d6f4",
+      "afterImportReload": "94e386b1f9faa1b5b2c6e8cad76c33f74dd89b8d341f6a443daba1d6bfc2d6f4"
+    },
+    "errors": []
+  },
+  "fixtures": {
+    "referenceSha256": "b034bcc892018a7b3b5c64f801b92f7589c99a7a8c4b8486fe81e241caabe6ab",
+    "migrationSha256": "ee742dccc9d3efefe8f3493d846c44138d2d2f8d8f5c0d1f468ef23cc47327e1",
+    "importCompatibilitySha256": "9f998dc6111dd7084eb164e5fcd4f88150d187701e5d049c724534d97750a7c2"
+  },
+  "originalReleaseEvidence": [
+    "pruefnachweise/release/v3.17_RC1/additional-unit-cases.json",
+    "pruefnachweise/release/v3.17_RC1/assessments-and-agreements.json",
+    "pruefnachweise/release/v3.17_RC1/browser-parity.json",
+    "pruefnachweise/release/v3.17_RC1/build-summary.json",
+    "pruefnachweise/release/v3.17_RC1/domain-summary.json",
+    "pruefnachweise/release/v3.17_RC1/flow-browser.json",
+    "pruefnachweise/release/v3.17_RC1/flow-control.json",
+    "pruefnachweise/release/v3.17_RC1/flow-edges.json",
+    "pruefnachweise/release/v3.17_RC1/known-findings.json",
+    "pruefnachweise/release/v3.17_RC1/performance.json",
+    "pruefnachweise/release/v3.17_RC1/roundtrip.json",
+    "pruefnachweise/release/v3.17_RC1/unit-summary.json",
+    "pruefnachweise/release/v3.17_RC1/verification.json"
+  ],
+  "commitAndPush": false,
+  "removedGenerated": {
+    "node_modules": {
+      "files": 1262,
+      "bytes": 29799553
+    },
+    ".test-output": {
+      "files": 21,
+      "bytes": 125570
+    }
+  }
+}

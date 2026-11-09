@@ -1,0 +1,85 @@
+.utg33-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 14px 0;
+}
+.utg33-tools button[aria-pressed="true"] {
+  background: #163e56;
+  color: white;
+}
+.utg33-policybar {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(155px, 1fr));
+  gap: 6px;
+  min-width: 1380px;
+  margin: 12px 0;
+}
+.utg33-slot {
+  border: 1px solid #cbd8e4;
+  border-radius: 8px;
+  padding: 10px;
+  background: #f5f9fd;
+  font-size: var(--text-small);
+  min-height: 92px;
+}
+.utg33-slot strong {
+  display: block;
+  margin: 4px 0;
+}
+.utg33-slot button {
+  padding: 5px 8px;
+  font-size: var(--text-small);
+  margin-top: 7px;
+}
+.utg33-detail {
+  border: 1px solid #b6c9da;
+  background: #f7fafc;
+  border-radius: 9px;
+  padding: 15px;
+  margin: 12px 0;
+}
+.utg33-detail label {
+  display: block;
+  font-size: var(--text-small);
+  margin: 10px 0 5px;
+}
+.utg33-detail textarea,
+.utg33-detail input,
+.utg33-detail select {
+  width: 100%;
+  max-width: 680px;
+}
+.utg33-eventgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 9px;
+  margin: 12px 0;
+}
+.utg33-event {
+  border: 1px solid #dce4eb;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fff;
+  font-size: var(--text-small);
+}
+.utg33-event strong {
+  display: block;
+  margin-bottom: 7px;
+}
+.utg33-interface {
+  padding: 12px;
+  background: #f0f5f9;
+  border-left: 4px solid #4a809b;
+  border-radius: 7px;
+  margin: 10px 0;
+  font-size: var(--text-small);
+}
+.utg33-muted {
+  color: #5c6e7c;
+  font-size: var(--text-small);
+}
+.utg33-hidden {
+  display: none !important;
+}

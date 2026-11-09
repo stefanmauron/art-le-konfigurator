@@ -1,0 +1,173 @@
+{
+  "passed": 21,
+  "results": [
+    {
+      "label": "Tätigkeit umbenannt / A",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "4c1d8cb4e7d9c1314a1eb37fa4637b3d38699afb74b11f6c25646887e633204b",
+      "actualSha256": "4c1d8cb4e7d9c1314a1eb37fa4637b3d38699afb74b11f6c25646887e633204b",
+      "equal": true
+    },
+    {
+      "label": "Tätigkeit umbenannt / B",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "081f266a2bdb50557f9df7f8afbae84cb4e33b40500782334b6f125f3d20be34",
+      "actualSha256": "081f266a2bdb50557f9df7f8afbae84cb4e33b40500782334b6f125f3d20be34",
+      "equal": true
+    },
+    {
+      "label": "Vertauschte Tätigkeitsnamen",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "2aabf9c9d4598af9ec479bc4aaffda4cc3e9937b0a7293fc8146c1a1edd3f299",
+      "actualSha256": "2aabf9c9d4598af9ec479bc4aaffda4cc3e9937b0a7293fc8146c1a1edd3f299",
+      "equal": true
+    },
+    {
+      "label": "Mehrere gleichzeitige Konflikte / beide",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "766622d8b765109445cc4d47d97cb85067c64c391527a28a29f0fc24f00a928e",
+      "actualSha256": "766622d8b765109445cc4d47d97cb85067c64c391527a28a29f0fc24f00a928e",
+      "equal": true
+    },
+    {
+      "label": "Mehrere gleichzeitige Konflikte / B",
+      "teams": 2,
+      "products": 2,
+      "expectedSha256": "b037260972a5582e44e1a96345403dd8af30488a2c3de2cebf8205d348caee5b",
+      "actualSha256": "b037260972a5582e44e1a96345403dd8af30488a2c3de2cebf8205d348caee5b",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 0",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "adb498d478e3c7f4eaa5a10cc5ff90ce8e8561dd4513609ec9e841c3ff44556f",
+      "actualSha256": "adb498d478e3c7f4eaa5a10cc5ff90ce8e8561dd4513609ec9e841c3ff44556f",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 1",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "c224e6db14c940e42d8c79fc9eecb65f97f8737f144fd3e4a9f3ab3855574c36",
+      "actualSha256": "c224e6db14c940e42d8c79fc9eecb65f97f8737f144fd3e4a9f3ab3855574c36",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 2",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "3be199ef0831a965540813008897e160f5b7f3c347c5491bd5ea8cb178ce84b2",
+      "actualSha256": "3be199ef0831a965540813008897e160f5b7f3c347c5491bd5ea8cb178ce84b2",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 3",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "6c3982705422d92663d513cf2c3e8a4ad1398ce4e0c64e5c1921154f1632e2ac",
+      "actualSha256": "6c3982705422d92663d513cf2c3e8a4ad1398ce4e0c64e5c1921154f1632e2ac",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 4",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "cfc608d5ed4e530dfc7887abc59f4f23644ca2f04f0af37f29575f9739a76509",
+      "actualSha256": "cfc608d5ed4e530dfc7887abc59f4f23644ca2f04f0af37f29575f9739a76509",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 5",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "d94ce87a2238bd31b8d994427ae009b367e7163850b47d8325f7b1e66a9bf1d2",
+      "actualSha256": "d94ce87a2238bd31b8d994427ae009b367e7163850b47d8325f7b1e66a9bf1d2",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 6",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "941d1073ce1ffe5374a13143adf86b0a7be19355e21326d8d99e927205915caf",
+      "actualSha256": "941d1073ce1ffe5374a13143adf86b0a7be19355e21326d8d99e927205915caf",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 7",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "7b37599bd71937d4f3cc2bc3e66df824cfb5a24823a3285c45a52df1e8a738c5",
+      "actualSha256": "7b37599bd71937d4f3cc2bc3e66df824cfb5a24823a3285c45a52df1e8a738c5",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 8",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "454a2881c2bd6f2038fe35232830ef7a40d431c60b343d8fa2e3da07202b32f8",
+      "actualSha256": "454a2881c2bd6f2038fe35232830ef7a40d431c60b343d8fa2e3da07202b32f8",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 9",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "8f01bc6068c5273e90711ddbd7e263468680f466c16f72c65abb85231ced0f82",
+      "actualSha256": "8f01bc6068c5273e90711ddbd7e263468680f466c16f72c65abb85231ced0f82",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 10",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "df691bf441d373bbb5c00b6fe3e6a8b6a922f812f62ffbca1198b19d2edac24f",
+      "actualSha256": "df691bf441d373bbb5c00b6fe3e6a8b6a922f812f62ffbca1198b19d2edac24f",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 11",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "1cbeecc95df51abb5349bfd09a0714a9c521b956b86bbed2ca8db877b66b9826",
+      "actualSha256": "1cbeecc95df51abb5349bfd09a0714a9c521b956b86bbed2ca8db877b66b9826",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 12",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "afd7ddcad8f18304324a984457a237604283f44ddb6dcca96b94987242be0b6e",
+      "actualSha256": "afd7ddcad8f18304324a984457a237604283f44ddb6dcca96b94987242be0b6e",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 13",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "e425ae1859dd4dd79446324cb597604b81c22e31423760a80b6a936d31f17103",
+      "actualSha256": "e425ae1859dd4dd79446324cb597604b81c22e31423760a80b6a936d31f17103",
+      "equal": true
+    },
+    {
+      "label": "Zufalls-Roundtrip 14",
+      "teams": 4,
+      "products": 4,
+      "expectedSha256": "e68cbdbd72ac28a8d56920318e2227f2c4828b06bd28a97a6ceb90e846960e95",
+      "actualSha256": "e68cbdbd72ac28a8d56920318e2227f2c4828b06bd28a97a6ceb90e846960e95",
+      "equal": true
+    },
+    {
+      "label": "20 Teams / 20 Produkte / 640 Matrixeinträge",
+      "teams": 20,
+      "products": 20,
+      "expectedSha256": "74eec8cdfb7cc280e620c1c3382081b89afeffe35338ef494d4cd3e333fdc28f",
+      "actualSha256": "74eec8cdfb7cc280e620c1c3382081b89afeffe35338ef494d4cd3e333fdc28f",
+      "equal": true
+    }
+  ]
+}

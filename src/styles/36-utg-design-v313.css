@@ -1,0 +1,434 @@
+/* v3.13: quiet workspace surfaces, shared line icons and fixed drawer chrome. */
+:root {
+  --ink: #203449;
+  --muted: #526879;
+  --accent: #244e65;
+  --accent-dark: #244e65;
+  --line: #dee6eb;
+  --surface: #fff;
+  --soft: #f4f7f9;
+  --radius: 10px;
+  --success: #2d6079;
+  --warning: #92521c;
+  --danger: #a04438;
+}
+body {
+  background: #f3f6f8;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+body > header {
+  background: #193448;
+  border-bottom: 2px solid #4a809b;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+header h1 {
+  font-weight: 650;
+}
+header p {
+  color: #ccdae3;
+}
+.app-version {
+  border: 1px solid #ffffff26;
+  background: transparent;
+}
+#utg-nav {
+  background: #f3f6f8;
+  border-bottom-color: #d7e2e9;
+  margin-bottom: 20px;
+}
+#utg-nav button {
+  border-radius: 8px 8px 0 0;
+  min-height: 76px;
+}
+#utg-nav button.active {
+  background: #edf4f8;
+  color: var(--accent-dark);
+  box-shadow: inset 0 -2px var(--accent);
+}
+#utg-nav button:hover {
+  background: #ebf1f4;
+}
+.utg-page > .panel,
+.utg-page > .v3,
+.utg-page > .overview-panel {
+  border: 1px solid #e2e9ee;
+  box-shadow: none;
+  border-radius: var(--radius);
+}
+.utg-page
+  :is(
+    .utg-team-audit,
+    #utg-contract-report,
+    #utg-interface-3907,
+    #utg-integrated-quality
+  ) {
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 20px 0;
+  margin-top: 24px;
+}
+.utg-page h2 {
+  font-weight: 650;
+}
+.utg-page h3 {
+  font-weight: 600;
+}
+.hint,
+.muted {
+  color: var(--muted);
+}
+.vision {
+  background: #204657;
+  box-shadow: none;
+  border: 0;
+  border-radius: var(--radius);
+}
+.vision-card {
+  background: #ffffff09;
+  border-color: #ffffff24;
+  box-shadow: none;
+}
+.vision .eyebrow {
+  color: #c5d9e6;
+}
+.ui-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  vertical-align: middle;
+}
+.ui-action-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  flex: 0 0 16px;
+}
+button,
+.filebtn {
+  border-radius: 7px;
+  box-shadow: none;
+}
+button:hover,
+.filebtn:hover {
+  box-shadow: none;
+  background: #edf4f8;
+  border-color: #c5d9e6;
+}
+button.primary,
+.filebtn.primary {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+button.primary:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+button[data-ui-action="edit"] {
+  background: transparent;
+  border-color: transparent;
+  color: var(--accent-dark);
+}
+button[data-ui-action="edit"]:hover {
+  background: #edf4f8;
+  border-color: #edf4f8;
+}
+button[data-ui-action="delete"] {
+  background: transparent;
+  border-color: transparent;
+  color: var(--danger);
+}
+button[data-ui-action="delete"]:hover {
+  background: #fbefed;
+  border-color: #eed6d1;
+}
+input,
+select,
+textarea {
+  box-shadow: none;
+  border-color: #cad7df;
+}
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #94aebb;
+}
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #4a809b;
+  outline-offset: 2px;
+  background: white;
+}
+.utg-page table th {
+  background: #f0f4f7;
+  color: #4b6273;
+  font-weight: 650;
+  border-bottom-color: #d5e0e7;
+}
+.utg-page table td {
+  border-bottom-color: #e8edf1;
+}
+.utg-page tbody tr:hover {
+  background: #edf4f8;
+}
+#utg-activities td select {
+  border-color: transparent;
+  background: transparent;
+}
+#utg-activities td select:hover,
+#utg-activities td select:focus {
+  background: white;
+  border-color: #aec5d0;
+}
+#v3matrix :is(th, td):first-child {
+  background: #f1f5f7;
+}
+#v3matrix :is(th, td):nth-child(2) {
+  background: #fafcfd;
+  box-shadow: 3px 0 6px #20344905;
+}
+#v3matrix tbody tr:hover :is(td:first-child, td:nth-child(2)) {
+  background: #edf4f8;
+}
+#v3matrix th:first-child,
+#v3matrix th:nth-child(2) {
+  background: #eaf1f4;
+}
+#v3matrix td[data-f="org"] select {
+  background: #edf3f6;
+  color: #294f64;
+}
+.v3bar,
+.app-searchbar input {
+  background: var(--soft);
+}
+.v3bar {
+  border-color: transparent;
+  border-radius: 8px;
+}
+.v3grid > div,
+.stat {
+  border: 0;
+  background: #f3f7f9;
+  box-shadow: none;
+  border-radius: 8px;
+}
+.v3grid > div > div,
+.stat strong {
+  color: #244e62;
+}
+.utg-check,
+.utg-catalog-row,
+.crud-entry {
+  border-color: var(--line);
+}
+.utg-check strong {
+  color: var(--warning);
+}
+.flow-grid {
+  gap: 10px;
+}
+.flow-col {
+  border: 1px solid var(--line);
+  box-shadow: none;
+  border-radius: 8px;
+}
+.flow-step {
+  background: #edf3f6;
+  border-top: 2px solid #8dabb8;
+  min-height: 80px;
+}
+.flow-step strong {
+  font-size: var(--text-section);
+  color: #24465a;
+}
+.flow-quality {
+  background: #f0f5f9;
+  border-top-color: #d5e3ec;
+}
+.flow-tasks li {
+  border-color: #e9eef2;
+}
+.utg-layer-panel,
+.utg33-detail,
+.utg-linkage {
+  background: #f7f9fa;
+  border: 0;
+  border-radius: 8px;
+}
+.utg-layer-grid article,
+.utg33-event,
+.utg-band,
+.utg33-slot {
+  box-shadow: none;
+  border-color: var(--line);
+}
+/* Tiny visible controls retain a larger invisible pointer target. */
+button:is(
+  .app-column-info,
+  .app-section-info,
+  .app-matrix-info,
+  .app-context-info,
+  .app-description-toggle
+) {
+  position: relative;
+  isolation: isolate;
+}
+button:is(
+    .app-column-info,
+    .app-section-info,
+    .app-matrix-info,
+    .app-context-info
+  )::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: transparent;
+  pointer-events: auto;
+}
+button.app-description-toggle {
+  touch-action: manipulation;
+}
+button.app-description-toggle::before {
+  box-shadow: 0 0 0 7px transparent;
+}
+.app-activity-description {
+  color: #586f80;
+}
+/* Header/footer stay fixed while the form body scrolls. Existing controls retain their handlers. */
+dialog.app-drawer.ui-drawer-with-form,
+dialog.app-drawer.ui-drawer-layout {
+  padding: 0 !important;
+  overflow: hidden;
+  border-radius: 12px 0 0 12px !important;
+  box-shadow: -8px 0 40px #19344826;
+}
+dialog.app-drawer .ui-drawer-layout,
+dialog.app-drawer.ui-drawer-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+dialog.app-drawer .ui-drawer-header {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 22px 24px 18px;
+  border-bottom: 1px solid var(--line);
+  background: white;
+}
+dialog.app-drawer .ui-drawer-header :is(h2, h3) {
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  min-width: 0;
+  font-size: var(--text-title);
+  line-height: 1.3;
+  font-weight: 650;
+}
+dialog.app-drawer button.ui-drawer-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  min-height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--muted);
+}
+dialog.app-drawer button.ui-drawer-close:hover {
+  background: var(--soft);
+  color: var(--ink);
+}
+dialog.app-drawer .ui-drawer-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 20px 24px;
+}
+dialog.app-drawer .ui-drawer-footer {
+  flex: 0 0 auto;
+  padding: 14px 24px;
+  border-top: 1px solid var(--line);
+  background: #fafcfd;
+}
+dialog.app-drawer .ui-drawer-footer .crud-actions,
+dialog.app-drawer .ui-drawer-footer .actions {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+dialog.app-drawer .ui-drawer-footer:empty {
+  display: none;
+}
+dialog.app-drawer .ui-drawer-body > .panel {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-shadow: none;
+}
+@media (max-width: 600px) {
+  .ui-action {
+    gap: 5px;
+  }
+  .ui-action-icon {
+    width: 14px;
+    height: 14px;
+    min-width: 14px;
+    flex-basis: 14px;
+  }
+  dialog.app-drawer .ui-drawer-header {
+    padding: 18px 16px 14px;
+  }
+  dialog.app-drawer .ui-drawer-body {
+    padding: 16px;
+  }
+  dialog.app-drawer .ui-drawer-footer {
+    padding: 12px 16px;
+  }
+  .crud-entry-head {
+    gap: 4px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  button,
+  input,
+  select,
+  textarea {
+    transition:
+      background-color 0.12s,
+      border-color 0.12s,
+      color 0.12s;
+  }
+}
+@media print {
+  .ui-drawer-close {
+    display: none !important;
+  }
+  .utg-page > .panel,
+  .utg-page > .v3 {
+    box-shadow: none;
+  }
+  .flow-col {
+    break-inside: avoid;
+  }
+}

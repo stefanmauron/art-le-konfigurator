@@ -1,0 +1,22 @@
+/* Equal-height grid cards keep rule actions aligned below a shared separator. */
+#operating-model .utg33-policybar {
+  align-items: stretch;
+}
+#operating-model .utg33-slot {
+  display: flex;
+  flex-direction: column;
+}
+#operating-model .utg33-policy-actions {
+  margin-top: auto;
+  padding-top: 12px;
+  text-align: center;
+}
+#operating-model .utg33-policy-actions::before {
+  content: "";
+  display: block;
+  border-top: 1px solid var(--line);
+  margin-bottom: 12px;
+}
+#operating-model .utg33-policy-actions button[data-policy] {
+  margin-top: 0;
+}

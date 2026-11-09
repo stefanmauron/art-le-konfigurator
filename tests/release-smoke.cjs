@@ -1,0 +1,14 @@
+// Release metadata and real download check; reads the same release.json as the build.
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),crypto=require('node:crypto'),{pathToFileURL}=require('node:url');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'/Users/stefanmauron/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const root=path.resolve(__dirname,'..'),release=JSON.parse(fs.readFileSync(path.join(root,'release.json'))),target=path.join(root,'dist',`UTG-LE_Operating_Model_v${release.version}_${release.stage}.html`),out=process.env.OUTPUT_DIR||path.join(root,'.test-output/release');
+const checks=[],errors=[];function check(name,fn){fn();checks.push({name,ok:true});console.log('PASS '+name)}
+(async()=>{const browser=await chromium.launch({channel:'chrome',headless:true});try{
+ const context=await browser.newContext({offline:true,acceptDownloads:true,viewport:{width:1440,height:1000}}),p=await context.newPage(),requests=[];p.on('pageerror',e=>errors.push(e.message));p.on('request',r=>requests.push(r.url()));await p.goto(pathToFileURL(target).href);await p.waitForFunction(()=>!!window.UTGFlowStandardUI);
+ const title=await p.title(),badge=await p.locator('.app-version-trigger').textContent();check('Title and badge reflect release.json',()=>{assert(title.includes(release.label));assert.equal(badge,release.label)});
+ await p.locator('.app-version-trigger').click();const about=await p.locator('#utg-about-changelog').textContent();check('About identifies current release',()=>assert(about.includes(release.label)));await p.locator('.app-about-close').click();
+ const actual=await p.evaluate(()=>({version:UTGVersion,stage:UTGReleaseStage}));check('Runtime metadata matches release.json',()=>assert.deepEqual(actual,{version:release.version,stage:release.stage}));
+ const wait=p.waitForEvent('download');await p.evaluate(()=>UTGFiles.save(true));const download=await wait,data=JSON.parse(fs.readFileSync(await download.path()));check('Real JSON download has correct filename and metadata',()=>{assert.equal(download.suggestedFilename(),release.exportFilename);assert.equal(data.appVersion,release.version);assert.equal(data.releaseStage,release.stage)});
+ check('Offline bundle loads no external resources',()=>assert(requests.every(url=>url.startsWith('file:')||url.startsWith('data:'))));check('No unhandled browser errors',()=>assert.deepEqual(errors,[]));
+ fs.mkdirSync(out,{recursive:true});fs.writeFileSync(path.join(out,'summary.json'),JSON.stringify({release,target:path.relative(root,target),sha256:crypto.createHash('sha256').update(fs.readFileSync(target)).digest('hex'),browser:browser.version(),platform:process.platform,checks,errors},null,2)+'\n');console.log(JSON.stringify({passed:checks.length,failed:0}));
+ }finally{await browser.close()}})().catch(e=>{console.error(e);process.exitCode=1});

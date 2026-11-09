@@ -1,0 +1,90 @@
+{
+  "date": "2026-11-06",
+  "reference": {
+    "file": "/Users/stefanmauron/Desktop/99_old/UTG-LE_Operating_Model_v3.16_RC2.html",
+    "sha256": "b034bcc892018a7b3b5c64f801b92f7589c99a7a8c4b8486fe81e241caabe6ab"
+  },
+  "candidate": {
+    "file": "/Users/stefanmauron/Documents/ngGEVER/version 3.3/40 Misc/03 UTG-Transformation/02_art-le_konfigurator/dist/UTG-LE_Operating_Model_v3.16_RC3.html",
+    "sha256": "cc48d64d0365a2e4b64473151add6a9e6131b5c403191a34fc8d0035f95e6522"
+  },
+  "referenceFixtureByteIdenticalToUserFile": true,
+  "applicationFilesUnchanged": true,
+  "platform": "Chrome 156.0.8078.80 / macOS",
+  "controlledClock": "2026-11-06T13:00:00.000Z",
+  "dataSet": {
+    "teams": 20,
+    "products": 40,
+    "matrixFieldsIncludedInCompleteSnapshot": 5120,
+    "note": "Identical imported full data; additional UI creation/deletion of one team and one product."
+  },
+  "result": "No functional difference found in the executed cases. Operational and metadata differences are explicitly listed.",
+  "checks": {
+    "pairedUserOperations": 21,
+    "allPersistedFieldsEqualAfterEveryOperation": true,
+    "noPersistedFieldExclusionsUsedForEqualityAssertion": true,
+    "baseCasesPerVersion": 111,
+    "flowUnitGroupsPerVersion": 18,
+    "edgeUnitCasesPerVersion": 68,
+    "ruleContractCasesPerVersion": 55,
+    "methodCasesPerVersion": 94,
+    "knownNegativeMethodCasesPerVersion": 49,
+    "browserControlCasesPerVersion": 71,
+    "browserEdgeCasesPerVersion": 15,
+    "browserFlowGroupsPerVersion": 13
+  },
+  "exportContentDifferences": [
+    {
+      "path": "$.releaseStage",
+      "reference": "RC2",
+      "candidate": "RC3"
+    }
+  ],
+  "exportMetadata": [
+    {
+      "filename": "UTG-LE_Konfiguration_v3.16_RC2.json",
+      "sha256": "551c53cfbaccda5f7bdc736bd46868983ad49b2592eaec4cd6e85cb507b14273",
+      "format": "utg-le-complete",
+      "version": 4,
+      "appVersion": "3.16",
+      "releaseStage": "RC2",
+      "exported": "2026-11-06T13:00:00.000Z",
+      "functionalHash": "a5159a09ee991153d099c36d6bd15333605cdc28d8c54063a73d4a8b11bc0c12"
+    },
+    {
+      "filename": "UTG-LE_Konfiguration_v3.16_RC3.json",
+      "sha256": "09bf8997bd87f18997ab276b3f507cca659c792b4626eae6f52ac6d30cdfe39f",
+      "format": "utg-le-complete",
+      "version": 4,
+      "appVersion": "3.16",
+      "releaseStage": "RC3",
+      "exported": "2026-11-06T13:00:00.000Z",
+      "functionalHash": "a5159a09ee991153d099c36d6bd15333605cdc28d8c54063a73d4a8b11bc0c12"
+    }
+  ],
+  "storageKeys": [
+    [
+      "gever-art-leistungsmatrix-v1",
+      "gever-art-v3-config",
+      "gever-art-v34-decisions"
+    ],
+    [
+      "utg-le-v317:gever-art-leistungsmatrix-v1",
+      "utg-le-v317:gever-art-v3-config",
+      "utg-le-v317:gever-art-v34-decisions"
+    ]
+  ],
+  "observedDifferences": [
+    "Release display and About change-log",
+    "Export filename and releaseStage",
+    "Separate local-storage namespace",
+    "Application file size and implementation structure"
+  ],
+  "notClaimed": [
+    "Every possible interaction sequence",
+    "Windows or Edge parity",
+    "Identical performance",
+    "New full fresh 20-team/40-product CRUD creation in both versions"
+  ],
+  "testCatalogueRepair": "The criteria-order regression was missing from the active suite after earlier cleanup. It was restored from its original Git-tracked assertion and passed against both artifacts. No application code was changed."
+}

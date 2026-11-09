@@ -1,0 +1,1966 @@
+{
+  "provenance": {
+    "gitCommit": "c75067e0c82c977b0623629423b9dcf37ac70606",
+    "sourcePath": "version 3.3/40 Misc/03 UTG-Transformation/02_art-le_konfigurator/99_old/UTG-LE_Operating_Model_v3.15.2.html",
+    "sourceSha256": "31fba46e41e47cc4b40046393a8ba12f8adaa625808ffad298d6357fa8637c7c",
+    "purpose": "Historical input and signature oracle for v3.17 migration regression; no old application runtime required."
+  },
+  "configuration": {
+    "schema": 3,
+    "products": [],
+    "configs": {},
+    "services": [
+      {
+        "id": "default-it-gever-consulting",
+        "name": "IT- und GEVER-Beratung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-architecture-security-consulting",
+        "name": "Architektur-, Sicherheits- und Konformitätsberatung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-application-development",
+        "name": "Anwendungsentwicklung und Weiterentwicklung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-interface-integration",
+        "name": "Schnittstellenintegration",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-system-environments",
+        "name": "Systemumgebungen bereitstellen und pflegen",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-deployment",
+        "name": "Deployment und technische Releasebereitstellung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-operations",
+        "name": "Anwendungsbetrieb und Wartung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-monitoring",
+        "name": "Monitoring und technische Protokollierung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-application-support",
+        "name": "Technischer Anwendungssupport und Störungsbehebung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-archive-delivery",
+        "name": "Technische Aussonderung und Archivablieferung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-integration-tests",
+        "name": "Integrationstests",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      }
+    ],
+    "activities": [
+      {
+        "id": "activity-01",
+        "phase": "Funnel",
+        "name": "Bedarfserfassung",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Die Bedarfserfassung klärt das Anliegen, den erwarteten Nutzen und die Zuständigkeit.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-03",
+        "phase": "Analyzing",
+        "name": "Requirements Engineering",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Anforderungen und Akzeptanzkriterien beschreiben, was das Produkt leisten soll.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-04",
+        "phase": "Analyzing",
+        "name": "Feature-Planung und -Refinement",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Features werden präzisiert, sinnvoll geschnitten und für die Umsetzung vorbereitet.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-05",
+        "phase": "Analyzing",
+        "name": "Solution Design",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Das Lösungsdesign zeigt, wie Anforderungen technisch und fachlich umgesetzt werden können.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-06",
+        "phase": "Analyzing",
+        "name": "Architektur-Alignment",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Die Lösung wird mit der Zielarchitektur und den betroffenen Systemen abgestimmt.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-07",
+        "phase": "Analyzing",
+        "name": "Security- und Compliance-Anforderungen",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Sicherheits- und Compliance-Vorgaben werden früh geklärt und für die Umsetzung konkretisiert.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-08",
+        "phase": "Analyzing",
+        "name": "Architekturentscheid / Freigabe",
+        "service": "",
+        "type": "Entscheidung",
+        "description": "Erforderliche Architekturentscheide werden begründet und dokumentiert; eine Freigabe erfolgt nur bei Bedarf.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-09",
+        "phase": "Analyzing",
+        "name": "Kapazitäts- und Abhängigkeitsplanung",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Vor der Einplanung werden Kapazitätsbedarf, Abhängigkeiten und erforderliche Lieferzusagen geklärt; bei Änderungen wird die Planung angepasst.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-10",
+        "phase": "Analyzing",
+        "name": "Test- und Releaseplanung",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Die Planung legt Testumfang, Nachweise und Voraussetzungen für das Release fest.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-11",
+        "phase": "Implementing",
+        "name": "Entwicklung",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Die Entwicklung setzt die vereinbarten Anforderungen in funktionsfähige Software um.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-12",
+        "phase": "Implementing",
+        "name": "Konfigurationsmanagement",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Softwarestände und Konfigurationen werden versioniert und nachvollziehbar bereitgestellt.",
+        "additionalPhases": [
+          "Validating",
+          "Deploying & Releasing"
+        ]
+      },
+      {
+        "id": "activity-13",
+        "phase": "Implementing",
+        "name": "Unit-Tests",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Automatisierte Tests prüfen die korrekte Funktion einzelner Softwarebausteine.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-14",
+        "phase": "Implementing",
+        "name": "Funktionale Tests",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Funktionale Tests prüfen früh und fortlaufend, ob die vereinbarten Anforderungen erfüllt sind.",
+        "additionalPhases": [
+          "Validating"
+        ]
+      },
+      {
+        "id": "activity-15",
+        "phase": "Implementing",
+        "name": "Code-Review",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Code-Reviews prüfen Änderungen auf Verständlichkeit, Wartbarkeit und technische Fehler.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-30",
+        "phase": "Implementing",
+        "name": "Continuous Integration",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Softwareänderungen werden laufend zusammengeführt und automatisiert auf Fehler geprüft.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-16",
+        "phase": "Implementing",
+        "name": "Integrationstests",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Integrationstests prüfen früh das Zusammenspiel von Komponenten und Schnittstellen.",
+        "additionalPhases": [
+          "Validating"
+        ]
+      },
+      {
+        "id": "activity-18",
+        "phase": "Implementing",
+        "name": "Sicherheitstests",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Sicherheitstests decken Schwachstellen auf und prüfen die Einhaltung der Sicherheitsanforderungen.",
+        "additionalPhases": [
+          "Validating"
+        ]
+      },
+      {
+        "id": "activity-19",
+        "phase": "Implementing",
+        "name": "Performance-Tests",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Performance-Tests prüfen Antwortzeiten, Durchsatz und Stabilität unter erwarteter Last.",
+        "additionalPhases": [
+          "Validating"
+        ]
+      },
+      {
+        "id": "activity-17",
+        "phase": "Validating",
+        "name": "End-to-End-Tests",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "End-to-End-Tests weisen nach, dass vollständige Geschäftsabläufe über Systemgrenzen hinweg funktionieren.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-20",
+        "phase": "Validating",
+        "name": "Fachliche Abnahme",
+        "service": "",
+        "type": "Entscheidung",
+        "description": "Die fachliche Abnahme bewertet die Erfüllung der Akzeptanzkriterien; ein formaler Entscheid erfolgt bei Bedarf. Fachliches Feedback wird bereits während der Umsetzung eingeholt und ist von dieser Abnahme zu unterscheiden.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-21",
+        "phase": "Deploying & Releasing",
+        "name": "Deployment",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Software wird kontrolliert in Entwicklungs-, Test- und Produktionsumgebungen bereitgestellt.",
+        "additionalPhases": [
+          "Implementing",
+          "Validating"
+        ]
+      },
+      {
+        "id": "activity-31",
+        "phase": "Implementing",
+        "name": "Technische Integration",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Komponenten werden technisch verbunden und in Entwicklungs- und Testumgebungen lauffähig gemacht.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-22",
+        "phase": "Deploying & Releasing",
+        "name": "Releasefreigabe",
+        "service": "",
+        "type": "Entscheidung",
+        "description": "Die zuständige Rolle entscheidet gemäss Release-Regeln über die Freigabe zur Nutzung.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-23",
+        "phase": "Deploying & Releasing",
+        "name": "Betriebsübergabe",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Die Betriebsübergabe bestätigt die vereinbarten Zuständigkeiten, Betriebsunterlagen und Unterstützung für den laufenden Betrieb.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-25",
+        "phase": "Done",
+        "name": "Feature-Abschluss / Lessons Learned",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Erfüllte Done-Kriterien belegen den Feature-Abschluss. Erkenntnisse werden während des gesamten Flows ausgewertet und in Verbesserungen umgesetzt; Lessons Learned sind keine einmalige Abschlussaufgabe.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-02",
+        "phase": "Übergreifend",
+        "name": "Strategische Einordnung und Priorisierung",
+        "service": "",
+        "type": "Governance",
+        "description": "Die Portfolio-Steuerung ordnet Vorhaben strategisch ein und setzt Prioritäten ausserhalb des Feature-Flows.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-32",
+        "phase": "Deploying & Releasing",
+        "name": "Rollback-Bereitschaft prüfen",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Vor der Freigabe wird nachgewiesen, dass die Rückkehr zu einem definierten Software- und Konfigurationsstand funktioniert.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-24",
+        "phase": "Übergreifend",
+        "name": "Wirkungskontrolle / Nutzungsanalyse",
+        "service": "",
+        "type": "Feedback",
+        "description": "Nutzungsdaten und Rückmeldungen zeigen nach dem Release, ob der erwartete Nutzen eintritt.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-26",
+        "phase": "Übergreifend",
+        "name": "Monitoring und Audit-Trails",
+        "service": "",
+        "type": "Lifecycle",
+        "description": "Monitoring überwacht den Servicebetrieb; Audit-Trails machen relevante Vorgänge nachvollziehbar.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-27",
+        "phase": "Übergreifend",
+        "name": "Operations / Incident Management",
+        "service": "",
+        "type": "Lifecycle",
+        "description": "Der Servicebetrieb hält Leistungen verfügbar und behebt Störungen; Verbesserungsbedarf fliesst ins ART-Backlog.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-28",
+        "phase": "Übergreifend",
+        "name": "Dependency Management",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Abhängigkeiten zwischen Teams und Leistungserbringern werden laufend abgestimmt; Blockaden werden geklärt oder eskaliert.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-29",
+        "phase": "Übergreifend",
+        "name": "Dokumentation und Qualitätsmanagement",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Dokumentation und Qualitätsnachweise werden während der Arbeit erstellt und aktuell gehalten.",
+        "additionalPhases": []
+      }
+    ],
+    "policies": [
+      {
+        "name": "Funnel",
+        "exit": "Bedarf, betroffene Nutzer und erwarteter Nutzen sind beschrieben. Für den Übergang nach Analyzing ist die Analyse ausgewählt und Kapazität verfügbar. Zurückgestellte oder abgelehnte Anliegen wechseln nicht nach Analyzing.",
+        "owner": "Product Management",
+        "contributors": "Bedarfsträger / Product Owner",
+        "evidence": "Analyseentscheid mit Priorität und bestätigter Analysekapazität",
+        "wip": "",
+        "scope": "ART",
+        "type": "Übergang",
+        "standardRevision": 3
+      },
+      {
+        "name": "Analyzing",
+        "exit": "Feature-Ziel, Umfang, überprüfbare Feature-AC und wesentliche Risiken sind geklärt. Blockierende Abhängigkeiten und benötigte LE-Beiträge sind beurteilt; Wirkungshypothese und Prüfansatz sind dokumentiert. Das Feature ist zur Priorisierung im Backlog bereit.",
+        "owner": "Product Owner",
+        "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+        "evidence": "Feature mit AC, Risikoeinschätzung, LE-Beiträgen und referenziertem Messplan",
+        "wip": "",
+        "scope": "ART",
+        "type": "Übergang",
+        "standardRevision": 3
+      },
+      {
+        "name": "Backlog",
+        "exit": "Das Feature ist aktuell priorisiert. Der nächste Umsetzungsschritt erfüllt die vereinbarte Bereitschaft; benötigte Fähigkeiten, Kapazität und verbindliche externe Beiträge sind verfügbar. Das Team zieht die Arbeit nach Implementing.",
+        "owner": "Product Owner",
+        "contributors": "Team / beteiligte LE",
+        "evidence": "Pull-Entscheid mit Kapazität, Bereitschaft und benötigten Zusagen",
+        "wip": "",
+        "scope": "ART",
+        "type": "Übergang",
+        "standardRevision": 3
+      },
+      {
+        "name": "Implementing",
+        "exit": "Der vereinbarte Umfang ist integriert und versioniert; Build, Reviews und relevante frühe Tests sind erfolgreich. Das Ergebnis ist in der vereinbarten Umgebung prüfbar; offene Punkte verhindern die integrierte Validierung nicht.",
+        "owner": "Umsetzungsverantwortliche Rolle im Team",
+        "contributors": "Team / beteiligte LE",
+        "evidence": "Versioniertes Artefakt, erfolgreicher Build, Reviews und frühe Tests",
+        "wip": "",
+        "scope": "ART",
+        "type": "Übergang",
+        "standardRevision": 3
+      },
+      {
+        "name": "Validating",
+        "exit": "Feature-AC und relevante Qualitätsanforderungen sind am integrierten Ergebnis nachgewiesen. Verbleibende Abweichungen sind durch die zuständige Entscheidrolle beurteilt; keine blockiert die Auslieferung. Erforderliche Freigabeunterlagen liegen vor.",
+        "owner": "Product Owner",
+        "contributors": "Team / Fachrollen",
+        "evidence": "Akzeptanz- und Qualitätsnachweise mit beurteilten Abweichungen",
+        "wip": "",
+        "scope": "ART",
+        "type": "Übergang",
+        "standardRevision": 3
+      },
+      {
+        "name": "Deploying & Releasing",
+        "exit": "Die vereinbarte Bereitstellung und Freigabe zur Nutzung sind erfolgt. Funktionsprüfung, Monitoring und Supportübernahme sind bestätigt; erforderliche Übergaben sind nachgewiesen und ein Rückfallweg ist verfügbar.",
+        "owner": "Releaseverantwortliche Rolle",
+        "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+        "evidence": "Deploymentprotokoll, Nutzungsfreigabe, Funktionsprüfung und bestätigte Betriebsübernahme",
+        "wip": "",
+        "scope": "ART",
+        "type": "Übergang",
+        "standardRevision": 3
+      },
+      {
+        "name": "Done",
+        "exit": "Feature-Abschluss, anwendbare DoD, erforderliche Abnahme und Auslieferungsnachweise sind dokumentiert. Der Messauftrag für die spätere Wirkungskontrolle ist mit Verantwortung, Termin und Datenquelle übergeben. Beobachtete Wirkung ist keine Voraussetzung für Done.",
+        "owner": "Product Owner",
+        "contributors": "Team / Product Management",
+        "evidence": "Feature-Abschluss mit DoD-Nachweisen und Referenz auf übergebenen Messauftrag",
+        "wip": "",
+        "scope": "ART",
+        "type": "Abschluss",
+        "standardRevision": 3
+      }
+    ],
+    "product": "",
+    "team": "",
+    "providers": [
+      "UTG-ART",
+      "ISCeco",
+      "BIT",
+      "Rubicon"
+    ],
+    "models": [
+      "Embedded",
+      "Kooperation",
+      "Shared Service",
+      "Service Interface"
+    ],
+    "updated": "2026-10-28T17:57:10.400Z",
+    "flowSchema": "seven-states-v1",
+    "methodVersion": "3.9.23",
+    "flowGovernance": {
+      "version": 1,
+      "status": "Vorschlag",
+      "workItem": "Feature im ART-Fluss. Story-Bereitschaft wird separat für die nächsten Umsetzungsschritte vereinbart.",
+      "pull": "Arbeit nur bei verfügbarer Kapazität der empfangenden Stufe ziehen. Backlog ist eine priorisierte Warteschlange; Verfeinerung erfolgt bedarfsgerecht.",
+      "wip": "",
+      "blocked": "Blockade am Arbeitselement mit verantwortlicher Person, nächstem Schritt und Eskalationszeitpunkt dokumentieren. Den konkreten Eskalationsweg gemeinsam vereinbaren.",
+      "aging": "Alternde Arbeit regelmässig im Flow-Review besprechen; Prüfrhythmus und Eingriffsgrenzen anhand tatsächlicher Durchlaufzeiten vereinbaren.",
+      "exceptions": "Arbeit darf mit begründetem Entscheid abgelehnt, geparkt oder in eine frühere Stufe zurückgegeben werden. Verantwortliche Rolle und Wiederaufnahmebedingung am Feature dokumentieren.",
+      "measurementStart": "Pull eines Features vom Backlog nach Implementing; Analysezeiten separat betrachten.",
+      "measurementEnd": "Eintritt in Done nach bestätigter Bereitstellung, Nutzungsfreigabe und Übergabe.",
+      "sle": "",
+      "qualityMinimum": "Am selben Produkt gemeinsam vereinbarte DoD einhalten: überprüfbare AC, Integration und Versionierung, relevante Tests, anwendbare Qualitätsanforderungen und aktuelle Dokumentation. Team-Vereinbarungen konkretisieren diese Mindestqualität. Formale Abnahmen nur bei fachlicher, vertraglicher oder regulatorischer Erforderlichkeit; zuständige Entscheidrolle benennen.",
+      "decisionRole": "",
+      "evidence": ""
+    },
+    "migrations": {
+      "policyCompletionType3140": true
+    },
+    "flowCriteria": {
+      "version": 1,
+      "commonDoD": [
+        {
+          "id": "dod-acceptance",
+          "type": "DoD",
+          "description": "Die vereinbarten Akzeptanzkriterien sind anhand nachvollziehbarer Nachweise erfüllt. Eine formale Abnahme erfolgt nur, soweit fachlich, vertraglich oder regulatorisch erforderlich; die zuständige Entscheidrolle ist benannt.",
+          "owner": "Product Owner / Team",
+          "evidence": "Akzeptanznachweis und, soweit erforderlich, referenzierter Abnahmeentscheid"
+        },
+        {
+          "id": "dod-integration",
+          "type": "DoD",
+          "description": "Änderungen sind geprüft, versioniert und in den gemeinsamen Stand integriert; ein reproduzierbares, auslieferbares Ergebnis liegt vor.",
+          "owner": "Team",
+          "evidence": "Review, erfolgreicher Build und versioniertes Artefakt"
+        },
+        {
+          "id": "dod-tests",
+          "type": "DoD",
+          "description": "Relevante automatisierte Tests und erforderliche ergänzende Prüfungen sind erfolgreich; es bestehen keine Fehler, die der vereinbarten DoD entgegenstehen.",
+          "owner": "Team",
+          "evidence": "Test- und Regressionsnachweise einschliesslich betroffener Schnittstellen"
+        },
+        {
+          "id": "dod-quality",
+          "type": "DoD",
+          "description": "Anwendbare Anforderungen an Security, Datenschutz, Barrierefreiheit, Performance und Resilienz sind nachgewiesen.",
+          "owner": "Team / zuständige Fachrollen",
+          "evidence": "Prüfresultate gemäss vereinbartem Schutz- und Qualitätsbedarf"
+        },
+        {
+          "id": "dod-docs",
+          "type": "DoD",
+          "description": "Betroffene Dokumentation und Änderungsinformationen sind aktuell; bei Daten- oder Schnittstellenänderungen sind Kompatibilität und Datenerhalt geprüft.",
+          "owner": "Team",
+          "evidence": "Aktuelle Dokumentation sowie erforderliche Migrations- und Kompatibilitätstests"
+        }
+      ],
+      "rules": {
+        "Funnel": {
+          "useDoD": false,
+          "criteria": []
+        },
+        "Analyzing": {
+          "useDoD": false,
+          "criteria": [
+            {
+              "id": "ac-behavior",
+              "type": "AC",
+              "description": "Das erwartete Verhalten und Ergebnis aus Nutzersicht sind je Feature konkret beschrieben.",
+              "owner": "Product Owner",
+              "evidence": "Konkrete Beispiele; bei Bedarf Gegeben–Wenn–Dann",
+              "contributors": "Team / Fachrollen"
+            },
+            {
+              "id": "ac-boundaries",
+              "type": "AC",
+              "description": "Relevante Fehlerfälle, Grenzwerte und Berechtigungen sind mit eindeutig erwartetem Verhalten beschrieben.",
+              "owner": "Product Owner",
+              "evidence": "Positive, negative und Grenzfall-Szenarien",
+              "contributors": "Team / Fachrollen"
+            },
+            {
+              "id": "ac-quality",
+              "type": "AC",
+              "description": "Spezifische Qualitätsanforderungen sind mit messbaren Zielwerten und Prüfbedingungen festgelegt.",
+              "owner": "Product Owner",
+              "evidence": "Anwendbare Messwerte, etwa Antwortzeit oder Wiederanlaufziel",
+              "contributors": "Team / Fachrollen"
+            },
+            {
+              "id": "ac-proof",
+              "type": "AC",
+              "description": "Für jedes Akzeptanzkriterium ist festgelegt, wie und mit welchen Daten das Ergebnis überprüft oder demonstriert wird.",
+              "owner": "Product Owner",
+              "evidence": "Zugeordnete Akzeptanztests und Demo-Szenarien",
+              "contributors": "Team / Fachrollen"
+            },
+            {
+              "id": "impact",
+              "type": "Wirkung",
+              "description": "Ausgangslage, erwartete Veränderung, Messgrösse, Datenquelle, Messverantwortung und Messzeitpunkt sind im Messauftrag festgelegt.",
+              "owner": "Product Management",
+              "evidence": "Referenz auf Wirkungshypothese und Messauftrag mit Ausgangswert und Datenquelle",
+              "contributors": "Product Owner / Team"
+            }
+          ]
+        },
+        "Backlog": {
+          "useDoD": false,
+          "criteria": []
+        },
+        "Implementing": {
+          "useDoD": true,
+          "criteria": [
+            {
+              "id": "flow",
+              "type": "Flow-Steuerung",
+              "description": "Nach der übergreifenden Flow-Vereinbarung arbeiten: WIP begrenzen, Blockaden und alternde Arbeit sichtbar bearbeiten. Fehlende konkrete Limits und Eskalationswege gemeinsam vereinbaren.",
+              "owner": "Umsetzungsverantwortliche Rolle im Team",
+              "contributors": "Team / beteiligte LE",
+              "evidence": "Referenz auf vereinbarte WIP-, Blockade- und Eskalationsregeln"
+            }
+          ]
+        },
+        "Validating": {
+          "useDoD": true,
+          "criteria": []
+        },
+        "Deploying & Releasing": {
+          "useDoD": false,
+          "criteria": [
+            {
+              "id": "release",
+              "type": "Release / Betrieb",
+              "description": "Vor der Auslieferung Deployment, Funktionsprüfung, Rollback, Monitoring und Support vorbereiten. Deployment und Freigabe zur Nutzung getrennt nachweisen; bei entkoppeltem Release bleibt das Feature bis zur vereinbarten Nutzungsfreigabe hier.",
+              "owner": "Releaseverantwortliche Rolle",
+              "contributors": "Team / Betriebsverantwortliche",
+              "evidence": "Releaseplan und Rückfallverfahren; getrennte Deployment- und Freigabenachweise"
+            },
+            {
+              "id": "handover",
+              "type": "Schnittstelle",
+              "description": "Lieferobjekt, empfangende Rolle, Übergabekriterien und Reaktionszeit vereinbaren; die erfolgte Übernahme bestätigen lassen.",
+              "owner": "Betriebsverantwortliche Rolle",
+              "contributors": "Team / beteiligte LE",
+              "evidence": "Schnittstellenvereinbarung und bestätigter Übergabenachweis"
+            }
+          ]
+        },
+        "Done": {
+          "useDoD": true,
+          "criteria": []
+        }
+      },
+      "teams": {},
+      "standardRevision": 3,
+      "profiles": {},
+      "phaseGates": {
+        "Funnel": [
+          {
+            "id": "entry-0",
+            "type": "Eintritt",
+            "description": "Ein Feature-Anliegen mit betroffenen Nutzern und einer zuständigen Person ist erfasst.",
+            "owner": "Product Management",
+            "contributors": "Bedarfsträger / Product Owner",
+            "evidence": "Bedarfseintrag mit Nutzern und zuständiger Person"
+          },
+          {
+            "id": "exit-0",
+            "type": "Übergang",
+            "description": "Bedarf, betroffene Nutzer und erwarteter Nutzen sind beschrieben. Für den Übergang nach Analyzing ist die Analyse ausgewählt und Kapazität verfügbar. Zurückgestellte oder abgelehnte Anliegen wechseln nicht nach Analyzing.",
+            "owner": "Product Management",
+            "contributors": "Bedarfsträger / Product Owner",
+            "evidence": "Analyseentscheid mit Priorität und bestätigter Analysekapazität"
+          }
+        ],
+        "Analyzing": [
+          {
+            "id": "entry-1",
+            "type": "Eintritt",
+            "description": "Der Bedarf ist zur Analyse ausgewählt; Analysekapazität und benötigte Fach- und Technikrollen sind verfügbar.",
+            "owner": "Product Owner",
+            "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+            "evidence": "Priorisierter Analyseauftrag und verfügbare Fach- und Technikrollen"
+          },
+          {
+            "id": "exit-1",
+            "type": "Übergang",
+            "description": "Feature-Ziel, Umfang, überprüfbare Feature-AC und wesentliche Risiken sind geklärt. Blockierende Abhängigkeiten und benötigte LE-Beiträge sind beurteilt; Wirkungshypothese und Prüfansatz sind dokumentiert. Das Feature ist zur Priorisierung im Backlog bereit.",
+            "owner": "Product Owner",
+            "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+            "evidence": "Feature mit AC, Risikoeinschätzung, LE-Beiträgen und referenziertem Messplan"
+          }
+        ],
+        "Backlog": [
+          {
+            "id": "entry-2",
+            "type": "Eintritt",
+            "description": "Feature-Ziel, Umfang, Feature-AC, wesentliche Risiken und Abhängigkeiten sind analysiert; das Feature ist zur Priorisierung bereit.",
+            "owner": "Product Owner",
+            "contributors": "Team / beteiligte LE",
+            "evidence": "Analysiertes Feature mit AC und Abhängigkeiten"
+          },
+          {
+            "id": "exit-2",
+            "type": "Übergang",
+            "description": "Das Feature ist aktuell priorisiert. Der nächste Umsetzungsschritt erfüllt die vereinbarte Bereitschaft; benötigte Fähigkeiten, Kapazität und verbindliche externe Beiträge sind verfügbar. Das Team zieht die Arbeit nach Implementing.",
+            "owner": "Product Owner",
+            "contributors": "Team / beteiligte LE",
+            "evidence": "Pull-Entscheid mit Kapazität, Bereitschaft und benötigten Zusagen"
+          }
+        ],
+        "Implementing": [
+          {
+            "id": "entry-3",
+            "type": "Eintritt",
+            "description": "Das Team hat das priorisierte Feature nach vereinbarter Bereitschaft und verfügbarer Kapazität gezogen; benötigte externe Lieferbeiträge sind zugesagt.",
+            "owner": "Umsetzungsverantwortliche Rolle im Team",
+            "contributors": "Team / beteiligte LE",
+            "evidence": "Pull-Entscheid gemäss Bereitschaft und Kapazität"
+          },
+          {
+            "id": "exit-3",
+            "type": "Übergang",
+            "description": "Der vereinbarte Umfang ist integriert und versioniert; Build, Reviews und relevante frühe Tests sind erfolgreich. Das Ergebnis ist in der vereinbarten Umgebung prüfbar; offene Punkte verhindern die integrierte Validierung nicht.",
+            "owner": "Umsetzungsverantwortliche Rolle im Team",
+            "contributors": "Team / beteiligte LE",
+            "evidence": "Versioniertes Artefakt, erfolgreicher Build, Reviews und frühe Tests"
+          }
+        ],
+        "Validating": [
+          {
+            "id": "entry-4",
+            "type": "Eintritt",
+            "description": "Das integrierte, versionierte Ergebnis ist nach erfolgreichen frühen Prüfungen in der vereinbarten Umgebung mit Testdaten prüfbar.",
+            "owner": "Product Owner",
+            "contributors": "Team / Fachrollen",
+            "evidence": "Prüfbares integriertes Artefakt, Testdaten und Prüfumgebung"
+          },
+          {
+            "id": "exit-4",
+            "type": "Übergang",
+            "description": "Feature-AC und relevante Qualitätsanforderungen sind am integrierten Ergebnis nachgewiesen. Verbleibende Abweichungen sind durch die zuständige Entscheidrolle beurteilt; keine blockiert die Auslieferung. Erforderliche Freigabeunterlagen liegen vor.",
+            "owner": "Product Owner",
+            "contributors": "Team / Fachrollen",
+            "evidence": "Akzeptanz- und Qualitätsnachweise mit beurteilten Abweichungen"
+          }
+        ],
+        "Deploying & Releasing": [
+          {
+            "id": "entry-5",
+            "type": "Eintritt",
+            "description": "Feature-AC und relevante Qualitätsanforderungen sind nachgewiesen; blockierende Abweichungen bestehen nicht. Die erforderlichen Release- und Betriebsinformationen liegen vor.",
+            "owner": "Releaseverantwortliche Rolle",
+            "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+            "evidence": "Validierungsnachweise und vorbereitete Release-/Betriebsinformationen"
+          },
+          {
+            "id": "exit-5",
+            "type": "Übergang",
+            "description": "Die vereinbarte Bereitstellung und Freigabe zur Nutzung sind erfolgt. Funktionsprüfung, Monitoring und Supportübernahme sind bestätigt; erforderliche Übergaben sind nachgewiesen und ein Rückfallweg ist verfügbar.",
+            "owner": "Releaseverantwortliche Rolle",
+            "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+            "evidence": "Deploymentprotokoll, Nutzungsfreigabe, Funktionsprüfung und bestätigte Betriebsübernahme"
+          }
+        ],
+        "Done": [
+          {
+            "id": "entry-6",
+            "type": "Eintritt",
+            "description": "Die vereinbarte Bereitstellung und Freigabe zur Nutzung sind erfolgt; Funktionsprüfung, Betriebsübernahme und erforderliche Übergaben sind nachgewiesen.",
+            "owner": "Product Owner",
+            "contributors": "Team / Product Management",
+            "evidence": "Nachgewiesene Bereitstellung, Nutzungsfreigabe und Übergaben"
+          },
+          {
+            "id": "exit-6",
+            "type": "Abschluss",
+            "description": "Feature-Abschluss, anwendbare DoD, erforderliche Abnahme und Auslieferungsnachweise sind dokumentiert. Der Messauftrag für die spätere Wirkungskontrolle ist mit Verantwortung, Termin und Datenquelle übergeben. Beobachtete Wirkung ist keine Voraussetzung für Done.",
+            "owner": "Product Owner",
+            "contributors": "Team / Product Management",
+            "evidence": "Feature-Abschluss mit DoD-Nachweisen und Referenz auf übergebenen Messauftrag"
+          }
+        ]
+      },
+      "commonDoR": [
+        {
+          "id": "dor-value",
+          "type": "DoR",
+          "description": "Nutzen, Zielgruppe und Umfang sind verstanden; der Bezug zum Produkt- oder Feature-Ziel ist geklärt.",
+          "owner": "Product Owner / Team",
+          "evidence": "Backlog-Eintrag mit Ziel, Nutzen und Abgrenzung"
+        },
+        {
+          "id": "dor-ac",
+          "type": "DoR",
+          "description": "Akzeptanzkriterien sind verständlich, überprüfbar und mit Product Owner und Team abgestimmt.",
+          "owner": "Product Owner / Team",
+          "evidence": "Vereinbarte AC mit Beispielen und Prüfansatz"
+        },
+        {
+          "id": "dor-small",
+          "type": "DoR",
+          "description": "Die nächsten Umsetzungsschritte sind klein genug für den vereinbarten Arbeitsrhythmus; weitere Verfeinerung erfolgt bedarfsgerecht. Story-Bereitschaft wird separat für den nächsten Schritt geklärt.",
+          "owner": "Team",
+          "evidence": "Zuschnitt des Features und Bereitschaft der nächsten Umsetzungsschritte"
+        },
+        {
+          "id": "dor-dependencies",
+          "type": "DoR",
+          "description": "Abhängigkeiten, Architektur- und Qualitätsrisiken sind beurteilt; blockierende Fragen sind geklärt oder mit tragfähigem Vorgehen adressiert.",
+          "owner": "Team / Architektur / beteiligte LE",
+          "evidence": "Abhängigkeiten, Risikoeinschätzung und erforderliche Zusagen"
+        },
+        {
+          "id": "dor-capacity",
+          "type": "DoR",
+          "description": "Priorität, verantwortliche Rollen, benötigte Fähigkeiten und verfügbare Testmittel sind geklärt; das Team kann die Umsetzung beginnen.",
+          "owner": "Product Owner / Team",
+          "evidence": "Priorisiertes Backlog und abgestimmte Lieferbeiträge"
+        }
+      ]
+    }
+  },
+  "teamProfile": {
+    "phaseGates": {
+      "Funnel": [
+        {
+          "id": "entry-0",
+          "type": "Eintritt",
+          "description": "Ein Feature-Anliegen mit betroffenen Nutzern und einer zuständigen Person ist erfasst.",
+          "owner": "Product Management",
+          "contributors": "Bedarfsträger / Product Owner",
+          "evidence": "Bedarfseintrag mit Nutzern und zuständiger Person"
+        },
+        {
+          "id": "exit-0",
+          "type": "Übergang",
+          "description": "Bedarf, betroffene Nutzer und erwarteter Nutzen sind beschrieben. Für den Übergang nach Analyzing ist die Analyse ausgewählt und Kapazität verfügbar. Zurückgestellte oder abgelehnte Anliegen wechseln nicht nach Analyzing.",
+          "owner": "Product Management",
+          "contributors": "Bedarfsträger / Product Owner",
+          "evidence": "Analyseentscheid mit Priorität und bestätigter Analysekapazität"
+        }
+      ],
+      "Analyzing": [
+        {
+          "id": "entry-1",
+          "type": "Eintritt",
+          "description": "Der Bedarf ist zur Analyse ausgewählt; Analysekapazität und benötigte Fach- und Technikrollen sind verfügbar.",
+          "owner": "Product Owner",
+          "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+          "evidence": "Priorisierter Analyseauftrag und verfügbare Fach- und Technikrollen"
+        },
+        {
+          "id": "exit-1",
+          "type": "Übergang",
+          "description": "Feature-Ziel, Umfang, überprüfbare Feature-AC und wesentliche Risiken sind geklärt. Blockierende Abhängigkeiten und benötigte LE-Beiträge sind beurteilt; Wirkungshypothese und Prüfansatz sind dokumentiert. Das Feature ist zur Priorisierung im Backlog bereit.",
+          "owner": "Product Owner",
+          "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+          "evidence": "Feature mit AC, Risikoeinschätzung, LE-Beiträgen und referenziertem Messplan"
+        }
+      ],
+      "Backlog": [
+        {
+          "id": "entry-2",
+          "type": "Eintritt",
+          "description": "Feature-Ziel, Umfang, Feature-AC, wesentliche Risiken und Abhängigkeiten sind analysiert; das Feature ist zur Priorisierung bereit.",
+          "owner": "Product Owner",
+          "contributors": "Team / beteiligte LE",
+          "evidence": "Analysiertes Feature mit AC und Abhängigkeiten"
+        },
+        {
+          "id": "exit-2",
+          "type": "Übergang",
+          "description": "Das Feature ist aktuell priorisiert. Der nächste Umsetzungsschritt erfüllt die vereinbarte Bereitschaft; benötigte Fähigkeiten, Kapazität und verbindliche externe Beiträge sind verfügbar. Das Team zieht die Arbeit nach Implementing.",
+          "owner": "Product Owner",
+          "contributors": "Team / beteiligte LE",
+          "evidence": "Pull-Entscheid mit Kapazität, Bereitschaft und benötigten Zusagen"
+        }
+      ],
+      "Implementing": [
+        {
+          "id": "entry-3",
+          "type": "Eintritt",
+          "description": "Das Team hat das priorisierte Feature nach vereinbarter Bereitschaft und verfügbarer Kapazität gezogen; benötigte externe Lieferbeiträge sind zugesagt.",
+          "owner": "Umsetzungsverantwortliche Rolle im Team",
+          "contributors": "Team / beteiligte LE",
+          "evidence": "Pull-Entscheid gemäss Bereitschaft und Kapazität"
+        },
+        {
+          "id": "exit-3",
+          "type": "Übergang",
+          "description": "Der vereinbarte Umfang ist integriert und versioniert; Build, Reviews und relevante frühe Tests sind erfolgreich. Das Ergebnis ist in der vereinbarten Umgebung prüfbar; offene Punkte verhindern die integrierte Validierung nicht.",
+          "owner": "Umsetzungsverantwortliche Rolle im Team",
+          "contributors": "Team / beteiligte LE",
+          "evidence": "Versioniertes Artefakt, erfolgreicher Build, Reviews und frühe Tests"
+        }
+      ],
+      "Validating": [
+        {
+          "id": "entry-4",
+          "type": "Eintritt",
+          "description": "Das integrierte, versionierte Ergebnis ist nach erfolgreichen frühen Prüfungen in der vereinbarten Umgebung mit Testdaten prüfbar.",
+          "owner": "Product Owner",
+          "contributors": "Team / Fachrollen",
+          "evidence": "Prüfbares integriertes Artefakt, Testdaten und Prüfumgebung"
+        },
+        {
+          "id": "exit-4",
+          "type": "Übergang",
+          "description": "Feature-AC und relevante Qualitätsanforderungen sind am integrierten Ergebnis nachgewiesen. Verbleibende Abweichungen sind durch die zuständige Entscheidrolle beurteilt; keine blockiert die Auslieferung. Erforderliche Freigabeunterlagen liegen vor.",
+          "owner": "Product Owner",
+          "contributors": "Team / Fachrollen",
+          "evidence": "Akzeptanz- und Qualitätsnachweise mit beurteilten Abweichungen"
+        }
+      ],
+      "Deploying & Releasing": [
+        {
+          "id": "entry-5",
+          "type": "Eintritt",
+          "description": "Feature-AC und relevante Qualitätsanforderungen sind nachgewiesen; blockierende Abweichungen bestehen nicht. Die erforderlichen Release- und Betriebsinformationen liegen vor.",
+          "owner": "Releaseverantwortliche Rolle",
+          "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+          "evidence": "Validierungsnachweise und vorbereitete Release-/Betriebsinformationen"
+        },
+        {
+          "id": "exit-5",
+          "type": "Übergang",
+          "description": "Die vereinbarte Bereitstellung und Freigabe zur Nutzung sind erfolgt. Funktionsprüfung, Monitoring und Supportübernahme sind bestätigt; erforderliche Übergaben sind nachgewiesen und ein Rückfallweg ist verfügbar.",
+          "owner": "Releaseverantwortliche Rolle",
+          "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+          "evidence": "Deploymentprotokoll, Nutzungsfreigabe, Funktionsprüfung und bestätigte Betriebsübernahme"
+        }
+      ],
+      "Done": [
+        {
+          "id": "entry-6",
+          "type": "Eintritt",
+          "description": "Die vereinbarte Bereitstellung und Freigabe zur Nutzung sind erfolgt; Funktionsprüfung, Betriebsübernahme und erforderliche Übergaben sind nachgewiesen.",
+          "owner": "Product Owner",
+          "contributors": "Team / Product Management",
+          "evidence": "Nachgewiesene Bereitstellung, Nutzungsfreigabe und Übergaben"
+        },
+        {
+          "id": "exit-6",
+          "type": "Abschluss",
+          "description": "Feature-Abschluss, anwendbare DoD, erforderliche Abnahme und Auslieferungsnachweise sind dokumentiert. Der Messauftrag für die spätere Wirkungskontrolle ist mit Verantwortung, Termin und Datenquelle übergeben. Beobachtete Wirkung ist keine Voraussetzung für Done.",
+          "owner": "Product Owner",
+          "contributors": "Team / Product Management",
+          "evidence": "Feature-Abschluss mit DoD-Nachweisen und Referenz auf übergebenen Messauftrag"
+        }
+      ]
+    },
+    "commonDoR": [
+      {
+        "id": "dor-value",
+        "type": "DoR",
+        "description": "Nutzen, Zielgruppe und Umfang sind verstanden; der Bezug zum Produkt- oder Feature-Ziel ist geklärt.",
+        "owner": "Product Owner / Team",
+        "evidence": "Backlog-Eintrag mit Ziel, Nutzen und Abgrenzung"
+      },
+      {
+        "id": "dor-ac",
+        "type": "DoR",
+        "description": "Akzeptanzkriterien sind verständlich, überprüfbar und mit Product Owner und Team abgestimmt.",
+        "owner": "Product Owner / Team",
+        "evidence": "Vereinbarte AC mit Beispielen und Prüfansatz"
+      },
+      {
+        "id": "dor-small",
+        "type": "DoR",
+        "description": "Die nächsten Umsetzungsschritte sind klein genug für den vereinbarten Arbeitsrhythmus; weitere Verfeinerung erfolgt bedarfsgerecht. Story-Bereitschaft wird separat für den nächsten Schritt geklärt.",
+        "owner": "Team",
+        "evidence": "Zuschnitt des Features und Bereitschaft der nächsten Umsetzungsschritte"
+      },
+      {
+        "id": "dor-dependencies",
+        "type": "DoR",
+        "description": "Abhängigkeiten, Architektur- und Qualitätsrisiken sind beurteilt; blockierende Fragen sind geklärt oder mit tragfähigem Vorgehen adressiert.",
+        "owner": "Team / Architektur / beteiligte LE",
+        "evidence": "Abhängigkeiten, Risikoeinschätzung und erforderliche Zusagen"
+      },
+      {
+        "id": "dor-capacity",
+        "type": "DoR",
+        "description": "Priorität, verantwortliche Rollen, benötigte Fähigkeiten und verfügbare Testmittel sind geklärt; das Team kann die Umsetzung beginnen.",
+        "owner": "Product Owner / Team",
+        "evidence": "Priorisiertes Backlog und abgestimmte Lieferbeiträge"
+      }
+    ],
+    "commonDoD": [
+      {
+        "id": "dod-acceptance",
+        "type": "DoD",
+        "description": "Die vereinbarten Akzeptanzkriterien sind anhand nachvollziehbarer Nachweise erfüllt. Eine formale Abnahme erfolgt nur, soweit fachlich, vertraglich oder regulatorisch erforderlich; die zuständige Entscheidrolle ist benannt.",
+        "owner": "Product Owner / Team",
+        "evidence": "Akzeptanznachweis und, soweit erforderlich, referenzierter Abnahmeentscheid"
+      },
+      {
+        "id": "dod-integration",
+        "type": "DoD",
+        "description": "Änderungen sind geprüft, versioniert und in den gemeinsamen Stand integriert; ein reproduzierbares, auslieferbares Ergebnis liegt vor.",
+        "owner": "Team",
+        "evidence": "Review, erfolgreicher Build und versioniertes Artefakt"
+      },
+      {
+        "id": "dod-tests",
+        "type": "DoD",
+        "description": "Relevante automatisierte Tests und erforderliche ergänzende Prüfungen sind erfolgreich; es bestehen keine Fehler, die der vereinbarten DoD entgegenstehen.",
+        "owner": "Team",
+        "evidence": "Test- und Regressionsnachweise einschliesslich betroffener Schnittstellen"
+      },
+      {
+        "id": "dod-quality",
+        "type": "DoD",
+        "description": "Anwendbare Anforderungen an Security, Datenschutz, Barrierefreiheit, Performance und Resilienz sind nachgewiesen.",
+        "owner": "Team / zuständige Fachrollen",
+        "evidence": "Prüfresultate gemäss vereinbartem Schutz- und Qualitätsbedarf"
+      },
+      {
+        "id": "dod-docs",
+        "type": "DoD",
+        "description": "Betroffene Dokumentation und Änderungsinformationen sind aktuell; bei Daten- oder Schnittstellenänderungen sind Kompatibilität und Datenerhalt geprüft.",
+        "owner": "Team",
+        "evidence": "Aktuelle Dokumentation sowie erforderliche Migrations- und Kompatibilitätstests"
+      }
+    ],
+    "rules": {
+      "Funnel": {
+        "useDoD": false,
+        "criteria": []
+      },
+      "Analyzing": {
+        "useDoD": false,
+        "criteria": [
+          {
+            "id": "ac-behavior",
+            "type": "AC",
+            "description": "Das erwartete Verhalten und Ergebnis aus Nutzersicht sind je Feature konkret beschrieben.",
+            "owner": "Product Owner",
+            "evidence": "Konkrete Beispiele; bei Bedarf Gegeben–Wenn–Dann",
+            "contributors": "Team / Fachrollen"
+          },
+          {
+            "id": "ac-boundaries",
+            "type": "AC",
+            "description": "Relevante Fehlerfälle, Grenzwerte und Berechtigungen sind mit eindeutig erwartetem Verhalten beschrieben.",
+            "owner": "Product Owner",
+            "evidence": "Positive, negative und Grenzfall-Szenarien",
+            "contributors": "Team / Fachrollen"
+          },
+          {
+            "id": "ac-quality",
+            "type": "AC",
+            "description": "Spezifische Qualitätsanforderungen sind mit messbaren Zielwerten und Prüfbedingungen festgelegt.",
+            "owner": "Product Owner",
+            "evidence": "Anwendbare Messwerte, etwa Antwortzeit oder Wiederanlaufziel",
+            "contributors": "Team / Fachrollen"
+          },
+          {
+            "id": "ac-proof",
+            "type": "AC",
+            "description": "Für jedes Akzeptanzkriterium ist festgelegt, wie und mit welchen Daten das Ergebnis überprüft oder demonstriert wird.",
+            "owner": "Product Owner",
+            "evidence": "Zugeordnete Akzeptanztests und Demo-Szenarien",
+            "contributors": "Team / Fachrollen"
+          },
+          {
+            "id": "impact",
+            "type": "Wirkung",
+            "description": "Ausgangslage, erwartete Veränderung, Messgrösse, Datenquelle, Messverantwortung und Messzeitpunkt sind im Messauftrag festgelegt.",
+            "owner": "Product Management",
+            "evidence": "Referenz auf Wirkungshypothese und Messauftrag mit Ausgangswert und Datenquelle",
+            "contributors": "Product Owner / Team"
+          }
+        ]
+      },
+      "Backlog": {
+        "useDoD": false,
+        "criteria": []
+      },
+      "Implementing": {
+        "useDoD": true,
+        "criteria": [
+          {
+            "id": "flow",
+            "type": "Flow-Steuerung",
+            "description": "Nach der übergreifenden Flow-Vereinbarung arbeiten: WIP begrenzen, Blockaden und alternde Arbeit sichtbar bearbeiten. Fehlende konkrete Limits und Eskalationswege gemeinsam vereinbaren.",
+            "owner": "Umsetzungsverantwortliche Rolle im Team",
+            "contributors": "Team / beteiligte LE",
+            "evidence": "Referenz auf vereinbarte WIP-, Blockade- und Eskalationsregeln"
+          }
+        ]
+      },
+      "Validating": {
+        "useDoD": true,
+        "criteria": []
+      },
+      "Deploying & Releasing": {
+        "useDoD": false,
+        "criteria": [
+          {
+            "id": "release",
+            "type": "Release / Betrieb",
+            "description": "Vor der Auslieferung Deployment, Funktionsprüfung, Rollback, Monitoring und Support vorbereiten. Deployment und Freigabe zur Nutzung getrennt nachweisen; bei entkoppeltem Release bleibt das Feature bis zur vereinbarten Nutzungsfreigabe hier.",
+            "owner": "Releaseverantwortliche Rolle",
+            "contributors": "Team / Betriebsverantwortliche",
+            "evidence": "Releaseplan und Rückfallverfahren; getrennte Deployment- und Freigabenachweise"
+          },
+          {
+            "id": "handover",
+            "type": "Schnittstelle",
+            "description": "Lieferobjekt, empfangende Rolle, Übergabekriterien und Reaktionszeit vereinbaren; die erfolgte Übernahme bestätigen lassen.",
+            "owner": "Betriebsverantwortliche Rolle",
+            "contributors": "Team / beteiligte LE",
+            "evidence": "Schnittstellenvereinbarung und bestätigter Übergabenachweis"
+          }
+        ]
+      },
+      "Done": {
+        "useDoD": true,
+        "criteria": []
+      }
+    }
+  },
+  "signatureWithoutGovernance": "{\"activities\":[{\"additionalPhases\":[],\"description\":\"Die Bedarfserfassung klärt das Anliegen, den erwarteten Nutzen und die Zuständigkeit.\",\"id\":\"activity-01\",\"name\":\"Bedarfserfassung\",\"phase\":\"Funnel\",\"service\":\"\",\"type\":\"Zustandsbezogen\"},{\"additionalPhases\":[\"Implementing\"],\"description\":\"Anforderungen und Akzeptanzkriterien beschreiben, was das Produkt leisten soll.\",\"id\":\"activity-03\",\"name\":\"Requirements Engineering\",\"phase\":\"Analyzing\",\"service\":\"\",\"type\":\"Zustandsbezogen\"},{\"additionalPhases\":[\"Implementing\"],\"description\":\"Features werden präzisiert, sinnvoll geschnitten und für die Umsetzung vorbereitet.\",\"id\":\"activity-04\",\"name\":\"Feature-Planung und -Refinement\",\"phase\":\"Analyzing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[\"Implementing\"],\"description\":\"Das Lösungsdesign zeigt, wie Anforderungen technisch und fachlich umgesetzt werden können.\",\"id\":\"activity-05\",\"name\":\"Solution Design\",\"phase\":\"Analyzing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[\"Implementing\"],\"description\":\"Die Lösung wird mit der Zielarchitektur und den betroffenen Systemen abgestimmt.\",\"id\":\"activity-06\",\"name\":\"Architektur-Alignment\",\"phase\":\"Analyzing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[\"Implementing\"],\"description\":\"Sicherheits- und Compliance-Vorgaben werden früh geklärt und für die Umsetzung konkretisiert.\",\"id\":\"activity-07\",\"name\":\"Security- und Compliance-Anforderungen\",\"phase\":\"Analyzing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[],\"description\":\"Erforderliche Architekturentscheide werden begründet und dokumentiert; eine Freigabe erfolgt nur bei Bedarf.\",\"id\":\"activity-08\",\"name\":\"Architekturentscheid / Freigabe\",\"phase\":\"Analyzing\",\"service\":\"\",\"type\":\"Entscheidung\"},{\"additionalPhases\":[\"Implementing\"],\"description\":\"Vor der Einplanung werden Kapazitätsbedarf, Abhängigkeiten und erforderliche Lieferzusagen geklärt; bei Änderungen wird die Planung angepasst.\",\"id\":\"activity-09\",\"name\":\"Kapazitäts- und Abhängigkeitsplanung\",\"phase\":\"Analyzing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[\"Implementing\"],\"description\":\"Die Planung legt Testumfang, Nachweise und Voraussetzungen für das Release fest.\",\"id\":\"activity-10\",\"name\":\"Test- und Releaseplanung\",\"phase\":\"Analyzing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[],\"description\":\"Die Entwicklung setzt die vereinbarten Anforderungen in funktionsfähige Software um.\",\"id\":\"activity-11\",\"name\":\"Entwicklung\",\"phase\":\"Implementing\",\"service\":\"\",\"type\":\"Zustandsbezogen\"},{\"additionalPhases\":[\"Validating\",\"Deploying & Releasing\"],\"description\":\"Softwarestände und Konfigurationen werden versioniert und nachvollziehbar bereitgestellt.\",\"id\":\"activity-12\",\"name\":\"Konfigurationsmanagement\",\"phase\":\"Implementing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[],\"description\":\"Automatisierte Tests prüfen die korrekte Funktion einzelner Softwarebausteine.\",\"id\":\"activity-13\",\"name\":\"Unit-Tests\",\"phase\":\"Implementing\",\"service\":\"\",\"type\":\"Zustandsbezogen\"},{\"additionalPhases\":[\"Validating\"],\"description\":\"Funktionale Tests prüfen früh und fortlaufend, ob die vereinbarten Anforderungen erfüllt sind.\",\"id\":\"activity-14\",\"name\":\"Funktionale Tests\",\"phase\":\"Implementing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[],\"description\":\"Code-Reviews prüfen Änderungen auf Verständlichkeit, Wartbarkeit und technische Fehler.\",\"id\":\"activity-15\",\"name\":\"Code-Review\",\"phase\":\"Implementing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[],\"description\":\"Softwareänderungen werden laufend zusammengeführt und automatisiert auf Fehler geprüft.\",\"id\":\"activity-30\",\"name\":\"Continuous Integration\",\"phase\":\"Implementing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[\"Validating\"],\"description\":\"Integrationstests prüfen früh das Zusammenspiel von Komponenten und Schnittstellen.\",\"id\":\"activity-16\",\"name\":\"Integrationstests\",\"phase\":\"Implementing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[\"Validating\"],\"description\":\"Sicherheitstests decken Schwachstellen auf und prüfen die Einhaltung der Sicherheitsanforderungen.\",\"id\":\"activity-18\",\"name\":\"Sicherheitstests\",\"phase\":\"Implementing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[\"Validating\"],\"description\":\"Performance-Tests prüfen Antwortzeiten, Durchsatz und Stabilität unter erwarteter Last.\",\"id\":\"activity-19\",\"name\":\"Performance-Tests\",\"phase\":\"Implementing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[],\"description\":\"End-to-End-Tests weisen nach, dass vollständige Geschäftsabläufe über Systemgrenzen hinweg funktionieren.\",\"id\":\"activity-17\",\"name\":\"End-to-End-Tests\",\"phase\":\"Validating\",\"service\":\"\",\"type\":\"Zustandsbezogen\"},{\"additionalPhases\":[],\"description\":\"Die fachliche Abnahme bewertet die Erfüllung der Akzeptanzkriterien; ein formaler Entscheid erfolgt bei Bedarf. Fachliches Feedback wird bereits während der Umsetzung eingeholt und ist von dieser Abnahme zu unterscheiden.\",\"id\":\"activity-20\",\"name\":\"Fachliche Abnahme\",\"phase\":\"Validating\",\"service\":\"\",\"type\":\"Entscheidung\"},{\"additionalPhases\":[\"Implementing\",\"Validating\"],\"description\":\"Software wird kontrolliert in Entwicklungs-, Test- und Produktionsumgebungen bereitgestellt.\",\"id\":\"activity-21\",\"name\":\"Deployment\",\"phase\":\"Deploying & Releasing\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[],\"description\":\"Komponenten werden technisch verbunden und in Entwicklungs- und Testumgebungen lauffähig gemacht.\",\"id\":\"activity-31\",\"name\":\"Technische Integration\",\"phase\":\"Implementing\",\"service\":\"\",\"type\":\"Zustandsbezogen\"},{\"additionalPhases\":[],\"description\":\"Die zuständige Rolle entscheidet gemäss Release-Regeln über die Freigabe zur Nutzung.\",\"id\":\"activity-22\",\"name\":\"Releasefreigabe\",\"phase\":\"Deploying & Releasing\",\"service\":\"\",\"type\":\"Entscheidung\"},{\"additionalPhases\":[],\"description\":\"Die Betriebsübergabe bestätigt die vereinbarten Zuständigkeiten, Betriebsunterlagen und Unterstützung für den laufenden Betrieb.\",\"id\":\"activity-23\",\"name\":\"Betriebsübergabe\",\"phase\":\"Deploying & Releasing\",\"service\":\"\",\"type\":\"Zustandsbezogen\"},{\"additionalPhases\":[],\"description\":\"Erfüllte Done-Kriterien belegen den Feature-Abschluss. Erkenntnisse werden während des gesamten Flows ausgewertet und in Verbesserungen umgesetzt; Lessons Learned sind keine einmalige Abschlussaufgabe.\",\"id\":\"activity-25\",\"name\":\"Feature-Abschluss / Lessons Learned\",\"phase\":\"Done\",\"service\":\"\",\"type\":\"Zustandsbezogen\"},{\"additionalPhases\":[],\"description\":\"Die Portfolio-Steuerung ordnet Vorhaben strategisch ein und setzt Prioritäten ausserhalb des Feature-Flows.\",\"id\":\"activity-02\",\"name\":\"Strategische Einordnung und Priorisierung\",\"phase\":\"Übergreifend\",\"service\":\"\",\"type\":\"Governance\"},{\"additionalPhases\":[],\"description\":\"Vor der Freigabe wird nachgewiesen, dass die Rückkehr zu einem definierten Software- und Konfigurationsstand funktioniert.\",\"id\":\"activity-32\",\"name\":\"Rollback-Bereitschaft prüfen\",\"phase\":\"Deploying & Releasing\",\"service\":\"\",\"type\":\"Zustandsbezogen\"},{\"additionalPhases\":[],\"description\":\"Nutzungsdaten und Rückmeldungen zeigen nach dem Release, ob der erwartete Nutzen eintritt.\",\"id\":\"activity-24\",\"name\":\"Wirkungskontrolle / Nutzungsanalyse\",\"phase\":\"Übergreifend\",\"service\":\"\",\"type\":\"Feedback\"},{\"additionalPhases\":[],\"description\":\"Monitoring überwacht den Servicebetrieb; Audit-Trails machen relevante Vorgänge nachvollziehbar.\",\"id\":\"activity-26\",\"name\":\"Monitoring und Audit-Trails\",\"phase\":\"Übergreifend\",\"service\":\"\",\"type\":\"Lifecycle\"},{\"additionalPhases\":[],\"description\":\"Der Servicebetrieb hält Leistungen verfügbar und behebt Störungen; Verbesserungsbedarf fliesst ins ART-Backlog.\",\"id\":\"activity-27\",\"name\":\"Operations / Incident Management\",\"phase\":\"Übergreifend\",\"service\":\"\",\"type\":\"Lifecycle\"},{\"additionalPhases\":[],\"description\":\"Abhängigkeiten zwischen Teams und Leistungserbringern werden laufend abgestimmt; Blockaden werden geklärt oder eskaliert.\",\"id\":\"activity-28\",\"name\":\"Dependency Management\",\"phase\":\"Übergreifend\",\"service\":\"\",\"type\":\"Kontinuierlich\"},{\"additionalPhases\":[],\"description\":\"Dokumentation und Qualitätsnachweise werden während der Arbeit erstellt und aktuell gehalten.\",\"id\":\"activity-29\",\"name\":\"Dokumentation und Qualitätsmanagement\",\"phase\":\"Übergreifend\",\"service\":\"\",\"type\":\"Kontinuierlich\"}],\"contract\":{},\"design\":[],\"entries\":{},\"flow\":{\"commonDoD\":[{\"description\":\"Die vereinbarten Akzeptanzkriterien sind anhand nachvollziehbarer Nachweise erfüllt. Eine formale Abnahme erfolgt nur, soweit fachlich, vertraglich oder regulatorisch erforderlich; die zuständige Entscheidrolle ist benannt.\",\"evidence\":\"Akzeptanznachweis und, soweit erforderlich, referenzierter Abnahmeentscheid\",\"id\":\"dod-acceptance\",\"owner\":\"Product Owner / Team\",\"type\":\"DoD\"},{\"description\":\"Änderungen sind geprüft, versioniert und in den gemeinsamen Stand integriert; ein reproduzierbares, auslieferbares Ergebnis liegt vor.\",\"evidence\":\"Review, erfolgreicher Build und versioniertes Artefakt\",\"id\":\"dod-integration\",\"owner\":\"Team\",\"type\":\"DoD\"},{\"description\":\"Relevante automatisierte Tests und erforderliche ergänzende Prüfungen sind erfolgreich; es bestehen keine Fehler, die der vereinbarten DoD entgegenstehen.\",\"evidence\":\"Test- und Regressionsnachweise einschliesslich betroffener Schnittstellen\",\"id\":\"dod-tests\",\"owner\":\"Team\",\"type\":\"DoD\"},{\"description\":\"Anwendbare Anforderungen an Security, Datenschutz, Barrierefreiheit, Performance und Resilienz sind nachgewiesen.\",\"evidence\":\"Prüfresultate gemäss vereinbartem Schutz- und Qualitätsbedarf\",\"id\":\"dod-quality\",\"owner\":\"Team / zuständige Fachrollen\",\"type\":\"DoD\"},{\"description\":\"Betroffene Dokumentation und Änderungsinformationen sind aktuell; bei Daten- oder Schnittstellenänderungen sind Kompatibilität und Datenerhalt geprüft.\",\"evidence\":\"Aktuelle Dokumentation sowie erforderliche Migrations- und Kompatibilitätstests\",\"id\":\"dod-docs\",\"owner\":\"Team\",\"type\":\"DoD\"}],\"commonDoR\":[{\"description\":\"Nutzen, Zielgruppe und Umfang sind verstanden; der Bezug zum Produkt- oder Feature-Ziel ist geklärt.\",\"evidence\":\"Backlog-Eintrag mit Ziel, Nutzen und Abgrenzung\",\"id\":\"dor-value\",\"owner\":\"Product Owner / Team\",\"type\":\"DoR\"},{\"description\":\"Akzeptanzkriterien sind verständlich, überprüfbar und mit Product Owner und Team abgestimmt.\",\"evidence\":\"Vereinbarte AC mit Beispielen und Prüfansatz\",\"id\":\"dor-ac\",\"owner\":\"Product Owner / Team\",\"type\":\"DoR\"},{\"description\":\"Die nächsten Umsetzungsschritte sind klein genug für den vereinbarten Arbeitsrhythmus; weitere Verfeinerung erfolgt bedarfsgerecht. Story-Bereitschaft wird separat für den nächsten Schritt geklärt.\",\"evidence\":\"Zuschnitt des Features und Bereitschaft der nächsten Umsetzungsschritte\",\"id\":\"dor-small\",\"owner\":\"Team\",\"type\":\"DoR\"},{\"description\":\"Abhängigkeiten, Architektur- und Qualitätsrisiken sind beurteilt; blockierende Fragen sind geklärt oder mit tragfähigem Vorgehen adressiert.\",\"evidence\":\"Abhängigkeiten, Risikoeinschätzung und erforderliche Zusagen\",\"id\":\"dor-dependencies\",\"owner\":\"Team / Architektur / beteiligte LE\",\"type\":\"DoR\"},{\"description\":\"Priorität, verantwortliche Rollen, benötigte Fähigkeiten und verfügbare Testmittel sind geklärt; das Team kann die Umsetzung beginnen.\",\"evidence\":\"Priorisiertes Backlog und abgestimmte Lieferbeiträge\",\"id\":\"dor-capacity\",\"owner\":\"Product Owner / Team\",\"type\":\"DoR\"}],\"phaseGates\":{\"Analyzing\":[{\"contributors\":\"Team / Architektur / Fachrollen / beteiligte LE\",\"description\":\"Der Bedarf ist zur Analyse ausgewählt; Analysekapazität und benötigte Fach- und Technikrollen sind verfügbar.\",\"evidence\":\"Priorisierter Analyseauftrag und verfügbare Fach- und Technikrollen\",\"id\":\"entry-1\",\"owner\":\"Product Owner\",\"type\":\"Eintritt\"},{\"contributors\":\"Team / Architektur / Fachrollen / beteiligte LE\",\"description\":\"Feature-Ziel, Umfang, überprüfbare Feature-AC und wesentliche Risiken sind geklärt. Blockierende Abhängigkeiten und benötigte LE-Beiträge sind beurteilt; Wirkungshypothese und Prüfansatz sind dokumentiert. Das Feature ist zur Priorisierung im Backlog bereit.\",\"evidence\":\"Feature mit AC, Risikoeinschätzung, LE-Beiträgen und referenziertem Messplan\",\"id\":\"exit-1\",\"owner\":\"Product Owner\",\"type\":\"Übergang\"}],\"Backlog\":[{\"contributors\":\"Team / beteiligte LE\",\"description\":\"Feature-Ziel, Umfang, Feature-AC, wesentliche Risiken und Abhängigkeiten sind analysiert; das Feature ist zur Priorisierung bereit.\",\"evidence\":\"Analysiertes Feature mit AC und Abhängigkeiten\",\"id\":\"entry-2\",\"owner\":\"Product Owner\",\"type\":\"Eintritt\"},{\"contributors\":\"Team / beteiligte LE\",\"description\":\"Das Feature ist aktuell priorisiert. Der nächste Umsetzungsschritt erfüllt die vereinbarte Bereitschaft; benötigte Fähigkeiten, Kapazität und verbindliche externe Beiträge sind verfügbar. Das Team zieht die Arbeit nach Implementing.\",\"evidence\":\"Pull-Entscheid mit Kapazität, Bereitschaft und benötigten Zusagen\",\"id\":\"exit-2\",\"owner\":\"Product Owner\",\"type\":\"Übergang\"}],\"Deploying & Releasing\":[{\"contributors\":\"Team / Betriebsverantwortliche / beteiligte LE\",\"description\":\"Feature-AC und relevante Qualitätsanforderungen sind nachgewiesen; blockierende Abweichungen bestehen nicht. Die erforderlichen Release- und Betriebsinformationen liegen vor.\",\"evidence\":\"Validierungsnachweise und vorbereitete Release-/Betriebsinformationen\",\"id\":\"entry-5\",\"owner\":\"Releaseverantwortliche Rolle\",\"type\":\"Eintritt\"},{\"contributors\":\"Team / Betriebsverantwortliche / beteiligte LE\",\"description\":\"Die vereinbarte Bereitstellung und Freigabe zur Nutzung sind erfolgt. Funktionsprüfung, Monitoring und Supportübernahme sind bestätigt; erforderliche Übergaben sind nachgewiesen und ein Rückfallweg ist verfügbar.\",\"evidence\":\"Deploymentprotokoll, Nutzungsfreigabe, Funktionsprüfung und bestätigte Betriebsübernahme\",\"id\":\"exit-5\",\"owner\":\"Releaseverantwortliche Rolle\",\"type\":\"Übergang\"}],\"Done\":[{\"contributors\":\"Team / Product Management\",\"description\":\"Die vereinbarte Bereitstellung und Freigabe zur Nutzung sind erfolgt; Funktionsprüfung, Betriebsübernahme und erforderliche Übergaben sind nachgewiesen.\",\"evidence\":\"Nachgewiesene Bereitstellung, Nutzungsfreigabe und Übergaben\",\"id\":\"entry-6\",\"owner\":\"Product Owner\",\"type\":\"Eintritt\"},{\"contributors\":\"Team / Product Management\",\"description\":\"Feature-Abschluss, anwendbare DoD, erforderliche Abnahme und Auslieferungsnachweise sind dokumentiert. Der Messauftrag für die spätere Wirkungskontrolle ist mit Verantwortung, Termin und Datenquelle übergeben. Beobachtete Wirkung ist keine Voraussetzung für Done.\",\"evidence\":\"Feature-Abschluss mit DoD-Nachweisen und Referenz auf übergebenen Messauftrag\",\"id\":\"exit-6\",\"owner\":\"Product Owner\",\"type\":\"Abschluss\"}],\"Funnel\":[{\"contributors\":\"Bedarfsträger / Product Owner\",\"description\":\"Ein Feature-Anliegen mit betroffenen Nutzern und einer zuständigen Person ist erfasst.\",\"evidence\":\"Bedarfseintrag mit Nutzern und zuständiger Person\",\"id\":\"entry-0\",\"owner\":\"Product Management\",\"type\":\"Eintritt\"},{\"contributors\":\"Bedarfsträger / Product Owner\",\"description\":\"Bedarf, betroffene Nutzer und erwarteter Nutzen sind beschrieben. Für den Übergang nach Analyzing ist die Analyse ausgewählt und Kapazität verfügbar. Zurückgestellte oder abgelehnte Anliegen wechseln nicht nach Analyzing.\",\"evidence\":\"Analyseentscheid mit Priorität und bestätigter Analysekapazität\",\"id\":\"exit-0\",\"owner\":\"Product Management\",\"type\":\"Übergang\"}],\"Implementing\":[{\"contributors\":\"Team / beteiligte LE\",\"description\":\"Das Team hat das priorisierte Feature nach vereinbarter Bereitschaft und verfügbarer Kapazität gezogen; benötigte externe Lieferbeiträge sind zugesagt.\",\"evidence\":\"Pull-Entscheid gemäss Bereitschaft und Kapazität\",\"id\":\"entry-3\",\"owner\":\"Umsetzungsverantwortliche Rolle im Team\",\"type\":\"Eintritt\"},{\"contributors\":\"Team / beteiligte LE\",\"description\":\"Der vereinbarte Umfang ist integriert und versioniert; Build, Reviews und relevante frühe Tests sind erfolgreich. Das Ergebnis ist in der vereinbarten Umgebung prüfbar; offene Punkte verhindern die integrierte Validierung nicht.\",\"evidence\":\"Versioniertes Artefakt, erfolgreicher Build, Reviews und frühe Tests\",\"id\":\"exit-3\",\"owner\":\"Umsetzungsverantwortliche Rolle im Team\",\"type\":\"Übergang\"}],\"Validating\":[{\"contributors\":\"Team / Fachrollen\",\"description\":\"Das integrierte, versionierte Ergebnis ist nach erfolgreichen frühen Prüfungen in der vereinbarten Umgebung mit Testdaten prüfbar.\",\"evidence\":\"Prüfbares integriertes Artefakt, Testdaten und Prüfumgebung\",\"id\":\"entry-4\",\"owner\":\"Product Owner\",\"type\":\"Eintritt\"},{\"contributors\":\"Team / Fachrollen\",\"description\":\"Feature-AC und relevante Qualitätsanforderungen sind am integrierten Ergebnis nachgewiesen. Verbleibende Abweichungen sind durch die zuständige Entscheidrolle beurteilt; keine blockiert die Auslieferung. Erforderliche Freigabeunterlagen liegen vor.\",\"evidence\":\"Akzeptanz- und Qualitätsnachweise mit beurteilten Abweichungen\",\"id\":\"exit-4\",\"owner\":\"Product Owner\",\"type\":\"Übergang\"}]},\"rules\":{\"Analyzing\":{\"criteria\":[{\"contributors\":\"Team / Fachrollen\",\"description\":\"Das erwartete Verhalten und Ergebnis aus Nutzersicht sind je Feature konkret beschrieben.\",\"evidence\":\"Konkrete Beispiele; bei Bedarf Gegeben–Wenn–Dann\",\"id\":\"ac-behavior\",\"owner\":\"Product Owner\",\"type\":\"AC\"},{\"contributors\":\"Team / Fachrollen\",\"description\":\"Relevante Fehlerfälle, Grenzwerte und Berechtigungen sind mit eindeutig erwartetem Verhalten beschrieben.\",\"evidence\":\"Positive, negative und Grenzfall-Szenarien\",\"id\":\"ac-boundaries\",\"owner\":\"Product Owner\",\"type\":\"AC\"},{\"contributors\":\"Team / Fachrollen\",\"description\":\"Spezifische Qualitätsanforderungen sind mit messbaren Zielwerten und Prüfbedingungen festgelegt.\",\"evidence\":\"Anwendbare Messwerte, etwa Antwortzeit oder Wiederanlaufziel\",\"id\":\"ac-quality\",\"owner\":\"Product Owner\",\"type\":\"AC\"},{\"contributors\":\"Team / Fachrollen\",\"description\":\"Für jedes Akzeptanzkriterium ist festgelegt, wie und mit welchen Daten das Ergebnis überprüft oder demonstriert wird.\",\"evidence\":\"Zugeordnete Akzeptanztests und Demo-Szenarien\",\"id\":\"ac-proof\",\"owner\":\"Product Owner\",\"type\":\"AC\"},{\"contributors\":\"Product Owner / Team\",\"description\":\"Ausgangslage, erwartete Veränderung, Messgrösse, Datenquelle, Messverantwortung und Messzeitpunkt sind im Messauftrag festgelegt.\",\"evidence\":\"Referenz auf Wirkungshypothese und Messauftrag mit Ausgangswert und Datenquelle\",\"id\":\"impact\",\"owner\":\"Product Management\",\"type\":\"Wirkung\"}],\"useDoD\":false},\"Backlog\":{\"criteria\":[],\"useDoD\":false},\"Deploying & Releasing\":{\"criteria\":[{\"contributors\":\"Team / Betriebsverantwortliche\",\"description\":\"Vor der Auslieferung Deployment, Funktionsprüfung, Rollback, Monitoring und Support vorbereiten. Deployment und Freigabe zur Nutzung getrennt nachweisen; bei entkoppeltem Release bleibt das Feature bis zur vereinbarten Nutzungsfreigabe hier.\",\"evidence\":\"Releaseplan und Rückfallverfahren; getrennte Deployment- und Freigabenachweise\",\"id\":\"release\",\"owner\":\"Releaseverantwortliche Rolle\",\"type\":\"Release / Betrieb\"},{\"contributors\":\"Team / beteiligte LE\",\"description\":\"Lieferobjekt, empfangende Rolle, Übergabekriterien und Reaktionszeit vereinbaren; die erfolgte Übernahme bestätigen lassen.\",\"evidence\":\"Schnittstellenvereinbarung und bestätigter Übergabenachweis\",\"id\":\"handover\",\"owner\":\"Betriebsverantwortliche Rolle\",\"type\":\"Schnittstelle\"}],\"useDoD\":false},\"Done\":{\"criteria\":[],\"useDoD\":true},\"Funnel\":{\"criteria\":[],\"useDoD\":false},\"Implementing\":{\"criteria\":[{\"contributors\":\"Team / beteiligte LE\",\"description\":\"Nach der übergreifenden Flow-Vereinbarung arbeiten: WIP begrenzen, Blockaden und alternde Arbeit sichtbar bearbeiten. Fehlende konkrete Limits und Eskalationswege gemeinsam vereinbaren.\",\"evidence\":\"Referenz auf vereinbarte WIP-, Blockade- und Eskalationsregeln\",\"id\":\"flow\",\"owner\":\"Umsetzungsverantwortliche Rolle im Team\",\"type\":\"Flow-Steuerung\"}],\"useDoD\":true},\"Validating\":{\"criteria\":[],\"useDoD\":true}}},\"policies\":[{\"contributors\":\"Bedarfsträger / Product Owner\",\"evidence\":\"Analyseentscheid mit Priorität und bestätigter Analysekapazität\",\"exit\":\"Bedarf, betroffene Nutzer und erwarteter Nutzen sind beschrieben. Für den Übergang nach Analyzing ist die Analyse ausgewählt und Kapazität verfügbar. Zurückgestellte oder abgelehnte Anliegen wechseln nicht nach Analyzing.\",\"name\":\"Funnel\",\"owner\":\"Product Management\",\"scope\":\"ART\",\"standardRevision\":3,\"type\":\"Übergang\",\"wip\":\"\"},{\"contributors\":\"Team / Architektur / Fachrollen / beteiligte LE\",\"evidence\":\"Feature mit AC, Risikoeinschätzung, LE-Beiträgen und referenziertem Messplan\",\"exit\":\"Feature-Ziel, Umfang, überprüfbare Feature-AC und wesentliche Risiken sind geklärt. Blockierende Abhängigkeiten und benötigte LE-Beiträge sind beurteilt; Wirkungshypothese und Prüfansatz sind dokumentiert. Das Feature ist zur Priorisierung im Backlog bereit.\",\"name\":\"Analyzing\",\"owner\":\"Product Owner\",\"scope\":\"ART\",\"standardRevision\":3,\"type\":\"Übergang\",\"wip\":\"\"},{\"contributors\":\"Team / beteiligte LE\",\"evidence\":\"Pull-Entscheid mit Kapazität, Bereitschaft und benötigten Zusagen\",\"exit\":\"Das Feature ist aktuell priorisiert. Der nächste Umsetzungsschritt erfüllt die vereinbarte Bereitschaft; benötigte Fähigkeiten, Kapazität und verbindliche externe Beiträge sind verfügbar. Das Team zieht die Arbeit nach Implementing.\",\"name\":\"Backlog\",\"owner\":\"Product Owner\",\"scope\":\"ART\",\"standardRevision\":3,\"type\":\"Übergang\",\"wip\":\"\"},{\"contributors\":\"Team / beteiligte LE\",\"evidence\":\"Versioniertes Artefakt, erfolgreicher Build, Reviews und frühe Tests\",\"exit\":\"Der vereinbarte Umfang ist integriert und versioniert; Build, Reviews und relevante frühe Tests sind erfolgreich. Das Ergebnis ist in der vereinbarten Umgebung prüfbar; offene Punkte verhindern die integrierte Validierung nicht.\",\"name\":\"Implementing\",\"owner\":\"Umsetzungsverantwortliche Rolle im Team\",\"scope\":\"ART\",\"standardRevision\":3,\"type\":\"Übergang\",\"wip\":\"\"},{\"contributors\":\"Team / Fachrollen\",\"evidence\":\"Akzeptanz- und Qualitätsnachweise mit beurteilten Abweichungen\",\"exit\":\"Feature-AC und relevante Qualitätsanforderungen sind am integrierten Ergebnis nachgewiesen. Verbleibende Abweichungen sind durch die zuständige Entscheidrolle beurteilt; keine blockiert die Auslieferung. Erforderliche Freigabeunterlagen liegen vor.\",\"name\":\"Validating\",\"owner\":\"Product Owner\",\"scope\":\"ART\",\"standardRevision\":3,\"type\":\"Übergang\",\"wip\":\"\"},{\"contributors\":\"Team / Betriebsverantwortliche / beteiligte LE\",\"evidence\":\"Deploymentprotokoll, Nutzungsfreigabe, Funktionsprüfung und bestätigte Betriebsübernahme\",\"exit\":\"Die vereinbarte Bereitstellung und Freigabe zur Nutzung sind erfolgt. Funktionsprüfung, Monitoring und Supportübernahme sind bestätigt; erforderliche Übergaben sind nachgewiesen und ein Rückfallweg ist verfügbar.\",\"name\":\"Deploying & Releasing\",\"owner\":\"Releaseverantwortliche Rolle\",\"scope\":\"ART\",\"standardRevision\":3,\"type\":\"Übergang\",\"wip\":\"\"},{\"contributors\":\"Team / Product Management\",\"evidence\":\"Feature-Abschluss mit DoD-Nachweisen und Referenz auf übergebenen Messauftrag\",\"exit\":\"Feature-Abschluss, anwendbare DoD, erforderliche Abnahme und Auslieferungsnachweise sind dokumentiert. Der Messauftrag für die spätere Wirkungskontrolle ist mit Verantwortung, Termin und Datenquelle übergeben. Beobachtete Wirkung ist keine Voraussetzung für Done.\",\"name\":\"Done\",\"owner\":\"Product Owner\",\"scope\":\"ART\",\"standardRevision\":3,\"type\":\"Abschluss\",\"wip\":\"\"}],\"products\":[],\"services\":[]}",
+  "previousConfiguration": {
+    "v2": {
+      "teams": [],
+      "selected": null
+    },
+    "v3": {
+      "schema": 3,
+      "products": [],
+      "configs": {},
+      "services": [
+        {
+          "id": "default-it-gever-consulting",
+          "name": "IT- und GEVER-Beratung",
+          "provider": "ISCeco",
+          "embedding": "Noch zu klären",
+          "interaction": "Noch zu klären"
+        },
+        {
+          "id": "default-architecture-security-consulting",
+          "name": "Architektur-, Sicherheits- und Konformitätsberatung",
+          "provider": "ISCeco",
+          "embedding": "Noch zu klären",
+          "interaction": "Noch zu klären"
+        },
+        {
+          "id": "default-application-development",
+          "name": "Anwendungsentwicklung und Weiterentwicklung",
+          "provider": "ISCeco",
+          "embedding": "Noch zu klären",
+          "interaction": "Noch zu klären"
+        },
+        {
+          "id": "default-interface-integration",
+          "name": "Schnittstellenintegration",
+          "provider": "ISCeco",
+          "embedding": "Noch zu klären",
+          "interaction": "Noch zu klären"
+        },
+        {
+          "id": "default-system-environments",
+          "name": "Systemumgebungen bereitstellen und pflegen",
+          "provider": "ISCeco",
+          "embedding": "Noch zu klären",
+          "interaction": "Noch zu klären"
+        },
+        {
+          "id": "default-deployment",
+          "name": "Deployment und technische Releasebereitstellung",
+          "provider": "ISCeco",
+          "embedding": "Noch zu klären",
+          "interaction": "Noch zu klären"
+        },
+        {
+          "id": "default-operations",
+          "name": "Anwendungsbetrieb und Wartung",
+          "provider": "ISCeco",
+          "embedding": "Noch zu klären",
+          "interaction": "Noch zu klären"
+        },
+        {
+          "id": "default-monitoring",
+          "name": "Monitoring und technische Protokollierung",
+          "provider": "ISCeco",
+          "embedding": "Noch zu klären",
+          "interaction": "Noch zu klären"
+        },
+        {
+          "id": "default-application-support",
+          "name": "Technischer Anwendungssupport und Störungsbehebung",
+          "provider": "ISCeco",
+          "embedding": "Noch zu klären",
+          "interaction": "Noch zu klären"
+        },
+        {
+          "id": "default-archive-delivery",
+          "name": "Technische Aussonderung und Archivablieferung",
+          "provider": "ISCeco",
+          "embedding": "Noch zu klären",
+          "interaction": "Noch zu klären"
+        },
+        {
+          "id": "default-integration-tests",
+          "name": "Integrationstests",
+          "provider": "ISCeco",
+          "embedding": "Noch zu klären",
+          "interaction": "Noch zu klären"
+        }
+      ],
+      "activities": [
+        {
+          "id": "activity-01",
+          "phase": "Funnel",
+          "name": "Bedarfserfassung",
+          "service": "",
+          "type": "Zustandsbezogen",
+          "description": "Die Bedarfserfassung klärt das Anliegen, den erwarteten Nutzen und die Zuständigkeit.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-03",
+          "phase": "Analyzing",
+          "name": "Requirements Engineering",
+          "service": "",
+          "type": "Zustandsbezogen",
+          "description": "Anforderungen und Akzeptanzkriterien beschreiben, was das Produkt leisten soll.",
+          "additionalPhases": [
+            "Implementing"
+          ]
+        },
+        {
+          "id": "activity-04",
+          "phase": "Analyzing",
+          "name": "Feature-Planung und -Refinement",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Features werden präzisiert, sinnvoll geschnitten und für die Umsetzung vorbereitet.",
+          "additionalPhases": [
+            "Implementing"
+          ]
+        },
+        {
+          "id": "activity-05",
+          "phase": "Analyzing",
+          "name": "Solution Design",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Das Lösungsdesign zeigt, wie Anforderungen technisch und fachlich umgesetzt werden können.",
+          "additionalPhases": [
+            "Implementing"
+          ]
+        },
+        {
+          "id": "activity-06",
+          "phase": "Analyzing",
+          "name": "Architektur-Alignment",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Die Lösung wird mit der Zielarchitektur und den betroffenen Systemen abgestimmt.",
+          "additionalPhases": [
+            "Implementing"
+          ]
+        },
+        {
+          "id": "activity-07",
+          "phase": "Analyzing",
+          "name": "Security- und Compliance-Anforderungen",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Sicherheits- und Compliance-Vorgaben werden früh geklärt und für die Umsetzung konkretisiert.",
+          "additionalPhases": [
+            "Implementing"
+          ]
+        },
+        {
+          "id": "activity-08",
+          "phase": "Analyzing",
+          "name": "Architekturentscheid / Freigabe",
+          "service": "",
+          "type": "Entscheidung",
+          "description": "Erforderliche Architekturentscheide werden begründet und dokumentiert; eine Freigabe erfolgt nur bei Bedarf.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-09",
+          "phase": "Analyzing",
+          "name": "Kapazitäts- und Abhängigkeitsplanung",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Vor der Einplanung werden Kapazitätsbedarf, Abhängigkeiten und erforderliche Lieferzusagen geklärt; bei Änderungen wird die Planung angepasst.",
+          "additionalPhases": [
+            "Implementing"
+          ]
+        },
+        {
+          "id": "activity-10",
+          "phase": "Analyzing",
+          "name": "Test- und Releaseplanung",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Die Planung legt Testumfang, Nachweise und Voraussetzungen für das Release fest.",
+          "additionalPhases": [
+            "Implementing"
+          ]
+        },
+        {
+          "id": "activity-11",
+          "phase": "Implementing",
+          "name": "Entwicklung",
+          "service": "",
+          "type": "Zustandsbezogen",
+          "description": "Die Entwicklung setzt die vereinbarten Anforderungen in funktionsfähige Software um.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-12",
+          "phase": "Implementing",
+          "name": "Konfigurationsmanagement",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Softwarestände und Konfigurationen werden versioniert und nachvollziehbar bereitgestellt.",
+          "additionalPhases": [
+            "Validating",
+            "Deploying & Releasing"
+          ]
+        },
+        {
+          "id": "activity-13",
+          "phase": "Implementing",
+          "name": "Unit-Tests",
+          "service": "",
+          "type": "Zustandsbezogen",
+          "description": "Automatisierte Tests prüfen die korrekte Funktion einzelner Softwarebausteine.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-14",
+          "phase": "Implementing",
+          "name": "Funktionale Tests",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Funktionale Tests prüfen früh und fortlaufend, ob die vereinbarten Anforderungen erfüllt sind.",
+          "additionalPhases": [
+            "Validating"
+          ]
+        },
+        {
+          "id": "activity-15",
+          "phase": "Implementing",
+          "name": "Code-Review",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Code-Reviews prüfen Änderungen auf Verständlichkeit, Wartbarkeit und technische Fehler.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-30",
+          "phase": "Implementing",
+          "name": "Continuous Integration",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Softwareänderungen werden laufend zusammengeführt und automatisiert auf Fehler geprüft.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-16",
+          "phase": "Implementing",
+          "name": "Integrationstests",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Integrationstests prüfen früh das Zusammenspiel von Komponenten und Schnittstellen.",
+          "additionalPhases": [
+            "Validating"
+          ]
+        },
+        {
+          "id": "activity-18",
+          "phase": "Implementing",
+          "name": "Sicherheitstests",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Sicherheitstests decken Schwachstellen auf und prüfen die Einhaltung der Sicherheitsanforderungen.",
+          "additionalPhases": [
+            "Validating"
+          ]
+        },
+        {
+          "id": "activity-19",
+          "phase": "Implementing",
+          "name": "Performance-Tests",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Performance-Tests prüfen Antwortzeiten, Durchsatz und Stabilität unter erwarteter Last.",
+          "additionalPhases": [
+            "Validating"
+          ]
+        },
+        {
+          "id": "activity-17",
+          "phase": "Validating",
+          "name": "End-to-End-Tests",
+          "service": "",
+          "type": "Zustandsbezogen",
+          "description": "End-to-End-Tests weisen nach, dass vollständige Geschäftsabläufe über Systemgrenzen hinweg funktionieren.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-20",
+          "phase": "Validating",
+          "name": "Fachliche Abnahme",
+          "service": "",
+          "type": "Entscheidung",
+          "description": "Die fachliche Abnahme bewertet die Erfüllung der Akzeptanzkriterien; ein formaler Entscheid erfolgt bei Bedarf. Fachliches Feedback wird bereits während der Umsetzung eingeholt und ist von dieser Abnahme zu unterscheiden.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-21",
+          "phase": "Deploying & Releasing",
+          "name": "Deployment",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Software wird kontrolliert in Entwicklungs-, Test- und Produktionsumgebungen bereitgestellt.",
+          "additionalPhases": [
+            "Implementing",
+            "Validating"
+          ]
+        },
+        {
+          "id": "activity-31",
+          "phase": "Implementing",
+          "name": "Technische Integration",
+          "service": "",
+          "type": "Zustandsbezogen",
+          "description": "Komponenten werden technisch verbunden und in Entwicklungs- und Testumgebungen lauffähig gemacht.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-22",
+          "phase": "Deploying & Releasing",
+          "name": "Releasefreigabe",
+          "service": "",
+          "type": "Entscheidung",
+          "description": "Die zuständige Rolle entscheidet gemäss Release-Regeln über die Freigabe zur Nutzung.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-23",
+          "phase": "Deploying & Releasing",
+          "name": "Betriebsübergabe",
+          "service": "",
+          "type": "Zustandsbezogen",
+          "description": "Die Betriebsübergabe bestätigt die vereinbarten Zuständigkeiten, Betriebsunterlagen und Unterstützung für den laufenden Betrieb.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-25",
+          "phase": "Done",
+          "name": "Feature-Abschluss / Lessons Learned",
+          "service": "",
+          "type": "Zustandsbezogen",
+          "description": "Erfüllte Done-Kriterien belegen den Feature-Abschluss. Erkenntnisse werden während des gesamten Flows ausgewertet und in Verbesserungen umgesetzt; Lessons Learned sind keine einmalige Abschlussaufgabe.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-02",
+          "phase": "Übergreifend",
+          "name": "Strategische Einordnung und Priorisierung",
+          "service": "",
+          "type": "Governance",
+          "description": "Die Portfolio-Steuerung ordnet Vorhaben strategisch ein und setzt Prioritäten ausserhalb des Feature-Flows.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-32",
+          "phase": "Deploying & Releasing",
+          "name": "Rollback-Bereitschaft prüfen",
+          "service": "",
+          "type": "Zustandsbezogen",
+          "description": "Vor der Freigabe wird nachgewiesen, dass die Rückkehr zu einem definierten Software- und Konfigurationsstand funktioniert.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-24",
+          "phase": "Übergreifend",
+          "name": "Wirkungskontrolle / Nutzungsanalyse",
+          "service": "",
+          "type": "Feedback",
+          "description": "Nutzungsdaten und Rückmeldungen zeigen nach dem Release, ob der erwartete Nutzen eintritt.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-26",
+          "phase": "Übergreifend",
+          "name": "Monitoring und Audit-Trails",
+          "service": "",
+          "type": "Lifecycle",
+          "description": "Monitoring überwacht den Servicebetrieb; Audit-Trails machen relevante Vorgänge nachvollziehbar.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-27",
+          "phase": "Übergreifend",
+          "name": "Operations / Incident Management",
+          "service": "",
+          "type": "Lifecycle",
+          "description": "Der Servicebetrieb hält Leistungen verfügbar und behebt Störungen; Verbesserungsbedarf fliesst ins ART-Backlog.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-28",
+          "phase": "Übergreifend",
+          "name": "Dependency Management",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Abhängigkeiten zwischen Teams und Leistungserbringern werden laufend abgestimmt; Blockaden werden geklärt oder eskaliert.",
+          "additionalPhases": []
+        },
+        {
+          "id": "activity-29",
+          "phase": "Übergreifend",
+          "name": "Dokumentation und Qualitätsmanagement",
+          "service": "",
+          "type": "Kontinuierlich",
+          "description": "Dokumentation und Qualitätsnachweise werden während der Arbeit erstellt und aktuell gehalten.",
+          "additionalPhases": []
+        }
+      ],
+      "policies": [
+        {
+          "name": "Funnel",
+          "exit": "Bedarf und Nutzen geklärt; Analyse ausgewählt und kapazitiv möglich.",
+          "owner": "Product Management",
+          "contributors": "Bedarfsträger / Product Owner",
+          "evidence": "Analyseentscheid mit Priorität und bestätigter Analysekapazität",
+          "wip": "",
+          "scope": "ART",
+          "type": "Übergang",
+          "standardRevision": 4
+        },
+        {
+          "name": "Analyzing",
+          "exit": "Feature-Ziel, Umfang und prüfbare AC geklärt; Risiken, LE-Abhängigkeiten und Wirkungshypothese samt Messauftrag dokumentiert.",
+          "owner": "Product Owner",
+          "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+          "evidence": "Feature mit AC, Risikoeinschätzung, LE-Beiträgen und referenziertem Messplan",
+          "wip": "",
+          "scope": "ART",
+          "type": "Übergang",
+          "standardRevision": 4
+        },
+        {
+          "name": "Backlog",
+          "exit": "Nächster Umsetzungsschritt bereit; priorisiertes Feature bei freier Kapazität und gesicherten Lieferbeiträgen ziehen.",
+          "owner": "Product Owner",
+          "contributors": "Team / beteiligte LE",
+          "evidence": "Pull-Entscheid mit Kapazität, Bereitschaft und benötigten Zusagen",
+          "wip": "",
+          "scope": "ART",
+          "type": "Übergang",
+          "standardRevision": 4
+        },
+        {
+          "name": "Implementing",
+          "exit": "Änderungen integriert; Build, Reviews und frühe Tests erfolgreich. Ergebnis für die integrierte Validierung prüfbar.",
+          "owner": "Umsetzungsverantwortliche Rolle im Team",
+          "contributors": "Team / beteiligte LE",
+          "evidence": "Versioniertes Artefakt, erfolgreicher Build, Reviews und frühe Tests",
+          "wip": "",
+          "scope": "ART",
+          "type": "Übergang",
+          "standardRevision": 4
+        },
+        {
+          "name": "Validating",
+          "exit": "DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden Abweichungen. Erforderliche Freigabeunterlagen liegen vor.",
+          "owner": "Product Owner",
+          "contributors": "Team / Fachrollen",
+          "evidence": "Akzeptanz- und Qualitätsnachweise mit beurteilten Abweichungen",
+          "wip": "",
+          "scope": "ART",
+          "type": "Übergang",
+          "standardRevision": 4
+        },
+        {
+          "name": "Deploying & Releasing",
+          "exit": "Bereitstellung, Nutzungsfreigabe und Betriebsübernahme bestätigt; Funktionsprüfung erfolgreich und Rückfallweg verfügbar.",
+          "owner": "Releaseverantwortliche Rolle",
+          "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+          "evidence": "Deploymentprotokoll, Nutzungsfreigabe, Funktionsprüfung und bestätigte Betriebsübernahme",
+          "wip": "",
+          "scope": "ART",
+          "type": "Übergang",
+          "standardRevision": 4
+        },
+        {
+          "name": "Done",
+          "exit": "Abschluss und Nachweise vollständig; Messauftrag mit Verantwortung, Termin und Datenquelle übergeben.",
+          "owner": "Product Owner",
+          "contributors": "Team / Product Management",
+          "evidence": "Feature-Abschluss mit DoD-Nachweisen und Referenz auf übergebenen Messauftrag",
+          "wip": "",
+          "scope": "ART",
+          "type": "Abschluss",
+          "standardRevision": 4
+        }
+      ],
+      "product": "",
+      "team": "",
+      "providers": [
+        "UTG-ART",
+        "ISCeco",
+        "BIT",
+        "Rubicon"
+      ],
+      "models": [
+        "Embedded",
+        "Kooperation",
+        "Shared Service",
+        "Service Interface"
+      ],
+      "updated": "2026-10-28T17:57:10.400Z",
+      "flowSchema": "seven-states-v1",
+      "methodVersion": "3.9.23",
+      "flowGovernance": {
+        "version": 1,
+        "status": "Vorschlag",
+        "workItem": "Feature im ART-Fluss. Story-Bereitschaft wird separat für die nächsten Umsetzungsschritte vereinbart.",
+        "pull": "Arbeit nur bei verfügbarer Kapazität der empfangenden Stufe ziehen. Backlog ist eine priorisierte Warteschlange; Verfeinerung erfolgt bedarfsgerecht.",
+        "wip": "",
+        "blocked": "Blockade am Arbeitselement mit verantwortlicher Person, nächstem Schritt und Eskalationszeitpunkt dokumentieren. Den konkreten Eskalationsweg gemeinsam vereinbaren.",
+        "aging": "Alternde Arbeit regelmässig im Flow-Review besprechen; Prüfrhythmus und Eingriffsgrenzen anhand tatsächlicher Durchlaufzeiten vereinbaren.",
+        "exceptions": "Arbeit darf mit begründetem Entscheid abgelehnt, geparkt oder in eine frühere Stufe zurückgegeben werden. Verantwortliche Rolle und Wiederaufnahmebedingung am Feature dokumentieren.",
+        "measurementStart": "Pull eines Features vom Backlog nach Implementing; Analysezeiten separat betrachten.",
+        "measurementEnd": "Eintritt in Done nach bestätigter Bereitstellung, Nutzungsfreigabe und Übergabe.",
+        "sle": "",
+        "qualityMinimum": "Am selben Produkt gemeinsam vereinbarte DoD einhalten: überprüfbare AC, Integration und Versionierung, relevante Tests, anwendbare Qualitätsanforderungen und aktuelle Dokumentation. Team-Vereinbarungen konkretisieren diese Mindestqualität. Formale Abnahmen nur bei fachlicher, vertraglicher oder regulatorischer Erforderlichkeit; zuständige Entscheidrolle benennen.",
+        "decisionRole": "",
+        "evidence": ""
+      },
+      "migrations": {
+        "policyCompletionType3140": true
+      },
+      "flowCriteria": {
+        "version": 1,
+        "commonDoD": [
+          {
+            "id": "dod-acceptance",
+            "type": "DoD",
+            "description": "Die vereinbarten AC sind nachweislich erfüllt.",
+            "owner": "Product Owner / Team",
+            "evidence": "Akzeptanznachweis am Arbeitselement; erforderliche formale Abnahme in der Freigaberegel referenzieren"
+          },
+          {
+            "id": "dod-integration",
+            "type": "DoD",
+            "description": "Änderungen sind geprüft, versioniert und integriert; das Ergebnis ist auslieferbar.",
+            "owner": "Team",
+            "evidence": "Review, erfolgreicher Build und versioniertes Artefakt"
+          },
+          {
+            "id": "dod-tests",
+            "type": "DoD",
+            "description": "Relevante Tests sind erfolgreich; keine unzulässigen Befunde sind offen.",
+            "owner": "Team",
+            "evidence": "Relevante Testnachweise und produktbezogene Fehlergrenzen; keine offenen Befunde, die verbindliche AC oder Qualitätsgrenzen verletzen"
+          },
+          {
+            "id": "dod-quality",
+            "type": "DoD",
+            "description": "Die anwendbaren Qualitäts- und Schutzanforderungen sind nachgewiesen.",
+            "owner": "Team / zuständige Fachrollen",
+            "evidence": "Produktbezogenes Qualitätsprofil mit anwendbaren Anforderungen an Security, Datenschutz, Barrierefreiheit, Performance und Resilienz sowie referenzierten Prüfnachweisen"
+          },
+          {
+            "id": "dod-docs",
+            "type": "DoD",
+            "description": "Dokumentation ist aktuell; Daten-, Schnittstellen- und Migrationsfolgen sind geprüft.",
+            "owner": "Team",
+            "evidence": "Aktuelle Dokumentation und Änderungsinformationen; Datenerhalt, Kompatibilität oder vereinbarter Versions-/Migrationspfad nachgewiesen"
+          }
+        ],
+        "rules": {
+          "Funnel": {
+            "useDoD": false,
+            "criteria": []
+          },
+          "Analyzing": {
+            "useDoD": false,
+            "criteria": [
+              {
+                "id": "ac-behavior",
+                "type": "AC",
+                "description": "Das erwartete Verhalten und Ergebnis aus Nutzersicht sind je Feature konkret beschrieben.",
+                "owner": "Product Owner",
+                "evidence": "Konkrete Beispiele; bei Bedarf Gegeben–Wenn–Dann",
+                "contributors": "Team / Fachrollen"
+              },
+              {
+                "id": "ac-boundaries",
+                "type": "AC",
+                "description": "Relevante Fehlerfälle, Grenzwerte und Berechtigungen sind mit eindeutig erwartetem Verhalten beschrieben.",
+                "owner": "Product Owner",
+                "evidence": "Positive, negative und Grenzfall-Szenarien",
+                "contributors": "Team / Fachrollen"
+              },
+              {
+                "id": "ac-quality",
+                "type": "AC",
+                "description": "Spezifische Qualitätsanforderungen sind mit messbaren Zielwerten und Prüfbedingungen festgelegt.",
+                "owner": "Product Owner",
+                "evidence": "Anwendbare Messwerte, etwa Antwortzeit oder Wiederanlaufziel",
+                "contributors": "Team / Fachrollen"
+              },
+              {
+                "id": "ac-proof",
+                "type": "AC",
+                "description": "Für jedes Akzeptanzkriterium ist festgelegt, wie und mit welchen Daten das Ergebnis überprüft oder demonstriert wird.",
+                "owner": "Product Owner",
+                "evidence": "Zugeordnete Akzeptanztests und Demo-Szenarien",
+                "contributors": "Team / Fachrollen"
+              },
+              {
+                "id": "impact",
+                "type": "Wirkung",
+                "description": "Ausgangslage, erwartete Veränderung, Messgrösse, Datenquelle, Messverantwortung und Messzeitpunkt sind im Messauftrag festgelegt.",
+                "owner": "Product Management",
+                "evidence": "Referenz auf Wirkungshypothese und Messauftrag mit Ausgangswert und Datenquelle",
+                "contributors": "Product Owner / Team"
+              }
+            ]
+          },
+          "Backlog": {
+            "useDoD": false,
+            "criteria": []
+          },
+          "Implementing": {
+            "useDoD": true,
+            "criteria": [
+              {
+                "id": "flow",
+                "type": "Flow-Steuerung",
+                "description": "Nach der übergreifenden Flow-Vereinbarung arbeiten: WIP begrenzen, Blockaden und alternde Arbeit sichtbar bearbeiten. Fehlende konkrete Limits und Eskalationswege gemeinsam vereinbaren.",
+                "owner": "Umsetzungsverantwortliche Rolle im Team",
+                "contributors": "Team / beteiligte LE",
+                "evidence": "Referenz auf vereinbarte WIP-, Blockade- und Eskalationsregeln"
+              }
+            ]
+          },
+          "Validating": {
+            "useDoD": true,
+            "criteria": []
+          },
+          "Deploying & Releasing": {
+            "useDoD": false,
+            "criteria": [
+              {
+                "id": "release",
+                "type": "Release / Betrieb",
+                "description": "Vor der Auslieferung Deployment, Funktionsprüfung, Rollback, Monitoring und Support vorbereiten. Deployment und Freigabe zur Nutzung getrennt nachweisen; bei entkoppeltem Release bleibt das Feature bis zur vereinbarten Nutzungsfreigabe hier. Formale Abnahmen nur bei Erforderlichkeit mit Entscheidrolle und Nachweis führen.",
+                "owner": "Releaseverantwortliche Rolle",
+                "contributors": "Team / Betriebsverantwortliche",
+                "evidence": "Releaseplan und Rückfallverfahren; getrennte Deployment- und Freigabenachweise sowie erforderliche formale Abnahmen"
+              },
+              {
+                "id": "handover",
+                "type": "Schnittstelle",
+                "description": "Lieferobjekt, empfangende Rolle, Übergabekriterien und Reaktionszeit vereinbaren; die erfolgte Übernahme bestätigen lassen.",
+                "owner": "Betriebsverantwortliche Rolle",
+                "contributors": "Team / beteiligte LE",
+                "evidence": "Schnittstellenvereinbarung und bestätigter Übergabenachweis"
+              }
+            ]
+          },
+          "Done": {
+            "useDoD": true,
+            "criteria": []
+          }
+        },
+        "teams": {},
+        "standardRevision": 4,
+        "profiles": {},
+        "phaseGates": {
+          "Funnel": [
+            {
+              "id": "entry-0",
+              "type": "Eintritt",
+              "description": "Feature-Anliegen mit betroffenen Nutzern und zuständiger Person erfasst.",
+              "owner": "Product Management",
+              "contributors": "Bedarfsträger / Product Owner",
+              "evidence": "Bedarfseintrag mit Nutzern und zuständiger Person"
+            },
+            {
+              "id": "exit-0",
+              "type": "Übergang",
+              "description": "Bedarf und Nutzen geklärt; Analyse ausgewählt und kapazitiv möglich.",
+              "owner": "Product Management",
+              "contributors": "Bedarfsträger / Product Owner",
+              "evidence": "Analyseentscheid mit Priorität und bestätigter Analysekapazität"
+            }
+          ],
+          "Analyzing": [
+            {
+              "id": "entry-1",
+              "type": "Eintritt",
+              "description": "Analyse ausgewählt; Kapazität und benötigte Rollen verfügbar.",
+              "owner": "Product Owner",
+              "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+              "evidence": "Priorisierter Analyseauftrag und verfügbare Fach- und Technikrollen"
+            },
+            {
+              "id": "exit-1",
+              "type": "Übergang",
+              "description": "Feature-Ziel, Umfang und prüfbare AC geklärt; Risiken, LE-Abhängigkeiten und Wirkungshypothese samt Messauftrag dokumentiert.",
+              "owner": "Product Owner",
+              "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+              "evidence": "Feature mit AC, Risikoeinschätzung, LE-Beiträgen und referenziertem Messplan"
+            }
+          ],
+          "Backlog": [
+            {
+              "id": "entry-2",
+              "type": "Eintritt",
+              "description": "Feature mit Ziel, Umfang, AC, Risiken und Abhängigkeiten analysiert.",
+              "owner": "Product Owner",
+              "contributors": "Team / beteiligte LE",
+              "evidence": "Analysiertes Feature mit AC und Abhängigkeiten"
+            },
+            {
+              "id": "exit-2",
+              "type": "Übergang",
+              "description": "Nächster Umsetzungsschritt bereit; priorisiertes Feature bei freier Kapazität und gesicherten Lieferbeiträgen ziehen.",
+              "owner": "Product Owner",
+              "contributors": "Team / beteiligte LE",
+              "evidence": "Pull-Entscheid mit Kapazität, Bereitschaft und benötigten Zusagen"
+            }
+          ],
+          "Implementing": [
+            {
+              "id": "entry-3",
+              "type": "Eintritt",
+              "description": "Priorisiertes Feature gezogen; nächster Schritt bereit, Kapazität und benötigte Lieferbeiträge gesichert.",
+              "owner": "Umsetzungsverantwortliche Rolle im Team",
+              "contributors": "Team / beteiligte LE",
+              "evidence": "Pull-Entscheid gemäss Bereitschaft und Kapazität"
+            },
+            {
+              "id": "exit-3",
+              "type": "Übergang",
+              "description": "Änderungen integriert; Build, Reviews und frühe Tests erfolgreich. Ergebnis für die integrierte Validierung prüfbar.",
+              "owner": "Umsetzungsverantwortliche Rolle im Team",
+              "contributors": "Team / beteiligte LE",
+              "evidence": "Versioniertes Artefakt, erfolgreicher Build, Reviews und frühe Tests"
+            }
+          ],
+          "Validating": [
+            {
+              "id": "entry-4",
+              "type": "Eintritt",
+              "description": "Integriertes Ergebnis nach erfolgreichen frühen Prüfungen mit Testdaten in der vereinbarten Umgebung prüfbar.",
+              "owner": "Product Owner",
+              "contributors": "Team / Fachrollen",
+              "evidence": "Prüfbares integriertes Artefakt, Testdaten und Prüfumgebung; referenzierte DoD-Nachweise"
+            },
+            {
+              "id": "exit-4",
+              "type": "Übergang",
+              "description": "DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden Abweichungen. Erforderliche Freigabeunterlagen liegen vor.",
+              "owner": "Product Owner",
+              "contributors": "Team / Fachrollen",
+              "evidence": "Akzeptanz- und Qualitätsnachweise mit beurteilten Abweichungen; referenzierte DoD-Nachweise"
+            }
+          ],
+          "Deploying & Releasing": [
+            {
+              "id": "entry-5",
+              "type": "Eintritt",
+              "description": "DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden Abweichungen. Erforderliche Release- und Betriebsinformationen liegen vor.",
+              "owner": "Releaseverantwortliche Rolle",
+              "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+              "evidence": "Validierungsnachweise und vorbereitete Release-/Betriebsinformationen; referenzierte DoD-Nachweise"
+            },
+            {
+              "id": "exit-5",
+              "type": "Übergang",
+              "description": "Bereitstellung, Nutzungsfreigabe und Betriebsübernahme bestätigt; Funktionsprüfung erfolgreich und Rückfallweg verfügbar.",
+              "owner": "Releaseverantwortliche Rolle",
+              "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+              "evidence": "Deploymentprotokoll, Nutzungsfreigabe, Funktionsprüfung und bestätigte Betriebsübernahme; referenzierte DoD-Nachweise"
+            }
+          ],
+          "Done": [
+            {
+              "id": "entry-6",
+              "type": "Eintritt",
+              "description": "Bereitstellung, Nutzungsfreigabe und Betriebsübernahme nachgewiesen.",
+              "owner": "Product Owner",
+              "contributors": "Team / Product Management",
+              "evidence": "Nachgewiesene Bereitstellung, Nutzungsfreigabe und Übergaben"
+            },
+            {
+              "id": "exit-6",
+              "type": "Abschluss",
+              "description": "Abschluss und Nachweise vollständig; Messauftrag mit Verantwortung, Termin und Datenquelle übergeben.",
+              "owner": "Product Owner",
+              "contributors": "Team / Product Management",
+              "evidence": "Feature-Abschluss mit DoD-Nachweisen und Referenz auf übergebenen Messauftrag"
+            }
+          ]
+        },
+        "commonDoR": [
+          {
+            "id": "dor-value",
+            "type": "DoR",
+            "description": "Ziel, Nutzen und Umfang sind verstanden.",
+            "owner": "Product Owner / Team",
+            "evidence": "Backlog-Eintrag mit Ziel, Nutzen und Abgrenzung"
+          },
+          {
+            "id": "dor-ac",
+            "type": "DoR",
+            "description": "AC sind abgestimmt und überprüfbar.",
+            "owner": "Product Owner / Team",
+            "evidence": "Vereinbarte AC mit Beispielen und Prüfansatz"
+          },
+          {
+            "id": "dor-small",
+            "type": "DoR",
+            "description": "Der nächste Umsetzungsschritt ist klein und umsetzbar.",
+            "owner": "Team",
+            "evidence": "Zuschnitt des nächsten Schritts; weitere Verfeinerung nach Bedarf, Story-Bereitschaft separat"
+          },
+          {
+            "id": "dor-dependencies",
+            "type": "DoR",
+            "description": "Blockierende Fragen sind geklärt oder tragfähig adressiert.",
+            "owner": "Team / Architektur / beteiligte LE",
+            "evidence": "Abhängigkeiten, Risikoeinschätzung und erforderliche Zusagen"
+          },
+          {
+            "id": "dor-capacity",
+            "type": "DoR",
+            "description": "Benötigte Rollen, Fähigkeiten, Testmittel und Lieferbeiträge sind rechtzeitig verfügbar.",
+            "owner": "Product Owner / Team",
+            "evidence": "Benötigte Beiträge und Testmittel verfügbar oder für ihren Bedarfstermin verbindlich zugesagt; Priorität und freie Kapazität beim Pull bestätigen"
+          }
+        ]
+      }
+    },
+    "organisations": {}
+  },
+  "previousProvenance": {
+    "gitCommit": "c75067e0c82c977b0623629423b9dcf37ac70606",
+    "sourceVersion": "3.15.4",
+    "sourceSha256": "59dc752e4fa0843ab5a00dbf2ef611c8475eef91a49cf7b7d1a33c9c190258ed"
+  }
+}

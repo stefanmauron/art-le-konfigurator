@@ -1,0 +1,12 @@
+#utg-rule-details .rule-facts.rule-evidence {
+  grid-template-columns: 1fr;
+}
+#utg-rule-details .rule-facts.rule-evidence dd {
+  overflow-wrap: break-word;
+}
+@media (max-width: 420px) {
+  #utg-rule-details .rule-facts {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

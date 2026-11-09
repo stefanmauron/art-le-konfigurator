@@ -1,0 +1,610 @@
+{
+  "toolVersion": "1.0.1",
+  "created": "2026-11-08T12:48:15.848Z",
+  "ready": true,
+  "inputs": [
+    {
+      "name": "Laptop-1.json",
+      "sha256": "ed403491057580c06bc1f35c18eb4a48eeb30608b76b10062b8bbb6ee94ad906",
+      "appVersion": "3.16",
+      "releaseStage": "RC3"
+    },
+    {
+      "name": "Laptop-2.json",
+      "sha256": "6ec1f0ad24d2df29d5c694dc40e8fb2a1e313102688fc5eeabc0da45db4ba32c",
+      "appVersion": "3.16",
+      "releaseStage": "RC3"
+    }
+  ],
+  "decisions": {},
+  "changes": [
+    {
+      "kind": "products",
+      "id": "products:merge-product-1",
+      "label": "Produkt 1",
+      "action": "Erhalten",
+      "source": "A"
+    },
+    {
+      "kind": "products",
+      "id": "products:merge-product-2",
+      "label": "Produkt 2",
+      "action": "Erhalten",
+      "source": "A"
+    },
+    {
+      "kind": "products",
+      "id": "products:merge-product-3",
+      "label": "Produkt 3",
+      "action": "Hinzugefügt",
+      "source": "B"
+    },
+    {
+      "kind": "products",
+      "id": "products:merge-product-4",
+      "label": "Produkt 4",
+      "action": "Hinzugefügt",
+      "source": "B"
+    },
+    {
+      "kind": "services",
+      "id": "services:default-it-gever-consulting",
+      "label": "IT- und GEVER-Beratung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "services",
+      "id": "services:default-architecture-security-consulting",
+      "label": "Architektur-, Sicherheits- und Konformitätsberatung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "services",
+      "id": "services:default-application-development",
+      "label": "Anwendungsentwicklung und Weiterentwicklung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "services",
+      "id": "services:default-interface-integration",
+      "label": "Schnittstellenintegration",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "services",
+      "id": "services:default-system-environments",
+      "label": "Systemumgebungen bereitstellen und pflegen",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "services",
+      "id": "services:default-deployment",
+      "label": "Deployment und technische Releasebereitstellung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "services",
+      "id": "services:default-operations",
+      "label": "Anwendungsbetrieb und Wartung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "services",
+      "id": "services:default-monitoring",
+      "label": "Monitoring und technische Protokollierung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "services",
+      "id": "services:default-application-support",
+      "label": "Technischer Anwendungssupport und Störungsbehebung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "services",
+      "id": "services:default-archive-delivery",
+      "label": "Technische Aussonderung und Archivablieferung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "services",
+      "id": "services:default-integration-tests",
+      "label": "Integrationstests",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-01",
+      "label": "Bedarfserfassung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-03",
+      "label": "Requirements Engineering",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-04",
+      "label": "Feature-Planung und -Refinement",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-05",
+      "label": "Solution Design",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-06",
+      "label": "Architektur-Alignment",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-07",
+      "label": "Security- und Compliance-Anforderungen",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-08",
+      "label": "Architekturentscheid / Freigabe",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-09",
+      "label": "Kapazitäts- und Abhängigkeitsplanung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-10",
+      "label": "Test- und Releaseplanung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-11",
+      "label": "Entwicklung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-12",
+      "label": "Konfigurationsmanagement",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-13",
+      "label": "Unit-Tests",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-14",
+      "label": "Funktionale Tests",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-15",
+      "label": "Code-Review",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-30",
+      "label": "Continuous Integration",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-16",
+      "label": "Integrationstests",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-18",
+      "label": "Sicherheitstests",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-19",
+      "label": "Performance-Tests",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-17",
+      "label": "End-to-End-Tests",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-20",
+      "label": "Fachliche Abnahme",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-21",
+      "label": "Deployment",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-31",
+      "label": "Technische Integration",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-22",
+      "label": "Releasefreigabe",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-23",
+      "label": "Betriebsübergabe",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-25",
+      "label": "Feature-Abschluss / Lessons Learned",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-02",
+      "label": "Strategische Einordnung und Priorisierung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-32",
+      "label": "Rollback-Bereitschaft prüfen",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-24",
+      "label": "Wirkungskontrolle / Nutzungsanalyse",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-26",
+      "label": "Monitoring und Audit-Trails",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-27",
+      "label": "Operations / Incident Management",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-28",
+      "label": "Dependency Management",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "activities",
+      "id": "activities:activity-29",
+      "label": "Dokumentation und Qualitätsmanagement",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "designCriteria",
+      "id": "designCriteria:design-customer-value",
+      "label": "Zusammenhängender Auftrag mit erkennbarem Nutzen",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "designCriteria",
+      "id": "designCriteria:design-e2e",
+      "label": "Lieferfähigkeit über den gesamten vereinbarten Umfang",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "designCriteria",
+      "id": "designCriteria:design-self-organisation",
+      "label": "Eindeutige Verantwortung und Entscheidungsbefugnisse",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "designCriteria",
+      "id": "designCriteria:design-all-in-one",
+      "label": "Fachlich und technisch passende Grenzen",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "designCriteria",
+      "id": "designCriteria:design-cross-assignments",
+      "label": "Externe Abhängigkeiten und Querbeauftragungen reduzieren",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "designCriteria",
+      "id": "designCriteria:design-manageable-scope",
+      "label": "Tragbarer Umfang und begrenzte Komplexität",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "designCriteria",
+      "id": "designCriteria:design-crossfunctional",
+      "label": "Passende Kompetenzen und ausreichende Kapazität",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "designCriteria",
+      "id": "designCriteria:design-stable-focus",
+      "label": "Stabiler Teamkern und eindeutige Priorisierung",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "designCriteria",
+      "id": "designCriteria:design-shared-services",
+      "label": "Gemeinsame Services mit klarem Entlastungseffekt",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "providerRecords",
+      "id": "providerRecords:provider-UTG-ART",
+      "label": "UTG-ART",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "providerRecords",
+      "id": "providerRecords:provider-ISCeco",
+      "label": "ISCeco",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "providerRecords",
+      "id": "providerRecords:provider-BIT",
+      "label": "BIT",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "providerRecords",
+      "id": "providerRecords:provider-Rubicon",
+      "label": "Rubicon",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "teams",
+      "id": "teams:merge-team-1",
+      "label": "Team 1",
+      "action": "Erhalten",
+      "source": "A"
+    },
+    {
+      "kind": "teams",
+      "id": "teams:merge-team-2",
+      "label": "Team 2",
+      "action": "Erhalten",
+      "source": "A"
+    },
+    {
+      "kind": "teams",
+      "id": "teams:merge-team-3",
+      "label": "Team 3",
+      "action": "Hinzugefügt",
+      "source": "B"
+    },
+    {
+      "kind": "teams",
+      "id": "teams:merge-team-4",
+      "label": "Team 4",
+      "action": "Hinzugefügt",
+      "source": "B"
+    },
+    {
+      "kind": "schema",
+      "id": "global:schema",
+      "label": "schema",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "policies",
+      "id": "global:policies",
+      "label": "policies",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "flowSchema",
+      "id": "global:flowSchema",
+      "label": "flowSchema",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "methodVersion",
+      "id": "global:methodVersion",
+      "label": "methodVersion",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "flowGovernance",
+      "id": "global:flowGovernance",
+      "label": "flowGovernance",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "migrations",
+      "id": "global:migrations:activityCatalog3110",
+      "label": "migrations · activityCatalog3110",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "migrations",
+      "id": "global:migrations:embeddingKinds3141",
+      "label": "migrations · embeddingKinds3141",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "migrations",
+      "id": "global:migrations:policyCompletionType3140",
+      "label": "migrations · policyCompletionType3140",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "embeddingKinds",
+      "id": "global:embeddingKinds:Im Team integriert",
+      "label": "embeddingKinds · Im Team integriert",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "embeddingKinds",
+      "id": "global:embeddingKinds:Anderes Team im selben ART",
+      "label": "embeddingKinds · Anderes Team im selben ART",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "embeddingKinds",
+      "id": "global:embeddingKinds:Shared Services",
+      "label": "embeddingKinds · Shared Services",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "embeddingKinds",
+      "id": "global:embeddingKinds:Leistungserbringer ausserhalb des ART",
+      "label": "embeddingKinds · Leistungserbringer ausserhalb des ART",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "operatingModelVersion",
+      "id": "global:operatingModelVersion",
+      "label": "operatingModelVersion",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "ART-Flow",
+      "id": "flow:version",
+      "label": "version",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "ART-Flow",
+      "id": "flow:commonDoD",
+      "label": "commonDoD",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "ART-Flow",
+      "id": "flow:rules",
+      "label": "rules",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "ART-Flow",
+      "id": "flow:standardRevision",
+      "label": "standardRevision",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "ART-Flow",
+      "id": "flow:phaseGates",
+      "label": "phaseGates",
+      "action": "Identisch",
+      "source": "A+B"
+    },
+    {
+      "kind": "ART-Flow",
+      "id": "flow:commonDoR",
+      "label": "commonDoR",
+      "action": "Identisch",
+      "source": "A+B"
+    }
+  ],
+  "renames": [],
+  "warnings": [
+    "Navigation und Export-Metadaten stammen aus A. Fehlende Inhalte löschen nichts."
+  ],
+  "errors": [],
+  "unresolved": 0,
+  "metadataPolicy": "Export-Metadaten und Navigation aus A; fachliche Konflikte nur nach expliziter Entscheidung."
+}

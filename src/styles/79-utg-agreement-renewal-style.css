@@ -1,0 +1,17 @@
+dialog.app-drawer label.flow-agreement-renewal {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-weight: 400;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--soft);
+}
+dialog.app-drawer label.flow-agreement-renewal[hidden] {
+  display: none;
+}
+dialog.app-drawer .flow-agreement-renewal input {
+  flex: 0 0 auto;
+  margin-top: 3px;
+}

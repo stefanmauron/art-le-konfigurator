@@ -1,0 +1,243 @@
+{
+  "testSha256": "2e853fb98fdbdfcc63ae885a61b611459de11f07387e27365db29e0dccda238b",
+  "resumedSetup": false,
+  "rawPayloadHashes": {
+    "beforeExport": "6cc1b1d0ee0cd7b7d5d04f9d5ff8c97526f603bf286afd552219555f6b92d87e",
+    "exportFile": "4e915d4fd5603315887b2c6cee786ace45e0c3f1c0564d85a2fc69ab5e081e03",
+    "afterExport": "6cc1b1d0ee0cd7b7d5d04f9d5ff8c97526f603bf286afd552219555f6b92d87e",
+    "afterImport": "d23674b1e56bbb142779bde7d8995e67f144f515a1764c1e4d119ba48bae7348",
+    "afterImportReload": "d23674b1e56bbb142779bde7d8995e67f144f515a1764c1e4d119ba48bae7348"
+  },
+  "excludedContextFields": [
+    "v2.selected",
+    "v3.team",
+    "v3.product",
+    "v3.navigationEpoch"
+  ],
+  "appSha256": "827644997f5d838950b2d4e0e4a4399e2dafa5dbfec4ac301d495e8973267877",
+  "seed": 20261106,
+  "teams": 20,
+  "products": 40,
+  "activitiesPerTeam": 32,
+  "matrixFields": 5120,
+  "changedTeamProfiles": 10,
+  "changedPhases": 70,
+  "criteriaEditorsSaved": 160,
+  "checks": 50,
+  "failed": 0,
+  "payloadHashes": {
+    "beforeExport": "94e386b1f9faa1b5b2c6e8cad76c33f74dd89b8d341f6a443daba1d6bfc2d6f4",
+    "exportFile": "94e386b1f9faa1b5b2c6e8cad76c33f74dd89b8d341f6a443daba1d6bfc2d6f4",
+    "afterExport": "94e386b1f9faa1b5b2c6e8cad76c33f74dd89b8d341f6a443daba1d6bfc2d6f4",
+    "afterReset": "4d4f3aaea3b0353f2d3c9d25518535a98a1a40d5c0e54580efa1e1c5f517083e",
+    "afterImport": "94e386b1f9faa1b5b2c6e8cad76c33f74dd89b8d341f6a443daba1d6bfc2d6f4",
+    "afterImportReload": "94e386b1f9faa1b5b2c6e8cad76c33f74dd89b8d341f6a443daba1d6bfc2d6f4"
+  },
+  "errors": [],
+  "historicalDriverVersion": "3.15.5",
+  "appVersion": "3.17",
+  "releaseStage": "RC1",
+  "targetFile": "dist/UTG-LE_Operating_Model_v3.17_RC1.html",
+  "checkDetails": [
+    {
+      "name": "20 Teams und 40 Produkte über CRUD angelegt",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 01",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 02",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 03",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 04",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 05",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 06",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 07",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 08",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 09",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 10",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 11",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 12",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 13",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 14",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 15",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 16",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 17",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 18",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 19",
+      "ok": true
+    },
+    {
+      "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 20",
+      "ok": true
+    },
+    {
+      "name": "10 Teams: alle 7 Phasen mit individuellen Phasenregeln und AC sowie Team-DoR/DoD",
+      "ok": true
+    },
+    {
+      "name": "ART-Regeln, Standardvorlage und übrige 10 Teamprofile unverändert",
+      "ok": true
+    },
+    {
+      "name": "Exportdatei enthält den vollständigen gespeicherten Datenbestand",
+      "ok": true
+    },
+    {
+      "name": "Export verändert keinen gespeicherten Wert",
+      "ok": true
+    },
+    {
+      "name": "Exportierter Navigationskontext entspricht dem aktiven Team",
+      "ok": true
+    },
+    {
+      "name": "Tatsächlicher Standard-Reset entfernt alle Szenariodaten",
+      "ok": true
+    },
+    {
+      "name": "Nach Reimport: alle fachlichen Daten exakt wie vor Export",
+      "ok": true
+    },
+    {
+      "name": "Nach zusätzlichem Reload weiterhin vollständige Gleichheit",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 01",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 02",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 03",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 04",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 05",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 06",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 07",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 08",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 09",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 10",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 11",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 12",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 13",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 14",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 15",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 16",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 17",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 18",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 19",
+      "ok": true
+    },
+    {
+      "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 20",
+      "ok": true
+    },
+    {
+      "name": "Keine unbehandelten Browserfehler",
+      "ok": true
+    }
+  ]
+}

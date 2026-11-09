@@ -1,0 +1,53 @@
+:root {
+  --disclosure-size: 16px;
+}
+/* Native details use the same compact circle and plus/minus as text previews. */
+body details > summary {
+  position: relative;
+  list-style: none;
+  padding-left: 24px;
+  cursor: pointer;
+}
+body details > summary::-webkit-details-marker {
+  display: none;
+}
+body details > summary::marker {
+  content: "";
+}
+body details > summary::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  width: var(--disclosure-size);
+  height: var(--disclosure-size);
+  border: 1px solid #91a7b4;
+  border-radius: 50%;
+  color: var(--accent-dark);
+  background:
+    linear-gradient(currentColor, currentColor) center/7px 1px no-repeat,
+    linear-gradient(currentColor, currentColor) center/1px 7px no-repeat;
+}
+body details[open] > summary::before {
+  background: linear-gradient(currentColor, currentColor) center/7px 1px
+    no-repeat;
+}
+body details > summary:hover::before {
+  border-color: var(--accent);
+}
+body .app-file-menu > summary {
+  padding-left: 38px;
+}
+body .app-file-menu > summary::before {
+  left: 14px;
+}
+body .app-file-menu > summary::after {
+  content: none;
+}
+@media print {
+  body details > summary::before {
+    display: none;
+  }
+}

@@ -1,0 +1,32 @@
+/* A 28px hit area surrounds the unchanged 16px disclosure symbol. */
+body button.app-description-toggle,
+:is(#utg-activities, #utg-design-criteria, #utg-design-overview)
+  td
+  .app-description-toggle {
+  flex-basis: 28px;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  max-width: 28px;
+  max-height: 28px;
+  margin: -5px 0 -5px;
+  border: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 7px,
+    #91a7b4 7px,
+    #91a7b4 8px,
+    transparent 8px
+  );
+  border-radius: 50%;
+}
+body button.app-description-toggle:hover {
+  background: radial-gradient(
+    circle at center,
+    var(--soft) 7px,
+    var(--accent) 7px,
+    var(--accent) 8px,
+    transparent 8px
+  );
+}

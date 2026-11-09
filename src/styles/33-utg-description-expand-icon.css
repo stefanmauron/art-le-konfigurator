@@ -1,0 +1,49 @@
+/* Geometric plus/minus: identical size and exact centering in every preview. */
+body button.app-description-toggle,
+:is(#utg-activities, #utg-design-criteria, #utg-design-overview)
+  td
+  .app-description-toggle {
+  position: relative;
+  flex: 0 0 var(--disclosure-size);
+  width: var(--disclosure-size);
+  height: var(--disclosure-size);
+  min-width: var(--disclosure-size);
+  min-height: var(--disclosure-size);
+  max-width: var(--disclosure-size);
+  max-height: var(--disclosure-size);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 1px 0 0;
+  border: 1px solid #91a7b4;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--accent-dark);
+  font-size: 0 !important;
+  line-height: 1 !important;
+  box-shadow: none;
+}
+body button.app-description-toggle::before,
+body button.app-description-toggle::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: currentColor;
+  pointer-events: none;
+}
+body button.app-description-toggle::before {
+  width: 7px;
+  height: 1px;
+}
+body button.app-description-toggle::after {
+  width: 1px;
+  height: 7px;
+}
+body button.app-description-toggle[aria-expanded="true"]::after {
+  display: none;
+}
+body button.app-description-toggle:hover {
+  border-color: var(--accent);
+  background: var(--soft);
+}

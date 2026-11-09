@@ -1,0 +1,40 @@
+{
+  "release": {
+    "version": "3.16",
+    "stage": "RC3",
+    "label": "v3.16 (RC3)",
+    "exportFilename": "UTG-LE_Konfiguration_v3.16_RC3.json",
+    "storageNamespace": "utg-le-v317:"
+  },
+  "target": "dist/UTG-LE_Operating_Model_v3.16_RC3.html",
+  "sha256": "cc48d64d0365a2e4b64473151add6a9e6131b5c403191a34fc8d0035f95e6522",
+  "browser": "156.0.8078.80",
+  "platform": "darwin",
+  "checks": [
+    {
+      "name": "Title and badge reflect release.json",
+      "ok": true
+    },
+    {
+      "name": "About identifies current release",
+      "ok": true
+    },
+    {
+      "name": "Runtime metadata matches release.json",
+      "ok": true
+    },
+    {
+      "name": "Real JSON download has correct filename and metadata",
+      "ok": true
+    },
+    {
+      "name": "Offline bundle loads no external resources",
+      "ok": true
+    },
+    {
+      "name": "No unhandled browser errors",
+      "ok": true
+    }
+  ],
+  "errors": []
+}

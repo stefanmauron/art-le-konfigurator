@@ -1,0 +1,8 @@
+{
+  "bundleSha256": "827644997f5d838950b2d4e0e4a4399e2dafa5dbfec4ac301d495e8973267877",
+  "groups": 13,
+  "failed": 0,
+  "unhandledErrors": 0,
+  "driver": "test-scripts/browser/test-flow-v3155.cjs",
+  "adapter": "tests/run-browser-family.cjs"
+}

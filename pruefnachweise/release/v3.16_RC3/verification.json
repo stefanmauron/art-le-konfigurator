@@ -1,0 +1,17 @@
+{
+  "release": {
+    "version": "3.16",
+    "stage": "RC3",
+    "label": "v3.16 (RC3)",
+    "exportFilename": "UTG-LE_Konfiguration_v3.16_RC3.json",
+    "storageNamespace": "utg-le-v317:"
+  },
+  "bundle": "dist/UTG-LE_Operating_Model_v3.16_RC3.html",
+  "sha256": "cc48d64d0365a2e4b64473151add6a9e6131b5c403191a34fc8d0035f95e6522",
+  "unitFamiliesPassed": 9,
+  "baseCasesPerVersion": 111,
+  "offlineReleaseChecksPassed": 6,
+  "platform": "Chrome / macOS",
+  "scope": "Release metadata, build, unit regressions and real offline export. No new full 20x40 or multi-platform acceptance run.",
+  "dataNamespaceUnchanged": true
+}

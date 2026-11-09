@@ -1,0 +1,20 @@
+#utg-assign-products {
+  background: var(--success-soft);
+  color: var(--accent-dark);
+  border: 1px solid #c5d8e4;
+  box-shadow: none;
+}
+#utg-assign-products:hover {
+  background: #e1edf4;
+  border-color: #8faec0;
+  color: #203f54;
+}
+#utg-assign-products:active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+#utg-assign-products:focus-visible {
+  outline: 2px solid #4a809b;
+  outline-offset: 3px;
+}

@@ -1,0 +1,32 @@
+{
+  "name": "utg-le-configurator",
+  "version": "3.16.0-rc.3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "verify": "node tests/verify-build.mjs",
+    "test": "node tests/run-regressions.cjs",
+    "format": "prettier --write \"src/**/*.js\" \"src/styles/*.css\" \"scripts/*.mjs\" \"tests/*.mjs\" \"tests/*.cjs\"",
+    "test:browser": "node tests/browser-parity.cjs",
+    "test:flow": "node tests/run-browser-family.cjs control",
+    "test:edges": "node tests/run-browser-family.cjs edges",
+    "test:roundtrip": "node tests/roundtrip.cjs",
+    "test:performance": "node tests/performance.cjs",
+    "lint": "eslint src",
+    "test:assessments": "node tests/assessments-and-agreements.cjs",
+    "test:release": "node tests/release-smoke.cjs",
+    "test:compare-versions": "node tests/compare-user-versions.cjs",
+    "build:merge": "node merge-tool/build.mjs",
+    "test:merge": "node merge-tool/test.mjs"
+  },
+  "devDependencies": {
+    "acorn": "8.15.0",
+    "esbuild": "0.25.12",
+    "eslint": "9.39.1",
+    "prettier": "3.6.2"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,17 @@
+/* Einheitliche Typografie für alle Aktionen in der oberen Speicherleiste. */
+.toolbar > button,
+.toolbar > label.filebtn {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: var(--text-body) !important;
+  font-weight: 600 !important;
+  line-height: 20px !important;
+  letter-spacing: normal !important;
+  box-sizing: border-box;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  margin: 0;
+  text-transform: none;
+}

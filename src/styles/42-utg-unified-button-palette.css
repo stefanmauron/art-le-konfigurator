@@ -1,0 +1,74 @@
+/* Shared button palette, independent of previous action hierarchy. */
+:root {
+  --button-bg: #edf4f8;
+  --button-ink: #244e65;
+  --button-line: #c5d8e4;
+  --button-hover: #dfecf4;
+  --button-active: #d1e3ef;
+  --button-focus: #4a809b;
+}
+body button,
+body .filebtn,
+body .app-file-menu > summary {
+  background-color: var(--button-bg) !important;
+  color: var(--button-ink) !important;
+  border-color: var(--button-line) !important;
+  box-shadow: none;
+}
+body button:hover,
+body .filebtn:hover,
+body .app-file-menu > summary:hover {
+  background-color: var(--button-hover) !important;
+  color: #203f54 !important;
+  border-color: #8faec0 !important;
+}
+body button:active,
+body button[aria-pressed="true"],
+body button[data-policy][aria-expanded="true"],
+body .filebtn:active {
+  background-color: var(--button-active) !important;
+  color: #203f54 !important;
+  border-color: #8faec0 !important;
+}
+body button:focus-visible,
+body .filebtn:focus-visible,
+body .filebtn:has(input:focus-visible),
+body .app-file-menu > summary:focus-visible {
+  outline: 2px solid var(--button-focus);
+  outline-offset: 3px;
+}
+body button:disabled {
+  background-color: #f1f5f8 !important;
+  color: #718696 !important;
+  border-color: #dce5eb !important;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+/* Active navigation remains identifiable through its underline. */
+#utg-nav button.active {
+  background-color: var(--button-active) !important;
+  box-shadow: inset 0 -2px var(--button-focus);
+}
+#utg-nav button small {
+  color: #526b7e !important;
+}
+/* Preserve the small drawn circle and plus/minus inside its larger hit area. */
+body button.app-description-toggle {
+  background-color: transparent !important;
+  background-image: radial-gradient(
+    circle at center,
+    var(--button-bg) 7px,
+    var(--button-line) 7px,
+    var(--button-line) 8px,
+    transparent 8px
+  ) !important;
+}
+body button.app-description-toggle:hover {
+  background-image: radial-gradient(
+    circle at center,
+    var(--button-hover) 7px,
+    #8faec0 7px,
+    #8faec0 8px,
+    transparent 8px
+  ) !important;
+}

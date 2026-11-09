@@ -1,0 +1,2464 @@
+{
+  "format": "utg-le-complete",
+  "version": 4,
+  "appVersion": "3.16",
+  "releaseStage": "RC3",
+  "exported": "2026-11-08T12:48:15.578Z",
+  "v2": {
+    "teams": [
+      {
+        "id": "merge-team-3",
+        "name": "Team 3",
+        "description": "Synthetisches Team 3 · Seed 193107",
+        "productIds": [
+          "merge-product-3"
+        ],
+        "assignments": {}
+      },
+      {
+        "id": "merge-team-4",
+        "name": "Team 4",
+        "description": "Synthetisches Team 4 · Seed 193107",
+        "productIds": [
+          "merge-product-4"
+        ],
+        "assignments": {}
+      }
+    ],
+    "selected": "merge-team-3"
+  },
+  "v3": {
+    "schema": 3,
+    "products": [
+      {
+        "id": "merge-product-3",
+        "name": "Produkt 3",
+        "description": "Eigenständiger Auftrag 3 · 7515",
+        "wikiUrl": "https://example.invalid/produkt/3"
+      },
+      {
+        "id": "merge-product-4",
+        "name": "Produkt 4",
+        "description": "Eigenständiger Auftrag 4 · 12396",
+        "wikiUrl": "https://example.invalid/produkt/4"
+      }
+    ],
+    "configs": {
+      "merge-team-3::flow": {
+        "status": "Entwurf",
+        "entries": {
+          "Bedarfserfassung": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 3 · 683",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "",
+            "note": "Zufall 611918 · activity-01"
+          },
+          "Requirements Engineering": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Servicebezug",
+            "business": "PO 3 · 395",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "",
+            "note": "Zufall 356873 · activity-03"
+          },
+          "Feature-Planung und -Refinement": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 3 · 858",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-it-gever-consulting",
+            "note": "Zufall 210698 · activity-04"
+          },
+          "Solution Design": {
+            "org": "ISCeco",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 3 · 837",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-it-gever-consulting",
+            "note": "Zufall 221667 · activity-05"
+          },
+          "Architektur-Alignment": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Servicebezug",
+            "business": "PO 3 · 743",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-application-support",
+            "note": "Zufall 4217 · activity-06"
+          },
+          "Security- und Compliance-Anforderungen": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 3 · 398",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-it-gever-consulting",
+            "note": "Zufall 372706 · activity-07"
+          },
+          "Architekturentscheid / Freigabe": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 3 · 589",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-deployment",
+            "note": "Zufall 587528 · activity-08"
+          },
+          "Kapazitäts- und Abhängigkeitsplanung": {
+            "org": "ISCeco",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Befähigung",
+            "business": "PO 3 · 599",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-it-gever-consulting",
+            "note": "Zufall 130089 · activity-09"
+          },
+          "Test- und Releaseplanung": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 3 · 534",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-operations",
+            "note": "Zufall 556267 · activity-10"
+          },
+          "Entwicklung": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Servicebezug",
+            "business": "PO 3 · 626",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-monitoring",
+            "note": "Zufall 31682 · activity-11"
+          },
+          "Konfigurationsmanagement": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Servicebezug",
+            "business": "PO 3 · 355",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-deployment",
+            "note": "Zufall 994691 · activity-12"
+          },
+          "Unit-Tests": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Befähigung",
+            "business": "PO 3 · 273",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-integration-tests",
+            "note": "Zufall 58524 · activity-13"
+          },
+          "Funktionale Tests": {
+            "org": "ISCeco",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 3 · 330",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-interface-integration",
+            "note": "Zufall 639114 · activity-14"
+          },
+          "Code-Review": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Befähigung",
+            "business": "PO 3 · 356",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-monitoring",
+            "note": "Zufall 210396 · activity-15"
+          },
+          "Continuous Integration": {
+            "org": "ISCeco",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 3 · 771",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-application-support",
+            "note": "Zufall 240953 · activity-30"
+          },
+          "Integrationstests": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Servicebezug",
+            "business": "PO 3 · 628",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-integration-tests",
+            "note": "Zufall 276179 · activity-16"
+          },
+          "Sicherheitstests": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Befähigung",
+            "business": "PO 3 · 216",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-interface-integration",
+            "note": "Zufall 153176 · activity-18"
+          },
+          "Performance-Tests": {
+            "org": "ISCeco",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 3 · 310",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-operations",
+            "note": "Zufall 796906 · activity-19"
+          },
+          "End-to-End-Tests": {
+            "org": "ISCeco",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 3 · 252",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-integration-tests",
+            "note": "Zufall 899304 · activity-17"
+          },
+          "Fachliche Abnahme": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 3 · 703",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-interface-integration",
+            "note": "Zufall 739961 · activity-20"
+          },
+          "Deployment": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 3 · 201",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-monitoring",
+            "note": "Zufall 305426 · activity-21"
+          },
+          "Technische Integration": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Servicebezug",
+            "business": "PO 3 · 223",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-operations",
+            "note": "Zufall 603027 · activity-31"
+          },
+          "Releasefreigabe": {
+            "org": "ISCeco",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 3 · 619",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-application-development",
+            "note": "Zufall 245376 · activity-22"
+          },
+          "Betriebsübergabe": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Befähigung",
+            "business": "PO 3 · 22",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-deployment",
+            "note": "Zufall 358824 · activity-23"
+          },
+          "Feature-Abschluss / Lessons Learned": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 3 · 752",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-deployment",
+            "note": "Zufall 229932 · activity-25"
+          },
+          "Strategische Einordnung und Priorisierung": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 3 · 336",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-deployment",
+            "note": "Zufall 148690 · activity-02"
+          },
+          "Rollback-Bereitschaft prüfen": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 3 · 912",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-application-support",
+            "note": "Zufall 524955 · activity-32"
+          },
+          "Wirkungskontrolle / Nutzungsanalyse": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Servicebezug",
+            "business": "PO 3 · 273",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-application-support",
+            "note": "Zufall 747368 · activity-24"
+          },
+          "Monitoring und Audit-Trails": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Servicebezug",
+            "business": "PO 3 · 14",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-application-development",
+            "note": "Zufall 273446 · activity-26"
+          },
+          "Operations / Incident Management": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 3 · 72",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "",
+            "note": "Zufall 559703 · activity-27"
+          },
+          "Dependency Management": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Befähigung",
+            "business": "PO 3 · 611",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-deployment",
+            "note": "Zufall 690492 · activity-28"
+          },
+          "Dokumentation und Qualitätsmanagement": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 3 · 405",
+            "technical": "Tech 3",
+            "operations": "Betrieb 3",
+            "service": "default-architecture-security-consulting",
+            "note": "Zufall 511772 · activity-29"
+          }
+        }
+      },
+      "merge-team-4::flow": {
+        "status": "Entwurf",
+        "entries": {
+          "Bedarfserfassung": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Servicebezug",
+            "business": "PO 4 · 632",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-it-gever-consulting",
+            "note": "Zufall 48612 · activity-01"
+          },
+          "Requirements Engineering": {
+            "org": "ISCeco",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 4 · 236",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-monitoring",
+            "note": "Zufall 772595 · activity-03"
+          },
+          "Feature-Planung und -Refinement": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 4 · 761",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-architecture-security-consulting",
+            "note": "Zufall 171309 · activity-04"
+          },
+          "Solution Design": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 4 · 442",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-interface-integration",
+            "note": "Zufall 974292 · activity-05"
+          },
+          "Architektur-Alignment": {
+            "org": "ISCeco",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 4 · 802",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-architecture-security-consulting",
+            "note": "Zufall 326934 · activity-06"
+          },
+          "Security- und Compliance-Anforderungen": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Befähigung",
+            "business": "PO 4 · 605",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-monitoring",
+            "note": "Zufall 116321 · activity-07"
+          },
+          "Architekturentscheid / Freigabe": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Servicebezug",
+            "business": "PO 4 · 656",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-application-development",
+            "note": "Zufall 347446 · activity-08"
+          },
+          "Kapazitäts- und Abhängigkeitsplanung": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 4 · 253",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "",
+            "note": "Zufall 288618 · activity-09"
+          },
+          "Test- und Releaseplanung": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 4 · 231",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-it-gever-consulting",
+            "note": "Zufall 900337 · activity-10"
+          },
+          "Entwicklung": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 4 · 233",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "",
+            "note": "Zufall 580453 · activity-11"
+          },
+          "Konfigurationsmanagement": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 4 · 512",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-archive-delivery",
+            "note": "Zufall 403500 · activity-12"
+          },
+          "Unit-Tests": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Servicebezug",
+            "business": "PO 4 · 971",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-interface-integration",
+            "note": "Zufall 462496 · activity-13"
+          },
+          "Funktionale Tests": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 4 · 311",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "",
+            "note": "Zufall 367238 · activity-14"
+          },
+          "Code-Review": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Befähigung",
+            "business": "PO 4 · 808",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-application-development",
+            "note": "Zufall 572032 · activity-15"
+          },
+          "Continuous Integration": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Servicebezug",
+            "business": "PO 4 · 785",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-integration-tests",
+            "note": "Zufall 868276 · activity-30"
+          },
+          "Integrationstests": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Befähigung",
+            "business": "PO 4 · 723",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "",
+            "note": "Zufall 281970 · activity-16"
+          },
+          "Sicherheitstests": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 4 · 843",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-it-gever-consulting",
+            "note": "Zufall 532589 · activity-18"
+          },
+          "Performance-Tests": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Servicebezug",
+            "business": "PO 4 · 914",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-integration-tests",
+            "note": "Zufall 306744 · activity-19"
+          },
+          "End-to-End-Tests": {
+            "org": "ISCeco",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 4 · 777",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "",
+            "note": "Zufall 555078 · activity-17"
+          },
+          "Fachliche Abnahme": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 4 · 941",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-system-environments",
+            "note": "Zufall 781699 · activity-20"
+          },
+          "Deployment": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 4 · 857",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "",
+            "note": "Zufall 619800 · activity-21"
+          },
+          "Technische Integration": {
+            "org": "ISCeco",
+            "orgSource": "explicit",
+            "embedding": "Shared Services",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 4 · 744",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "",
+            "note": "Zufall 468323 · activity-31"
+          },
+          "Releasefreigabe": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 4 · 965",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-interface-integration",
+            "note": "Zufall 243670 · activity-22"
+          },
+          "Betriebsübergabe": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Befähigung",
+            "business": "PO 4 · 359",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-application-development",
+            "note": "Zufall 248578 · activity-23"
+          },
+          "Feature-Abschluss / Lessons Learned": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 4 · 112",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-it-gever-consulting",
+            "note": "Zufall 356777 · activity-25"
+          },
+          "Strategische Einordnung und Priorisierung": {
+            "org": "Rubicon",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 4 · 327",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "",
+            "note": "Zufall 438772 · activity-02"
+          },
+          "Rollback-Bereitschaft prüfen": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Gemeinsame Erarbeitung",
+            "business": "PO 4 · 491",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-architecture-security-consulting",
+            "note": "Zufall 983585 · activity-32"
+          },
+          "Wirkungskontrolle / Nutzungsanalyse": {
+            "org": "ISCeco",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Servicebezug",
+            "business": "PO 4 · 465",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-archive-delivery",
+            "note": "Zufall 451730 · activity-24"
+          },
+          "Monitoring und Audit-Trails": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Leistungserbringer ausserhalb des ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 4 · 838",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "",
+            "note": "Zufall 222612 · activity-26"
+          },
+          "Operations / Incident Management": {
+            "org": "UTG-ART",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Servicebezug",
+            "business": "PO 4 · 725",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-interface-integration",
+            "note": "Zufall 874818 · activity-27"
+          },
+          "Dependency Management": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Anderes Team im selben ART",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 4 · 606",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-application-support",
+            "note": "Zufall 267395 · activity-28"
+          },
+          "Dokumentation und Qualitätsmanagement": {
+            "org": "BIT",
+            "orgSource": "explicit",
+            "embedding": "Im Team integriert",
+            "interaction": "Beratung / punktuelle Unterstützung",
+            "business": "PO 4 · 625",
+            "technical": "Tech 4",
+            "operations": "Betrieb 4",
+            "service": "default-monitoring",
+            "note": "Zufall 869293 · activity-29"
+          }
+        }
+      }
+    },
+    "services": [
+      {
+        "id": "default-it-gever-consulting",
+        "name": "IT- und GEVER-Beratung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-architecture-security-consulting",
+        "name": "Architektur-, Sicherheits- und Konformitätsberatung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-application-development",
+        "name": "Anwendungsentwicklung und Weiterentwicklung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-interface-integration",
+        "name": "Schnittstellenintegration",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-system-environments",
+        "name": "Systemumgebungen bereitstellen und pflegen",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-deployment",
+        "name": "Deployment und technische Releasebereitstellung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-operations",
+        "name": "Anwendungsbetrieb und Wartung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-monitoring",
+        "name": "Monitoring und technische Protokollierung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-application-support",
+        "name": "Technischer Anwendungssupport und Störungsbehebung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-archive-delivery",
+        "name": "Technische Aussonderung und Archivablieferung",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      },
+      {
+        "id": "default-integration-tests",
+        "name": "Integrationstests",
+        "provider": "ISCeco",
+        "embedding": "Noch zu klären",
+        "interaction": "Noch zu klären"
+      }
+    ],
+    "activities": [
+      {
+        "id": "activity-01",
+        "phase": "Funnel",
+        "name": "Bedarfserfassung",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Die Bedarfserfassung klärt das Anliegen, den erwarteten Nutzen und die Zuständigkeit.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-03",
+        "phase": "Analyzing",
+        "name": "Requirements Engineering",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Anforderungen und Akzeptanzkriterien beschreiben, was das Produkt leisten soll.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-04",
+        "phase": "Analyzing",
+        "name": "Feature-Planung und -Refinement",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Features werden präzisiert, sinnvoll geschnitten und für die Umsetzung vorbereitet.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-05",
+        "phase": "Analyzing",
+        "name": "Solution Design",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Das Lösungsdesign zeigt, wie Anforderungen technisch und fachlich umgesetzt werden können.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-06",
+        "phase": "Analyzing",
+        "name": "Architektur-Alignment",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Die Lösung wird mit der Zielarchitektur und den betroffenen Systemen abgestimmt.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-07",
+        "phase": "Analyzing",
+        "name": "Security- und Compliance-Anforderungen",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Sicherheits- und Compliance-Vorgaben werden früh geklärt und für die Umsetzung konkretisiert.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-08",
+        "phase": "Analyzing",
+        "name": "Architekturentscheid / Freigabe",
+        "service": "",
+        "type": "Entscheidung",
+        "description": "Erforderliche Architekturentscheide werden begründet und dokumentiert; eine Freigabe erfolgt nur bei Bedarf.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-09",
+        "phase": "Analyzing",
+        "name": "Kapazitäts- und Abhängigkeitsplanung",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Vor der Einplanung werden Kapazitätsbedarf, Abhängigkeiten und erforderliche Lieferzusagen geklärt; bei Änderungen wird die Planung angepasst.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-10",
+        "phase": "Analyzing",
+        "name": "Test- und Releaseplanung",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Die Planung legt Testumfang, Nachweise und Voraussetzungen für das Release fest.",
+        "additionalPhases": [
+          "Implementing"
+        ]
+      },
+      {
+        "id": "activity-11",
+        "phase": "Implementing",
+        "name": "Entwicklung",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Die Entwicklung setzt die vereinbarten Anforderungen in funktionsfähige Software um.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-12",
+        "phase": "Implementing",
+        "name": "Konfigurationsmanagement",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Softwarestände und Konfigurationen werden versioniert und nachvollziehbar bereitgestellt.",
+        "additionalPhases": [
+          "Validating",
+          "Deploying & Releasing"
+        ]
+      },
+      {
+        "id": "activity-13",
+        "phase": "Implementing",
+        "name": "Unit-Tests",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Automatisierte Tests prüfen die korrekte Funktion einzelner Softwarebausteine.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-14",
+        "phase": "Implementing",
+        "name": "Funktionale Tests",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Funktionale Tests prüfen früh und fortlaufend, ob die vereinbarten Anforderungen erfüllt sind.",
+        "additionalPhases": [
+          "Validating"
+        ]
+      },
+      {
+        "id": "activity-15",
+        "phase": "Implementing",
+        "name": "Code-Review",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Code-Reviews prüfen Änderungen auf Verständlichkeit, Wartbarkeit und technische Fehler.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-30",
+        "phase": "Implementing",
+        "name": "Continuous Integration",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Softwareänderungen werden laufend zusammengeführt und automatisiert auf Fehler geprüft.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-16",
+        "phase": "Implementing",
+        "name": "Integrationstests",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Integrationstests prüfen früh das Zusammenspiel von Komponenten und Schnittstellen.",
+        "additionalPhases": [
+          "Validating"
+        ]
+      },
+      {
+        "id": "activity-18",
+        "phase": "Implementing",
+        "name": "Sicherheitstests",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Sicherheitstests decken Schwachstellen auf und prüfen die Einhaltung der Sicherheitsanforderungen.",
+        "additionalPhases": [
+          "Validating"
+        ]
+      },
+      {
+        "id": "activity-19",
+        "phase": "Implementing",
+        "name": "Performance-Tests",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Performance-Tests prüfen Antwortzeiten, Durchsatz und Stabilität unter erwarteter Last.",
+        "additionalPhases": [
+          "Validating"
+        ]
+      },
+      {
+        "id": "activity-17",
+        "phase": "Validating",
+        "name": "End-to-End-Tests",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "End-to-End-Tests weisen nach, dass vollständige Geschäftsabläufe über Systemgrenzen hinweg funktionieren.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-20",
+        "phase": "Validating",
+        "name": "Fachliche Abnahme",
+        "service": "",
+        "type": "Entscheidung",
+        "description": "Die fachliche Abnahme bewertet die Erfüllung der Akzeptanzkriterien; ein formaler Entscheid erfolgt bei Bedarf. Fachliches Feedback wird bereits während der Umsetzung eingeholt und ist von dieser Abnahme zu unterscheiden.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-21",
+        "phase": "Deploying & Releasing",
+        "name": "Deployment",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Software wird kontrolliert in Entwicklungs-, Test- und Produktionsumgebungen bereitgestellt.",
+        "additionalPhases": [
+          "Implementing",
+          "Validating"
+        ]
+      },
+      {
+        "id": "activity-31",
+        "phase": "Implementing",
+        "name": "Technische Integration",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Komponenten werden technisch verbunden und in Entwicklungs- und Testumgebungen lauffähig gemacht.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-22",
+        "phase": "Deploying & Releasing",
+        "name": "Releasefreigabe",
+        "service": "",
+        "type": "Entscheidung",
+        "description": "Die zuständige Rolle entscheidet gemäss Release-Regeln über die Freigabe zur Nutzung.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-23",
+        "phase": "Deploying & Releasing",
+        "name": "Betriebsübergabe",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Die Betriebsübergabe bestätigt die vereinbarten Zuständigkeiten, Betriebsunterlagen und Unterstützung für den laufenden Betrieb.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-25",
+        "phase": "Done",
+        "name": "Feature-Abschluss / Lessons Learned",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Erfüllte Done-Kriterien belegen den Feature-Abschluss. Erkenntnisse werden während des gesamten Flows ausgewertet und in Verbesserungen umgesetzt; Lessons Learned sind keine einmalige Abschlussaufgabe.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-02",
+        "phase": "Übergreifend",
+        "name": "Strategische Einordnung und Priorisierung",
+        "service": "",
+        "type": "Governance",
+        "description": "Die Portfolio-Steuerung ordnet Vorhaben strategisch ein und setzt Prioritäten ausserhalb des Feature-Flows.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-32",
+        "phase": "Deploying & Releasing",
+        "name": "Rollback-Bereitschaft prüfen",
+        "service": "",
+        "type": "Zustandsbezogen",
+        "description": "Vor der Freigabe wird nachgewiesen, dass die Rückkehr zu einem definierten Software- und Konfigurationsstand funktioniert.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-24",
+        "phase": "Übergreifend",
+        "name": "Wirkungskontrolle / Nutzungsanalyse",
+        "service": "",
+        "type": "Feedback",
+        "description": "Nutzungsdaten und Rückmeldungen zeigen nach dem Release, ob der erwartete Nutzen eintritt.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-26",
+        "phase": "Übergreifend",
+        "name": "Monitoring und Audit-Trails",
+        "service": "",
+        "type": "Lifecycle",
+        "description": "Monitoring überwacht den Servicebetrieb; Audit-Trails machen relevante Vorgänge nachvollziehbar.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-27",
+        "phase": "Übergreifend",
+        "name": "Operations / Incident Management",
+        "service": "",
+        "type": "Lifecycle",
+        "description": "Der Servicebetrieb hält Leistungen verfügbar und behebt Störungen; Verbesserungsbedarf fliesst ins ART-Backlog.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-28",
+        "phase": "Übergreifend",
+        "name": "Dependency Management",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Abhängigkeiten zwischen Teams und Leistungserbringern werden laufend abgestimmt; Blockaden werden geklärt oder eskaliert.",
+        "additionalPhases": []
+      },
+      {
+        "id": "activity-29",
+        "phase": "Übergreifend",
+        "name": "Dokumentation und Qualitätsmanagement",
+        "service": "",
+        "type": "Kontinuierlich",
+        "description": "Dokumentation und Qualitätsnachweise werden während der Arbeit erstellt und aktuell gehalten.",
+        "additionalPhases": []
+      }
+    ],
+    "policies": [
+      {
+        "name": "Funnel",
+        "exit": "Bedarf und Nutzen geklärt; Analyse ausgewählt und kapazitiv möglich.",
+        "owner": "Product Management",
+        "contributors": "Bedarfsträger / Product Owner",
+        "evidence": "Analyseentscheid mit Priorität und bestätigter Analysekapazität",
+        "wip": "",
+        "scope": "ART",
+        "type": "Übergang",
+        "standardRevision": 4
+      },
+      {
+        "name": "Analyzing",
+        "exit": "Feature-Ziel, Umfang und prüfbare AC geklärt; Risiken, LE-Abhängigkeiten und Wirkungshypothese samt Messauftrag dokumentiert.",
+        "owner": "Product Owner",
+        "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+        "evidence": "Feature mit AC, Risikoeinschätzung, LE-Beiträgen und referenziertem Messplan",
+        "wip": "",
+        "scope": "ART",
+        "type": "Übergang",
+        "standardRevision": 4
+      },
+      {
+        "name": "Backlog",
+        "exit": "Nächster Umsetzungsschritt bereit; priorisiertes Feature bei freier Kapazität und gesicherten Lieferbeiträgen ziehen.",
+        "owner": "Product Owner",
+        "contributors": "Team / beteiligte LE",
+        "evidence": "Pull-Entscheid mit Kapazität, Bereitschaft und benötigten Zusagen",
+        "wip": "",
+        "scope": "ART",
+        "type": "Übergang",
+        "standardRevision": 4
+      },
+      {
+        "name": "Implementing",
+        "exit": "Änderungen integriert; Build, Reviews und frühe Tests erfolgreich. Ergebnis für die integrierte Validierung prüfbar.",
+        "owner": "Umsetzungsverantwortliche Rolle im Team",
+        "contributors": "Team / beteiligte LE",
+        "evidence": "Versioniertes Artefakt, erfolgreicher Build, Reviews und frühe Tests",
+        "wip": "",
+        "scope": "ART",
+        "type": "Übergang",
+        "standardRevision": 4
+      },
+      {
+        "name": "Validating",
+        "exit": "DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden Abweichungen. Erforderliche Freigabeunterlagen liegen vor.",
+        "owner": "Product Owner",
+        "contributors": "Team / Fachrollen",
+        "evidence": "Akzeptanz- und Qualitätsnachweise mit beurteilten Abweichungen",
+        "wip": "",
+        "scope": "ART",
+        "type": "Übergang",
+        "standardRevision": 4
+      },
+      {
+        "name": "Deploying & Releasing",
+        "exit": "Bereitstellung, Nutzungsfreigabe und Betriebsübernahme bestätigt; Funktionsprüfung erfolgreich und Rückfallweg verfügbar.",
+        "owner": "Releaseverantwortliche Rolle",
+        "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+        "evidence": "Deploymentprotokoll, Nutzungsfreigabe, Funktionsprüfung und bestätigte Betriebsübernahme",
+        "wip": "",
+        "scope": "ART",
+        "type": "Übergang",
+        "standardRevision": 4
+      },
+      {
+        "name": "Done",
+        "exit": "Abschluss und Nachweise vollständig; Messauftrag mit Verantwortung, Termin und Datenquelle übergeben.",
+        "owner": "Product Owner",
+        "contributors": "Team / Product Management",
+        "evidence": "Feature-Abschluss mit DoD-Nachweisen und Referenz auf übergebenen Messauftrag",
+        "wip": "",
+        "scope": "ART",
+        "type": "Abschluss",
+        "standardRevision": 4
+      }
+    ],
+    "product": "merge-product-3",
+    "team": "merge-team-3",
+    "providers": [
+      "UTG-ART",
+      "ISCeco",
+      "BIT",
+      "Rubicon"
+    ],
+    "updated": "2026-11-08T12:48:15.102Z",
+    "flowSchema": "seven-states-v1",
+    "methodVersion": "3.10.0",
+    "flowGovernance": {
+      "version": 1,
+      "status": "Vorschlag",
+      "workItem": "Feature im ART-Fluss. Story-Bereitschaft wird separat für die nächsten Umsetzungsschritte vereinbart.",
+      "pull": "Arbeit nur bei verfügbarer Kapazität der empfangenden Stufe ziehen. Backlog ist eine priorisierte Warteschlange; Verfeinerung erfolgt bedarfsgerecht.",
+      "wip": "",
+      "blocked": "Blockade am Arbeitselement mit verantwortlicher Person, nächstem Schritt und Eskalationszeitpunkt dokumentieren. Den konkreten Eskalationsweg gemeinsam vereinbaren.",
+      "aging": "Alternde Arbeit regelmässig im Flow-Review besprechen; Prüfrhythmus und Eingriffsgrenzen anhand tatsächlicher Durchlaufzeiten vereinbaren.",
+      "exceptions": "Arbeit darf mit begründetem Entscheid abgelehnt, geparkt oder in eine frühere Stufe zurückgegeben werden. Verantwortliche Rolle und Wiederaufnahmebedingung am Feature dokumentieren.",
+      "measurementStart": "Pull eines Features vom Backlog nach Implementing; Analysezeiten separat betrachten.",
+      "measurementEnd": "Eintritt in Done nach bestätigter Bereitstellung, Nutzungsfreigabe und Übergabe.",
+      "sle": "",
+      "qualityMinimum": "Am selben Produkt gemeinsam vereinbarte DoD einhalten: überprüfbare AC, Integration und Versionierung, relevante Tests, anwendbare Qualitätsanforderungen und aktuelle Dokumentation. Team-Vereinbarungen konkretisieren diese Mindestqualität. Formale Abnahmen nur bei fachlicher, vertraglicher oder regulatorischer Erforderlichkeit; zuständige Entscheidrolle benennen.",
+      "decisionRole": "",
+      "evidence": ""
+    },
+    "migrations": {
+      "activityCatalog3110": true,
+      "embeddingKinds3141": true,
+      "policyCompletionType3140": true
+    },
+    "embeddingKinds": {
+      "Im Team integriert": "embedded",
+      "Anderes Team im selben ART": "art-team",
+      "Shared Services": "shared",
+      "Leistungserbringer ausserhalb des ART": "outside"
+    },
+    "providerRecords": [
+      {
+        "id": "provider-UTG-ART",
+        "name": "UTG-ART",
+        "kind": "art"
+      },
+      {
+        "id": "provider-ISCeco",
+        "name": "ISCeco",
+        "kind": "isceco"
+      },
+      {
+        "id": "provider-BIT",
+        "name": "BIT",
+        "kind": "other"
+      },
+      {
+        "id": "provider-Rubicon",
+        "name": "Rubicon",
+        "kind": "other"
+      }
+    ],
+    "designCriteria": [
+      {
+        "id": "design-customer-value",
+        "name": "Zusammenhängender Auftrag mit erkennbarem Nutzen",
+        "description": "Das Team wird um einen fachlich zusammenhängenden Produktbereich oder Service gebildet. Seine Nutzer und der erwartete Nutzen sind benennbar. Eine gemeinsame Technologie oder dieselbe vorgesetzte Stelle reicht als Begründung für den Teamschnitt nicht aus."
+      },
+      {
+        "id": "design-e2e",
+        "name": "Lieferfähigkeit über den gesamten vereinbarten Umfang",
+        "description": "Das Team kann eine typische Änderung von der Klärung des Bedarfs bis zur nutzbaren und betreibbaren Lösung verantworten. Der Zuschnitt vermeidet reine Analyse-, Entwicklungs- oder Testteams, zwischen denen jede Änderung weitergereicht werden muss. Erforderliche externe Leistungen sind ausdrücklich vereinbart."
+      },
+      {
+        "id": "design-self-organisation",
+        "name": "Eindeutige Verantwortung und Entscheidungsbefugnisse",
+        "description": "Für jedes Produkt, jeden Service und jede wesentliche Schnittstelle ist klar, welches Team verantwortlich ist. Diese Verantwortung ist mit den nötigen Entscheidungsrechten verbunden. Überschneidungen und Lücken werden beim Zuschnitt geklärt – etwa, wer einen produktiven Fehler behebt oder eine Schnittstellenänderung entscheidet."
+      },
+      {
+        "id": "design-all-in-one",
+        "name": "Fachlich und technisch passende Grenzen",
+        "description": "Aufgaben, die häufig gemeinsam verändert werden müssen, liegen möglichst beim selben Team. Teamgrenzen sollen unabhängige Änderungen ermöglichen. Wenn zwei Teams für fast jedes Feature gemeinsam planen, entwickeln und freigeben müssen, ist ihre Trennung zu hinterfragen."
+      },
+      {
+        "id": "design-cross-assignments",
+        "name": "Externe Abhängigkeiten und Querbeauftragungen reduzieren",
+        "description": "Der Teamschnitt minimiert wiederkehrende Übergaben, externe Freigaben und konkurrierende Beauftragungen. Massgeblich ist, wie oft das Team auf andere warten muss. Häufig benötigte Fähigkeiten gehören möglichst ins Team; selten benötigte Spezialleistungen können verlässlich von aussen bezogen werden."
+      },
+      {
+        "id": "design-manageable-scope",
+        "name": "Tragbarer Umfang und begrenzte Komplexität",
+        "description": "Anzahl und Verschiedenheit der Produkte, Technologien und Betriebsaufgaben passen zur Leistungsfähigkeit des Teams. Ein Team übernimmt nicht beliebig viele Systeme, nur weil diese organisatorisch zusammengehören. Wird der Umfang zu gross, wird entlang zusammenhängender Aufgaben geteilt – nicht automatisch nach einzelnen Disziplinen."
+      },
+      {
+        "id": "design-crossfunctional",
+        "name": "Passende Kompetenzen und ausreichende Kapazität",
+        "description": "Die Besetzung folgt dem Auftrag. Das Team verfügt gemeinsam über die benötigten fachlichen, technischen und betrieblichen Fähigkeiten. Kritisches Wissen hängt nicht dauerhaft an einer einzelnen Person. Teamgrösse und Kapazität werden daraus abgeleitet, nicht über eine starre Sollzahl vorgegeben."
+      },
+      {
+        "id": "design-stable-focus",
+        "name": "Stabiler Teamkern und eindeutige Priorisierung",
+        "description": "Menschen werden einem beständigen Auftrag zugeordnet. Dauerhafte Mehrfachzuordnungen und wechselnde Queraufträge werden begrenzt. Für das Team gibt es eine nachvollziehbare Reihenfolge der Arbeit; mehrere Auftraggeber können nicht unabhängig dieselbe Kapazität verplanen."
+      },
+      {
+        "id": "design-shared-services",
+        "name": "Gemeinsame Services mit klarem Entlastungseffekt",
+        "description": "Plattform- und Spezialistenteams werden dort gebildet, wo sie andere Teams wirksam unterstützen: durch wiederverwendbare Leistungen oder gebündeltes Spezialwissen. Leistungsumfang, Schnittstellen und Nutzungsbedingungen sind klar. Eine zentrale Einheit, die für jede Änderung eine individuelle Beauftragung und lange Abstimmung verlangt, muss ihren Zuschnitt überprüfen."
+      }
+    ],
+    "teamDesignAssessments": {},
+    "embeddings": [
+      "Im Team integriert",
+      "Anderes Team im selben ART",
+      "Shared Services",
+      "Leistungserbringer ausserhalb des ART"
+    ],
+    "interactions": [
+      "Gemeinsame Erarbeitung",
+      "Servicebezug",
+      "Befähigung",
+      "Beratung / punktuelle Unterstützung"
+    ],
+    "legacyModels": [
+      "Embedded",
+      "Kooperation",
+      "Shared Service",
+      "Service Interface"
+    ],
+    "operatingModelVersion": "3.16",
+    "teamDesignCriteria": {
+      "merge-team-3": [
+        {
+          "id": "design-customer-value",
+          "name": "Zusammenhängender Auftrag mit erkennbarem Nutzen",
+          "description": "Das Team wird um einen fachlich zusammenhängenden Produktbereich oder Service gebildet. Seine Nutzer und der erwartete Nutzen sind benennbar. Eine gemeinsame Technologie oder dieselbe vorgesetzte Stelle reicht als Begründung für den Teamschnitt nicht aus.",
+          "fulfilled": false,
+          "assessmentStatus": "Teilweise erfüllt",
+          "note": "Beurteilung 3 · 3266",
+          "needsReview": false
+        },
+        {
+          "id": "design-e2e",
+          "name": "Lieferfähigkeit über den gesamten vereinbarten Umfang",
+          "description": "Das Team kann eine typische Änderung von der Klärung des Bedarfs bis zur nutzbaren und betreibbaren Lösung verantworten. Der Zuschnitt vermeidet reine Analyse-, Entwicklungs- oder Testteams, zwischen denen jede Änderung weitergereicht werden muss. Erforderliche externe Leistungen sind ausdrücklich vereinbart.",
+          "fulfilled": false,
+          "assessmentStatus": "Teilweise erfüllt",
+          "note": "Beurteilung 3 · 1536",
+          "needsReview": false
+        },
+        {
+          "id": "design-self-organisation",
+          "name": "Eindeutige Verantwortung und Entscheidungsbefugnisse",
+          "description": "Für jedes Produkt, jeden Service und jede wesentliche Schnittstelle ist klar, welches Team verantwortlich ist. Diese Verantwortung ist mit den nötigen Entscheidungsrechten verbunden. Überschneidungen und Lücken werden beim Zuschnitt geklärt – etwa, wer einen produktiven Fehler behebt oder eine Schnittstellenänderung entscheidet.",
+          "fulfilled": false,
+          "assessmentStatus": "Nicht erfüllt",
+          "note": "Beurteilung 3 · 5627",
+          "needsReview": false
+        },
+        {
+          "id": "design-all-in-one",
+          "name": "Fachlich und technisch passende Grenzen",
+          "description": "Aufgaben, die häufig gemeinsam verändert werden müssen, liegen möglichst beim selben Team. Teamgrenzen sollen unabhängige Änderungen ermöglichen. Wenn zwei Teams für fast jedes Feature gemeinsam planen, entwickeln und freigeben müssen, ist ihre Trennung zu hinterfragen.",
+          "fulfilled": false,
+          "assessmentStatus": "Nicht erfüllt",
+          "note": "Beurteilung 3 · 6042",
+          "needsReview": false
+        },
+        {
+          "id": "design-cross-assignments",
+          "name": "Externe Abhängigkeiten und Querbeauftragungen reduzieren",
+          "description": "Der Teamschnitt minimiert wiederkehrende Übergaben, externe Freigaben und konkurrierende Beauftragungen. Massgeblich ist, wie oft das Team auf andere warten muss. Häufig benötigte Fähigkeiten gehören möglichst ins Team; selten benötigte Spezialleistungen können verlässlich von aussen bezogen werden.",
+          "fulfilled": false,
+          "assessmentStatus": "Teilweise erfüllt",
+          "note": "Beurteilung 3 · 5734",
+          "needsReview": false
+        },
+        {
+          "id": "design-manageable-scope",
+          "name": "Tragbarer Umfang und begrenzte Komplexität",
+          "description": "Anzahl und Verschiedenheit der Produkte, Technologien und Betriebsaufgaben passen zur Leistungsfähigkeit des Teams. Ein Team übernimmt nicht beliebig viele Systeme, nur weil diese organisatorisch zusammengehören. Wird der Umfang zu gross, wird entlang zusammenhängender Aufgaben geteilt – nicht automatisch nach einzelnen Disziplinen.",
+          "fulfilled": false,
+          "assessmentStatus": "Teilweise erfüllt",
+          "note": "Beurteilung 3 · 2911",
+          "needsReview": false
+        },
+        {
+          "id": "design-crossfunctional",
+          "name": "Passende Kompetenzen und ausreichende Kapazität",
+          "description": "Die Besetzung folgt dem Auftrag. Das Team verfügt gemeinsam über die benötigten fachlichen, technischen und betrieblichen Fähigkeiten. Kritisches Wissen hängt nicht dauerhaft an einer einzelnen Person. Teamgrösse und Kapazität werden daraus abgeleitet, nicht über eine starre Sollzahl vorgegeben.",
+          "fulfilled": false,
+          "assessmentStatus": "Nicht erfüllt",
+          "note": "Beurteilung 3 · 5146",
+          "needsReview": false
+        },
+        {
+          "id": "design-stable-focus",
+          "name": "Stabiler Teamkern und eindeutige Priorisierung",
+          "description": "Menschen werden einem beständigen Auftrag zugeordnet. Dauerhafte Mehrfachzuordnungen und wechselnde Queraufträge werden begrenzt. Für das Team gibt es eine nachvollziehbare Reihenfolge der Arbeit; mehrere Auftraggeber können nicht unabhängig dieselbe Kapazität verplanen.",
+          "fulfilled": false,
+          "assessmentStatus": "Nicht beurteilt",
+          "note": "Beurteilung 3 · 657",
+          "needsReview": false
+        },
+        {
+          "id": "design-shared-services",
+          "name": "Gemeinsame Services mit klarem Entlastungseffekt",
+          "description": "Plattform- und Spezialistenteams werden dort gebildet, wo sie andere Teams wirksam unterstützen: durch wiederverwendbare Leistungen oder gebündeltes Spezialwissen. Leistungsumfang, Schnittstellen und Nutzungsbedingungen sind klar. Eine zentrale Einheit, die für jede Änderung eine individuelle Beauftragung und lange Abstimmung verlangt, muss ihren Zuschnitt überprüfen.",
+          "fulfilled": false,
+          "assessmentStatus": "Nicht beurteilt",
+          "note": "Beurteilung 3 · 4285",
+          "needsReview": false
+        }
+      ],
+      "merge-team-4": [
+        {
+          "id": "design-customer-value",
+          "name": "Zusammenhängender Auftrag mit erkennbarem Nutzen",
+          "description": "Das Team wird um einen fachlich zusammenhängenden Produktbereich oder Service gebildet. Seine Nutzer und der erwartete Nutzen sind benennbar. Eine gemeinsame Technologie oder dieselbe vorgesetzte Stelle reicht als Begründung für den Teamschnitt nicht aus.",
+          "fulfilled": false,
+          "assessmentStatus": "Nicht beurteilt",
+          "note": "Beurteilung 4 · 7262",
+          "needsReview": false
+        },
+        {
+          "id": "design-e2e",
+          "name": "Lieferfähigkeit über den gesamten vereinbarten Umfang",
+          "description": "Das Team kann eine typische Änderung von der Klärung des Bedarfs bis zur nutzbaren und betreibbaren Lösung verantworten. Der Zuschnitt vermeidet reine Analyse-, Entwicklungs- oder Testteams, zwischen denen jede Änderung weitergereicht werden muss. Erforderliche externe Leistungen sind ausdrücklich vereinbart.",
+          "fulfilled": false,
+          "assessmentStatus": "Nicht erfüllt",
+          "note": "Beurteilung 4 · 4114",
+          "needsReview": false
+        },
+        {
+          "id": "design-self-organisation",
+          "name": "Eindeutige Verantwortung und Entscheidungsbefugnisse",
+          "description": "Für jedes Produkt, jeden Service und jede wesentliche Schnittstelle ist klar, welches Team verantwortlich ist. Diese Verantwortung ist mit den nötigen Entscheidungsrechten verbunden. Überschneidungen und Lücken werden beim Zuschnitt geklärt – etwa, wer einen produktiven Fehler behebt oder eine Schnittstellenänderung entscheidet.",
+          "fulfilled": false,
+          "assessmentStatus": "Nicht erfüllt",
+          "note": "Beurteilung 4 · 3209",
+          "needsReview": false
+        },
+        {
+          "id": "design-all-in-one",
+          "name": "Fachlich und technisch passende Grenzen",
+          "description": "Aufgaben, die häufig gemeinsam verändert werden müssen, liegen möglichst beim selben Team. Teamgrenzen sollen unabhängige Änderungen ermöglichen. Wenn zwei Teams für fast jedes Feature gemeinsam planen, entwickeln und freigeben müssen, ist ihre Trennung zu hinterfragen.",
+          "fulfilled": false,
+          "assessmentStatus": "Nicht erfüllt",
+          "note": "Beurteilung 4 · 5421",
+          "needsReview": false
+        },
+        {
+          "id": "design-cross-assignments",
+          "name": "Externe Abhängigkeiten und Querbeauftragungen reduzieren",
+          "description": "Der Teamschnitt minimiert wiederkehrende Übergaben, externe Freigaben und konkurrierende Beauftragungen. Massgeblich ist, wie oft das Team auf andere warten muss. Häufig benötigte Fähigkeiten gehören möglichst ins Team; selten benötigte Spezialleistungen können verlässlich von aussen bezogen werden.",
+          "fulfilled": false,
+          "assessmentStatus": "Nicht erfüllt",
+          "note": "Beurteilung 4 · 6546",
+          "needsReview": false
+        },
+        {
+          "id": "design-manageable-scope",
+          "name": "Tragbarer Umfang und begrenzte Komplexität",
+          "description": "Anzahl und Verschiedenheit der Produkte, Technologien und Betriebsaufgaben passen zur Leistungsfähigkeit des Teams. Ein Team übernimmt nicht beliebig viele Systeme, nur weil diese organisatorisch zusammengehören. Wird der Umfang zu gross, wird entlang zusammenhängender Aufgaben geteilt – nicht automatisch nach einzelnen Disziplinen.",
+          "fulfilled": false,
+          "assessmentStatus": "Nicht erfüllt",
+          "note": "Beurteilung 4 · 3597",
+          "needsReview": false
+        },
+        {
+          "id": "design-crossfunctional",
+          "name": "Passende Kompetenzen und ausreichende Kapazität",
+          "description": "Die Besetzung folgt dem Auftrag. Das Team verfügt gemeinsam über die benötigten fachlichen, technischen und betrieblichen Fähigkeiten. Kritisches Wissen hängt nicht dauerhaft an einer einzelnen Person. Teamgrösse und Kapazität werden daraus abgeleitet, nicht über eine starre Sollzahl vorgegeben.",
+          "fulfilled": false,
+          "assessmentStatus": "Nicht erfüllt",
+          "note": "Beurteilung 4 · 7313",
+          "needsReview": false
+        },
+        {
+          "id": "design-stable-focus",
+          "name": "Stabiler Teamkern und eindeutige Priorisierung",
+          "description": "Menschen werden einem beständigen Auftrag zugeordnet. Dauerhafte Mehrfachzuordnungen und wechselnde Queraufträge werden begrenzt. Für das Team gibt es eine nachvollziehbare Reihenfolge der Arbeit; mehrere Auftraggeber können nicht unabhängig dieselbe Kapazität verplanen.",
+          "fulfilled": false,
+          "assessmentStatus": "Teilweise erfüllt",
+          "note": "Beurteilung 4 · 9091",
+          "needsReview": false
+        },
+        {
+          "id": "design-shared-services",
+          "name": "Gemeinsame Services mit klarem Entlastungseffekt",
+          "description": "Plattform- und Spezialistenteams werden dort gebildet, wo sie andere Teams wirksam unterstützen: durch wiederverwendbare Leistungen oder gebündeltes Spezialwissen. Leistungsumfang, Schnittstellen und Nutzungsbedingungen sind klar. Eine zentrale Einheit, die für jede Änderung eine individuelle Beauftragung und lange Abstimmung verlangt, muss ihren Zuschnitt überprüfen.",
+          "fulfilled": false,
+          "assessmentStatus": "Teilweise erfüllt",
+          "note": "Beurteilung 4 · 5916",
+          "needsReview": false
+        }
+      ]
+    },
+    "flowCriteria": {
+      "version": 1,
+      "commonDoD": [
+        {
+          "id": "dod-acceptance",
+          "type": "DoD",
+          "description": "Die vereinbarten AC sind nachweislich erfüllt.",
+          "owner": "Product Owner / Team",
+          "evidence": "Akzeptanznachweis am Arbeitselement; erforderliche formale Abnahme in der Freigaberegel referenzieren"
+        },
+        {
+          "id": "dod-integration",
+          "type": "DoD",
+          "description": "Änderungen sind geprüft, versioniert und integriert; das Ergebnis ist auslieferbar.",
+          "owner": "Team",
+          "evidence": "Review, erfolgreicher Build und versioniertes Artefakt"
+        },
+        {
+          "id": "dod-tests",
+          "type": "DoD",
+          "description": "Relevante Tests sind erfolgreich; keine unzulässigen Befunde sind offen.",
+          "owner": "Team",
+          "evidence": "Relevante Testnachweise und produktbezogene Fehlergrenzen; keine offenen Befunde, die verbindliche AC oder Qualitätsgrenzen verletzen"
+        },
+        {
+          "id": "dod-quality",
+          "type": "DoD",
+          "description": "Die anwendbaren Qualitäts- und Schutzanforderungen sind nachgewiesen.",
+          "owner": "Team / zuständige Fachrollen",
+          "evidence": "Produktbezogenes Qualitätsprofil mit anwendbaren Anforderungen an Security, Datenschutz, Barrierefreiheit, Performance und Resilienz sowie referenzierten Prüfnachweisen"
+        },
+        {
+          "id": "dod-docs",
+          "type": "DoD",
+          "description": "Dokumentation ist aktuell; Daten-, Schnittstellen- und Migrationsfolgen sind geprüft.",
+          "owner": "Team",
+          "evidence": "Aktuelle Dokumentation und Änderungsinformationen; Datenerhalt, Kompatibilität oder vereinbarter Versions-/Migrationspfad nachgewiesen"
+        }
+      ],
+      "rules": {
+        "Funnel": {
+          "useDoD": false,
+          "criteria": []
+        },
+        "Analyzing": {
+          "useDoD": false,
+          "criteria": [
+            {
+              "id": "ac-behavior",
+              "type": "AC",
+              "description": "Das erwartete Verhalten und Ergebnis aus Nutzersicht sind je Feature konkret beschrieben.",
+              "owner": "Product Owner",
+              "evidence": "Konkrete Beispiele; bei Bedarf Gegeben–Wenn–Dann",
+              "contributors": "Team / Fachrollen"
+            },
+            {
+              "id": "ac-boundaries",
+              "type": "AC",
+              "description": "Relevante Fehlerfälle, Grenzwerte und Berechtigungen sind mit eindeutig erwartetem Verhalten beschrieben.",
+              "owner": "Product Owner",
+              "evidence": "Positive, negative und Grenzfall-Szenarien",
+              "contributors": "Team / Fachrollen"
+            },
+            {
+              "id": "ac-quality",
+              "type": "AC",
+              "description": "Spezifische Qualitätsanforderungen sind mit messbaren Zielwerten und Prüfbedingungen festgelegt.",
+              "owner": "Product Owner",
+              "evidence": "Anwendbare Messwerte, etwa Antwortzeit oder Wiederanlaufziel",
+              "contributors": "Team / Fachrollen"
+            },
+            {
+              "id": "ac-proof",
+              "type": "AC",
+              "description": "Für jedes Akzeptanzkriterium ist festgelegt, wie und mit welchen Daten das Ergebnis überprüft oder demonstriert wird.",
+              "owner": "Product Owner",
+              "evidence": "Zugeordnete Akzeptanztests und Demo-Szenarien",
+              "contributors": "Team / Fachrollen"
+            },
+            {
+              "id": "impact",
+              "type": "Wirkung",
+              "description": "Ausgangslage, erwartete Veränderung, Messgrösse, Datenquelle, Messverantwortung und Messzeitpunkt sind im Messauftrag festgelegt.",
+              "owner": "Product Management",
+              "evidence": "Referenz auf Wirkungshypothese und Messauftrag mit Ausgangswert und Datenquelle",
+              "contributors": "Product Owner / Team"
+            }
+          ]
+        },
+        "Backlog": {
+          "useDoD": false,
+          "criteria": []
+        },
+        "Implementing": {
+          "useDoD": true,
+          "criteria": [
+            {
+              "id": "flow",
+              "type": "Flow-Steuerung",
+              "description": "Nach der übergreifenden Flow-Vereinbarung arbeiten: WIP begrenzen, Blockaden und alternde Arbeit sichtbar bearbeiten. Fehlende konkrete Limits und Eskalationswege gemeinsam vereinbaren.",
+              "owner": "Umsetzungsverantwortliche Rolle im Team",
+              "contributors": "Team / beteiligte LE",
+              "evidence": "Referenz auf vereinbarte WIP-, Blockade- und Eskalationsregeln"
+            }
+          ]
+        },
+        "Validating": {
+          "useDoD": true,
+          "criteria": []
+        },
+        "Deploying & Releasing": {
+          "useDoD": false,
+          "criteria": [
+            {
+              "id": "release",
+              "type": "Release / Betrieb",
+              "description": "Vor der Auslieferung Deployment, Funktionsprüfung, Rollback, Monitoring und Support vorbereiten. Deployment und Freigabe zur Nutzung getrennt nachweisen; bei entkoppeltem Release bleibt das Feature bis zur vereinbarten Nutzungsfreigabe hier. Formale Abnahmen nur bei Erforderlichkeit mit Entscheidrolle und Nachweis führen.",
+              "owner": "Releaseverantwortliche Rolle",
+              "contributors": "Team / Betriebsverantwortliche",
+              "evidence": "Releaseplan und Rückfallverfahren; getrennte Deployment- und Freigabenachweise sowie erforderliche formale Abnahmen"
+            },
+            {
+              "id": "handover",
+              "type": "Schnittstelle",
+              "description": "Lieferobjekt, empfangende Rolle, Übergabekriterien und Reaktionszeit vereinbaren; die erfolgte Übernahme bestätigen lassen.",
+              "owner": "Betriebsverantwortliche Rolle",
+              "contributors": "Team / beteiligte LE",
+              "evidence": "Schnittstellenvereinbarung und bestätigter Übergabenachweis"
+            }
+          ]
+        },
+        "Done": {
+          "useDoD": true,
+          "criteria": []
+        }
+      },
+      "teams": {
+        "merge-team-3": {},
+        "merge-team-4": {}
+      },
+      "standardRevision": 4,
+      "profiles": {
+        "merge-team-3": {
+          "rules": {
+            "Funnel": {
+              "useDoD": false,
+              "criteria": []
+            },
+            "Analyzing": {
+              "useDoD": false,
+              "criteria": [
+                {
+                  "id": "ac-behavior",
+                  "type": "AC",
+                  "description": "Das erwartete Verhalten und Ergebnis aus Nutzersicht sind je Feature konkret beschrieben.",
+                  "owner": "Product Owner",
+                  "evidence": "Konkrete Beispiele; bei Bedarf Gegeben–Wenn–Dann",
+                  "contributors": "Team / Fachrollen"
+                },
+                {
+                  "id": "ac-boundaries",
+                  "type": "AC",
+                  "description": "Relevante Fehlerfälle, Grenzwerte und Berechtigungen sind mit eindeutig erwartetem Verhalten beschrieben.",
+                  "owner": "Product Owner",
+                  "evidence": "Positive, negative und Grenzfall-Szenarien",
+                  "contributors": "Team / Fachrollen"
+                },
+                {
+                  "id": "ac-quality",
+                  "type": "AC",
+                  "description": "Spezifische Qualitätsanforderungen sind mit messbaren Zielwerten und Prüfbedingungen festgelegt.",
+                  "owner": "Product Owner",
+                  "evidence": "Anwendbare Messwerte, etwa Antwortzeit oder Wiederanlaufziel",
+                  "contributors": "Team / Fachrollen"
+                },
+                {
+                  "id": "ac-proof",
+                  "type": "AC",
+                  "description": "Für jedes Akzeptanzkriterium ist festgelegt, wie und mit welchen Daten das Ergebnis überprüft oder demonstriert wird.",
+                  "owner": "Product Owner",
+                  "evidence": "Zugeordnete Akzeptanztests und Demo-Szenarien",
+                  "contributors": "Team / Fachrollen"
+                },
+                {
+                  "id": "impact",
+                  "type": "Wirkung",
+                  "description": "Ausgangslage, erwartete Veränderung, Messgrösse, Datenquelle, Messverantwortung und Messzeitpunkt sind im Messauftrag festgelegt.",
+                  "owner": "Product Management",
+                  "evidence": "Referenz auf Wirkungshypothese und Messauftrag mit Ausgangswert und Datenquelle",
+                  "contributors": "Product Owner / Team"
+                }
+              ]
+            },
+            "Backlog": {
+              "useDoD": false,
+              "criteria": []
+            },
+            "Implementing": {
+              "useDoD": true,
+              "criteria": [
+                {
+                  "id": "flow",
+                  "type": "Flow-Steuerung",
+                  "description": "Nach der übergreifenden Flow-Vereinbarung arbeiten: WIP begrenzen, Blockaden und alternde Arbeit sichtbar bearbeiten. Fehlende konkrete Limits und Eskalationswege gemeinsam vereinbaren.",
+                  "owner": "Umsetzungsverantwortliche Rolle im Team",
+                  "contributors": "Team / beteiligte LE",
+                  "evidence": "Testnachweis 3"
+                }
+              ]
+            },
+            "Validating": {
+              "useDoD": true,
+              "criteria": []
+            },
+            "Deploying & Releasing": {
+              "useDoD": false,
+              "criteria": [
+                {
+                  "id": "release",
+                  "type": "Release / Betrieb",
+                  "description": "Vor der Auslieferung Deployment, Funktionsprüfung, Rollback, Monitoring und Support vorbereiten. Deployment und Freigabe zur Nutzung getrennt nachweisen; bei entkoppeltem Release bleibt das Feature bis zur vereinbarten Nutzungsfreigabe hier. Formale Abnahmen nur bei Erforderlichkeit mit Entscheidrolle und Nachweis führen.",
+                  "owner": "Releaseverantwortliche Rolle",
+                  "contributors": "Team / Betriebsverantwortliche",
+                  "evidence": "Releaseplan und Rückfallverfahren; getrennte Deployment- und Freigabenachweise sowie erforderliche formale Abnahmen"
+                },
+                {
+                  "id": "handover",
+                  "type": "Schnittstelle",
+                  "description": "Lieferobjekt, empfangende Rolle, Übergabekriterien und Reaktionszeit vereinbaren; die erfolgte Übernahme bestätigen lassen.",
+                  "owner": "Betriebsverantwortliche Rolle",
+                  "contributors": "Team / beteiligte LE",
+                  "evidence": "Schnittstellenvereinbarung und bestätigter Übergabenachweis"
+                }
+              ]
+            },
+            "Done": {
+              "useDoD": true,
+              "criteria": []
+            }
+          },
+          "phaseGates": {
+            "Funnel": [
+              {
+                "id": "entry-0",
+                "type": "Eintritt",
+                "description": "Feature-Anliegen mit betroffenen Nutzern und zuständiger Person erfasst.",
+                "owner": "Product Management",
+                "contributors": "Bedarfsträger / Product Owner",
+                "evidence": "Bedarfseintrag mit Nutzern und zuständiger Person"
+              },
+              {
+                "id": "exit-0",
+                "type": "Übergang",
+                "description": "Bedarf und Nutzen geklärt; Analyse ausgewählt und kapazitiv möglich.",
+                "owner": "Product Management",
+                "contributors": "Bedarfsträger / Product Owner",
+                "evidence": "Analyseentscheid mit Priorität und bestätigter Analysekapazität"
+              }
+            ],
+            "Analyzing": [
+              {
+                "id": "entry-1",
+                "type": "Eintritt",
+                "description": "Analyse ausgewählt; Kapazität und benötigte Rollen verfügbar.",
+                "owner": "Product Owner",
+                "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+                "evidence": "Priorisierter Analyseauftrag und verfügbare Fach- und Technikrollen"
+              },
+              {
+                "id": "exit-1",
+                "type": "Übergang",
+                "description": "Feature-Ziel, Umfang und prüfbare AC geklärt; Risiken, LE-Abhängigkeiten und Wirkungshypothese samt Messauftrag dokumentiert.",
+                "owner": "Product Owner",
+                "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+                "evidence": "Feature mit AC, Risikoeinschätzung, LE-Beiträgen und referenziertem Messplan"
+              }
+            ],
+            "Backlog": [
+              {
+                "id": "entry-2",
+                "type": "Eintritt",
+                "description": "Feature mit Ziel, Umfang, AC, Risiken und Abhängigkeiten analysiert.",
+                "owner": "Product Owner",
+                "contributors": "Team / beteiligte LE",
+                "evidence": "Analysiertes Feature mit AC und Abhängigkeiten"
+              },
+              {
+                "id": "exit-2",
+                "type": "Übergang",
+                "description": "Nächster Umsetzungsschritt bereit; priorisiertes Feature bei freier Kapazität und gesicherten Lieferbeiträgen ziehen.",
+                "owner": "Product Owner",
+                "contributors": "Team / beteiligte LE",
+                "evidence": "Pull-Entscheid mit Kapazität, Bereitschaft und benötigten Zusagen"
+              }
+            ],
+            "Implementing": [
+              {
+                "id": "entry-3",
+                "type": "Eintritt",
+                "description": "Priorisiertes Feature gezogen; nächster Schritt bereit, Kapazität und benötigte Lieferbeiträge gesichert.",
+                "owner": "Umsetzungsverantwortliche Rolle im Team",
+                "contributors": "Team / beteiligte LE",
+                "evidence": "Pull-Entscheid gemäss Bereitschaft und Kapazität"
+              },
+              {
+                "id": "exit-3",
+                "type": "Übergang",
+                "description": "Änderungen integriert; Build, Reviews und frühe Tests erfolgreich. Ergebnis für die integrierte Validierung prüfbar.",
+                "owner": "Umsetzungsverantwortliche Rolle im Team",
+                "contributors": "Team / beteiligte LE",
+                "evidence": "Versioniertes Artefakt, erfolgreicher Build, Reviews und frühe Tests"
+              }
+            ],
+            "Validating": [
+              {
+                "id": "entry-4",
+                "type": "Eintritt",
+                "description": "Integriertes Ergebnis nach erfolgreichen frühen Prüfungen mit Testdaten in der vereinbarten Umgebung prüfbar.",
+                "owner": "Product Owner",
+                "contributors": "Team / Fachrollen",
+                "evidence": "Prüfbares integriertes Artefakt, Testdaten und Prüfumgebung; referenzierte DoD-Nachweise"
+              },
+              {
+                "id": "exit-4",
+                "type": "Übergang",
+                "description": "DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden Abweichungen. Erforderliche Freigabeunterlagen liegen vor.",
+                "owner": "Product Owner",
+                "contributors": "Team / Fachrollen",
+                "evidence": "Akzeptanz- und Qualitätsnachweise mit beurteilten Abweichungen; referenzierte DoD-Nachweise"
+              }
+            ],
+            "Deploying & Releasing": [
+              {
+                "id": "entry-5",
+                "type": "Eintritt",
+                "description": "DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden Abweichungen. Erforderliche Release- und Betriebsinformationen liegen vor.",
+                "owner": "Releaseverantwortliche Rolle",
+                "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+                "evidence": "Validierungsnachweise und vorbereitete Release-/Betriebsinformationen; referenzierte DoD-Nachweise"
+              },
+              {
+                "id": "exit-5",
+                "type": "Übergang",
+                "description": "Bereitstellung, Nutzungsfreigabe und Betriebsübernahme bestätigt; Funktionsprüfung erfolgreich und Rückfallweg verfügbar.",
+                "owner": "Releaseverantwortliche Rolle",
+                "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+                "evidence": "Deploymentprotokoll, Nutzungsfreigabe, Funktionsprüfung und bestätigte Betriebsübernahme; referenzierte DoD-Nachweise"
+              }
+            ],
+            "Done": [
+              {
+                "id": "entry-6",
+                "type": "Eintritt",
+                "description": "Bereitstellung, Nutzungsfreigabe und Betriebsübernahme nachgewiesen.",
+                "owner": "Product Owner",
+                "contributors": "Team / Product Management",
+                "evidence": "Nachgewiesene Bereitstellung, Nutzungsfreigabe und Übergaben"
+              },
+              {
+                "id": "exit-6",
+                "type": "Abschluss",
+                "description": "Abschluss und Nachweise vollständig; Messauftrag mit Verantwortung, Termin und Datenquelle übergeben.",
+                "owner": "Product Owner",
+                "contributors": "Team / Product Management",
+                "evidence": "Feature-Abschluss mit DoD-Nachweisen und Referenz auf übergebenen Messauftrag"
+              }
+            ]
+          },
+          "commonDoR": [
+            {
+              "id": "dor-value",
+              "type": "DoR",
+              "description": "Ziel, Nutzen und Umfang sind verstanden.",
+              "owner": "PO 3",
+              "evidence": "Backlog-Eintrag mit Ziel, Nutzen und Abgrenzung"
+            },
+            {
+              "id": "dor-ac",
+              "type": "DoR",
+              "description": "AC sind abgestimmt und überprüfbar.",
+              "owner": "Product Owner / Team",
+              "evidence": "Vereinbarte AC mit Beispielen und Prüfansatz"
+            },
+            {
+              "id": "dor-small",
+              "type": "DoR",
+              "description": "Der nächste Umsetzungsschritt ist klein und umsetzbar.",
+              "owner": "Team",
+              "evidence": "Zuschnitt des nächsten Schritts; weitere Verfeinerung nach Bedarf, Story-Bereitschaft separat"
+            },
+            {
+              "id": "dor-dependencies",
+              "type": "DoR",
+              "description": "Blockierende Fragen sind geklärt oder tragfähig adressiert.",
+              "owner": "Team / Architektur / beteiligte LE",
+              "evidence": "Abhängigkeiten, Risikoeinschätzung und erforderliche Zusagen"
+            },
+            {
+              "id": "dor-capacity",
+              "type": "DoR",
+              "description": "Benötigte Rollen, Fähigkeiten, Testmittel und Lieferbeiträge sind rechtzeitig verfügbar.",
+              "owner": "Product Owner / Team",
+              "evidence": "Benötigte Beiträge und Testmittel verfügbar oder für ihren Bedarfstermin verbindlich zugesagt; Priorität und freie Kapazität beim Pull bestätigen"
+            }
+          ],
+          "commonDoD": [
+            {
+              "id": "dod-acceptance",
+              "type": "DoD",
+              "description": "Die vereinbarten AC sind nachweislich erfüllt. Team 3 prüft Stichprobe 5351.",
+              "owner": "Product Owner / Team",
+              "evidence": "Akzeptanznachweis am Arbeitselement; erforderliche formale Abnahme in der Freigaberegel referenzieren"
+            },
+            {
+              "id": "dod-integration",
+              "type": "DoD",
+              "description": "Änderungen sind geprüft, versioniert und integriert; das Ergebnis ist auslieferbar.",
+              "owner": "Team",
+              "evidence": "Review, erfolgreicher Build und versioniertes Artefakt"
+            },
+            {
+              "id": "dod-tests",
+              "type": "DoD",
+              "description": "Relevante Tests sind erfolgreich; keine unzulässigen Befunde sind offen.",
+              "owner": "Team",
+              "evidence": "Relevante Testnachweise und produktbezogene Fehlergrenzen; keine offenen Befunde, die verbindliche AC oder Qualitätsgrenzen verletzen"
+            },
+            {
+              "id": "dod-quality",
+              "type": "DoD",
+              "description": "Die anwendbaren Qualitäts- und Schutzanforderungen sind nachgewiesen.",
+              "owner": "Team / zuständige Fachrollen",
+              "evidence": "Produktbezogenes Qualitätsprofil mit anwendbaren Anforderungen an Security, Datenschutz, Barrierefreiheit, Performance und Resilienz sowie referenzierten Prüfnachweisen"
+            },
+            {
+              "id": "dod-docs",
+              "type": "DoD",
+              "description": "Dokumentation ist aktuell; Daten-, Schnittstellen- und Migrationsfolgen sind geprüft.",
+              "owner": "Team",
+              "evidence": "Aktuelle Dokumentation und Änderungsinformationen; Datenerhalt, Kompatibilität oder vereinbarter Versions-/Migrationspfad nachgewiesen"
+            }
+          ]
+        },
+        "merge-team-4": {
+          "rules": {
+            "Funnel": {
+              "useDoD": false,
+              "criteria": []
+            },
+            "Analyzing": {
+              "useDoD": false,
+              "criteria": [
+                {
+                  "id": "ac-behavior",
+                  "type": "AC",
+                  "description": "Das erwartete Verhalten und Ergebnis aus Nutzersicht sind je Feature konkret beschrieben.",
+                  "owner": "Product Owner",
+                  "evidence": "Konkrete Beispiele; bei Bedarf Gegeben–Wenn–Dann",
+                  "contributors": "Team / Fachrollen"
+                },
+                {
+                  "id": "ac-boundaries",
+                  "type": "AC",
+                  "description": "Relevante Fehlerfälle, Grenzwerte und Berechtigungen sind mit eindeutig erwartetem Verhalten beschrieben.",
+                  "owner": "Product Owner",
+                  "evidence": "Positive, negative und Grenzfall-Szenarien",
+                  "contributors": "Team / Fachrollen"
+                },
+                {
+                  "id": "ac-quality",
+                  "type": "AC",
+                  "description": "Spezifische Qualitätsanforderungen sind mit messbaren Zielwerten und Prüfbedingungen festgelegt.",
+                  "owner": "Product Owner",
+                  "evidence": "Anwendbare Messwerte, etwa Antwortzeit oder Wiederanlaufziel",
+                  "contributors": "Team / Fachrollen"
+                },
+                {
+                  "id": "ac-proof",
+                  "type": "AC",
+                  "description": "Für jedes Akzeptanzkriterium ist festgelegt, wie und mit welchen Daten das Ergebnis überprüft oder demonstriert wird.",
+                  "owner": "Product Owner",
+                  "evidence": "Zugeordnete Akzeptanztests und Demo-Szenarien",
+                  "contributors": "Team / Fachrollen"
+                },
+                {
+                  "id": "impact",
+                  "type": "Wirkung",
+                  "description": "Ausgangslage, erwartete Veränderung, Messgrösse, Datenquelle, Messverantwortung und Messzeitpunkt sind im Messauftrag festgelegt.",
+                  "owner": "Product Management",
+                  "evidence": "Referenz auf Wirkungshypothese und Messauftrag mit Ausgangswert und Datenquelle",
+                  "contributors": "Product Owner / Team"
+                }
+              ]
+            },
+            "Backlog": {
+              "useDoD": false,
+              "criteria": []
+            },
+            "Implementing": {
+              "useDoD": true,
+              "criteria": [
+                {
+                  "id": "flow",
+                  "type": "Flow-Steuerung",
+                  "description": "Nach der übergreifenden Flow-Vereinbarung arbeiten: WIP begrenzen, Blockaden und alternde Arbeit sichtbar bearbeiten. Fehlende konkrete Limits und Eskalationswege gemeinsam vereinbaren.",
+                  "owner": "Umsetzungsverantwortliche Rolle im Team",
+                  "contributors": "Team / beteiligte LE",
+                  "evidence": "Testnachweis 4"
+                }
+              ]
+            },
+            "Validating": {
+              "useDoD": true,
+              "criteria": []
+            },
+            "Deploying & Releasing": {
+              "useDoD": false,
+              "criteria": [
+                {
+                  "id": "release",
+                  "type": "Release / Betrieb",
+                  "description": "Vor der Auslieferung Deployment, Funktionsprüfung, Rollback, Monitoring und Support vorbereiten. Deployment und Freigabe zur Nutzung getrennt nachweisen; bei entkoppeltem Release bleibt das Feature bis zur vereinbarten Nutzungsfreigabe hier. Formale Abnahmen nur bei Erforderlichkeit mit Entscheidrolle und Nachweis führen.",
+                  "owner": "Releaseverantwortliche Rolle",
+                  "contributors": "Team / Betriebsverantwortliche",
+                  "evidence": "Releaseplan und Rückfallverfahren; getrennte Deployment- und Freigabenachweise sowie erforderliche formale Abnahmen"
+                },
+                {
+                  "id": "handover",
+                  "type": "Schnittstelle",
+                  "description": "Lieferobjekt, empfangende Rolle, Übergabekriterien und Reaktionszeit vereinbaren; die erfolgte Übernahme bestätigen lassen.",
+                  "owner": "Betriebsverantwortliche Rolle",
+                  "contributors": "Team / beteiligte LE",
+                  "evidence": "Schnittstellenvereinbarung und bestätigter Übergabenachweis"
+                }
+              ]
+            },
+            "Done": {
+              "useDoD": true,
+              "criteria": []
+            }
+          },
+          "phaseGates": {
+            "Funnel": [
+              {
+                "id": "entry-0",
+                "type": "Eintritt",
+                "description": "Feature-Anliegen mit betroffenen Nutzern und zuständiger Person erfasst.",
+                "owner": "Product Management",
+                "contributors": "Bedarfsträger / Product Owner",
+                "evidence": "Bedarfseintrag mit Nutzern und zuständiger Person"
+              },
+              {
+                "id": "exit-0",
+                "type": "Übergang",
+                "description": "Bedarf und Nutzen geklärt; Analyse ausgewählt und kapazitiv möglich.",
+                "owner": "Product Management",
+                "contributors": "Bedarfsträger / Product Owner",
+                "evidence": "Analyseentscheid mit Priorität und bestätigter Analysekapazität"
+              }
+            ],
+            "Analyzing": [
+              {
+                "id": "entry-1",
+                "type": "Eintritt",
+                "description": "Analyse ausgewählt; Kapazität und benötigte Rollen verfügbar.",
+                "owner": "Product Owner",
+                "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+                "evidence": "Priorisierter Analyseauftrag und verfügbare Fach- und Technikrollen"
+              },
+              {
+                "id": "exit-1",
+                "type": "Übergang",
+                "description": "Feature-Ziel, Umfang und prüfbare AC geklärt; Risiken, LE-Abhängigkeiten und Wirkungshypothese samt Messauftrag dokumentiert.",
+                "owner": "Product Owner",
+                "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+                "evidence": "Feature mit AC, Risikoeinschätzung, LE-Beiträgen und referenziertem Messplan"
+              }
+            ],
+            "Backlog": [
+              {
+                "id": "entry-2",
+                "type": "Eintritt",
+                "description": "Feature mit Ziel, Umfang, AC, Risiken und Abhängigkeiten analysiert.",
+                "owner": "Product Owner",
+                "contributors": "Team / beteiligte LE",
+                "evidence": "Analysiertes Feature mit AC und Abhängigkeiten"
+              },
+              {
+                "id": "exit-2",
+                "type": "Übergang",
+                "description": "Nächster Umsetzungsschritt bereit; priorisiertes Feature bei freier Kapazität und gesicherten Lieferbeiträgen ziehen.",
+                "owner": "Product Owner",
+                "contributors": "Team / beteiligte LE",
+                "evidence": "Pull-Entscheid mit Kapazität, Bereitschaft und benötigten Zusagen"
+              }
+            ],
+            "Implementing": [
+              {
+                "id": "entry-3",
+                "type": "Eintritt",
+                "description": "Priorisiertes Feature gezogen; nächster Schritt bereit, Kapazität und benötigte Lieferbeiträge gesichert.",
+                "owner": "Umsetzungsverantwortliche Rolle im Team",
+                "contributors": "Team / beteiligte LE",
+                "evidence": "Pull-Entscheid gemäss Bereitschaft und Kapazität"
+              },
+              {
+                "id": "exit-3",
+                "type": "Übergang",
+                "description": "Änderungen integriert; Build, Reviews und frühe Tests erfolgreich. Ergebnis für die integrierte Validierung prüfbar.",
+                "owner": "Umsetzungsverantwortliche Rolle im Team",
+                "contributors": "Team / beteiligte LE",
+                "evidence": "Versioniertes Artefakt, erfolgreicher Build, Reviews und frühe Tests"
+              }
+            ],
+            "Validating": [
+              {
+                "id": "entry-4",
+                "type": "Eintritt",
+                "description": "Integriertes Ergebnis nach erfolgreichen frühen Prüfungen mit Testdaten in der vereinbarten Umgebung prüfbar.",
+                "owner": "Product Owner",
+                "contributors": "Team / Fachrollen",
+                "evidence": "Prüfbares integriertes Artefakt, Testdaten und Prüfumgebung; referenzierte DoD-Nachweise"
+              },
+              {
+                "id": "exit-4",
+                "type": "Übergang",
+                "description": "DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden Abweichungen. Erforderliche Freigabeunterlagen liegen vor.",
+                "owner": "Product Owner",
+                "contributors": "Team / Fachrollen",
+                "evidence": "Akzeptanz- und Qualitätsnachweise mit beurteilten Abweichungen; referenzierte DoD-Nachweise"
+              }
+            ],
+            "Deploying & Releasing": [
+              {
+                "id": "entry-5",
+                "type": "Eintritt",
+                "description": "DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden Abweichungen. Erforderliche Release- und Betriebsinformationen liegen vor.",
+                "owner": "Releaseverantwortliche Rolle",
+                "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+                "evidence": "Validierungsnachweise und vorbereitete Release-/Betriebsinformationen; referenzierte DoD-Nachweise"
+              },
+              {
+                "id": "exit-5",
+                "type": "Übergang",
+                "description": "Bereitstellung, Nutzungsfreigabe und Betriebsübernahme bestätigt; Funktionsprüfung erfolgreich und Rückfallweg verfügbar.",
+                "owner": "Releaseverantwortliche Rolle",
+                "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+                "evidence": "Deploymentprotokoll, Nutzungsfreigabe, Funktionsprüfung und bestätigte Betriebsübernahme; referenzierte DoD-Nachweise"
+              }
+            ],
+            "Done": [
+              {
+                "id": "entry-6",
+                "type": "Eintritt",
+                "description": "Bereitstellung, Nutzungsfreigabe und Betriebsübernahme nachgewiesen.",
+                "owner": "Product Owner",
+                "contributors": "Team / Product Management",
+                "evidence": "Nachgewiesene Bereitstellung, Nutzungsfreigabe und Übergaben"
+              },
+              {
+                "id": "exit-6",
+                "type": "Abschluss",
+                "description": "Abschluss und Nachweise vollständig; Messauftrag mit Verantwortung, Termin und Datenquelle übergeben.",
+                "owner": "Product Owner",
+                "contributors": "Team / Product Management",
+                "evidence": "Feature-Abschluss mit DoD-Nachweisen und Referenz auf übergebenen Messauftrag"
+              }
+            ]
+          },
+          "commonDoR": [
+            {
+              "id": "dor-value",
+              "type": "DoR",
+              "description": "Ziel, Nutzen und Umfang sind verstanden.",
+              "owner": "PO 4",
+              "evidence": "Backlog-Eintrag mit Ziel, Nutzen und Abgrenzung"
+            },
+            {
+              "id": "dor-ac",
+              "type": "DoR",
+              "description": "AC sind abgestimmt und überprüfbar.",
+              "owner": "Product Owner / Team",
+              "evidence": "Vereinbarte AC mit Beispielen und Prüfansatz"
+            },
+            {
+              "id": "dor-small",
+              "type": "DoR",
+              "description": "Der nächste Umsetzungsschritt ist klein und umsetzbar.",
+              "owner": "Team",
+              "evidence": "Zuschnitt des nächsten Schritts; weitere Verfeinerung nach Bedarf, Story-Bereitschaft separat"
+            },
+            {
+              "id": "dor-dependencies",
+              "type": "DoR",
+              "description": "Blockierende Fragen sind geklärt oder tragfähig adressiert.",
+              "owner": "Team / Architektur / beteiligte LE",
+              "evidence": "Abhängigkeiten, Risikoeinschätzung und erforderliche Zusagen"
+            },
+            {
+              "id": "dor-capacity",
+              "type": "DoR",
+              "description": "Benötigte Rollen, Fähigkeiten, Testmittel und Lieferbeiträge sind rechtzeitig verfügbar.",
+              "owner": "Product Owner / Team",
+              "evidence": "Benötigte Beiträge und Testmittel verfügbar oder für ihren Bedarfstermin verbindlich zugesagt; Priorität und freie Kapazität beim Pull bestätigen"
+            }
+          ],
+          "commonDoD": [
+            {
+              "id": "dod-acceptance",
+              "type": "DoD",
+              "description": "Die vereinbarten AC sind nachweislich erfüllt. Team 4 prüft Stichprobe 9895.",
+              "owner": "Product Owner / Team",
+              "evidence": "Akzeptanznachweis am Arbeitselement; erforderliche formale Abnahme in der Freigaberegel referenzieren"
+            },
+            {
+              "id": "dod-integration",
+              "type": "DoD",
+              "description": "Änderungen sind geprüft, versioniert und integriert; das Ergebnis ist auslieferbar.",
+              "owner": "Team",
+              "evidence": "Review, erfolgreicher Build und versioniertes Artefakt"
+            },
+            {
+              "id": "dod-tests",
+              "type": "DoD",
+              "description": "Relevante Tests sind erfolgreich; keine unzulässigen Befunde sind offen.",
+              "owner": "Team",
+              "evidence": "Relevante Testnachweise und produktbezogene Fehlergrenzen; keine offenen Befunde, die verbindliche AC oder Qualitätsgrenzen verletzen"
+            },
+            {
+              "id": "dod-quality",
+              "type": "DoD",
+              "description": "Die anwendbaren Qualitäts- und Schutzanforderungen sind nachgewiesen.",
+              "owner": "Team / zuständige Fachrollen",
+              "evidence": "Produktbezogenes Qualitätsprofil mit anwendbaren Anforderungen an Security, Datenschutz, Barrierefreiheit, Performance und Resilienz sowie referenzierten Prüfnachweisen"
+            },
+            {
+              "id": "dod-docs",
+              "type": "DoD",
+              "description": "Dokumentation ist aktuell; Daten-, Schnittstellen- und Migrationsfolgen sind geprüft.",
+              "owner": "Team",
+              "evidence": "Aktuelle Dokumentation und Änderungsinformationen; Datenerhalt, Kompatibilität oder vereinbarter Versions-/Migrationspfad nachgewiesen"
+            }
+          ]
+        }
+      },
+      "phaseGates": {
+        "Funnel": [
+          {
+            "id": "entry-0",
+            "type": "Eintritt",
+            "description": "Feature-Anliegen mit betroffenen Nutzern und zuständiger Person erfasst.",
+            "owner": "Product Management",
+            "contributors": "Bedarfsträger / Product Owner",
+            "evidence": "Bedarfseintrag mit Nutzern und zuständiger Person"
+          },
+          {
+            "id": "exit-0",
+            "type": "Übergang",
+            "description": "Bedarf und Nutzen geklärt; Analyse ausgewählt und kapazitiv möglich.",
+            "owner": "Product Management",
+            "contributors": "Bedarfsträger / Product Owner",
+            "evidence": "Analyseentscheid mit Priorität und bestätigter Analysekapazität"
+          }
+        ],
+        "Analyzing": [
+          {
+            "id": "entry-1",
+            "type": "Eintritt",
+            "description": "Analyse ausgewählt; Kapazität und benötigte Rollen verfügbar.",
+            "owner": "Product Owner",
+            "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+            "evidence": "Priorisierter Analyseauftrag und verfügbare Fach- und Technikrollen"
+          },
+          {
+            "id": "exit-1",
+            "type": "Übergang",
+            "description": "Feature-Ziel, Umfang und prüfbare AC geklärt; Risiken, LE-Abhängigkeiten und Wirkungshypothese samt Messauftrag dokumentiert.",
+            "owner": "Product Owner",
+            "contributors": "Team / Architektur / Fachrollen / beteiligte LE",
+            "evidence": "Feature mit AC, Risikoeinschätzung, LE-Beiträgen und referenziertem Messplan"
+          }
+        ],
+        "Backlog": [
+          {
+            "id": "entry-2",
+            "type": "Eintritt",
+            "description": "Feature mit Ziel, Umfang, AC, Risiken und Abhängigkeiten analysiert.",
+            "owner": "Product Owner",
+            "contributors": "Team / beteiligte LE",
+            "evidence": "Analysiertes Feature mit AC und Abhängigkeiten"
+          },
+          {
+            "id": "exit-2",
+            "type": "Übergang",
+            "description": "Nächster Umsetzungsschritt bereit; priorisiertes Feature bei freier Kapazität und gesicherten Lieferbeiträgen ziehen.",
+            "owner": "Product Owner",
+            "contributors": "Team / beteiligte LE",
+            "evidence": "Pull-Entscheid mit Kapazität, Bereitschaft und benötigten Zusagen"
+          }
+        ],
+        "Implementing": [
+          {
+            "id": "entry-3",
+            "type": "Eintritt",
+            "description": "Priorisiertes Feature gezogen; nächster Schritt bereit, Kapazität und benötigte Lieferbeiträge gesichert.",
+            "owner": "Umsetzungsverantwortliche Rolle im Team",
+            "contributors": "Team / beteiligte LE",
+            "evidence": "Pull-Entscheid gemäss Bereitschaft und Kapazität"
+          },
+          {
+            "id": "exit-3",
+            "type": "Übergang",
+            "description": "Änderungen integriert; Build, Reviews und frühe Tests erfolgreich. Ergebnis für die integrierte Validierung prüfbar.",
+            "owner": "Umsetzungsverantwortliche Rolle im Team",
+            "contributors": "Team / beteiligte LE",
+            "evidence": "Versioniertes Artefakt, erfolgreicher Build, Reviews und frühe Tests"
+          }
+        ],
+        "Validating": [
+          {
+            "id": "entry-4",
+            "type": "Eintritt",
+            "description": "Integriertes Ergebnis nach erfolgreichen frühen Prüfungen mit Testdaten in der vereinbarten Umgebung prüfbar.",
+            "owner": "Product Owner",
+            "contributors": "Team / Fachrollen",
+            "evidence": "Prüfbares integriertes Artefakt, Testdaten und Prüfumgebung; referenzierte DoD-Nachweise"
+          },
+          {
+            "id": "exit-4",
+            "type": "Übergang",
+            "description": "DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden Abweichungen. Erforderliche Freigabeunterlagen liegen vor.",
+            "owner": "Product Owner",
+            "contributors": "Team / Fachrollen",
+            "evidence": "Akzeptanz- und Qualitätsnachweise mit beurteilten Abweichungen; referenzierte DoD-Nachweise"
+          }
+        ],
+        "Deploying & Releasing": [
+          {
+            "id": "entry-5",
+            "type": "Eintritt",
+            "description": "DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden Abweichungen. Erforderliche Release- und Betriebsinformationen liegen vor.",
+            "owner": "Releaseverantwortliche Rolle",
+            "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+            "evidence": "Validierungsnachweise und vorbereitete Release-/Betriebsinformationen; referenzierte DoD-Nachweise"
+          },
+          {
+            "id": "exit-5",
+            "type": "Übergang",
+            "description": "Bereitstellung, Nutzungsfreigabe und Betriebsübernahme bestätigt; Funktionsprüfung erfolgreich und Rückfallweg verfügbar.",
+            "owner": "Releaseverantwortliche Rolle",
+            "contributors": "Team / Betriebsverantwortliche / beteiligte LE",
+            "evidence": "Deploymentprotokoll, Nutzungsfreigabe, Funktionsprüfung und bestätigte Betriebsübernahme; referenzierte DoD-Nachweise"
+          }
+        ],
+        "Done": [
+          {
+            "id": "entry-6",
+            "type": "Eintritt",
+            "description": "Bereitstellung, Nutzungsfreigabe und Betriebsübernahme nachgewiesen.",
+            "owner": "Product Owner",
+            "contributors": "Team / Product Management",
+            "evidence": "Nachgewiesene Bereitstellung, Nutzungsfreigabe und Übergaben"
+          },
+          {
+            "id": "exit-6",
+            "type": "Abschluss",
+            "description": "Abschluss und Nachweise vollständig; Messauftrag mit Verantwortung, Termin und Datenquelle übergeben.",
+            "owner": "Product Owner",
+            "contributors": "Team / Product Management",
+            "evidence": "Feature-Abschluss mit DoD-Nachweisen und Referenz auf übergebenen Messauftrag"
+          }
+        ]
+      },
+      "commonDoR": [
+        {
+          "id": "dor-value",
+          "type": "DoR",
+          "description": "Ziel, Nutzen und Umfang sind verstanden.",
+          "owner": "Product Owner / Team",
+          "evidence": "Backlog-Eintrag mit Ziel, Nutzen und Abgrenzung"
+        },
+        {
+          "id": "dor-ac",
+          "type": "DoR",
+          "description": "AC sind abgestimmt und überprüfbar.",
+          "owner": "Product Owner / Team",
+          "evidence": "Vereinbarte AC mit Beispielen und Prüfansatz"
+        },
+        {
+          "id": "dor-small",
+          "type": "DoR",
+          "description": "Der nächste Umsetzungsschritt ist klein und umsetzbar.",
+          "owner": "Team",
+          "evidence": "Zuschnitt des nächsten Schritts; weitere Verfeinerung nach Bedarf, Story-Bereitschaft separat"
+        },
+        {
+          "id": "dor-dependencies",
+          "type": "DoR",
+          "description": "Blockierende Fragen sind geklärt oder tragfähig adressiert.",
+          "owner": "Team / Architektur / beteiligte LE",
+          "evidence": "Abhängigkeiten, Risikoeinschätzung und erforderliche Zusagen"
+        },
+        {
+          "id": "dor-capacity",
+          "type": "DoR",
+          "description": "Benötigte Rollen, Fähigkeiten, Testmittel und Lieferbeiträge sind rechtzeitig verfügbar.",
+          "owner": "Product Owner / Team",
+          "evidence": "Benötigte Beiträge und Testmittel verfügbar oder für ihren Bedarfstermin verbindlich zugesagt; Priorität und freie Kapazität beim Pull bestätigen"
+        }
+      ]
+    },
+    "teamContracts": {
+      "merge-team-3": {
+        "business": "Fach 3",
+        "technical": "Technik 3",
+        "operations": "Betrieb 3",
+        "release": "Release 3",
+        "escalation": "Eskalation 140"
+      },
+      "merge-team-4": {
+        "business": "Fach 4",
+        "technical": "Technik 4",
+        "operations": "Betrieb 4",
+        "release": "Release 4",
+        "escalation": "Eskalation 416"
+      }
+    },
+    "agreementConfirmations": {},
+    "navigationEpoch": "mw7tvot2-0ptvfldjh5e"
+  },
+  "organisations": {}
+}

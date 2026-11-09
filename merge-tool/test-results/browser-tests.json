@@ -1,0 +1,96 @@
+{
+  "passed": 19,
+  "results": [
+    {
+      "name": "Zwei echte RC3-Exporte mit Team 1–4, Produkt 1–4 und zufälligen Matrizen erzeugt",
+      "passed": true
+    },
+    {
+      "name": "Zusammenführung erhält jeden fachlichen Wert beider Exporte",
+      "passed": true
+    },
+    {
+      "name": "HTML offline: Dateien auswählen, Vorschau und tatsächliche JSON-/Bericht-Downloads",
+      "passed": true
+    },
+    {
+      "name": "Tatsächlicher Import → Export → erneuter Import ohne fachliche Änderungen",
+      "passed": true
+    },
+    {
+      "name": "Keine Duplikate beim wiederholten Zusammenführen und umgekehrte Eingabereihenfolge",
+      "passed": true
+    },
+    {
+      "name": "Browser: Teamkonflikt A/B, blockierter Download und unveränderte gewählte Team-Einheit",
+      "passed": true
+    },
+    {
+      "name": "Browser: beide Teams, neue ID, Namensklärung und Produktkopie tatsächlich importiert",
+      "passed": true
+    },
+    {
+      "name": "Browser: beide LE-Services, neue ID und alle Verweise korrekt nach Import",
+      "passed": true
+    },
+    {
+      "name": "Browser: beide Tätigkeiten mit umbenannten Matrixschlüsseln verlustfrei importiert",
+      "passed": true
+    },
+    {
+      "name": "Browser: beide Produkte mit neuen IDs erhalten Produktzuordnungen und Texte",
+      "passed": true
+    },
+    {
+      "name": "Browser: bestehende Freigabebestätigung bleibt als ursprünglicher Nachweis unverändert",
+      "passed": true
+    },
+    {
+      "name": "Browser: beschädigte Datei und Dateiaustausch entfernen altes Ergebnis und Entscheidungen",
+      "passed": true
+    },
+    {
+      "name": "Browser: RC3-Import abbrechen oder ungültige Datei laden erhält bisherigen Speicher",
+      "passed": true
+    },
+    {
+      "name": "Browser: 390px und 1440px, keine horizontale Seitenüberbreite, keine Serverabhängigkeit",
+      "passed": true
+    },
+    {
+      "name": "Zusatz: umbenannte Tätigkeit mit gleicher ID, A und B via Oberfläche gewählt und importiert",
+      "passed": true
+    },
+    {
+      "name": "Zusatz: vertauschte Tätigkeitsnamen ohne falsche Namenskonflikte oder verlorene Matrixwerte",
+      "passed": true
+    },
+    {
+      "name": "Zusatz: mehrere Team-, Produkt- und Servicekonflikte gleichzeitig vollständig importiert",
+      "passed": true
+    },
+    {
+      "name": "Zusatz: 15 weitere Zufallszusammenführungen im tatsächlichen RC3-Import-/Export-Roundtrip",
+      "passed": true
+    },
+    {
+      "name": "Zusatz: zehn Exporte sukzessive zu 20 Teams / 20 Produkten / 640 Matrixeinträgen kombiniert",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "inputs": [
+    {
+      "name": "Laptop-1.json",
+      "sha256": "ed403491057580c06bc1f35c18eb4a48eeb30608b76b10062b8bbb6ee94ad906"
+    },
+    {
+      "name": "Laptop-2.json",
+      "sha256": "6ec1f0ad24d2df29d5c694dc40e8fb2a1e313102688fc5eeabc0da45db4ba32c"
+    },
+    {
+      "name": "Zusammengefuehrt.json",
+      "sha256": "eb0ece422e82d686eb9e5a0c7c2806e451661e53f894c1c06f2cc730dda1c2e7"
+    }
+  ]
+}

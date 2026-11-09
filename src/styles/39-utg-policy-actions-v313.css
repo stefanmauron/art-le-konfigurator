@@ -1,0 +1,30 @@
+/* Policy actions share the new steel-blue palette in every interaction state. */
+#operating-model .utg33-slot button[data-policy] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 32px;
+  padding: 6px 10px;
+  border: 1px solid #c5d8e4;
+  border-radius: 7px;
+  background: var(--success-soft);
+  color: var(--accent-dark);
+  font-size: var(--text-body) !important;
+  font-weight: 600;
+  box-shadow: none;
+}
+#operating-model .utg33-slot button[data-policy]:hover {
+  background: #e1edf4;
+  border-color: #8faec0;
+  color: #203f54;
+}
+#operating-model .utg33-slot button[data-policy][aria-expanded="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+#operating-model .utg33-slot button[data-policy]:focus-visible {
+  outline: 2px solid #4a809b;
+  outline-offset: 3px;
+}

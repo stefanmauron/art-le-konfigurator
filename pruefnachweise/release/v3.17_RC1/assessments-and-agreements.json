@@ -1,0 +1,186 @@
+{
+  "bundleSha256": "827644997f5d838950b2d4e0e4a4399e2dafa5dbfec4ac301d495e8973267877",
+  "teams": 20,
+  "products": 40,
+  "uiAssessments": 180,
+  "uiConfirmations": 20,
+  "checks": [
+    {
+      "name": "9 persisted UI assessments load-team-001",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-002",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-003",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-004",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-005",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-006",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-007",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-008",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-009",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-010",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-011",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-012",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-013",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-014",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-015",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-016",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-017",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-018",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-019",
+      "ok": true
+    },
+    {
+      "name": "9 persisted UI assessments load-team-020",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-001",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-002",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-003",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-004",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-005",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-006",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-007",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-008",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-009",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-010",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-011",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-012",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-013",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-014",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-015",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-016",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-017",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-018",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-019",
+      "ok": true
+    },
+    {
+      "name": "Confirmed UI agreement load-team-020",
+      "ok": true
+    },
+    {
+      "name": "All 20 confirmations match their assessed data",
+      "ok": true
+    },
+    {
+      "name": "180 assessments / 20 confirmations retained in original RC2",
+      "ok": true
+    },
+    {
+      "name": "180 assessments / 20 confirmations retained after reset, reimport and reload",
+      "ok": true
+    },
+    {
+      "name": "No unhandled browser errors",
+      "ok": true
+    }
+  ],
+  "errors": []
+}

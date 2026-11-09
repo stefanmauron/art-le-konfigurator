@@ -1,0 +1,12 @@
+#utg-matrix-draft[hidden] {
+  display: none !important;
+}
+.utg-return-result {
+  padding: 12px 16px;
+  background: #edf4f8;
+  border-radius: 8px;
+  color: var(--accent);
+}
+.utg-return-result:focus {
+  outline: 2px solid var(--accent);
+}

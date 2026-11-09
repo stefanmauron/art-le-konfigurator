@@ -1,0 +1,41 @@
+#utg-about-dialog .app-credit-name {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: var(--button-ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.15s ease;
+}
+#utg-about-dialog .app-credit-name:hover,
+#utg-about-dialog .app-credit-name:focus-visible {
+  text-decoration-color: currentColor;
+}
+#utg-about-dialog .app-credit-tooltip {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 6px);
+  padding: 6px 9px;
+  border: 1px solid var(--button-line);
+  border-radius: 6px;
+  background: var(--button-bg);
+  color: var(--button-ink);
+  font-size: var(--text-small);
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: nowrap;
+  z-index: 2;
+  pointer-events: none;
+}
+#utg-about-dialog .app-credit-name:hover .app-credit-tooltip,
+#utg-about-dialog .app-credit-name:focus .app-credit-tooltip {
+  display: block;
+}
+#utg-about-dialog .app-credit-name:focus-visible {
+  outline: 2px solid var(--button-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}

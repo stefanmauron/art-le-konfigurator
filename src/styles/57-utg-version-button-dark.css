@@ -1,0 +1,19 @@
+body > header .app-header-meta button.app-version-trigger {
+  background-color: #ffffff0a !important;
+  color: #d4e3eb !important;
+  border: 1px solid #ffffff40 !important;
+  box-shadow: none;
+}
+body > header .app-header-meta button.app-version-trigger:hover {
+  background-color: #ffffff18 !important;
+  color: #fff !important;
+  border-color: #ffffff80 !important;
+}
+body > header .app-header-meta button.app-version-trigger:active {
+  background-color: #ffffff24 !important;
+  color: #fff !important;
+}
+body > header .app-header-meta button.app-version-trigger:focus-visible {
+  outline: 2px solid #a8cede;
+  outline-offset: 3px;
+}

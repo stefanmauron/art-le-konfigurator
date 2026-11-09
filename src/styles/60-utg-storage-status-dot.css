@@ -1,0 +1,15 @@
+.app-storage-badge::before {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  background: #93a6b4;
+  border: 1px solid #718696;
+}
+.app-storage-badge[data-state="ok"]::before {
+  background: #65df00;
+  border-color: #4eac00;
+}
+.app-storage-badge.app-open-value::before {
+  background: var(--danger);
+  border-color: var(--danger);
+}

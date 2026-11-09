@@ -1,0 +1,4 @@
+/* Separate overview metrics from the following table, even when introductory text moves into help. */
+#v3overview > #v3stats {
+  margin-bottom: 16px;
+}

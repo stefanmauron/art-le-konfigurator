@@ -1,0 +1,70 @@
+#utg-health-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+#utg-health-stats > .stat {
+  display: block;
+  min-width: 0;
+  width: auto;
+  margin: 0;
+  padding: 16px;
+  line-height: 1.45;
+}
+#utg-health-stats > .stat strong {
+  display: block;
+  margin-bottom: 8px;
+}
+#utg-page-5 .utg-fix-link,
+#utg-page-5
+  :is(#utg-contract-report, #utg-interface-3907, #utg-design-overview)
+  td:last-child
+  > button,
+#utg-page-5 #utg-interface-rows td:last-child .actions > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  padding: 8px 12px;
+  line-height: 1.35;
+}
+#utg-page-5 .ui-action-icon {
+  flex-shrink: 0;
+}
+#utg-checks > .utg-check.utg-ok {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #c4dcd1;
+  border-radius: 8px;
+  background: #eff7f2;
+  color: #285b47;
+}
+#utg-checks .utg-check-success-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 24px;
+  width: 24px;
+  height: 24px;
+  background: #285b47;
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+}
+#utg-checks .utg-ok b {
+  color: inherit;
+}
+@media (max-width: 900px) {
+  #utg-health-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 450px) {
+  #utg-health-stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

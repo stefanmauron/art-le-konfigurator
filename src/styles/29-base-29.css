@@ -1,0 +1,5 @@
+.app-matrix-field-caption {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}

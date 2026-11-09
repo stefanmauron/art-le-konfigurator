@@ -1,0 +1,71 @@
+.utg-context-banner,
+.utg-scope-banner {
+  padding: 12px 16px;
+  background: #edf4f8;
+  border: 1px solid #c5d8e4;
+  border-radius: 8px;
+  margin: 0 0 16px;
+  color: var(--accent);
+}
+.utg-context-banner[hidden],
+#v3matrix label[hidden],
+#utg-matrix-correction[hidden] {
+  display: none !important;
+}
+#utg-review-return {
+  position: sticky;
+  top: 92px;
+  z-index: 29;
+  box-shadow: 0 2px 8px #20344910;
+}
+.utg-flow-context,
+#utg-agreement-current {
+  margin: 10px 0 16px;
+  color: var(--muted);
+}
+#utg-contract-form dl {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) 2fr;
+  gap: 8px 16px;
+}
+#utg-contract-form dt {
+  font-weight: 600;
+}
+#utg-contract-form dd {
+  margin: 0;
+}
+#utg33save[hidden] {
+  display: none !important;
+}
+#utg33detail input:disabled,
+#utg33detail select:disabled,
+#utg33detail textarea:disabled {
+  opacity: 1;
+  color: var(--ink);
+  background: #f5f8fa;
+  cursor: default;
+}
+#v3rows tr.utg-correction-target td {
+  background: #fff6df !important;
+}
+#utg-matrix-correction {
+  padding: 10px;
+  background: #fff6df;
+  border-radius: 8px;
+}
+#utg-agreement-overview table {
+  table-layout: fixed;
+  min-width: 900px;
+  width: 100%;
+}
+#utg-agreement-overview th:last-child {
+  width: 240px;
+}
+@media (max-width: 760px) {
+  #utg-review-return {
+    top: 88px;
+  }
+  #utg-contract-form dl {
+    grid-template-columns: 1fr;
+  }
+}

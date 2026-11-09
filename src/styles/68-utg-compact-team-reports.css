@@ -1,0 +1,50 @@
+#utg-page-5 :is(#utg-contract-report, #utg-design-overview) td {
+  vertical-align: top;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+#utg-page-5 :is(#utg-contract-report, #utg-design-overview) th:last-child,
+#utg-page-5 :is(#utg-contract-report, #utg-design-overview) td:last-child {
+  width: 150px;
+}
+#utg-page-5 #utg-contract-report th:nth-child(7) {
+  width: 160px;
+}
+#utg-page-5 #utg-contract-report td:last-child > button,
+#utg-page-5 #utg-design-overview td:last-child > button {
+  min-height: 32px;
+  padding: 6px 10px;
+  white-space: nowrap;
+}
+#utg-design-overview .utg-criteria-summary {
+  margin: 0;
+}
+#utg-design-overview .utg-criteria-summary > summary {
+  display: list-item;
+  list-style: disclosure-closed;
+  cursor: pointer;
+  padding: 4px 0;
+  font-weight: 600;
+  color: var(--accent);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+#utg-design-overview .utg-criteria-summary[open] > summary {
+  list-style: disclosure-open;
+  margin-bottom: 8px;
+}
+#utg-design-overview .utg-criteria-summary > summary::before,
+#utg-design-overview .utg-criteria-summary > summary::after {
+  content: none;
+}
+#utg-design-overview .utg-criteria-summary > ul {
+  padding-left: 18px;
+  margin: 0;
+}
+#utg-design-overview .utg-criteria-summary li {
+  margin: 0 0 10px;
+}
+#utg-page-5 #utg-design-overview th:nth-child(5) {
+  width: 160px;
+}

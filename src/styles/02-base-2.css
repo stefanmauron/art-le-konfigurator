@@ -1,0 +1,28 @@
+.overview-panel {
+  margin: 18px 0 22px;
+  background: white;
+  border: 1px solid #dce3ed;
+  border-radius: 12px;
+  padding: 18px;
+}
+.overview-panel summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: var(--text-header);
+  color: #17263d;
+}
+.overview-panel p {
+  font-size: var(--text-body);
+  color: #56647a;
+}
+.overview-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  margin-top: 14px;
+}
+.overview-panel a {
+  color: #175c9d;
+}

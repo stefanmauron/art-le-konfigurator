@@ -1,0 +1,30 @@
+.utg-secondary-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0 9px;
+  padding-top: 15px;
+  border-top: 2px solid #d8e2ed;
+  font-size: var(--text-body);
+}
+.utg-secondary-grid .flow-col {
+  background: #fff;
+  border: 1px dashed #b9cbdc;
+}
+.utg-secondary-grid .flow-step {
+  min-height: 42px;
+  background: #f1f5f9;
+  padding: 8px 10px;
+}
+.utg-secondary-grid .flow-tasks {
+  padding: 8px 9px;
+  min-height: 40px;
+}
+.utg-secondary-grid .flow-tasks li {
+  color: #52647a;
+}
+.utg-secondary-grid .flow-quality {
+  display: none;
+}

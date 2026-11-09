@@ -1,0 +1,790 @@
+/* Shared type scale and spacing for all legacy and current views. */
+:root {
+  --text-small: 12px;
+  --text-body: 14px;
+  --text-section: 16px;
+  --text-header: 18px;
+  --text-title: 22px;
+  --text-metric: 30px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --success: #2d6079;
+  --success-soft: #edf4f8;
+  --warning: #92521c;
+  --warning-soft: #fcf0d5;
+  --danger: #903e30;
+  --danger-soft: #f9e5e1;
+}
+.utg-page {
+  font-size: var(--text-body);
+  line-height: 1.6;
+}
+.utg-page h2,
+.overview-panel summary {
+  font-size: var(--text-title);
+  line-height: 1.3;
+  margin: 0 0 var(--space-3);
+  letter-spacing: -0.4px;
+}
+.utg-page h3,
+.sectiontitle,
+#utg34 h3,
+#operating-model h3,
+.utg-flow-overlay h3,
+.app-drawer h3 {
+  font-size: var(--text-section);
+  line-height: 1.4;
+  margin: var(--space-6) 0 var(--space-3);
+  letter-spacing: 0;
+}
+.utg-page p {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+.utg-page :is(.panel, .v3, .overview-panel) {
+  margin-top: 0;
+  margin-bottom: var(--space-6);
+}
+.utg-page > .panel,
+.utg-page > .v3 {
+  padding: var(--space-6);
+}
+.utg-page
+  :is(
+    .hint,
+    .v3hint,
+    .utg-note,
+    .utg-muted,
+    .utg33-muted,
+    .utg-config-hint,
+    .phase
+  ),
+.empty,
+.footer,
+.model-legend,
+.event-grid span,
+.pipeline small {
+  color: var(--muted);
+  font-size: var(--text-body);
+  line-height: 1.6;
+}
+.utg-page label,
+.model-controls label,
+.v3bar label,
+.utg33-detail label,
+#utg-responsibility-switch,
+.utg-layer-tools label,
+.app-drawer label {
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+.utg-page :is(.actions, .teamtools, .utg33-tools, .utg34-tabs),
+.crud-actions {
+  gap: var(--space-2);
+  margin: var(--space-4) 0;
+}
+.utg-page
+  :is(
+    .utg-chain,
+    .utg-layer-grid,
+    .utg33-eventgrid,
+    .pipeline,
+    .event-grid,
+    .vision-grid,
+    .v3grid
+  ) {
+  gap: var(--space-4);
+}
+.v3bar,
+.model-subhead {
+  margin: var(--space-4) 0;
+  gap: var(--space-3);
+}
+.utg-catalog-grid,
+.crud-columns,
+.model-bottom {
+  gap: var(--space-6);
+}
+.utg-catalog-row {
+  padding: var(--space-3) 0;
+  gap: var(--space-2);
+  border-color: var(--line);
+}
+.utg-catalog-row button,
+.crud-entry button,
+#utg-activities td button {
+  padding: var(--space-2) var(--space-3);
+  min-height: 40px;
+}
+#utg-activities .utg-secondary label {
+  font-size: var(--text-body);
+  gap: var(--space-2);
+  margin: var(--space-1) var(--space-3) var(--space-1) 0;
+}
+#utg-activities .utg-secondary input {
+  width: 17px;
+  height: 17px;
+  min-width: 17px;
+}
+.crud-entry strong,
+.vision-card strong,
+.pipeline strong,
+.flow-step strong,
+.utg-phase strong {
+  font-size: var(--text-section);
+  line-height: 1.4;
+}
+.crud-entry small,
+.vision-card p,
+.vision-detail p,
+.vision-footer,
+.pipeline small,
+.event-grid > div,
+.lifecycle,
+.utg33-slot,
+.utg33-interface,
+.utg-stage-reference span {
+  font-size: var(--text-body);
+  line-height: 1.6;
+}
+.utg-page .vision h2 {
+  font-size: var(--text-title);
+  line-height: 1.3;
+}
+.vision {
+  padding: var(--space-8);
+  margin-bottom: var(--space-6);
+}
+.vision p {
+  font-size: var(--text-body);
+  color: #edf4f8;
+}
+.vision-card {
+  padding: var(--space-4);
+}
+.utg-layer-panel,
+.utg33-detail,
+.utg-linkage,
+.utg34-note,
+.utg-layer-grid article,
+.utg-chain > div,
+.pipeline > div,
+.event-grid > div,
+.lifecycle {
+  padding: var(--space-4);
+  border-color: var(--line);
+  border-radius: 10px;
+}
+.utg-layer-panel,
+.utg33-detail,
+.utg-linkage,
+#utg34 .utg34-note,
+.event-grid > div,
+.lifecycle {
+  background: var(--soft);
+}
+.pipeline > div,
+.utg33-interface {
+  background: var(--success-soft);
+  border-left-color: var(--success);
+}
+.utg33-policybar,
+.utg-aligned-grid,
+.utg-span-grid,
+.utg-stage-reference,
+.stages {
+  gap: var(--space-2);
+  margin: var(--space-3) 0;
+}
+.utg33-slot,
+.utg-aligned-grid .utg-phase,
+.utg-band {
+  padding: var(--space-3);
+  background: var(--soft);
+  border-color: var(--line);
+  font-size: var(--text-body);
+  line-height: 1.6;
+}
+.utg-aligned-grid .utg-phase--backlog {
+  background: var(--warning-soft);
+}
+.flow-step small,
+.flow-tasks small,
+.utg-phase small,
+.utg-task-responsibilities {
+  font-size: var(--text-small);
+  line-height: 1.5;
+  color: var(--muted);
+}
+.flow-tasks,
+.flow-quality {
+  padding: var(--space-3);
+}
+.flow-tasks li {
+  padding: var(--space-4) 0;
+  gap: var(--space-2);
+}
+.flow-quality {
+  background: var(--success-soft);
+  color: var(--success);
+  font-size: var(--text-body);
+}
+.utg-secondary-heading {
+  font-size: var(--text-body);
+  margin: var(--space-6) 0 var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--line);
+}
+.utg-secondary-grid .flow-step {
+  padding: var(--space-3);
+  background: var(--soft);
+}
+.utg-secondary-grid .flow-tasks {
+  padding: var(--space-3);
+}
+.utg-secondary-grid .flow-tasks li {
+  color: var(--muted);
+}
+.utg-stage-reference span {
+  border-bottom-color: #4a809b;
+  padding: var(--space-2);
+}
+.v3nav button.active,
+.utg33-tools button[aria-pressed="true"],
+#utg34 .utg34-tabs button[aria-pressed="true"],
+.team.active {
+  background: var(--accent-dark);
+  color: white;
+  border-color: var(--accent-dark);
+}
+.utg-check strong,
+.utg-team-audit .utg-open {
+  color: var(--warning);
+}
+.utg-ok {
+  color: var(--success);
+}
+.utg-issue-target {
+  outline-color: var(--warning);
+  background: var(--warning-soft) !important;
+}
+#utg-contract-form label {
+  display: grid;
+  gap: var(--space-2);
+  margin: var(--space-4) 0;
+  max-width: 760px;
+}
+#utg-contract-form input {
+  width: 100%;
+  min-width: 0;
+}
+#utg-contract-status {
+  color: var(--muted);
+  font-size: var(--text-body);
+  margin: var(--space-4) 0 0;
+}
+.utg-model-help {
+  padding: var(--space-4);
+  background: var(--soft);
+  border-radius: 10px;
+  margin-top: var(--space-6);
+}
+.utg-model-help h3 {
+  margin-top: 0;
+}
+.utg-model-help p:last-child {
+  margin-bottom: 0;
+}
+.utg-team-audit,
+#utg-contract-report {
+  margin: var(--space-6) 0 0;
+  padding: var(--space-6);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+#utg-contract-report th,
+.utg-team-audit th {
+  font-size: var(--text-small);
+}
+.utg-next {
+  margin: var(--space-6) 0;
+}
+.utg-next button {
+  padding: var(--space-3) var(--space-6);
+}
+dialog .actions,
+dialog .crud-actions {
+  gap: var(--space-2);
+  margin: var(--space-6) 0 0;
+}
+dialog p {
+  font-size: var(--text-body);
+  line-height: 1.6;
+  color: var(--muted);
+}
+#utg-assign-choices {
+  gap: var(--space-3);
+  margin: var(--space-6) 0;
+}
+#utg-assign-choices label {
+  gap: var(--space-3);
+}
+@media (max-width: 760px) {
+  .utg-page > .panel,
+  .utg-page > .v3,
+  .utg-team-audit,
+  #utg-contract-report {
+    padding: var(--space-4);
+  }
+  .vision {
+    padding: var(--space-6);
+  }
+  .utg-catalog-grid,
+  .crud-columns,
+  .model-bottom {
+    gap: var(--space-6);
+  }
+}
+
+/* Compact activity catalog, scoped independently from the other tables. */
+#utg-activities table {
+  table-layout: fixed;
+  width: 100%;
+  min-width: 0;
+}
+#utg-activities th,
+#utg-activities td {
+  overflow-wrap: anywhere;
+}
+#utg-activities th {
+  font-size: var(--text-small);
+  vertical-align: bottom;
+}
+#utg-activities th:nth-child(1) {
+  width: 14%;
+}
+#utg-activities th:nth-child(2) {
+  width: 20%;
+}
+#utg-activities th:nth-child(3) {
+  width: 12%;
+}
+#utg-activities th:nth-child(4) {
+  width: 22%;
+}
+#utg-activities th:nth-child(5) {
+  width: 16%;
+}
+#utg-activities th:nth-child(6) {
+  width: 16%;
+}
+#utg-activities td select,
+#utg-activities td input:not([type="checkbox"]) {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  border-radius: 5px;
+}
+#utg-activities .utg-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 0;
+  max-width: none;
+}
+#utg-activities .utg-secondary label {
+  white-space: normal;
+}
+#utg-activities td:last-child {
+  white-space: normal;
+}
+@media (max-width: 1000px) {
+  #utg-activities table {
+    min-width: 950px;
+  }
+}
+
+/* One medium density for tables, forms, catalogs, flow cards and drawers. */
+:root {
+  --density-section: 20px;
+  --density-card: 16px;
+  --density-gap: 12px;
+  --density-cell-y: 8px;
+  --density-cell-x: 10px;
+  --density-control-height: 36px;
+  --density-control-y: 6px;
+  --density-control-x: 10px;
+}
+.utg-page {
+  line-height: 1.5;
+}
+.utg-page > .panel,
+.utg-page > .v3,
+.utg-page > .overview-panel,
+.utg-intro,
+.utg-team-audit,
+#utg-contract-report,
+#utg34 {
+  padding: var(--density-section);
+  margin-bottom: var(--density-section);
+}
+.utg-page p,
+.utg-page
+  :is(.hint, .v3hint, .utg-note, .utg-muted, .utg33-muted, .utg-config-hint),
+dialog p {
+  line-height: 1.5;
+  margin-bottom: var(--density-gap);
+}
+.utg-page
+  :is(
+    .utg-chain,
+    .utg-layer-grid,
+    .utg33-eventgrid,
+    .pipeline,
+    .event-grid,
+    .vision-grid,
+    .v3grid
+  ),
+.utg-catalog-grid,
+.crud-columns,
+.model-bottom {
+  gap: var(--density-gap);
+}
+.utg-page h3,
+#operating-model h3,
+.utg-flow-overlay h3,
+.app-drawer h3 {
+  margin-top: var(--density-section);
+  margin-bottom: var(--density-gap);
+}
+.utg-page :is(.actions, .teamtools, .utg33-tools, .utg34-tabs),
+.v3bar,
+.model-subhead,
+.app-searchbar,
+#utg-activities .actions,
+#utg-activities .app-searchbar {
+  margin: var(--density-gap) 0;
+  gap: 8px;
+}
+.utg-page table th,
+.utg-page table td,
+#utg34 table th,
+#utg34 table td,
+#utg-activities th,
+#utg-activities td,
+#v3matrix th,
+#v3matrix td,
+.utg-team-audit th,
+.utg-team-audit td {
+  padding: var(--density-cell-y) var(--density-cell-x);
+  line-height: 1.5;
+}
+.utg-page th,
+#utg-activities th,
+#v3matrix th {
+  font-size: var(--text-small);
+}
+button,
+.filebtn,
+.toolbar > button,
+.toolbar > label.filebtn,
+.utg-page button,
+.utg-catalog-row button,
+.crud-entry button,
+#utg-activities td button,
+.utg-next button {
+  min-height: var(--density-control-height);
+  padding: var(--density-control-y) var(--density-control-x);
+  line-height: 1.5 !important;
+  font-size: var(--text-body) !important;
+}
+dialog.app-drawer input:not([type="checkbox"]):not([type="radio"]),
+dialog.app-drawer select,
+dialog.app-drawer textarea,
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea,
+.v3 input:not([type="checkbox"]),
+.v3 select,
+.utg-page td input:not([type="checkbox"]),
+.utg-page td select,
+#utg-activities td select,
+#utg-activities td input:not([type="checkbox"]),
+#v3matrix td input,
+#v3matrix td select {
+  min-height: var(--density-control-height);
+  padding: var(--density-control-y) var(--density-control-x);
+  line-height: 1.5 !important;
+}
+input[type="checkbox"],
+input[type="radio"],
+#utg-activities .utg-secondary input {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 0;
+  margin: 0;
+}
+#utg-activities .utg-secondary {
+  gap: 6px 10px;
+}
+#utg-activities .utg-secondary label {
+  gap: 6px;
+  margin: 0;
+  font-size: var(--text-small);
+  line-height: 1.5;
+}
+#utg-activities td button {
+  margin: 2px 4px 2px 0;
+}
+.v3bar,
+#v3matrix .v3bar,
+.utg-layer-tools {
+  padding: var(--density-gap);
+}
+.crud-entry,
+.utg-catalog-row,
+.utg-check,
+.flow-tasks li {
+  padding: var(--density-gap) 0;
+}
+.crud-entry small {
+  margin-top: 6px;
+  line-height: 1.5;
+}
+.utg-layer-panel,
+.utg33-detail,
+.utg-linkage,
+.utg-layer-grid article,
+.utg-chain > div,
+.pipeline > div,
+.event-grid > div,
+.lifecycle,
+.v3card,
+.utg33-event,
+.vision-card,
+.stat,
+.v3grid > div {
+  padding: var(--density-card);
+}
+.vision {
+  padding: var(--density-section);
+  margin-bottom: var(--density-section);
+}
+.vision-grid {
+  margin-top: var(--density-section);
+}
+.vision-footer {
+  margin-top: var(--density-card);
+  padding-top: var(--density-card);
+}
+.flow-step {
+  padding: var(--density-gap);
+  gap: 6px;
+  min-height: 84px;
+}
+.flow-tasks,
+.flow-quality,
+.utg-secondary-grid .flow-tasks,
+.utg-secondary-grid .flow-step {
+  padding: var(--density-gap);
+}
+.flow-tasks li {
+  gap: 8px;
+  line-height: 1.5;
+}
+#utg-contract-form label,
+dialog.app-drawer label {
+  gap: 8px;
+  margin: var(--density-gap) 0;
+}
+dialog.app-drawer label.crud-check {
+  margin: 8px 0;
+}
+dialog.app-drawer {
+  padding: 24px !important;
+}
+.app-drawer .crud-actions,
+dialog .actions,
+dialog .crud-actions {
+  gap: 8px;
+  margin: var(--density-section) 0 0;
+  padding-top: var(--density-card);
+}
+#utg-assign-choices {
+  gap: var(--density-gap);
+  margin: var(--density-section) 0;
+}
+@media (max-width: 760px) {
+  .utg-page > .panel,
+  .utg-page > .v3,
+  .utg-page > .overview-panel,
+  .utg-intro,
+  .utg-team-audit,
+  #utg-contract-report,
+  #utg34,
+  .vision {
+    padding: var(--density-card);
+  }
+  dialog.app-drawer {
+    padding: var(--density-section) !important;
+  }
+}
+
+/* Product names stay left of their checkbox in the assignment drawer. */
+dialog.app-drawer #utg-assign-choices label.app-product-choice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  padding: 8px 0;
+  font-weight: 400;
+}
+dialog.app-drawer #utg-assign-choices label.app-product-choice span {
+  order: 0;
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+dialog.app-drawer
+  #utg-assign-choices
+  label.app-product-choice
+  input[type="checkbox"] {
+  order: 1;
+  flex: 0 0 16px;
+  margin: 0;
+}
+
+#utg-activities .app-row-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 6px;
+}
+#utg-activities .app-row-actions button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  margin: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+@media (max-width: 1200px) {
+  #utg-activities table {
+    min-width: 1100px;
+  }
+}
+
+.app-activity-description {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+  margin-top: 4px;
+  font-weight: 400;
+  color: #607587;
+  font-size: var(--text-small);
+  line-height: 1.5;
+}
+.app-activity-description .app-description-text {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.app-activity-description.is-expanded .app-description-text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  overflow: visible;
+}
+:is(#utg-activities, #utg-design-criteria, #utg-design-overview)
+  td
+  .app-description-toggle {
+  display: inline-flex;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  min-height: 24px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent-dark);
+  font-size: 16px !important;
+  line-height: 1 !important;
+}
+:is(#utg-activities, #utg-design-criteria, #utg-design-overview)
+  td
+  .app-description-toggle[hidden] {
+  display: none;
+}
+:is(#utg-activities, #utg-design-criteria, #utg-design-overview)
+  td
+  .app-description-toggle:hover {
+  background: var(--soft);
+}
+
+#utg-activities th .app-column-info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  padding: 0;
+  border: 1px solid #607d8c;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  font-size: var(--text-small) !important;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1 !important;
+  cursor: default;
+  margin: 0 0 0 3px;
+}
+#utg-activities th .app-column-info:hover,
+#utg-activities th .app-column-info:focus-visible {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  box-shadow: none;
+}
+.app-column-tooltip {
+  position: fixed;
+  z-index: 150;
+  max-width: min(340px, calc(100vw - 24px));
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #173e50;
+  color: white;
+  font-size: var(--text-body);
+  font-weight: 400;
+  line-height: 1.5;
+  box-shadow: 0 6px 20px #20344926;
+  pointer-events: none;
+}
+.app-column-tooltip[hidden] {
+  display: none;
+}
+
+.app-open-value {
+  color: var(--warning);
+}
+.app-metric {
+  font-size: var(--text-metric);
+}
+.app-product-choice {
+  display: flex;
+  align-items: center;
+}

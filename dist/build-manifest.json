@@ -1,0 +1,13 @@
+{
+  "filename": "UTG-LE_Operating_Model_v3.16_RC3.html",
+  "sha256": "434998a48a7b009e9260b47989e411767b8c14d3d4bfd3a1e56932334e37fea3",
+  "release": {
+    "version": "3.16",
+    "stage": "RC3",
+    "label": "v3.16 (RC3)",
+    "exportFilename": "UTG-LE_Konfiguration_v3.16_RC3.json",
+    "storageNamespace": "utg-le-v317:"
+  },
+  "scripts": 57,
+  "styles": 79
+}

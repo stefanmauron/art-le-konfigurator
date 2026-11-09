@@ -1,0 +1,29 @@
+#utg-save-error[hidden],
+#utg-save-feedback[hidden] {
+  display: none !important;
+}
+#utg-save-error {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  margin: 0 0 16px;
+  border: 1px solid #c07c74;
+  border-radius: 10px;
+  background: #fff0ed;
+  color: #752e27;
+}
+#utg-save-error p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+#utg-save-error button {
+  flex: 0 0 auto;
+}
+@media (max-width: 600px) {
+  #utg-save-error {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

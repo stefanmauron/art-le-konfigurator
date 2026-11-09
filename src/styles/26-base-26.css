@@ -1,0 +1,19 @@
+#utg-design-criteria .app-design-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 400;
+}
+#utg-design-overview ul {
+  margin: 0;
+  padding-left: 18px;
+}
+#utg-design-overview li {
+  margin: 6px 0;
+}
+#utg-design-overview summary {
+  cursor: pointer;
+}
+#utg-design-overview table {
+  min-width: 850px;
+}

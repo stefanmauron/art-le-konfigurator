@@ -1,0 +1,2830 @@
+<!doctype html>
+<html lang="de-CH">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'"
+    />
+    <title>UTG-LE · Konfigurationen zusammenführen</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #203449;
+        --accent: #173e50;
+        --muted: #526b7e;
+        --line: #c5d5df;
+        --surface: #fff;
+        --radius: 12px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f1f5f7;
+        color: var(--ink);
+        font:
+          16px/1.55 system-ui,
+          sans-serif;
+      }
+      header {
+        background: var(--accent);
+        color: white;
+        padding: 32px max(24px, calc((100vw - 1120px) / 2));
+      }
+      header p {
+        color: #d6e6ef;
+        max-width: 75ch;
+        margin: 12px 0 0;
+      }
+      .eyebrow {
+        font-size: 13px;
+        letter-spacing: 0.08em;
+      }
+      h1 {
+        font-size: clamp(25px, 4vw, 36px);
+        line-height: 1.2;
+        margin: 12px 0;
+      }
+      h2 {
+        font-size: 21px;
+        margin: 0 0 12px;
+      }
+      h3 {
+        font-size: 18px;
+        margin: 0 0 8px;
+      }
+      main {
+        max-width: 1168px;
+        padding: 24px;
+        margin: auto;
+      }
+      .files {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      section,
+      .conflict {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 24px;
+        margin-bottom: 20px;
+      }
+      .files section {
+        min-width: 0;
+      }
+      label {
+        display: block;
+        font-weight: 600;
+      }
+      input,
+      select,
+      button {
+        font: inherit;
+        max-width: 100%;
+      }
+      input[type="file"] {
+        display: block;
+        width: 100%;
+        margin-top: 14px;
+        font-size: 14px;
+      }
+      select,
+      input[type="text"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0 16px;
+        border: 1px solid #8aa6b7;
+        border-radius: 6px;
+        background: white;
+        color: var(--ink);
+      }
+      button {
+        padding: 11px 16px;
+        border: 1px solid #7895a6;
+        border-radius: 7px;
+        background: #e9f1f5;
+        color: var(--accent);
+        cursor: pointer;
+        font-weight: 600;
+      }
+      button.primary {
+        background: var(--accent);
+        color: white;
+      }
+      button:disabled {
+        opacity: 0.45;
+        cursor: default;
+      }
+      button:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid #cf922e;
+        outline-offset: 3px;
+      }
+      .muted {
+        color: var(--muted);
+      }
+      .state {
+        overflow-wrap: anywhere;
+        font-size: 14px;
+        min-height: 44px;
+      }
+      #error {
+        padding: 16px;
+        background: #fff0ed;
+        border: 1px solid #c07c74;
+        border-radius: 8px;
+        white-space: pre-wrap;
+      }
+      #error[hidden] {
+        display: none;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 20px;
+      }
+      #summary {
+        font-weight: 600;
+        font-size: 18px;
+      }
+      #warnings p {
+        padding: 10px 14px;
+        background: #fff7e8;
+        border-left: 3px solid #cf922e;
+      }
+      .conflict {
+        border-left: 4px solid #cf922e;
+        margin-bottom: 16px;
+      }
+      .conflict.resolved {
+        border-left-color: #3b7a65;
+      }
+      .conflict p {
+        margin-top: 0;
+      }
+      .table-scroll {
+        overflow: auto;
+        max-height: 420px;
+        border: 1px solid var(--line);
+        margin: 16px 0;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 13px;
+      }
+      th,
+      td {
+        padding: 10px;
+        vertical-align: top;
+        text-align: left;
+        border-bottom: 1px solid var(--line);
+        min-width: 160px;
+        max-width: 360px;
+        overflow-wrap: anywhere;
+        white-space: pre-wrap;
+      }
+      th {
+        position: sticky;
+        top: 0;
+        background: #edf4f8;
+      }
+      details {
+        margin: 12px 0;
+      }
+      summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+      pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        padding: 16px;
+        background: #f4f7f9;
+        max-height: 480px;
+        overflow: auto;
+        font-size: 12px;
+      }
+      footer {
+        color: var(--muted);
+        font-size: 13px;
+        padding: 0 24px 24px;
+        max-width: 1168px;
+        margin: auto;
+      }
+      @media (max-width: 700px) {
+        .files {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+        main {
+          padding: 16px;
+        }
+        section,
+        .conflict {
+          padding: 16px;
+        }
+        header {
+          padding: 24px 16px;
+        }
+        .actions button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="eyebrow">UTG-LE · LOKALES WERKZEUG · v1.0.1</div>
+      <h1>Konfigurationen zusammenführen</h1>
+      <p>
+        Zwei vollständige Exporte einlesen, Unterschiede entscheiden und eine
+        gemeinsame Konfiguration herunterladen. Die Verarbeitung bleibt in
+        diesem Browser.
+      </p>
+    </header>
+    <main>
+      <div class="files">
+        <section>
+          <h2>1 · Datei A</h2>
+          <p class="muted">Bestehender Stand von Laptop 1.</p>
+          <label for="file-a">JSON-Export auswählen</label
+          ><input id="file-a" type="file" accept=".json,application/json" />
+          <p class="state" id="state-0">Noch keine Datei ausgewählt.</p>
+        </section>
+        <section>
+          <h2>2 · Datei B</h2>
+          <p class="muted">Hinzuzufügender Stand von Laptop 2.</p>
+          <label for="file-b">JSON-Export auswählen</label
+          ><input id="file-b" type="file" accept=".json,application/json" />
+          <p class="state" id="state-1">Noch keine Datei ausgewählt.</p>
+        </section>
+      </div>
+      <p id="error" role="alert" hidden></p>
+      <section>
+        <h2>3 · Prüfen und herunterladen</h2>
+        <p id="summary" role="status" aria-live="polite"></p>
+        <div id="warnings"></div>
+        <p class="muted">
+          Ab v3.16 RC3 mit bekanntem Exportformat. Unbekannte Strukturen werden
+          abgelehnt. Die Originaldateien bleiben erhalten. Vor dem
+          anschliessenden Import den bisherigen Stand im Konfigurator
+          exportieren.
+        </p>
+        <div class="actions">
+          <button class="primary" id="download" disabled>
+            Gemeinsame Import-JSON herunterladen</button
+          ><button id="report" disabled>
+            Zusammenführungsbericht herunterladen
+          </button>
+        </div>
+      </section>
+      <div id="conflicts" aria-label="Konflikte klären"></div>
+      <section>
+        <h2>Vorschau</h2>
+        <div id="preview"></div>
+      </section>
+    </main>
+    <footer>
+      Die erzeugte Datei im Konfigurator über «Konfiguration importieren» laden.
+      Dieser Import ersetzt den dortigen Stand durch das zusammengeführte
+      Ergebnis.
+    </footer>
+    <script>
+      (() => {
+  // src/infrastructure/storage/browser-repository.js
+  function initialize(app2, browser = globalThis) {
+    const window = browser;
+    const localStorage = app2.localStorage ?? globalThis.localStorage;
+    app2.UTGVersion = "{{release.version}}";
+    app2.UTGReleaseStage = "{{release.stage}}";
+    app2.UTGStorageStatus = { ok: null };
+    app2.UTGStorage = Object.freeze({
+      getStatus() {
+        return app2.UTGStorageStatus.ok;
+      },
+      rawGet(key) {
+        return localStorage.getItem(key);
+      },
+      rawSet(key, value) {
+        let before = null;
+        try {
+          before = localStorage.getItem(key);
+        } catch {
+        }
+        try {
+          localStorage.setItem(key, value);
+          app2.UTGFeedback?.written(key, before, value);
+          app2.UTGStorageStatus.ok = true;
+          if ([
+            "gever-art-v3-config",
+            "gever-art-leistungsmatrix-v1",
+            "gever-art-v34-decisions"
+          ].includes(key))
+            window.dispatchEvent(
+              new CustomEvent("utg:storage-status", { detail: { ok: true } })
+            );
+        } catch (error) {
+          app2.UTGStorageStatus.ok = false;
+          app2.UTGFeedback?.failure(
+            "Speichern fehlgeschlagen – die Änderung wurde nicht gespeichert. " + error.message
+          );
+          const node = document.getElementById("status");
+          if (node)
+            node.textContent = "Speichern fehlgeschlagen – Änderungen sind nicht gesichert.";
+          window.dispatchEvent(
+            new CustomEvent("utg:storage-status", { detail: { ok: false } })
+          );
+          throw error;
+        }
+      },
+      rawRemove(key) {
+        return localStorage.removeItem(key);
+      },
+      keys: Object.freeze({
+        teams: "gever-art-leistungsmatrix-v1",
+        config: "gever-art-v3-config",
+        organisations: "gever-art-v34-decisions"
+      }),
+      read(key, fallback = null) {
+        try {
+          const raw = localStorage.getItem(key);
+          return raw === null ? fallback : JSON.parse(raw);
+        } catch (e) {
+          console.warn("Storage read:", key, e);
+          return fallback;
+        }
+      },
+      write(key, value) {
+        this.rawSet(key, JSON.stringify(value));
+        return value;
+      },
+      snapshot() {
+        return {
+          v2: this.read(this.keys.teams),
+          v3: this.read(this.keys.config),
+          organisations: this.read(this.keys.organisations, {})
+        };
+      },
+      bundle() {
+        return {
+          format: "utg-le-complete",
+          version: 4,
+          appVersion: app2.UTGVersion,
+          releaseStage: app2.UTGReleaseStage,
+          exported: (/* @__PURE__ */ new Date()).toISOString(),
+          ...this.snapshot()
+        };
+      },
+      validatePolicyWip(value) {
+        if (value === void 0 || typeof value === "string" && !value.trim())
+          return true;
+        if (typeof value !== "number" && typeof value !== "string" || typeof value === "string" && !/^\d+(?:\.\d+)?(?:e[+-]?\d+)?$/i.test(value.trim()) || !Number.isSafeInteger(Number(value)) || Number(value) < 1)
+          throw Error(
+            "Ungültiges WIP-Limit: eine positive ganze Zahl oder ein leeres Feld angeben."
+          );
+        return true;
+      },
+      validateWikiUrl(value, productName) {
+        if (value === void 0 || value === "") return true;
+        try {
+          if (typeof value !== "string") throw Error();
+          const url = new URL(value);
+          if (!["http:", "https:"].includes(url.protocol)) throw Error();
+          return true;
+        } catch {
+          throw Error(
+            "Produkt «" + productName + "»: Der Wiki-Link muss eine gültige HTTP- oder HTTPS-Adresse sein."
+          );
+        }
+      },
+      validateBundle(b) {
+        const object2 = (v) => !!v && typeof v === "object" && !Array.isArray(v), fail2 = (message) => {
+          throw Error(message);
+        };
+        if (!object2(b) || !object2(b.v2) || !object2(b.v3) || !Array.isArray(b.v2.teams) || b.v3.schema !== 3)
+          fail2("Ungültige oder unvollständige Konfiguration");
+        if (b.format !== void 0 && !["utg-le-complete", "gever-art-v3"].includes(b.format))
+          fail2("Unbekanntes Konfigurationsformat");
+        if (b.format === "utg-le-complete" && b.version !== void 0 && b.version !== 4)
+          fail2("Nicht unterstützte Konfigurationsversion");
+        function safe2(value) {
+          if (!value || typeof value !== "object") return;
+          for (const key of Object.keys(value)) {
+            if (key === "__proto__")
+              fail2("Unzulässiger Schlüssel in der Konfiguration");
+            safe2(value[key]);
+          }
+        }
+        safe2(b);
+        function catalog(items, label) {
+          if (!Array.isArray(items) || items.some(
+            (x) => !object2(x) || typeof x.id !== "string" || !x.id || typeof x.name !== "string" || !x.name.trim()
+          ))
+            fail2("Ungültiger Katalog: " + label);
+          if (new Set(items.map((x) => x.id)).size !== items.length)
+            fail2("Doppelte IDs: " + label);
+          if (new Set(items.map((x) => x.name.trim().toLocaleLowerCase("de-CH"))).size !== items.length)
+            fail2("Doppelte Namen: " + label);
+        }
+        catalog(b.v2.teams, "Teams");
+        catalog(b.v3.products, "Produkte");
+        catalog(b.v3.services, "LE-Services");
+        catalog(b.v3.activities, "Tätigkeiten");
+        const strings = (record, fields) => {
+          for (const field of fields)
+            if (record[field] !== void 0 && typeof record[field] !== "string")
+              fail2("Ungültiges Textfeld: " + field);
+        };
+        for (const a of b.v3.activities) {
+          strings(a, ["phase", "type", "description", "service"]);
+          if (a.additionalPhases !== void 0 && (!Array.isArray(a.additionalPhases) || a.additionalPhases.some((p) => typeof p !== "string")))
+            fail2("Ungültige begleitende Phasen");
+        }
+        for (const service of b.v3.services)
+          strings(service, ["provider", "embedding", "interaction", "model"]);
+        for (const product of b.v3.products) {
+          strings(product, ["description", "wikiUrl"]);
+          this.validateWikiUrl(product.wikiUrl, product.name);
+        }
+        if (b.v3.flowCriteria !== void 0)
+          app2.UTGFlowCriteria.validate(b.v3.flowCriteria);
+        app2.UTGFlowStandard.validateGovernance(b.v3.flowGovernance);
+        const assigned = /* @__PURE__ */ new Set(), productIds = new Set(b.v3.products.map((p) => p.id));
+        for (const team of b.v2.teams) {
+          if (team.assignments !== void 0 && !object2(team.assignments))
+            fail2("Ungültige Team-Zuordnungen");
+          if (team.productIds !== void 0) {
+            if (!Array.isArray(team.productIds))
+              fail2("Ungültige Produktzuordnung");
+            for (const id of team.productIds) {
+              if (!productIds.has(id) || assigned.has(id))
+                fail2("Unbekanntes oder mehrfach zugeordnetes Produkt");
+              assigned.add(id);
+            }
+          }
+        }
+        if (!object2(b.v3.configs)) fail2("Ungültige Leistungsmatrix");
+        for (const config of Object.values(b.v3.configs)) {
+          if (!object2(config) || !object2(config.entries))
+            fail2("Ungültige Flow-Zuordnungen");
+          strings(config, ["status"]);
+          for (const entry of Object.values(config.entries)) {
+            if (!object2(entry))
+              fail2("Ungültige Tätigkeit in der Leistungsmatrix");
+            if (entry.orgSource !== void 0 && !["explicit", "service"].includes(entry.orgSource))
+              fail2("Ungültige Herkunft der Ausführung");
+            strings(entry, [
+              "org",
+              "embedding",
+              "interaction",
+              "business",
+              "technical",
+              "operations",
+              "service",
+              "note",
+              "model"
+            ]);
+          }
+        }
+        if (b.v3.embeddingKinds !== void 0) {
+          if (!object2(b.v3.embeddingKinds) || Object.values(b.v3.embeddingKinds).some(
+            (kind) => !["embedded", "art-team", "shared", "outside", "custom"].includes(
+              kind
+            )
+          ))
+            fail2("Ungültige Kennungen der Einbindung");
+        }
+        for (const field of ["providers", "embeddings", "interactions"])
+          if (b.v3[field] !== void 0) {
+            if (!Array.isArray(b.v3[field]) || b.v3[field].some((v) => typeof v !== "string" || !v.trim()))
+              fail2("Ungültiger Auswahlkatalog: " + field);
+            const names = b.v3[field].map(
+              (v) => v.trim().toLocaleLowerCase("de-CH")
+            );
+            if (names.some(
+              (v) => ["noch zu klären", "nicht erforderlich", "__proto__"].includes(v)
+            ))
+              fail2("Reservierter Systembegriff im Auswahlkatalog: " + field);
+            if (new Set(names).size !== names.length)
+              fail2("Doppelte Namen im Auswahlkatalog: " + field);
+          }
+        if (b.v3.providerRecords !== void 0) {
+          catalog(b.v3.providerRecords, "Anbieterkennungen");
+          if (b.v3.providerRecords.some(
+            (r) => !["art", "isceco", "joint", "shared", "other"].includes(r.kind) || ["noch zu klären", "nicht erforderlich", "__proto__"].includes(
+              r.name.trim().toLocaleLowerCase("de-CH")
+            )
+          ))
+            fail2("Ungültige Anbieterkennungen");
+        }
+        if (b.v3.policies !== void 0) {
+          if (!Array.isArray(b.v3.policies) || b.v3.policies.some((p) => !object2(p) || typeof p.name !== "string"))
+            fail2("Ungültige Flow Policies");
+          for (const p of b.v3.policies) {
+            strings(p, [
+              "exit",
+              "owner",
+              "contributors",
+              "evidence",
+              "scope",
+              "type",
+              "interface"
+            ]);
+            this.validatePolicyWip(p.wip);
+          }
+        }
+        if (b.v3.teamContracts !== void 0) {
+          if (!object2(b.v3.teamContracts))
+            fail2("Ungültige Team-Verantwortlichkeiten");
+          for (const c of Object.values(b.v3.teamContracts)) {
+            if (!object2(c)) fail2("Ungültige Team-Verantwortlichkeiten");
+            strings(c, [
+              "business",
+              "technical",
+              "operations",
+              "release",
+              "escalation"
+            ]);
+          }
+        }
+        if (b.v3.navigationEpoch !== void 0 && typeof b.v3.navigationEpoch !== "string")
+          fail2("Ungültiger Konfigurationskontext");
+        if (b.v3.agreementConfirmations !== void 0) {
+          if (!object2(b.v3.agreementConfirmations))
+            fail2("Ungültige Statusbestätigungen");
+          for (const record of Object.values(b.v3.agreementConfirmations)) {
+            if (!object2(record) || !["Abgestimmt", "Freigegeben"].includes(record.status) || typeof record.signature !== "string" || record.categorySignature !== void 0 && typeof record.categorySignature !== "string" || typeof record.confirmedAt !== "string" || !Number.isFinite(Date.parse(record.confirmedAt)))
+              fail2("Ungültige Statusbestätigung");
+          }
+        }
+        if (b.organisations !== void 0 && !object2(b.organisations))
+          fail2("Ungültige Organisationsdaten");
+        app2.UTGDesignCriteria.validate(b.v3);
+        return true;
+      },
+      commitPair(v2, v3) {
+        this.restore({
+          v2,
+          v3,
+          organisations: this.read(this.keys.organisations, {})
+        });
+      },
+      restore(b) {
+        this.validateBundle(b);
+        const data = structuredClone(b);
+        app2.UTGModels?.normalizeServiceReferences(data.v3);
+        for (const team of data.v2.teams) team.assignments ??= {};
+        const changes = [
+          [this.keys.config, JSON.stringify(data.v3)],
+          [this.keys.teams, JSON.stringify(data.v2)],
+          [this.keys.organisations, JSON.stringify(data.organisations || {})]
+        ], written = [];
+        try {
+          for (const [key, value] of changes) {
+            const before = this.rawGet(key);
+            if (before === value) continue;
+            this.rawSet(key, value);
+            written.push([key, before]);
+          }
+        } catch (error) {
+          const failed = [];
+          for (const [key, before] of written.reverse()) {
+            try {
+              if (before === null) localStorage.removeItem(key);
+              else localStorage.setItem(key, before);
+            } catch (rollback) {
+              failed.push(key);
+            }
+          }
+          app2.UTGStorageStatus.ok = false;
+          app2.UTGFeedback?.failure(
+            failed.length ? "Speichern fehlgeschlagen; der bisherige Stand konnte nicht vollständig wiederhergestellt werden." : "Speichern fehlgeschlagen. Die bisherige Konfiguration wurde wiederhergestellt."
+          );
+          window.dispatchEvent(
+            new CustomEvent("utg:storage-status", { detail: { ok: false } })
+          );
+          if (failed.length)
+            throw Error(
+              "Speichern fehlgeschlagen; Wiederherstellung des bisherigen Speichers nicht vollständig möglich: " + failed.join(", ")
+            );
+          throw Error(
+            "Speichern fehlgeschlagen. Die bisherige Konfiguration wurde wiederhergestellt. " + error.message
+          );
+        }
+      }
+    });
+  }
+
+  // src/domain/flow.js
+  function initialize2(app2, browser = globalThis) {
+    app2.UTGFlow = Object.freeze({
+      states: Object.freeze([
+        "Funnel",
+        "Analyzing",
+        "Backlog",
+        "Implementing",
+        "Validating",
+        "Deploying & Releasing",
+        "Done"
+      ])
+    });
+  }
+
+  // src/domain/flow-criteria.js
+  function initialize3(app2, browser = globalThis) {
+    (() => {
+      "use strict";
+      const stages = app2.UTGFlow.states;
+      const types = [
+        "Aufnahme",
+        "AC",
+        "DoR",
+        "DoD",
+        "Release / Betrieb",
+        "Schnittstelle",
+        "Wirkung",
+        "Flow-Steuerung",
+        "Eintritt",
+        "Übergang",
+        "Abschluss"
+      ];
+      const criterion = (id, type, description, owner, evidence) => ({
+        id,
+        type,
+        description,
+        owner,
+        evidence
+      });
+      function legacyDefaults() {
+        return {
+          version: 1,
+          commonDoD: [
+            criterion(
+              "dod-quality",
+              "DoD",
+              "Ergebnis integriert, geprüft und dokumentiert; relevante Qualitätsanforderungen erfüllt.",
+              "Team",
+              "Test-, Review- und Dokumentationsnachweise"
+            ),
+            criterion(
+              "dod-security",
+              "DoD",
+              "Anwendbare Anforderungen an Security, Datenschutz, Barrierefreiheit und Performance nachgewiesen.",
+              "Team / zuständige Fachrollen",
+              "Prüfnachweise gemäss vereinbartem Schutz- und Qualitätsbedarf"
+            )
+          ],
+          rules: Object.fromEntries(
+            stages.map((name, i) => [
+              name,
+              {
+                useDoD: [3, 4, 6].includes(i),
+                criteria: [
+                  [
+                    criterion(
+                      "intake",
+                      "Aufnahme",
+                      "Bedarf, erwarteter Nutzen und Zuständigkeit für die Analyse sind geklärt.",
+                      "Product Management / Product Owner",
+                      "Dokumentierter Bedarf mit Nutzen und zuständiger Person"
+                    )
+                  ],
+                  [
+                    criterion(
+                      "ac",
+                      "AC",
+                      "Akzeptanzkriterien je Feature oder Story sind verständlich und überprüfbar beschrieben.",
+                      "Product Owner / Team",
+                      "Verweis auf AC im Backlog-Werkzeug"
+                    ),
+                    criterion(
+                      "impact",
+                      "Wirkung",
+                      "Zielgrösse, Messverantwortung und Messzeitpunkt sind festgelegt.",
+                      "Product Management / Product Owner",
+                      "Vereinbarte Wirkungshypothese und Messplan"
+                    )
+                  ],
+                  [
+                    criterion(
+                      "ready",
+                      "DoR",
+                      "Ziel und AC sind verstanden; Abhängigkeiten und erforderliche Zusagen sind geklärt.",
+                      "Team / Product Owner",
+                      "Gemeinsame Bereitschaftsentscheidung zum Umsetzungsstart"
+                    )
+                  ],
+                  [
+                    criterion(
+                      "flow",
+                      "Flow-Steuerung",
+                      "WIP begrenzen und Blockaden mit zuständiger Rolle und Eskalationsweg bearbeiten.",
+                      "Team",
+                      "Vereinbartes WIP-Limit und Eskalationsweg"
+                    )
+                  ],
+                  [
+                    criterion(
+                      "validate-ac",
+                      "AC",
+                      "Fachliche Akzeptanzkriterien am integrierten Ergebnis nachgewiesen.",
+                      "Product Owner / Team",
+                      "Akzeptanz- und Integrationsnachweise"
+                    )
+                  ],
+                  [
+                    criterion(
+                      "release",
+                      "Release / Betrieb",
+                      "Deployment, Monitoring, Support und Rollback vorbereitet; erforderliche Freigaben liegen vor.",
+                      "Release- und Betriebsverantwortliche",
+                      "Release- und Betriebsbereitschaftsnachweis"
+                    ),
+                    criterion(
+                      "handover",
+                      "Schnittstelle",
+                      "Lieferobjekt, empfangende Rolle, Übergabekriterien und Reaktionszeit sind vereinbart.",
+                      "Team / beteiligte Leistungserbringer",
+                      "Schnittstellenvereinbarung und Übergabenachweis"
+                    )
+                  ],
+                  [
+                    criterion(
+                      "outcome",
+                      "Wirkung",
+                      "Wirkungsmessung nach Auslieferung zum vereinbarten Zeitpunkt durchführen; Done allein bestätigt keine Wirkung.",
+                      "Product Management / Product Owner",
+                      "Messresultat oder terminierter Messauftrag"
+                    )
+                  ]
+                ][i]
+              }
+            ])
+          ),
+          teams: {}
+        };
+      }
+      function previousPhaseDefaults() {
+        return {
+          Funnel: [
+            {
+              id: "entry-0",
+              type: "Eintritt",
+              description: "Ein Anliegen mit betroffenen Nutzern und einer zuständigen Person liegt vor.",
+              owner: "Product Management / Product Owner",
+              evidence: "Bedarfseintrag und abgestimmter Analyseauftrag"
+            },
+            {
+              id: "exit-0",
+              type: "Übergang",
+              description: "Bedarf und erwarteter Nutzen sind beschrieben; Analyseverantwortung, Priorität und notwendige Ansprechpartner sind geklärt.",
+              owner: "Product Management / Product Owner",
+              evidence: "Bedarfseintrag und abgestimmter Analyseauftrag"
+            }
+          ],
+          Analyzing: [
+            {
+              id: "entry-1",
+              type: "Eintritt",
+              description: "Der Bedarf ist für die Analyse priorisiert; die zuständigen Fach- und Technikrollen sind verfügbar.",
+              owner: "Product Owner / Team / Architektur",
+              evidence: "Analyseergebnis mit AC und Risikoeinschätzung"
+            },
+            {
+              id: "exit-1",
+              type: "Übergang",
+              description: "Umfang und Lösungsansatz sind abgegrenzt; AC sind formuliert und wesentliche Risiken, Architekturfragen sowie Abhängigkeiten beurteilt.",
+              owner: "Product Owner / Team / Architektur",
+              evidence: "Analyseergebnis mit AC und Risikoeinschätzung"
+            }
+          ],
+          Backlog: [
+            {
+              id: "entry-2",
+              type: "Eintritt",
+              description: "Ein ausreichend analysiertes Feature mit Nutzen, Umfang und Abhängigkeiten liegt vor.",
+              owner: "Product Owner / Team",
+              evidence: "Priorisiertes Backlog und Bereitschaftsentscheidung"
+            },
+            {
+              id: "exit-2",
+              type: "Übergang",
+              description: "Die Arbeit ist priorisiert und erfüllt die vereinbarte Team-DoR; Stories sind ausreichend klein und erforderliche Lieferzusagen liegen vor.",
+              owner: "Product Owner / Team",
+              evidence: "Priorisiertes Backlog und Bereitschaftsentscheidung"
+            }
+          ],
+          Implementing: [
+            {
+              id: "entry-3",
+              type: "Eintritt",
+              description: "Das Team hat die Arbeit unter Beachtung seiner DoR und verfügbaren Kapazität zur Umsetzung ausgewählt.",
+              owner: "Team",
+              evidence: "Review-, Build- und Testnachweise"
+            },
+            {
+              id: "exit-3",
+              type: "Übergang",
+              description: "Änderungen sind geprüft und integriert; Build und relevante frühe Tests sind erfolgreich. Das Ergebnis steht für die integrierte Validierung bereit.",
+              owner: "Team",
+              evidence: "Review-, Build- und Testnachweise"
+            }
+          ],
+          Validating: [
+            {
+              id: "entry-4",
+              type: "Eintritt",
+              description: "Ein integriertes, prüfbares Ergebnis sowie vereinbarte Testdaten und Prüfumgebung sind verfügbar.",
+              owner: "Product Owner / Team / Fachrollen",
+              evidence: "Akzeptanz-, Integrations- und Qualitätsnachweise"
+            },
+            {
+              id: "exit-4",
+              type: "Übergang",
+              description: "AC und relevante Qualitätsanforderungen sind nachgewiesen; Fehler sind nach vereinbarten Regeln behoben oder zulässig behandelt.",
+              owner: "Product Owner / Team / Fachrollen",
+              evidence: "Akzeptanz-, Integrations- und Qualitätsnachweise"
+            }
+          ],
+          "Deploying & Releasing": [
+            {
+              id: "entry-5",
+              type: "Eintritt",
+              description: "Das validierte Ergebnis und die benötigten Release- und Betriebsinformationen liegen vor.",
+              owner: "Release- und Betriebsverantwortliche / Team",
+              evidence: "Release- und Betriebsbereitschaftsnachweis"
+            },
+            {
+              id: "exit-5",
+              type: "Übergang",
+              description: "Deployment und Rollback sind vorbereitet und erforderliche Prüfungen erfolgt; Monitoring, Support und notwendige Freigaben sind geklärt.",
+              owner: "Release- und Betriebsverantwortliche / Team",
+              evidence: "Release- und Betriebsbereitschaftsnachweis"
+            }
+          ],
+          Done: [
+            {
+              id: "entry-6",
+              type: "Eintritt",
+              description: "Die vereinbarte Team-DoD ist erfüllt; erforderliche Auslieferungs- und Übergabeschritte sind nachgewiesen.",
+              owner: "Product Owner / Team / Product Management",
+              evidence: "Abschlussnachweis und terminierter Messauftrag"
+            },
+            {
+              id: "exit-6",
+              type: "Übergang",
+              description: "Das Ergebnis ist abgeschlossen und akzeptiert; Dokumentation und Nachweise sind vollständig. Für die spätere Wirkungsmessung sind Verantwortung und Termin festgelegt.",
+              owner: "Product Owner / Team / Product Management",
+              evidence: "Abschlussnachweis und terminierter Messauftrag"
+            }
+          ]
+        };
+      }
+      function phaseDefaults() {
+        const gates = previousPhaseDefaults(), evidence = [
+          "Bedarfseintrag mit Nutzern und zuständiger Person",
+          "Priorisierter Analyseauftrag und benannte Fach- und Technikrollen",
+          "Analyseergebnis mit Nutzen, Umfang und Abhängigkeiten",
+          "Bereitschaftsentscheidung gemäss Team-DoR und verfügbare Kapazität",
+          "Integriertes Artefakt sowie verfügbare Testdaten und Prüfumgebung",
+          "Validierungsnachweis und vorbereitete Release- und Betriebsinformationen",
+          "Erfüllte Team-DoD und Nachweise zur Auslieferung / Übergabe"
+        ];
+        stages.forEach((stage, i) => {
+          gates[stage][0].evidence = evidence[i];
+        });
+        gates.Done[1].type = "Abschluss";
+        return gates;
+      }
+      function migratePhaseEvidence(profile) {
+        const old = previousPhaseDefaults(), fresh = phaseDefaults();
+        for (const stage of stages) {
+          const items = profile.phaseGates?.[stage];
+          if (!Array.isArray(items)) continue;
+          for (let i = 0; i < old[stage].length; i++) {
+            const at = items.findIndex(
+              (c) => JSON.stringify(c) === JSON.stringify(old[stage][i])
+            );
+            if (at >= 0) items[at] = structuredClone(fresh[stage][i]);
+          }
+        }
+      }
+      function defaultsV2() {
+        const f = legacyDefaults();
+        f.standardRevision = 2;
+        f.commonDoD = [
+          {
+            id: "dod-acceptance",
+            type: "DoD",
+            description: "Die vereinbarten Akzeptanzkriterien sind erfüllt; der Product Owner hat das Ergebnis anhand der Nachweise akzeptiert.",
+            owner: "Product Owner / Team",
+            evidence: "Akzeptanznachweis am Backlog-Eintrag"
+          },
+          {
+            id: "dod-integration",
+            type: "DoD",
+            description: "Änderungen sind geprüft, versioniert und in den gemeinsamen Stand integriert; ein reproduzierbares, auslieferbares Ergebnis liegt vor.",
+            owner: "Team",
+            evidence: "Review, erfolgreicher Build und versioniertes Artefakt"
+          },
+          {
+            id: "dod-tests",
+            type: "DoD",
+            description: "Relevante automatisierte Tests und erforderliche ergänzende Prüfungen sind erfolgreich; es bestehen keine Fehler, die der vereinbarten DoD entgegenstehen.",
+            owner: "Team",
+            evidence: "Test- und Regressionsnachweise einschliesslich betroffener Schnittstellen"
+          },
+          {
+            id: "dod-quality",
+            type: "DoD",
+            description: "Anwendbare Anforderungen an Security, Datenschutz, Barrierefreiheit, Performance und Resilienz sind nachgewiesen.",
+            owner: "Team / zuständige Fachrollen",
+            evidence: "Prüfresultate gemäss vereinbartem Schutz- und Qualitätsbedarf"
+          },
+          {
+            id: "dod-docs",
+            type: "DoD",
+            description: "Betroffene Dokumentation und Änderungsinformationen sind aktuell; bei Daten- oder Schnittstellenänderungen sind Kompatibilität und Datenerhalt geprüft.",
+            owner: "Team",
+            evidence: "Aktuelle Dokumentation sowie erforderliche Migrations- und Kompatibilitätstests"
+          }
+        ];
+        f.rules.Analyzing.criteria = [
+          ...[
+            {
+              id: "ac-behavior",
+              type: "AC",
+              description: "Das erwartete Verhalten und Ergebnis aus Nutzersicht sind je Feature oder Story konkret beschrieben.",
+              owner: "Product Owner / Team",
+              evidence: "Konkrete Beispiele; bei Bedarf Gegeben–Wenn–Dann"
+            },
+            {
+              id: "ac-boundaries",
+              type: "AC",
+              description: "Relevante Fehlerfälle, Grenzwerte und Berechtigungen sind mit eindeutig erwartetem Verhalten beschrieben.",
+              owner: "Product Owner / Team",
+              evidence: "Positive, negative und Grenzfall-Szenarien"
+            },
+            {
+              id: "ac-quality",
+              type: "AC",
+              description: "Spezifische Qualitätsanforderungen sind mit messbaren Zielwerten und Prüfbedingungen festgelegt.",
+              owner: "Product Owner / Team / Fachrollen",
+              evidence: "Anwendbare Messwerte, etwa Antwortzeit oder Wiederanlaufziel"
+            },
+            {
+              id: "ac-proof",
+              type: "AC",
+              description: "Für jedes Akzeptanzkriterium ist festgelegt, wie und mit welchen Daten das Ergebnis überprüft oder demonstriert wird.",
+              owner: "Product Owner / Team",
+              evidence: "Zugeordnete Akzeptanztests und Demo-Szenarien"
+            }
+          ],
+          ...f.rules.Analyzing.criteria.filter((c) => c.type !== "AC")
+        ];
+        f.rules.Backlog.criteria = [
+          {
+            id: "dor-value",
+            type: "DoR",
+            description: "Nutzen, Zielgruppe und Umfang sind verstanden; der Bezug zum Produkt- oder Feature-Ziel ist geklärt.",
+            owner: "Product Owner / Team",
+            evidence: "Backlog-Eintrag mit Ziel, Nutzen und Abgrenzung"
+          },
+          {
+            id: "dor-ac",
+            type: "DoR",
+            description: "Akzeptanzkriterien sind verständlich, überprüfbar und mit Product Owner und Team abgestimmt.",
+            owner: "Product Owner / Team",
+            evidence: "Vereinbarte AC mit Beispielen und Prüfansatz"
+          },
+          {
+            id: "dor-small",
+            type: "DoR",
+            description: "Das Team hat den Aufwand eingeschätzt; Stories sind klein genug für eine Iteration. Grössere Features sind in umsetzbare Stories zerlegt.",
+            owner: "Team",
+            evidence: "Teameinschätzung und zugeschnittene Stories"
+          },
+          {
+            id: "dor-dependencies",
+            type: "DoR",
+            description: "Abhängigkeiten, Architektur- und Qualitätsrisiken sind beurteilt; blockierende Fragen sind geklärt oder mit tragfähigem Vorgehen adressiert.",
+            owner: "Team / Architektur / beteiligte LE",
+            evidence: "Abhängigkeiten, Risikoeinschätzung und erforderliche Zusagen"
+          },
+          {
+            id: "dor-capacity",
+            type: "DoR",
+            description: "Priorität, verantwortliche Rollen, benötigte Fähigkeiten und verfügbare Testmittel sind geklärt; das Team kann die Umsetzung beginnen.",
+            owner: "Product Owner / Team",
+            evidence: "Priorisiertes Backlog und abgestimmte Lieferbeiträge"
+          }
+        ];
+        f.profiles = {};
+        f.phaseGates = phaseDefaults();
+        centralize(f);
+        return f;
+      }
+      function defaults() {
+        return app2.UTGFlowStandard.refine(defaultsV2());
+      }
+      function validate2(value) {
+        const object2 = (x) => x && typeof x === "object" && !Array.isArray(x), fail2 = () => {
+          throw Error("Ungültige strukturierte Flow-Kriterien");
+        };
+        if (!object2(value) || value.version !== 1 || !object2(value.rules) || !object2(value.teams))
+          fail2();
+        function list(items) {
+          if (!Array.isArray(items)) fail2();
+          const ids = /* @__PURE__ */ new Set();
+          for (const c of items) {
+            if (!object2(c) || typeof c.id !== "string" || !c.id || ids.has(c.id) || !types.includes(c.type))
+              fail2();
+            ids.add(c.id);
+            for (const field of ["description", "owner", "evidence"])
+              if (typeof c[field] !== "string") fail2();
+            if (!c.description.trim() || c.contributors !== void 0 && typeof c.contributors !== "string")
+              fail2();
+          }
+        }
+        function gates(profile) {
+          if (profile.phaseGates !== void 0) {
+            if (!object2(profile.phaseGates)) fail2();
+            for (const [stage, items] of Object.entries(profile.phaseGates)) {
+              if (!stages.includes(stage)) fail2();
+              list(items);
+              if (items.some(
+                (c) => !["Eintritt", "Übergang", "Abschluss"].includes(c.type)
+              ))
+                fail2();
+            }
+          }
+        }
+        gates(value);
+        if (value.standardRevision !== void 0 && ![2, 3, 4].includes(value.standardRevision))
+          fail2();
+        if (value.profiles !== void 0) {
+          if (!object2(value.profiles)) fail2();
+          for (const profile of Object.values(value.profiles)) {
+            if (!object2(profile) || !object2(profile.rules)) fail2();
+            gates(profile);
+            list(profile.commonDoD);
+            if (profile.commonDoR !== void 0) list(profile.commonDoR);
+            for (const [stage, rule] of Object.entries(profile.rules)) {
+              if (!stages.includes(stage) || !object2(rule) || typeof rule.useDoD !== "boolean")
+                fail2();
+              list(rule.criteria);
+            }
+          }
+        }
+        list(value.commonDoD);
+        if (value.commonDoR !== void 0) list(value.commonDoR);
+        for (const [stage, rule] of Object.entries(value.rules)) {
+          if (!stages.includes(stage) || !object2(rule) || typeof rule.useDoD !== "boolean")
+            fail2();
+          list(rule.criteria);
+        }
+        for (const rules of Object.values(value.teams)) {
+          if (!object2(rules)) fail2();
+          for (const [stage, items] of Object.entries(rules)) {
+            if (!stages.includes(stage)) fail2();
+            list(items);
+          }
+        }
+        return value;
+      }
+      function appendUnique(target, item) {
+        if (target.some((c) => JSON.stringify(c) === JSON.stringify(item)))
+          return;
+        const copy = structuredClone(item), base = copy.id;
+        let n = 1;
+        while (target.some((c) => c.id === copy.id))
+          copy.id = base + "-migrated-" + n++;
+        target.push(copy);
+      }
+      function centralize(profile) {
+        if (profile.phaseGates === void 0)
+          profile.phaseGates = phaseDefaults();
+        if (profile.commonDoR === void 0) {
+          profile.commonDoR = [];
+          for (const rule of Object.values(profile.rules))
+            for (const c of rule.criteria)
+              if (c.type === "DoR") appendUnique(profile.commonDoR, c);
+        }
+        return profile;
+      }
+      function migrateCompletionType(data) {
+        data.migrations ??= {};
+        if (data.migrations.policyCompletionType3140) return;
+        const p = data.policies?.find((p2) => p2.name === "Done"), allowed = [
+          "name",
+          "exit",
+          "wip",
+          "id",
+          "type",
+          "scope",
+          "owner",
+          "interface"
+        ];
+        if (p && p.type === "Ausführung" && p.exit === "Vereinbarte Done-Kriterien erfüllt; Wirkungsmessung erfolgt nachgelagert" && !p.wip && (!p.id || p.id === "FP-7") && (!p.scope || p.scope === "ART") && (!p.owner || p.owner === "ART / zuständige Rollen") && !p.interface && Object.keys(p).every((k) => allowed.includes(k)))
+          p.type = "Abschluss";
+        data.migrations.policyCompletionType3140 = true;
+      }
+      function initialize6(data) {
+        migrateCompletionType(data);
+        if (data.flowCriteria === void 0) data.flowCriteria = defaults();
+        const f = data.flowCriteria;
+        validate2(f);
+        if (f.standardRevision === void 0) {
+          const old = legacyDefaults(), fresh = defaultsV2(), same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+          if (same(f.commonDoD, old.commonDoD)) f.commonDoD = fresh.commonDoD;
+          for (const name of ["Analyzing", "Backlog"])
+            if (same(f.rules[name]?.criteria, old.rules[name].criteria))
+              f.rules[name].criteria = fresh.rules[name].criteria;
+          f.standardRevision = 2;
+        }
+        f.profiles ??= {};
+        centralize(f);
+        migratePhaseEvidence(f);
+        for (const profile of Object.values(f.profiles)) {
+          centralize(profile);
+          migratePhaseEvidence(profile);
+        }
+        validate2(f);
+        return data;
+      }
+      function ensureTeam(data, team) {
+        const f = initialize6(data).flowCriteria;
+        if (team && !Object.hasOwn(f.profiles, team)) {
+          f.profiles[team] = {
+            phaseGates: structuredClone(f.phaseGates),
+            commonDoR: structuredClone(f.commonDoR),
+            commonDoD: structuredClone(f.commonDoD),
+            rules: structuredClone(f.rules)
+          };
+          for (const [stage, items] of Object.entries(f.teams[team] || {})) {
+            f.profiles[team].rules[stage] ??= { criteria: [], useDoD: false };
+            const target = f.profiles[team].rules[stage].criteria;
+            for (const c of items) {
+              if (c.type === "DoR") appendUnique(f.profiles[team].commonDoR, c);
+              const copy = structuredClone(c);
+              if (target.some((x) => x.id === copy.id))
+                copy.id = "team-" + copy.id;
+              target.push(copy);
+            }
+          }
+        }
+        return data;
+      }
+      function effective(data, stage, team) {
+        const d = ensureTeam(structuredClone(data), team), f = d.flowCriteria, profile = team ? f.profiles[team] : f, r = profile.rules[stage] || { criteria: [], useDoD: false };
+        return {
+          common: r.criteria,
+          dod: profile.commonDoD,
+          dor: profile.commonDoR,
+          team: []
+        };
+      }
+      function update(data, stage, team, items, useDoD) {
+        const d = ensureTeam(structuredClone(data), team), f = d.flowCriteria, target = team ? f.profiles[team] : f;
+        if (stage === "commonDoD") target.commonDoD = items;
+        else if (stage === "commonDoR") target.commonDoR = items;
+        else target.rules[stage] = { criteria: items, useDoD: !!useDoD };
+        validate2(f);
+        return d;
+      }
+      function typed(data, stage, team, type) {
+        const d = ensureTeam(structuredClone(data), team), f = team ? d.flowCriteria.profiles[team] : d.flowCriteria;
+        return structuredClone(
+          type === "Phase" ? [
+            ...f.phaseGates[stage] || [],
+            ...(f.rules[stage]?.criteria || []).filter((c) => !["AC", "DoR", "DoD"].includes(c.type)).map((c) => ({ ...c, _source: "rule" }))
+          ] : type === "DoD" ? f.commonDoD : type === "DoR" ? f.commonDoR : (f.rules[stage]?.criteria || []).filter((c) => c.type === type)
+        );
+      }
+      function updateTyped(data, stage, team, type, items, useDoD) {
+        if (!["Phase", "DoD", "DoR", "AC"].includes(type) || items.some(
+          (c) => type === "Phase" ? !types.includes(c.type) || ["AC", "DoR", "DoD"].includes(c.type) : c.type !== type
+        ))
+          throw Error("Ungültige Kriterienart");
+        const d = ensureTeam(structuredClone(data), team), f = team ? d.flowCriteria.profiles[team] : d.flowCriteria, r = f.rules[stage] || { criteria: [], useDoD: false };
+        if (type === "Phase") {
+          const ruleItems = items.filter(
+            (c) => c._source === "rule" && r.criteria.some(
+              (original) => original.id === c.id && original.type === c.type
+            ) || !["Eintritt", "Übergang", "Abschluss"].includes(c.type)
+          ), gates = items.filter((c) => !ruleItems.includes(c)), clean = (c) => {
+            const copy = { ...c };
+            delete copy._source;
+            return copy;
+          };
+          f.phaseGates[stage] = gates.map(clean);
+          f.rules[stage] = {
+            ...r,
+            criteria: [
+              ...r.criteria.filter((c) => ["AC", "DoR", "DoD"].includes(c.type)),
+              ...ruleItems.map(clean)
+            ]
+          };
+        } else if (type === "DoD") f.commonDoD = items;
+        else if (type === "DoR") f.commonDoR = items;
+        else
+          f.rules[stage] = {
+            ...r,
+            criteria: [...r.criteria.filter((c) => c.type !== type), ...items]
+          };
+        validate2(d.flowCriteria);
+        return d;
+      }
+      app2.UTGFlowCriteria = Object.freeze({
+        types,
+        defaults,
+        validate: validate2,
+        initialize: initialize6,
+        ensureTeam,
+        effective,
+        update,
+        typed,
+        updateTyped
+      });
+    })();
+  }
+
+  // src/domain/flow-standard.js
+  function initialize4(app2, browser = globalThis) {
+    (() => {
+      "use strict";
+      const fields = [
+        ["workItem", "Arbeitselement"],
+        ["pull", "Pull und Kapazität"],
+        ["wip", "Vereinbarte WIP-Begrenzung"],
+        ["blocked", "Blockaden und Eskalation"],
+        ["aging", "Alternde Arbeit"],
+        ["exceptions", "Ablehnen, Parkieren und Zurückgeben"],
+        ["measurementStart", "Startpunkt der Flow-Messung"],
+        ["measurementEnd", "Endpunkt der Flow-Messung"],
+        ["sle", "Service Level Expectation (SLE)"],
+        ["qualityMinimum", "Gemeinsame Produkt- / ART-Mindestqualität"],
+        ["decisionRole", "Entscheidungsverantwortliche Rolle"],
+        ["evidence", "Vereinbarungsnachweis / Referenz"]
+      ], policies = [
+        {
+          name: "Funnel",
+          exit: "Bedarf und Nutzen geklärt; Analyse ausgewählt und kapazitiv möglich.",
+          owner: "Product Management",
+          contributors: "Bedarfsträger / Product Owner",
+          evidence: "Analyseentscheid mit Priorität und bestätigter Analysekapazität",
+          wip: "",
+          scope: "ART",
+          type: "Übergang",
+          standardRevision: 4
+        },
+        {
+          name: "Analyzing",
+          exit: "Feature-Ziel, Umfang und prüfbare AC geklärt; Risiken, LE-Abhängigkeiten und Wirkungshypothese samt Messauftrag dokumentiert.",
+          owner: "Product Owner",
+          contributors: "Team / Architektur / Fachrollen / beteiligte LE",
+          evidence: "Feature mit AC, Risikoeinschätzung, LE-Beiträgen und referenziertem Messplan",
+          wip: "",
+          scope: "ART",
+          type: "Übergang",
+          standardRevision: 4
+        },
+        {
+          name: "Backlog",
+          exit: "Nächster Umsetzungsschritt bereit; priorisiertes Feature bei freier Kapazität und gesicherten Lieferbeiträgen ziehen.",
+          owner: "Product Owner",
+          contributors: "Team / beteiligte LE",
+          evidence: "Pull-Entscheid mit Kapazität, Bereitschaft und benötigten Zusagen",
+          wip: "",
+          scope: "ART",
+          type: "Übergang",
+          standardRevision: 4
+        },
+        {
+          name: "Implementing",
+          exit: "Änderungen integriert; Build, Reviews und frühe Tests erfolgreich. Ergebnis für die integrierte Validierung prüfbar.",
+          owner: "Umsetzungsverantwortliche Rolle im Team",
+          contributors: "Team / beteiligte LE",
+          evidence: "Versioniertes Artefakt, erfolgreicher Build, Reviews und frühe Tests",
+          wip: "",
+          scope: "ART",
+          type: "Übergang",
+          standardRevision: 4
+        },
+        {
+          name: "Validating",
+          exit: "DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden Abweichungen. Erforderliche Freigabeunterlagen liegen vor.",
+          owner: "Product Owner",
+          contributors: "Team / Fachrollen",
+          evidence: "Akzeptanz- und Qualitätsnachweise mit beurteilten Abweichungen",
+          wip: "",
+          scope: "ART",
+          type: "Übergang",
+          standardRevision: 4
+        },
+        {
+          name: "Deploying & Releasing",
+          exit: "Bereitstellung, Nutzungsfreigabe und Betriebsübernahme bestätigt; Funktionsprüfung erfolgreich und Rückfallweg verfügbar.",
+          owner: "Releaseverantwortliche Rolle",
+          contributors: "Team / Betriebsverantwortliche / beteiligte LE",
+          evidence: "Deploymentprotokoll, Nutzungsfreigabe, Funktionsprüfung und bestätigte Betriebsübernahme",
+          wip: "",
+          scope: "ART",
+          type: "Übergang",
+          standardRevision: 4
+        },
+        {
+          name: "Done",
+          exit: "Abschluss und Nachweise vollständig; Messauftrag mit Verantwortung, Termin und Datenquelle übergeben.",
+          owner: "Product Owner",
+          contributors: "Team / Product Management",
+          evidence: "Feature-Abschluss mit DoD-Nachweisen und Referenz auf übergebenen Messauftrag",
+          wip: "",
+          scope: "ART",
+          type: "Abschluss",
+          standardRevision: 4
+        }
+      ], gates = {
+        Funnel: [
+          {
+            id: "entry-0",
+            type: "Eintritt",
+            description: "Feature-Anliegen mit betroffenen Nutzern und zuständiger Person erfasst.",
+            owner: "Product Management",
+            contributors: "Bedarfsträger / Product Owner",
+            evidence: "Bedarfseintrag mit Nutzern und zuständiger Person"
+          },
+          {
+            id: "exit-0",
+            type: "Übergang",
+            description: "Bedarf und Nutzen geklärt; Analyse ausgewählt und kapazitiv möglich.",
+            owner: "Product Management",
+            contributors: "Bedarfsträger / Product Owner",
+            evidence: "Analyseentscheid mit Priorität und bestätigter Analysekapazität"
+          }
+        ],
+        Analyzing: [
+          {
+            id: "entry-1",
+            type: "Eintritt",
+            description: "Analyse ausgewählt; Kapazität und benötigte Rollen verfügbar.",
+            owner: "Product Owner",
+            contributors: "Team / Architektur / Fachrollen / beteiligte LE",
+            evidence: "Priorisierter Analyseauftrag und verfügbare Fach- und Technikrollen"
+          },
+          {
+            id: "exit-1",
+            type: "Übergang",
+            description: "Feature-Ziel, Umfang und prüfbare AC geklärt; Risiken, LE-Abhängigkeiten und Wirkungshypothese samt Messauftrag dokumentiert.",
+            owner: "Product Owner",
+            contributors: "Team / Architektur / Fachrollen / beteiligte LE",
+            evidence: "Feature mit AC, Risikoeinschätzung, LE-Beiträgen und referenziertem Messplan"
+          }
+        ],
+        Backlog: [
+          {
+            id: "entry-2",
+            type: "Eintritt",
+            description: "Feature mit Ziel, Umfang, AC, Risiken und Abhängigkeiten analysiert.",
+            owner: "Product Owner",
+            contributors: "Team / beteiligte LE",
+            evidence: "Analysiertes Feature mit AC und Abhängigkeiten"
+          },
+          {
+            id: "exit-2",
+            type: "Übergang",
+            description: "Nächster Umsetzungsschritt bereit; priorisiertes Feature bei freier Kapazität und gesicherten Lieferbeiträgen ziehen.",
+            owner: "Product Owner",
+            contributors: "Team / beteiligte LE",
+            evidence: "Pull-Entscheid mit Kapazität, Bereitschaft und benötigten Zusagen"
+          }
+        ],
+        Implementing: [
+          {
+            id: "entry-3",
+            type: "Eintritt",
+            description: "Priorisiertes Feature gezogen; nächster Schritt bereit, Kapazität und benötigte Lieferbeiträge gesichert.",
+            owner: "Umsetzungsverantwortliche Rolle im Team",
+            contributors: "Team / beteiligte LE",
+            evidence: "Pull-Entscheid gemäss Bereitschaft und Kapazität"
+          },
+          {
+            id: "exit-3",
+            type: "Übergang",
+            description: "Änderungen integriert; Build, Reviews und frühe Tests erfolgreich. Ergebnis für die integrierte Validierung prüfbar.",
+            owner: "Umsetzungsverantwortliche Rolle im Team",
+            contributors: "Team / beteiligte LE",
+            evidence: "Versioniertes Artefakt, erfolgreicher Build, Reviews und frühe Tests"
+          }
+        ],
+        Validating: [
+          {
+            id: "entry-4",
+            type: "Eintritt",
+            description: "Integriertes Ergebnis nach erfolgreichen frühen Prüfungen mit Testdaten in der vereinbarten Umgebung prüfbar.",
+            owner: "Product Owner",
+            contributors: "Team / Fachrollen",
+            evidence: "Prüfbares integriertes Artefakt, Testdaten und Prüfumgebung; referenzierte DoD-Nachweise"
+          },
+          {
+            id: "exit-4",
+            type: "Übergang",
+            description: "DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden Abweichungen. Erforderliche Freigabeunterlagen liegen vor.",
+            owner: "Product Owner",
+            contributors: "Team / Fachrollen",
+            evidence: "Akzeptanz- und Qualitätsnachweise mit beurteilten Abweichungen; referenzierte DoD-Nachweise"
+          }
+        ],
+        "Deploying & Releasing": [
+          {
+            id: "entry-5",
+            type: "Eintritt",
+            description: "DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden Abweichungen. Erforderliche Release- und Betriebsinformationen liegen vor.",
+            owner: "Releaseverantwortliche Rolle",
+            contributors: "Team / Betriebsverantwortliche / beteiligte LE",
+            evidence: "Validierungsnachweise und vorbereitete Release-/Betriebsinformationen; referenzierte DoD-Nachweise"
+          },
+          {
+            id: "exit-5",
+            type: "Übergang",
+            description: "Bereitstellung, Nutzungsfreigabe und Betriebsübernahme bestätigt; Funktionsprüfung erfolgreich und Rückfallweg verfügbar.",
+            owner: "Releaseverantwortliche Rolle",
+            contributors: "Team / Betriebsverantwortliche / beteiligte LE",
+            evidence: "Deploymentprotokoll, Nutzungsfreigabe, Funktionsprüfung und bestätigte Betriebsübernahme; referenzierte DoD-Nachweise"
+          }
+        ],
+        Done: [
+          {
+            id: "entry-6",
+            type: "Eintritt",
+            description: "Bereitstellung, Nutzungsfreigabe und Betriebsübernahme nachgewiesen.",
+            owner: "Product Owner",
+            contributors: "Team / Product Management",
+            evidence: "Nachgewiesene Bereitstellung, Nutzungsfreigabe und Übergaben"
+          },
+          {
+            id: "exit-6",
+            type: "Abschluss",
+            description: "Abschluss und Nachweise vollständig; Messauftrag mit Verantwortung, Termin und Datenquelle übergeben.",
+            owner: "Product Owner",
+            contributors: "Team / Product Management",
+            evidence: "Feature-Abschluss mit DoD-Nachweisen und Referenz auf übergebenen Messauftrag"
+          }
+        ]
+      }, governance = {
+        version: 1,
+        status: "Vorschlag",
+        workItem: "Feature im ART-Fluss. Story-Bereitschaft wird separat für die nächsten Umsetzungsschritte vereinbart.",
+        pull: "Arbeit nur bei verfügbarer Kapazität der empfangenden Stufe ziehen. Backlog ist eine priorisierte Warteschlange; Verfeinerung erfolgt bedarfsgerecht.",
+        wip: "",
+        blocked: "Blockade am Arbeitselement mit verantwortlicher Person, nächstem Schritt und Eskalationszeitpunkt dokumentieren. Den konkreten Eskalationsweg gemeinsam vereinbaren.",
+        aging: "Alternde Arbeit regelmässig im Flow-Review besprechen; Prüfrhythmus und Eingriffsgrenzen anhand tatsächlicher Durchlaufzeiten vereinbaren.",
+        exceptions: "Arbeit darf mit begründetem Entscheid abgelehnt, geparkt oder in eine frühere Stufe zurückgegeben werden. Verantwortliche Rolle und Wiederaufnahmebedingung am Feature dokumentieren.",
+        measurementStart: "Pull eines Features vom Backlog nach Implementing; Analysezeiten separat betrachten.",
+        measurementEnd: "Eintritt in Done nach bestätigter Bereitstellung, Nutzungsfreigabe und Übergabe.",
+        sle: "",
+        qualityMinimum: "Am selben Produkt gemeinsam vereinbarte DoD einhalten: überprüfbare AC, Integration und Versionierung, relevante Tests, anwendbare Qualitätsanforderungen und aktuelle Dokumentation. Team-Vereinbarungen konkretisieren diese Mindestqualität. Formale Abnahmen nur bei fachlicher, vertraglicher oder regulatorischer Erforderlichkeit; zuständige Entscheidrolle benennen.",
+        decisionRole: "",
+        evidence: ""
+      };
+      const clone2 = (x) => structuredClone(x), text = (x) => typeof x === "string" && !!x.trim();
+      function validateGovernance(g) {
+        if (g === void 0) return;
+        if (!g || typeof g !== "object" || Array.isArray(g) || g.version !== 1 || !["Vorschlag", "Vereinbart"].includes(g.status))
+          throw Error("Ungültige Flow-Vereinbarung");
+        for (const [key] of fields)
+          if (typeof g[key] !== "string")
+            throw Error("Ungültiges Flow-Feld: " + key);
+        if (g.status === "Vereinbart" && fields.some(([key]) => !text(g[key])))
+          throw Error(
+            "Für eine vereinbarte Flow-Steuerung fehlen Angaben, Zuständigkeit oder Nachweis."
+          );
+      }
+      function refine(f) {
+        f.standardRevision = 4;
+        f.phaseGates = clone2(gates);
+        f.rules.Funnel.criteria = [];
+        f.rules.Validating.criteria = [];
+        f.rules.Backlog.criteria = [];
+        f.rules.Done.criteria = [];
+        f.rules.Analyzing.criteria = f.rules.Analyzing.criteria.map(
+          (c) => c.id === "impact" ? {
+            ...c,
+            description: "Ausgangslage, erwartete Veränderung, Messgrösse, Datenquelle, Messverantwortung und Messzeitpunkt sind im Messauftrag festgelegt.",
+            owner: "Product Management",
+            contributors: "Product Owner / Team",
+            evidence: "Referenz auf Wirkungshypothese und Messauftrag mit Ausgangswert und Datenquelle"
+          } : c.type === "AC" ? {
+            ...c,
+            description: c.description.replace(
+              "je Feature oder Story",
+              "je Feature"
+            ),
+            owner: "Product Owner",
+            contributors: "Team / Fachrollen"
+          } : c
+        );
+        const dor = [
+          "Ziel, Nutzen und Umfang sind verstanden.",
+          "AC sind abgestimmt und überprüfbar.",
+          "Der nächste Umsetzungsschritt ist klein und umsetzbar.",
+          "Blockierende Fragen sind geklärt oder tragfähig adressiert.",
+          "Benötigte Rollen, Fähigkeiten, Testmittel und Lieferbeiträge sind rechtzeitig verfügbar."
+        ], dod = [
+          "Die vereinbarten AC sind nachweislich erfüllt.",
+          "Änderungen sind geprüft, versioniert und integriert; das Ergebnis ist auslieferbar.",
+          "Relevante Tests sind erfolgreich; keine unzulässigen Befunde sind offen.",
+          "Die anwendbaren Qualitäts- und Schutzanforderungen sind nachgewiesen.",
+          "Dokumentation ist aktuell; Daten-, Schnittstellen- und Migrationsfolgen sind geprüft."
+        ];
+        f.commonDoR = f.commonDoR.map((c, i) => ({ ...c, description: dor[i] }));
+        f.commonDoD = f.commonDoD.map((c, i) => ({ ...c, description: dod[i] }));
+        f.commonDoR[2].evidence = "Zuschnitt des nächsten Schritts; weitere Verfeinerung nach Bedarf, Story-Bereitschaft separat";
+        f.commonDoR[4].evidence = "Benötigte Beiträge und Testmittel verfügbar oder für ihren Bedarfstermin verbindlich zugesagt; Priorität und freie Kapazität beim Pull bestätigen";
+        f.commonDoD[0].evidence = "Akzeptanznachweis am Arbeitselement; erforderliche formale Abnahme in der Freigaberegel referenzieren";
+        f.commonDoD[2].evidence = "Relevante Testnachweise und produktbezogene Fehlergrenzen; keine offenen Befunde, die verbindliche AC oder Qualitätsgrenzen verletzen";
+        f.commonDoD[3].evidence = "Produktbezogenes Qualitätsprofil mit anwendbaren Anforderungen an Security, Datenschutz, Barrierefreiheit, Performance und Resilienz sowie referenzierten Prüfnachweisen";
+        f.commonDoD[4].evidence = "Aktuelle Dokumentation und Änderungsinformationen; Datenerhalt, Kompatibilität oder vereinbarter Versions-/Migrationspfad nachgewiesen";
+        f.rules.Implementing.criteria = [
+          {
+            id: "flow",
+            type: "Flow-Steuerung",
+            description: "Nach der übergreifenden Flow-Vereinbarung arbeiten: WIP begrenzen, Blockaden und alternde Arbeit sichtbar bearbeiten. Fehlende konkrete Limits und Eskalationswege gemeinsam vereinbaren.",
+            owner: "Umsetzungsverantwortliche Rolle im Team",
+            contributors: "Team / beteiligte LE",
+            evidence: "Referenz auf vereinbarte WIP-, Blockade- und Eskalationsregeln"
+          }
+        ];
+        f.rules["Deploying & Releasing"].criteria = [
+          {
+            id: "release",
+            type: "Release / Betrieb",
+            description: "Vor der Auslieferung Deployment, Funktionsprüfung, Rollback, Monitoring und Support vorbereiten. Deployment und Freigabe zur Nutzung getrennt nachweisen; bei entkoppeltem Release bleibt das Feature bis zur vereinbarten Nutzungsfreigabe hier. Formale Abnahmen nur bei Erforderlichkeit mit Entscheidrolle und Nachweis führen.",
+            owner: "Releaseverantwortliche Rolle",
+            contributors: "Team / Betriebsverantwortliche",
+            evidence: "Releaseplan und Rückfallverfahren; getrennte Deployment- und Freigabenachweise sowie erforderliche formale Abnahmen"
+          },
+          {
+            id: "handover",
+            type: "Schnittstelle",
+            description: "Lieferobjekt, empfangende Rolle, Übergabekriterien und Reaktionszeit vereinbaren; die erfolgte Übernahme bestätigen lassen.",
+            owner: "Betriebsverantwortliche Rolle",
+            contributors: "Team / beteiligte LE",
+            evidence: "Schnittstellenvereinbarung und bestätigter Übergabenachweis"
+          }
+        ];
+        return f;
+      }
+      function issues(d) {
+        const result2 = [], g = d.flowGovernance;
+        const add = (stage, message) => result2.push({
+          message: "Flow-Konsistenz · " + message,
+          target: { kind: "policy", stage }
+        });
+        if (!g || g.status !== "Vereinbart")
+          add(
+            "Funnel",
+            "Übergreifende Flow-Steuerung ist noch nicht gemeinsam vereinbart."
+          );
+        if (!g || !text(g.wip))
+          add("Implementing", "Konkrete WIP-Begrenzung ist noch zu vereinbaren.");
+        if (!g || !text(g.sle))
+          add(
+            "Implementing",
+            "SLE aus beobachteten Durchlaufzeiten noch zu ermitteln."
+          );
+        for (const [scope, p] of [
+          ["Standardvorlage", d.flowCriteria],
+          ...Object.entries(d.flowCriteria?.profiles || {}).map(([id, p2]) => [
+            "Team " + id,
+            p2
+          ])
+        ])
+          for (const [stage, list] of Object.entries(p?.phaseGates || {})) {
+            if (list.some(
+              (c) => stage === "Done" ? c.type === "Übergang" : c.type === "Abschluss"
+            ))
+              add(
+                stage,
+                scope + ": Abschluss ist Done vorbehalten; die anderen Zustände benötigen einen Übergang."
+              );
+          }
+        for (const p of d.policies || [])
+          if (!text(p.owner) || !text(p.evidence))
+            add(
+              p.name,
+              "ART-Regel " + p.name + ": Entscheidrolle oder erwarteter Nachweis fehlt."
+            );
+        return result2;
+      }
+      const contexts = {
+        Funnel: [
+          "Noch keine vollständige Umsetzungsbereitschaft verlangen. Bedarf und Analysezuständigkeit klären.",
+          "Qualitätsrahmen früh kennen; seine Erfüllung ist keine Aufnahmebedingung."
+        ],
+        Analyzing: [
+          "Bereitschaft schrittweise herstellen; nicht bereits zum Analysebeginn verlangen.",
+          "Benötigte Prüfungen und Nachweise früh planen."
+        ],
+        Backlog: [
+          "Vor dem Pull nach Implementing auf den nächsten Schritt anwenden. Priorität und freie Kapazität beim Pull bestätigen.",
+          "Das gemeinsame Qualitätsziel für die Umsetzung berücksichtigen."
+        ],
+        Implementing: [
+          "Bei wesentlichen Änderungen den nächsten Schritt klären; keine erneute pauschale Freigabe verlangen.",
+          "Qualität fortlaufend herstellen: integrieren, prüfen und dokumentieren."
+        ],
+        Validating: [
+          "Prüfumgebung und Testdaten nach der Phasenregel klären; keine erneute Umsetzungs-DoR.",
+          "Erfüllung am integrierten Ergebnis nachweisen, bevor ausgeliefert wird."
+        ],
+        "Deploying & Releasing": [
+          "Release-Bereitschaft nach der Phasenregel prüfen.",
+          "Vor der Nutzungsfreigabe erfüllt. DoD macht auslieferbar; der Release bestätigt die tatsächliche Freigabe."
+        ],
+        Done: [
+          "Keine neue Bereitschaftsprüfung; neue Arbeit separat aufnehmen.",
+          "Vorhandene Erfüllungsnachweise bestätigen. Feature-Abschluss umfasst zusätzlich Release und Übergabe; spätere Wirkung bleibt separat."
+        ]
+      };
+      function context(stage, type) {
+        return contexts[stage]?.[type === "DoR" ? 0 : 1] || "";
+      }
+      app2.UTGFlowStandard = Object.freeze({
+        context,
+        fields,
+        policies: () => clone2(policies),
+        gates: () => clone2(gates),
+        governance: () => clone2(governance),
+        refine,
+        validateGovernance,
+        issues
+      });
+    })();
+  }
+
+  // src/domain/design-criteria.js
+  function initialize5(app2, browser = globalThis) {
+    (() => {
+      "use strict";
+      const defaults = [
+        [
+          "customer-value",
+          "Zusammenhängender Auftrag mit erkennbarem Nutzen",
+          "Das Team wird um einen fachlich zusammenhängenden Produktbereich oder Service gebildet. Seine Nutzer und der erwartete Nutzen sind benennbar. Eine gemeinsame Technologie oder dieselbe vorgesetzte Stelle reicht als Begründung für den Teamschnitt nicht aus."
+        ],
+        [
+          "e2e",
+          "Lieferfähigkeit über den gesamten vereinbarten Umfang",
+          "Das Team kann eine typische Änderung von der Klärung des Bedarfs bis zur nutzbaren und betreibbaren Lösung verantworten. Der Zuschnitt vermeidet reine Analyse-, Entwicklungs- oder Testteams, zwischen denen jede Änderung weitergereicht werden muss. Erforderliche externe Leistungen sind ausdrücklich vereinbart."
+        ],
+        [
+          "self-organisation",
+          "Eindeutige Verantwortung und Entscheidungsbefugnisse",
+          "Für jedes Produkt, jeden Service und jede wesentliche Schnittstelle ist klar, welches Team verantwortlich ist. Diese Verantwortung ist mit den nötigen Entscheidungsrechten verbunden. Überschneidungen und Lücken werden beim Zuschnitt geklärt – etwa, wer einen produktiven Fehler behebt oder eine Schnittstellenänderung entscheidet."
+        ],
+        [
+          "all-in-one",
+          "Fachlich und technisch passende Grenzen",
+          "Aufgaben, die häufig gemeinsam verändert werden müssen, liegen möglichst beim selben Team. Teamgrenzen sollen unabhängige Änderungen ermöglichen. Wenn zwei Teams für fast jedes Feature gemeinsam planen, entwickeln und freigeben müssen, ist ihre Trennung zu hinterfragen."
+        ],
+        [
+          "cross-assignments",
+          "Externe Abhängigkeiten und Querbeauftragungen reduzieren",
+          "Der Teamschnitt minimiert wiederkehrende Übergaben, externe Freigaben und konkurrierende Beauftragungen. Massgeblich ist, wie oft das Team auf andere warten muss. Häufig benötigte Fähigkeiten gehören möglichst ins Team; selten benötigte Spezialleistungen können verlässlich von aussen bezogen werden."
+        ],
+        [
+          "manageable-scope",
+          "Tragbarer Umfang und begrenzte Komplexität",
+          "Anzahl und Verschiedenheit der Produkte, Technologien und Betriebsaufgaben passen zur Leistungsfähigkeit des Teams. Ein Team übernimmt nicht beliebig viele Systeme, nur weil diese organisatorisch zusammengehören. Wird der Umfang zu gross, wird entlang zusammenhängender Aufgaben geteilt – nicht automatisch nach einzelnen Disziplinen."
+        ],
+        [
+          "crossfunctional",
+          "Passende Kompetenzen und ausreichende Kapazität",
+          "Die Besetzung folgt dem Auftrag. Das Team verfügt gemeinsam über die benötigten fachlichen, technischen und betrieblichen Fähigkeiten. Kritisches Wissen hängt nicht dauerhaft an einer einzelnen Person. Teamgrösse und Kapazität werden daraus abgeleitet, nicht über eine starre Sollzahl vorgegeben."
+        ],
+        [
+          "stable-focus",
+          "Stabiler Teamkern und eindeutige Priorisierung",
+          "Menschen werden einem beständigen Auftrag zugeordnet. Dauerhafte Mehrfachzuordnungen und wechselnde Queraufträge werden begrenzt. Für das Team gibt es eine nachvollziehbare Reihenfolge der Arbeit; mehrere Auftraggeber können nicht unabhängig dieselbe Kapazität verplanen."
+        ],
+        [
+          "shared-services",
+          "Gemeinsame Services mit klarem Entlastungseffekt",
+          "Plattform- und Spezialistenteams werden dort gebildet, wo sie andere Teams wirksam unterstützen: durch wiederverwendbare Leistungen oder gebündeltes Spezialwissen. Leistungsumfang, Schnittstellen und Nutzungsbedingungen sind klar. Eine zentrale Einheit, die für jede Änderung eine individuelle Beauftragung und lange Abstimmung verlangt, muss ihren Zuschnitt überprüfen."
+        ]
+      ].map(([id, name, description]) => ({
+        id: "design-" + id,
+        name,
+        description
+      }));
+      const statuses = [
+        "Nicht beurteilt",
+        "Erfüllt",
+        "Teilweise erfüllt",
+        "Nicht erfüllt",
+        "Nicht anwendbar"
+      ];
+      function initialize6(data) {
+        if (data.designCriteria === void 0)
+          data.designCriteria = structuredClone(defaults);
+        data.teamDesignAssessments ??= {};
+        return data;
+      }
+      function validate2(data) {
+        if (data.designCriteria !== void 0) {
+          if (!Array.isArray(data.designCriteria) || data.designCriteria.some(
+            (c) => !c || typeof c.id !== "string" || !c.id || typeof c.name !== "string" || !c.name.trim() || typeof c.description !== "string"
+          ) || new Set(data.designCriteria.map((c) => c.id)).size !== data.designCriteria.length)
+            throw Error("Ungültige Design-Kriterien");
+        }
+        if (data.teamDesignAssessments !== void 0) {
+          if (!data.teamDesignAssessments || Array.isArray(data.teamDesignAssessments) || typeof data.teamDesignAssessments !== "object")
+            throw Error("Ungültige Team-Beurteilungen");
+          for (const ratings of Object.values(data.teamDesignAssessments)) {
+            if (!ratings || Array.isArray(ratings) || typeof ratings !== "object")
+              throw Error("Ungültige Team-Beurteilungen");
+            for (const rating of Object.values(ratings))
+              if (!rating || !statuses.includes(rating.status) || typeof rating.note !== "string")
+                throw Error("Ungültige Design-Beurteilung");
+          }
+        }
+      }
+      function upsert(data, id, name, description) {
+        const next = initialize6(structuredClone(data));
+        name = name.trim();
+        if (!name) throw Error("Bitte einen Namen eingeben.");
+        if (next.designCriteria.some(
+          (c) => c.id !== id && c.name.toLocaleLowerCase("de-CH") === name.toLocaleLowerCase("de-CH")
+        ))
+          throw Error("Dieses Design-Kriterium existiert bereits.");
+        if (id) {
+          const criterion = next.designCriteria.find((c) => c.id === id);
+          if (!criterion)
+            throw Error("Dieses Kriterium wurde inzwischen entfernt.");
+          if (criterion.name !== name || criterion.description !== description)
+            criterion.needsReview = true;
+          Object.assign(criterion, { name, description });
+        } else
+          next.designCriteria.push({
+            id: "design-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 9),
+            name,
+            description
+          });
+        return next;
+      }
+      function remove(data, id) {
+        const next = initialize6(structuredClone(data));
+        next.designCriteria = next.designCriteria.filter((c) => c.id !== id);
+        for (const ratings of Object.values(next.teamDesignAssessments))
+          delete ratings[id];
+        return next;
+      }
+      function assess(data, team, id, status, note) {
+        const next = initialize6(structuredClone(data));
+        if (!next.designCriteria.some((c) => c.id === id))
+          throw Error("Dieses Kriterium wurde inzwischen entfernt.");
+        if (!statuses.includes(status)) throw Error("Ungültiger Erfüllungsgrad.");
+        next.teamDesignAssessments[team] ??= {};
+        next.teamDesignAssessments[team][id] = {
+          status,
+          note,
+          updated: (/* @__PURE__ */ new Date()).toISOString()
+        };
+        return next;
+      }
+      function ensureTeams(data, teams, useDefaults = false) {
+        initialize6(data);
+        data.teamDesignCriteria ??= {};
+        for (const team of teams) {
+          if (Object.hasOwn(data.teamDesignCriteria, team.id)) continue;
+          data.teamDesignCriteria[team.id] = (useDefaults ? defaults : data.designCriteria).map((c) => {
+            const rating = data.teamDesignAssessments[team.id]?.[c.id], source = data.designCriteria.find((item) => item.id === c.id);
+            const changed = source && (source.name !== c.name || source.description !== c.description);
+            return {
+              ...structuredClone(c),
+              assessmentStatus: rating?.status || "Nicht beurteilt",
+              fulfilled: rating?.status === "Erfüllt",
+              note: rating?.note || "",
+              ...changed && rating && rating.status !== "Nicht beurteilt" ? { needsReview: true } : {}
+            };
+          });
+        }
+        return data;
+      }
+      function teamEdit(data, team, id, name, description) {
+        const next = structuredClone(data), list = next.teamDesignCriteria?.[team];
+        if (!list) throw Error("Bitte zuerst ein Team auswählen.");
+        name = name.trim();
+        if (!name) throw Error("Bitte einen Namen eingeben.");
+        if (list.some(
+          (c) => c.id !== id && c.name.toLocaleLowerCase("de-CH") === name.toLocaleLowerCase("de-CH")
+        ))
+          throw Error("Dieses Design-Kriterium existiert für das Team bereits.");
+        if (id) {
+          const criterion = list.find((c) => c.id === id);
+          if (!criterion)
+            throw Error("Dieses Kriterium wurde inzwischen entfernt.");
+          if (criterion.name !== name || criterion.description !== description)
+            criterion.needsReview = assessmentStatus(criterion) !== "Nicht beurteilt";
+          Object.assign(criterion, { name, description });
+        } else
+          list.push({
+            id: "design-" + Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 9),
+            name,
+            description,
+            fulfilled: false,
+            assessmentStatus: "Nicht beurteilt",
+            note: ""
+          });
+        return next;
+      }
+      function teamRemove(data, team, id) {
+        const next = structuredClone(data);
+        next.teamDesignCriteria[team] = next.teamDesignCriteria[team].filter(
+          (c) => c.id !== id
+        );
+        return next;
+      }
+      function teamCheck(data, team, id, fulfilled) {
+        const next = structuredClone(data), criterion = next.teamDesignCriteria?.[team]?.find((c) => c.id === id);
+        if (!criterion)
+          throw Error("Dieses Kriterium wurde inzwischen entfernt.");
+        criterion.fulfilled = fulfilled;
+        criterion.assessmentStatus = fulfilled ? "Erfüllt" : "Nicht erfüllt";
+        criterion.needsReview = false;
+        criterion.assessedAt = (/* @__PURE__ */ new Date()).toISOString();
+        return next;
+      }
+      function assessmentStatus(c) {
+        return c.assessmentStatus || (c.fulfilled ? "Erfüllt" : "Nicht erfüllt");
+      }
+      function teamRate(data, team, id, status) {
+        if (!["Nicht beurteilt", "Erfüllt", "Nicht erfüllt"].includes(status))
+          throw Error("Ungültige Beurteilung.");
+        const next = structuredClone(data), criterion = next.teamDesignCriteria?.[team]?.find((c) => c.id === id);
+        if (!criterion)
+          throw Error("Dieses Kriterium wurde inzwischen entfernt.");
+        criterion.assessmentStatus = status;
+        criterion.fulfilled = status === "Erfüllt";
+        criterion.needsReview = false;
+        criterion.assessedAt = (/* @__PURE__ */ new Date()).toISOString();
+        return next;
+      }
+      function teamSummary(data, teams) {
+        ensureTeams(data, teams);
+        return teams.map((team) => {
+          const list = data.teamDesignCriteria[team.id];
+          return {
+            team: team.name,
+            id: team.id,
+            fulfilled: list.filter(
+              (c) => assessmentStatus(c) === "Erfüllt" && !c.needsReview
+            ),
+            unfulfilled: list.filter(
+              (c) => assessmentStatus(c) === "Nicht erfüllt" && !c.needsReview
+            ),
+            unassessed: list.filter(
+              (c) => !c.needsReview && !["Erfüllt", "Nicht erfüllt"].includes(assessmentStatus(c))
+            ),
+            pending: list.filter((c) => c.needsReview)
+          };
+        });
+      }
+      const validateLegacy = validate2;
+      function validateTeams(data) {
+        validateLegacy(data);
+        if (data.teamDesignCriteria !== void 0) {
+          if (!data.teamDesignCriteria || typeof data.teamDesignCriteria !== "object" || Array.isArray(data.teamDesignCriteria))
+            throw Error("Ungültige Team-Design-Kriterien");
+          for (const list of Object.values(data.teamDesignCriteria)) {
+            if (!Array.isArray(list) || new Set(list.map((c) => c?.id)).size !== list.length || list.some(
+              (c) => !c || typeof c.id !== "string" || !c.id || typeof c.name !== "string" || !c.name.trim() || typeof c.description !== "string" || typeof c.fulfilled !== "boolean" || c.assessmentStatus !== void 0 && !statuses.includes(c.assessmentStatus) || typeof c.note !== "string" || c.needsReview !== void 0 && typeof c.needsReview !== "boolean" || c.assessedAt !== void 0 && typeof c.assessedAt !== "string"
+            ))
+              throw Error("Ungültige Team-Design-Kriterien");
+          }
+        }
+      }
+      app2.UTGDesignCriteria = {
+        initialize: initialize6,
+        validate: validateTeams,
+        upsert,
+        remove,
+        assess,
+        statuses,
+        ensureTeams,
+        teamEdit,
+        teamRemove,
+        teamCheck,
+        teamSummary,
+        teamRate,
+        assessmentStatus
+      };
+    })();
+  }
+
+  // merge-tool/src/merge.js
+  var app = { localStorage: {} };
+  initialize2(app);
+  initialize4(app);
+  initialize3(app);
+  initialize5(app);
+  initialize(app);
+  var clone = (value) => value === void 0 ? void 0 : structuredClone(value);
+  var stable = (value) => JSON.stringify(sort(value));
+  function sort(v) {
+    if (Array.isArray(v)) return v.map(sort);
+    return v && typeof v === "object" ? Object.fromEntries(
+      Object.keys(v).sort().map((k) => [k, sort(v[k])])
+    ) : v;
+  }
+  var equal = (a, b) => stable(a) === stable(b);
+  var object = (v) => v !== null && typeof v === "object" && !Array.isArray(v);
+  var own = (o, k) => Object.hasOwn(o || {}, k);
+  var fail = (message) => {
+    throw Error(message);
+  };
+  var teamFields = [
+    "teamContracts",
+    "teamDesignCriteria",
+    "teamDesignAssessments",
+    "agreementConfirmations"
+  ];
+  var catalogs = [
+    "products",
+    "services",
+    "activities",
+    "designCriteria",
+    "providerRecords"
+  ];
+  var rootKeys = "format version appVersion releaseStage exported v2 v3 organisations";
+  var v3Keys = "schema products configs services activities policies product team providers updated flowSchema methodVersion flowGovernance migrations embeddingKinds providerRecords designCriteria teamDesignAssessments embeddings interactions legacyModels operatingModelVersion teamDesignCriteria flowCriteria agreementConfirmations teamContracts navigationEpoch modelVersion legacyArchive";
+  function keys(value, allowed, path) {
+    if (!object(value)) fail(path + ": Objekt erwartet.");
+    const allowedSet = new Set(allowed.split(" "));
+    for (const k of Object.keys(value))
+      if (!allowedSet.has(k))
+        fail(
+          path + "." + k + ": unbekanntes Feld. Für dieses Format muss das Werkzeug erweitert werden."
+        );
+  }
+  function safe(value, depth = 0) {
+    if (depth > 80) fail("Datei ist zu tief verschachtelt.");
+    if (value && typeof value === "object")
+      for (const [k, v] of Object.entries(value)) {
+        if (["__proto__", "constructor", "prototype"].includes(k))
+          fail("Unzulässiger Schlüssel: " + k);
+        safe(v, depth + 1);
+      }
+  }
+  var itemKeys = {
+    products: "id name description wikiUrl",
+    services: "id name provider embedding interaction model",
+    activities: "id name phase type description service additionalPhases",
+    designCriteria: "id name description needsReview",
+    providerRecords: "id name kind"
+  };
+  var entryKeys = "org orgSource embedding interaction business technical operations service note model legacyModel";
+  var criterionKeys = "id type description owner evidence contributors";
+  function checkCriteria(items, path) {
+    if (!Array.isArray(items)) fail(path + ": Kriterienliste erwartet.");
+    for (const c of items) keys(c, criterionKeys, path);
+  }
+  function checkProfile(p, path) {
+    keys(p, "rules phaseGates commonDoR commonDoD", path);
+    for (const field of ["commonDoR", "commonDoD"])
+      if (p[field] !== void 0) checkCriteria(p[field], path + "." + field);
+    for (const [stage, r] of Object.entries(p.rules || {})) {
+      keys(r, "useDoD criteria", path + ".rules." + stage);
+      checkCriteria(r.criteria, path + ".rules." + stage);
+    }
+    for (const [stage, items] of Object.entries(p.phaseGates || {}))
+      checkCriteria(items, path + ".phaseGates." + stage);
+  }
+  function validate(bundle) {
+    safe(bundle);
+    keys(bundle, rootKeys, "Export");
+    if (bundle.format !== "utg-le-complete" || bundle.version !== 4)
+      fail(
+        "Vollständiger Export im Format utg-le-complete / Version 4 erforderlich."
+      );
+    const m = /^(\d+)\.(\d+)(?:\.(\d+))?$/.exec(bundle.appVersion || "");
+    if (!m || Number(m[1]) < 3 || Number(m[1]) === 3 && Number(m[2]) < 16)
+      fail("Nur v3.16 RC3 oder spätere kompatible Versionen werden unterstützt.");
+    if (Number(m[1]) === 3 && Number(m[2]) === 16 && !Number(m[3] || 0) && !/^(RC(?:[3-9]|[1-9]\d+)|Release Candidate [3-9]|Final|Stable|GA)$/i.test(
+      bundle.releaseStage || ""
+    ))
+      fail("v3.16 benötigt eine eindeutige Kennzeichnung ab RC3.");
+    keys(bundle.v2, "teams selected", "v2");
+    keys(bundle.v3, v3Keys, "v3");
+    app.UTGStorage.validateBundle(bundle);
+    if (bundle.v3.flowSchema !== "seven-states-v1" || bundle.v3.flowCriteria?.version !== 1)
+      fail(
+        "Nur das aktuelle Team-Flow-Schema seven-states-v1 mit Kriterienversion 1 ist verlustfrei unterstützt."
+      );
+    for (const t of bundle.v2.teams) {
+      keys(t, "id name description assignments productIds", "Team " + t.id);
+      if (!Array.isArray(t.productIds) || !object(t.assignments) || Object.keys(t.assignments).length)
+        fail(
+          "Team " + t.id + ": nur aktuelle Produktzuordnungen und leere Legacy-Assignments unterstützt."
+        );
+      if (t.id.includes("::")) fail("Team-ID enthält reservierten Trenner.");
+    }
+    for (const field of catalogs)
+      for (const item of bundle.v3[field] || [])
+        keys(item, itemKeys[field], field + "." + item.id);
+    for (const [key, c] of Object.entries(bundle.v3.configs)) {
+      keys(c, "status entries", "Matrix " + key);
+      for (const e of Object.values(c.entries))
+        keys(e, entryKeys, "Matrix " + key);
+    }
+    for (const [id, c] of Object.entries(bundle.v3.teamContracts || {}))
+      keys(
+        c,
+        "business technical operations release escalation",
+        "Verantwortung " + id
+      );
+    for (const list of Object.values(bundle.v3.teamDesignCriteria || {}))
+      for (const c of list)
+        keys(
+          c,
+          "id name description assessmentStatus fulfilled note needsReview assessedAt",
+          "Team-Design-Kriterium"
+        );
+    for (const ratings of Object.values(bundle.v3.teamDesignAssessments || {}))
+      for (const r of Object.values(ratings))
+        keys(r, "status note assessedAt", "Design-Beurteilung");
+    for (const c of Object.values(bundle.v3.agreementConfirmations || {}))
+      keys(c, "status signature categorySignature confirmedAt", "Bestätigung");
+    if (bundle.v3.flowGovernance)
+      keys(
+        bundle.v3.flowGovernance,
+        "version status workItem pull wip blocked aging exceptions measurementStart measurementEnd sle qualityMinimum decisionRole evidence",
+        "Flow-Governance"
+      );
+    for (const p of bundle.v3.policies || [])
+      keys(
+        p,
+        "name exit owner contributors evidence wip scope type interface standardRevision",
+        "Flow-Policy"
+      );
+    if (own(bundle.v3, "legacyArchive"))
+      keys(
+        bundle.v3.legacyArchive,
+        "retiredServiceFields",
+        "Historisches Archiv"
+      );
+    if (own(bundle.v3, "migrations"))
+      keys(
+        bundle.v3.migrations,
+        "activityCatalog3110 embeddingKinds3141 policyCompletionType3140",
+        "Migrationen"
+      );
+    if (own(bundle.v3.legacyArchive, "retiredServiceFields")) {
+      const archive = bundle.v3.legacyArchive.retiredServiceFields;
+      if (!object(archive)) fail("Historisches Service-Archiv: Objekt erwartet.");
+      for (const record of Object.values(archive))
+        keys(record, "capacity criteria", "Archivierter LE-Service");
+    }
+    if (Object.values(bundle.v3.migrations || {}).some(
+      (v) => typeof v !== "boolean"
+    ))
+      fail("Ungültige Migrationskennzeichnung.");
+    const f = bundle.v3.flowCriteria;
+    keys(
+      f,
+      "version rules phaseGates commonDoR commonDoD teams profiles standardRevision",
+      "Flow-Kriterien"
+    );
+    checkProfile(
+      Object.fromEntries(
+        ["rules", "phaseGates", "commonDoR", "commonDoD"].filter((k) => own(f, k)).map((k) => [k, f[k]])
+      ),
+      "ART-Flow"
+    );
+    for (const [id, p] of Object.entries(f.profiles || {}))
+      checkProfile(p, "Team-Flow " + id);
+    for (const stages of Object.values(f.teams || {}))
+      for (const items of Object.values(stages))
+        checkCriteria(items, "Team-Kriterien");
+    checkReferences(bundle);
+    return true;
+  }
+  function checkReferences(b) {
+    const d = b.v3, teamIds = new Set(b.v2.teams.map((t) => t.id)), serviceIds = new Set(d.services.map((s) => s.id)), activityNames = new Set(d.activities.map((a) => a.name));
+    const checkTeam = (id) => {
+      if (!teamIds.has(id)) fail("Verweis auf unbekanntes Team: " + id);
+    };
+    for (const field of teamFields)
+      for (const id of Object.keys(d[field] || {})) checkTeam(id);
+    for (const field of ["profiles", "teams"])
+      for (const id of Object.keys(d.flowCriteria?.[field] || {})) checkTeam(id);
+    for (const [key, c] of Object.entries(d.configs)) {
+      if (!key.endsWith("::flow"))
+        fail("Legacy- oder unbekannter Matrixschlüssel: " + key);
+      checkTeam(key.slice(0, -6));
+      for (const [name, e] of Object.entries(c.entries)) {
+        if (!activityNames.has(name))
+          fail("Matrix verweist auf unbekannte Tätigkeit: " + name);
+        if (e.service && !serviceIds.has(e.service))
+          fail("Matrix verweist auf unbekannten LE-Service: " + e.service);
+      }
+    }
+    for (const service of d.services)
+      if (d.services.some((s) => s.id !== service.id && s.name === service.id))
+        fail("Mehrdeutige LE-Service-Kennung: " + service.id);
+    for (const a of d.activities)
+      if (a.service && !serviceIds.has(a.service))
+        fail("Tätigkeit verweist auf unbekannten LE-Service: " + a.name);
+    const designIds = new Set((d.designCriteria || []).map((c) => c.id));
+    for (const r of Object.values(d.teamDesignAssessments || {}))
+      for (const id of Object.keys(r))
+        if (!designIds.has(id))
+          fail("Beurteilung verweist auf unbekanntes Design-Kriterium: " + id);
+  }
+  function teamUnit(b, t) {
+    const u = { team: clone(t) };
+    if (own(b.v3.configs, t.id + "::flow"))
+      u.configs = clone(b.v3.configs[t.id + "::flow"]);
+    for (const f of teamFields)
+      if (own(b.v3[f], t.id)) u[f] = clone(b.v3[f][t.id]);
+    for (const f of ["profiles", "teams"])
+      if (own(b.v3.flowCriteria?.[f], t.id))
+        u["flow:" + f] = clone(b.v3.flowCriteria[f][t.id]);
+    return u;
+  }
+  function freshId(id, used) {
+    let n = id + "--merge-b", i = 2;
+    while (used.has(n)) n = id + "--merge-b-" + i++;
+    used.add(n);
+    return n;
+  }
+  function renameTeam(b, old, next) {
+    const t = b.v2.teams.find((t2) => t2.id === old);
+    t.id = next;
+    for (const f of teamFields) move(b.v3[f], old, next);
+    for (const f of ["profiles", "teams"])
+      move(b.v3.flowCriteria?.[f], old, next);
+    move(b.v3.configs, old + "::flow", next + "::flow");
+    if (b.v2.selected === old) b.v2.selected = next;
+    if (b.v3.team === old) b.v3.team = next;
+  }
+  function move(map, old, next) {
+    if (old === next) return;
+    if (own(map, old)) {
+      map[next] = map[old];
+      delete map[old];
+    }
+  }
+  function renameCatalog(b, field, old, next) {
+    const d = b.v3, item = d[field].find((x) => x.id === old);
+    item.id = next;
+    if (field === "products") {
+      for (const t of b.v2.teams)
+        t.productIds = t.productIds.map((id) => id === old ? next : id);
+      if (d.product === old) d.product = next;
+    }
+    if (field === "services") {
+      move(d.legacyArchive?.retiredServiceFields, old, next);
+      for (const c of Object.values(d.configs))
+        for (const e of Object.values(c.entries))
+          if (e.service === old) e.service = next;
+      for (const a of d.activities) if (a.service === old) a.service = next;
+    }
+    if (field === "designCriteria")
+      for (const r of Object.values(d.teamDesignAssessments || {}))
+        move(r, old, next);
+  }
+  function renameName(b, field, id, name) {
+    const items = field === "teams" ? b.v2.teams : b.v3[field], item = items.find((x) => x.id === id), old = item.name;
+    item.name = name;
+    if (field === "activities")
+      for (const c of Object.values(b.v3.configs)) move(c.entries, old, name);
+    if (field === "providerRecords") {
+      b.v3.providers = b.v3.providers.map((n) => n === old ? name : n);
+      for (const s of b.v3.services) if (s.provider === old) s.provider = name;
+      for (const c of Object.values(b.v3.configs))
+        for (const e of Object.values(c.entries)) if (e.org === old) e.org = name;
+    }
+  }
+  function affected(b, field, item) {
+    return b.v2.teams.flatMap((t) => {
+      const c = b.v3.configs[t.id + "::flow"];
+      const uses = Object.entries(c?.entries || {}).filter(
+        ([name, e]) => field === "services" ? e.service === item.id : field === "activities" ? name === item.name : field === "products" ? t.productIds.includes(item.id) : true
+      ).map(([name]) => name);
+      return uses.length ? [{ team: t.name, teamId: t.id, activities: uses }] : [];
+    });
+  }
+  function analyze(a, b, choices2 = {}) {
+    validate(a);
+    validate(b);
+    const A = clone(a), B = clone(b), conflicts = [], warnings = [], changes = [], renames = [];
+    const key = (kind, id) => kind + ":" + id;
+    for (const field of ["teams", ...catalogs]) {
+      const aa = field === "teams" ? A.v2.teams : A.v3[field] || [], bb = field === "teams" ? B.v2.teams : B.v3[field] || [], used = new Set([...aa, ...bb].map((x) => x.id));
+      for (const item of [...bb]) {
+        const other = aa.find((x) => x.id === item.id), k = key(field, item.id), choice = choices2[k];
+        if (other && choice?.take === "both") {
+          if (equal(
+            field === "teams" ? teamUnit(A, other) : other,
+            field === "teams" ? teamUnit(B, item) : item
+          ))
+            continue;
+          if (Object.keys(B.organisations || {}).length)
+            fail(
+              "«Beide behalten» ist bei nicht leeren historischen Organisationsdaten nicht sicher möglich. A oder B wählen."
+            );
+          const old = item.id, next = freshId(old, used);
+          field === "teams" ? renameTeam(B, old, next) : renameCatalog(B, field, old, next);
+          renames.push({ kind: field, from: old, to: next });
+          const requested = choice.name?.trim();
+          if (requested) renameName(B, field, next, requested);
+          changes.push({
+            kind: field,
+            id: next,
+            action: "Beide behalten",
+            source: "B",
+            originalId: old
+          });
+          conflicts.push({
+            key: k,
+            kind: field,
+            label: other.name,
+            options: ["A", "B", "both"],
+            resolved: true,
+            choice: clone(choice),
+            a: clone(field === "teams" ? teamUnit(A, other) : other),
+            b: clone(field === "teams" ? teamUnit(B, item) : item),
+            affectedA: affected(A, field, other),
+            affectedB: affected(B, field, item)
+          });
+        }
+      }
+    }
+    for (const field of ["teams", ...catalogs]) {
+      const aa = field === "teams" ? A.v2.teams : A.v3[field] || [], bb = field === "teams" ? B.v2.teams : B.v3[field] || [];
+      const seen = new Map(
+        aa.filter((x) => choices2[key(field, x.id)]?.take !== "B").map((x) => [x.name.trim().toLocaleLowerCase("de-CH"), x])
+      );
+      for (const item of bb) {
+        if (aa.some((x) => x.id === item.id) && choices2[key(field, item.id)]?.take === "A")
+          continue;
+        const same = seen.get(item.name.trim().toLocaleLowerCase("de-CH"));
+        if (same && same.id !== item.id) {
+          const k = "name:" + field + ":" + item.id, c = choices2[k];
+          let resolved = false;
+          if (c?.name?.trim()) {
+            const name = c.name.trim();
+            if (![...aa, ...bb.filter((x) => x !== item)].some(
+              (x) => x.name.trim().toLocaleLowerCase("de-CH") === name.toLocaleLowerCase("de-CH")
+            )) {
+              renameName(B, field, item.id, name);
+              resolved = true;
+              changes.push({
+                kind: field,
+                id: item.id,
+                action: "Umbenannt",
+                before: same.name,
+                after: name,
+                source: "B"
+              });
+            }
+          }
+          conflicts.push({
+            key: k,
+            kind: "name",
+            label: field + " · " + same.name,
+            options: ["rename"],
+            resolved,
+            choice: clone(c),
+            a: clone(same),
+            b: clone(item),
+            affectedB: affected(B, field, item)
+          });
+        }
+        seen.set(item.name.trim().toLocaleLowerCase("de-CH"), item);
+      }
+    }
+    const resolve = (k, kind, label, x, y, allowBoth = false, details = {}) => {
+      if (x === void 0) {
+        changes.push({ kind, id: k, label, action: "Hinzugefügt", source: "B" });
+        return clone(y);
+      }
+      if (y === void 0) {
+        changes.push({ kind, id: k, label, action: "Erhalten", source: "A" });
+        return clone(x);
+      }
+      if (equal(x, y)) {
+        changes.push({ kind, id: k, label, action: "Identisch", source: "A+B" });
+        return clone(x);
+      }
+      const c = choices2[k], resolved = ["A", "B"].includes(c?.take);
+      conflicts.push({
+        key: k,
+        kind,
+        label,
+        options: allowBoth ? ["A", "B", "both"] : ["A", "B"],
+        resolved,
+        choice: clone(c),
+        a: clone(x),
+        b: clone(y),
+        ...details
+      });
+      if (resolved)
+        changes.push({
+          kind,
+          id: k,
+          label,
+          action: "Konflikt entschieden",
+          source: c.take
+        });
+      return clone(c?.take === "B" ? y : x);
+    };
+    const out = clone(A);
+    for (const field of catalogs) {
+      if (!own(A.v3, field) && !own(B.v3, field)) continue;
+      const aa = A.v3[field] || [], bb = B.v3[field] || [];
+      out.v3[field] = [...new Set([...aa, ...bb].map((x) => x.id))].map((id) => {
+        const x = aa.find((x2) => x2.id === id), y = bb.find((x2) => x2.id === id);
+        return resolve(key(field, id), field, (x || y).name, x, y, true, {
+          affectedA: x ? affected(A, field, x) : [],
+          affectedB: y ? affected(B, field, y) : []
+        });
+      });
+    }
+    const referenceErrors = [];
+    for (const [source, bundle] of [
+      ["A", A],
+      ["B", B]
+    ]) {
+      const mapping = new Map(
+        bundle.v3.activities.flatMap((activity) => {
+          const target = out.v3.activities.find((x) => x.id === activity.id);
+          const pending = conflicts.some(
+            (c) => c.key === key("activities", activity.id) && !c.resolved
+          );
+          return target && !pending && target.name !== activity.name ? [[activity.name, target.name]] : [];
+        })
+      );
+      for (const [configKey, config] of Object.entries(bundle.v3.configs)) {
+        const entries = Object.entries(config.entries).map(([name, value]) => [
+          mapping.get(name) || name,
+          value
+        ]);
+        if (new Set(entries.map(([name]) => name)).size !== entries.length) {
+          referenceErrors.push(
+            "Tätigkeitszuordnung in " + source + " / " + configKey + " würde Einträge überschreiben. Tätigkeitsentscheidungen prüfen."
+          );
+          continue;
+        }
+        config.entries = Object.fromEntries(entries);
+      }
+      for (const [from, to] of mapping)
+        changes.push({
+          kind: "activityReference",
+          source,
+          action: "Tätigkeitsverweis angepasst",
+          before: from,
+          after: to
+        });
+    }
+    out.v2.teams = [];
+    out.v3.configs = {};
+    for (const f of teamFields) if (own(A.v3, f) || own(B.v3, f)) out.v3[f] = {};
+    out.v3.flowCriteria = clone(A.v3.flowCriteria);
+    out.v3.flowCriteria.profiles = {};
+    out.v3.flowCriteria.teams = {};
+    for (const id of new Set([...A.v2.teams, ...B.v2.teams].map((t) => t.id))) {
+      const at = A.v2.teams.find((t) => t.id === id), bt = B.v2.teams.find((t) => t.id === id), u = resolve(
+        key("teams", id),
+        "teams",
+        (at || bt).name,
+        at ? teamUnit(A, at) : void 0,
+        bt ? teamUnit(B, bt) : void 0,
+        true
+      );
+      out.v2.teams.push(u.team);
+      if (own(u, "configs")) out.v3.configs[id + "::flow"] = u.configs;
+      for (const f of teamFields) if (own(u, f)) out.v3[f][id] = u[f];
+      for (const f of ["profiles", "teams"])
+        if (own(u, "flow:" + f)) out.v3.flowCriteria[f][id] = u["flow:" + f];
+    }
+    for (const product of [...out.v3.products]) {
+      const owners = out.v2.teams.filter(
+        (t) => t.productIds.includes(product.id)
+      );
+      if (owners.length < 2) continue;
+      const k = "ownership:" + product.id, c = choices2[k], resolved = c?.take === "duplicate" || owners.some((t) => t.id === c?.take);
+      conflicts.push({
+        key: k,
+        kind: "ownership",
+        label: "Produktverantwortung · " + product.name,
+        options: owners.map((t) => t.id).concat("duplicate"),
+        owners: owners.map((t) => ({ id: t.id, name: t.name })),
+        resolved,
+        choice: clone(c),
+        a: { product, teams: owners.map((t) => t.name) },
+        b: {
+          rule: "Genau ein verantwortliches Team pro Produkt. Bei Produktkopien erhält jede weitere Kopie eine neue ID und den Teamnamen als Namenszusatz."
+        }
+      });
+      if (!resolved) continue;
+      const used = new Set(out.v3.products.map((p) => p.id));
+      for (const [i, t] of owners.entries()) {
+        if (c.take === "duplicate" && i > 0) {
+          const next = clone(product);
+          next.id = freshId(product.id, used);
+          next.name = product.name + " (" + t.name + ")";
+          out.v3.products.push(next);
+          t.productIds = t.productIds.map(
+            (id) => id === product.id ? next.id : id
+          );
+          renames.push({
+            kind: "products",
+            from: product.id,
+            to: next.id,
+            team: t.id,
+            name: next.name
+          });
+        } else if (c.take !== "duplicate" && t.id !== c.take)
+          t.productIds = t.productIds.filter((id) => id !== product.id);
+      }
+      changes.push({
+        kind: "ownership",
+        id: product.id,
+        action: "Konflikt entschieden",
+        source: c.take
+      });
+    }
+    const handled = /* @__PURE__ */ new Set([
+      ...catalogs,
+      ...teamFields,
+      "configs",
+      "flowCriteria",
+      "legacyArchive",
+      "team",
+      "product",
+      "navigationEpoch",
+      "updated"
+    ]);
+    for (const field of /* @__PURE__ */ new Set([...Object.keys(A.v3), ...Object.keys(B.v3)])) {
+      if (handled.has(field)) continue;
+      if (["providers", "embeddings", "interactions", "legacyModels"].includes(
+        field
+      ))
+        out.v3[field] = [
+          .../* @__PURE__ */ new Set([...A.v3[field] || [], ...B.v3[field] || []])
+        ];
+      else if (["embeddingKinds", "migrations"].includes(field)) {
+        out.v3[field] = {};
+        for (const k of /* @__PURE__ */ new Set([
+          ...Object.keys(A.v3[field] || {}),
+          ...Object.keys(B.v3[field] || {})
+        ]))
+          out.v3[field][k] = resolve(
+            "global:" + field + ":" + k,
+            field,
+            field + " · " + k,
+            A.v3[field]?.[k],
+            B.v3[field]?.[k]
+          );
+      } else
+        out.v3[field] = resolve(
+          "global:" + field,
+          field,
+          field,
+          A.v3[field],
+          B.v3[field]
+        );
+    }
+    for (const field of /* @__PURE__ */ new Set([
+      ...Object.keys(A.v3.flowCriteria),
+      ...Object.keys(B.v3.flowCriteria)
+    ]))
+      if (!["teams", "profiles"].includes(field))
+        out.v3.flowCriteria[field] = resolve(
+          "flow:" + field,
+          "ART-Flow",
+          field,
+          A.v3.flowCriteria[field],
+          B.v3.flowCriteria[field]
+        );
+    if (A.v3.legacyArchive || B.v3.legacyArchive) {
+      out.v3.legacyArchive = {};
+      if (own(A.v3.legacyArchive, "retiredServiceFields") || own(B.v3.legacyArchive, "retiredServiceFields"))
+        out.v3.legacyArchive.retiredServiceFields = {};
+      const aa = A.v3.legacyArchive?.retiredServiceFields || {}, bb = B.v3.legacyArchive?.retiredServiceFields || {};
+      for (const id of /* @__PURE__ */ new Set([...Object.keys(aa), ...Object.keys(bb)]))
+        out.v3.legacyArchive.retiredServiceFields[id] = resolve(
+          "archive:" + id,
+          "Historisches Service-Archiv",
+          id,
+          aa[id],
+          bb[id]
+        );
+    }
+    out.organisations = {};
+    for (const k of /* @__PURE__ */ new Set([
+      ...Object.keys(A.organisations || {}),
+      ...Object.keys(B.organisations || {})
+    ]))
+      out.organisations[k] = resolve(
+        "organisation:" + k,
+        "Organisation",
+        k,
+        A.organisations?.[k],
+        B.organisations?.[k]
+      );
+    warnings.push(
+      "Navigation und Export-Metadaten stammen aus A. Fehlende Inhalte löschen nichts."
+    );
+    if (!equal(a.appVersion, b.appVersion) || !equal(a.releaseStage, b.releaseStage))
+      warnings.push(
+        "Unterschiedliche App-Versionen: bekanntes Schema wird geprüft. Zielversion muss dieses Schema unterstützen."
+      );
+    if (Object.keys(out.v3.agreementConfirmations || {}).length)
+      warnings.push(
+        "Ursprüngliche Statusbestätigungen bleiben erhalten. Geänderte gemeinsame Inhalte können im Konfigurator eine erneute fachliche Bestätigung erfordern."
+      );
+    if (renames.length)
+      warnings.push(
+        "IDs wurden auf ausdrückliche Auswahl geändert. Bestehende Statusbestätigungen können dadurch eine erneute fachliche Bestätigung benötigen."
+      );
+    const unresolved = conflicts.filter((c) => !c.resolved), errors = [...referenceErrors];
+    if (!unresolved.length)
+      try {
+        validate(out);
+      } catch (e) {
+        errors.push(e.message);
+      }
+    return {
+      bundle: out,
+      conflicts,
+      unresolved: unresolved.length,
+      errors,
+      warnings,
+      changes,
+      renames,
+      ready: !unresolved.length && !errors.length
+    };
+  }
+
+  // merge-tool/src/ui.js
+  var $ = (id) => document.getElementById(id);
+  var files = [null, null];
+  var choices = {};
+  var result = null;
+  var revision = [0, 0];
+  var el = (tag, text) => {
+    const n = document.createElement(tag);
+    if (text !== void 0) n.textContent = text;
+    return n;
+  };
+  function download(name, value) {
+    const url = URL.createObjectURL(
+      new Blob([JSON.stringify(value, null, 2) + "\n"], {
+        type: "application/json"
+      })
+    );
+    const a = el("a");
+    a.href = url;
+    a.download = name;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1e3);
+  }
+  async function hash(text) {
+    if (!globalThis.crypto?.subtle) return null;
+    const value = await crypto.subtle.digest(
+      "SHA-256",
+      new TextEncoder().encode(text)
+    );
+    return [...new Uint8Array(value)].map((v) => v.toString(16).padStart(2, "0")).join("");
+  }
+  for (const [i, id] of ["file-a", "file-b"].entries())
+    $(id).addEventListener("change", async (e) => {
+      const token = ++revision[i];
+      files[i] = null;
+      choices = {};
+      result = null;
+      render();
+      const file = e.target.files[0];
+      if (!file) {
+        $("state-" + i).textContent = "Noch keine Datei ausgewählt.";
+        return;
+      }
+      $("state-" + i).textContent = "Datei wird geprüft …";
+      try {
+        if (file.size > 30 * 1024 * 1024)
+          throw Error("Datei ist grösser als 30 MB.");
+        const raw = await file.text(), bundle = JSON.parse(raw);
+        validate(bundle);
+        const sha256 = await hash(raw);
+        if (token !== revision[i]) return;
+        files[i] = { name: file.name, raw, bundle, sha256 };
+        $("state-" + i).textContent = file.name + " · " + bundle.v2.teams.length + " Teams · " + bundle.v3.products.length + " Produkte · v" + bundle.appVersion + " " + bundle.releaseStage;
+        $("error").hidden = true;
+        run();
+      } catch (err) {
+        if (token !== revision[i]) return;
+        $("state-" + i).textContent = "Datei abgelehnt: " + err.message;
+        showError(err.message);
+        render();
+      }
+    });
+  function showError(message) {
+    $("error").hidden = false;
+    $("error").textContent = message;
+  }
+  function run() {
+    result = null;
+    if (files.every(Boolean))
+      try {
+        result = analyze(files[0].bundle, files[1].bundle, choices);
+        $("error").hidden = true;
+      } catch (err) {
+        showError(err.message);
+      }
+    render();
+  }
+  function differences(a, b, path = "") {
+    if (stable(a) === stable(b)) return [];
+    if (a && b && typeof a === "object" && typeof b === "object" && !Array.isArray(a) && !Array.isArray(b))
+      return [.../* @__PURE__ */ new Set([...Object.keys(a), ...Object.keys(b)])].flatMap(
+        (k) => differences(a[k], b[k], path ? path + "." + k : k)
+      );
+    return [{ path: path || "Wert", a, b }];
+  }
+  function detail(label, value) {
+    const d = el("details"), s = el("summary", label);
+    d.append(s, el("pre", JSON.stringify(value, null, 2)));
+    return d;
+  }
+  function render() {
+    $("download").disabled = !result?.ready;
+    $("report").disabled = !result;
+    $("conflicts").replaceChildren();
+    $("warnings").replaceChildren();
+    $("preview").replaceChildren();
+    $("summary").textContent = !result ? "Zwei vollständige Exporte auswählen." : result.ready ? "Bereit: " + result.bundle.v2.teams.length + " Teams und " + result.bundle.v3.products.length + " Produkte." : result.unresolved + " Entscheidungen offen" + (result.errors.length ? " · Ergebnis noch nicht importierbar." : ".");
+    if (!result) return;
+    for (const message of [...result.warnings, ...result.errors])
+      $("warnings").append(el("p", message));
+    for (const c of result.conflicts) {
+      const card = el("article");
+      card.className = "conflict" + (c.resolved ? " resolved" : "");
+      card.append(
+        el("h3", c.label),
+        el(
+          "p",
+          c.kind === "name" ? "Beide Objekte bleiben getrennt. Für den Import in RC3 braucht das Objekt aus B einen eindeutigen Namen." : c.kind === "teams" ? "Die Auswahl umfasst das gesamte Team mit Leistungsmatrix, Kriterien und Vereinbarungen." : "Die gewählte Fassung gilt auch für bestehende Verwendungen dieses Inhalts."
+        )
+      );
+      const label = el(
+        "label",
+        c.kind === "name" ? "Neuer Name für B" : "Übernehmen"
+      );
+      let control;
+      if (c.kind === "name") {
+        control = el("input");
+        control.type = "text";
+        control.value = c.choice?.name || "";
+        control.placeholder = c.b.name + " (Laptop 2)";
+        control.addEventListener("change", () => {
+          choices[c.key] = { name: control.value };
+          run();
+        });
+      } else {
+        control = el("select");
+        for (const [v, t] of [
+          ["", "Bitte auswählen"],
+          ["A", "Stand A behalten"],
+          ["B", "Stand B übernehmen"],
+          ...c.options.includes("both") ? [["both", "Beide behalten (B erhält neue ID)"]] : []
+        ]) {
+          const o = el("option", t);
+          o.value = v;
+          control.append(o);
+        }
+        if (c.kind === "ownership") {
+          control.replaceChildren();
+          for (const [v, t] of [
+            ["", "Bitte auswählen"],
+            ...c.owners.map((o) => [o.id, "Verantwortlich: " + o.name]),
+            ["duplicate", "Getrennte Produktkopien je Team erzeugen"]
+          ]) {
+            const o = el("option", t);
+            o.value = v;
+            control.append(o);
+          }
+        }
+        control.value = c.choice?.take || "";
+        control.addEventListener("change", () => {
+          choices[c.key] = { take: control.value };
+          run();
+        });
+      }
+      control.setAttribute(
+        "aria-label",
+        c.kind === "name" ? "Neuer Name: " + c.label : "Entscheidung: " + c.label
+      );
+      control.dataset.key = c.key;
+      label.append(control);
+      card.append(label);
+      const diffs = differences(c.a, c.b), table = el("table"), thead = el("thead"), hr = el("tr");
+      for (const t of ["Unterschied", "Datei A", "Datei B"])
+        hr.append(el("th", t));
+      thead.append(hr);
+      table.append(thead);
+      const body = el("tbody");
+      for (const d of diffs) {
+        const row = el("tr");
+        for (const v of [
+          d.path,
+          d.a === void 0 ? "Nicht vorhanden" : JSON.stringify(d.a),
+          d.b === void 0 ? "Nicht vorhanden" : JSON.stringify(d.b)
+        ])
+          row.append(el("td", v));
+        body.append(row);
+      }
+      table.append(body);
+      const scroll = el("div");
+      scroll.className = "table-scroll";
+      scroll.append(table);
+      card.append(scroll);
+      for (const [label2, affected2] of [
+        ["Betroffene Verwendungen in A", c.affectedA],
+        ["Betroffene Verwendungen in B", c.affectedB]
+      ])
+        if (affected2?.length) card.append(detail(label2, affected2));
+      card.append(
+        detail("Vollständiger Stand A", c.a),
+        detail("Vollständiger Stand B", c.b)
+      );
+      $("conflicts").append(card);
+    }
+    for (const action of [
+      "Hinzugefügt",
+      "Erhalten",
+      "Identisch",
+      "Konflikt entschieden",
+      "Beide behalten",
+      "Umbenannt",
+      "Tätigkeitsverweis angepasst"
+    ]) {
+      const list = result.changes.filter((c) => c.action === action);
+      if (list.length)
+        $("preview").append(detail(action + " · " + list.length, list));
+    }
+    $("preview").append(detail("Ergebnis als JSON prüfen", result.bundle));
+  }
+  function checked() {
+    if (!files.every(Boolean)) return false;
+    run();
+    return result?.ready;
+  }
+  $("download").addEventListener("click", () => {
+    if (checked())
+      download("UTG-LE_Konfiguration_zusammengefuehrt.json", result.bundle);
+  });
+  $("report").addEventListener("click", () => {
+    run();
+    if (!result) return;
+    download("UTG-LE_Zusammenfuehrungsbericht.json", {
+      toolVersion: "1.0.1",
+      created: (/* @__PURE__ */ new Date()).toISOString(),
+      ready: result.ready,
+      inputs: files.map((f) => ({
+        name: f.name,
+        sha256: f.sha256,
+        appVersion: f.bundle.appVersion,
+        releaseStage: f.bundle.releaseStage
+      })),
+      decisions: cloneChoices(),
+      changes: result.changes,
+      renames: result.renames,
+      warnings: result.warnings,
+      errors: result.errors,
+      unresolved: result.unresolved,
+      metadataPolicy: "Export-Metadaten und Navigation aus A; fachliche Konflikte nur nach expliziter Entscheidung."
+    });
+  });
+  function cloneChoices() {
+    return structuredClone(choices);
+  }
+  render();
+})();
+
+    </script>
+  </body>
+</html>

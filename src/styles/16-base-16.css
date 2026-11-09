@@ -1,0 +1,13 @@
+#utg-rule-details:not([open]) {
+  display: none;
+}
+#utg-rule-details #utg33detail {
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+#utg-rule-details textarea {
+  min-height: 100px;
+}

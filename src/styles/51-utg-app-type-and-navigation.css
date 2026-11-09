@@ -1,0 +1,74 @@
+/* Shared text roles; tiny info/disclosure glyphs retain their existing geometry. */
+:root {
+  --text-small: 12px;
+  --text-body: 14px;
+  --text-section: 14px;
+  --text-header: 22px;
+  --text-title: 22px;
+  --text-metric: 26px;
+}
+body {
+  font-size: var(--text-body);
+}
+.ui-action-icon {
+  stroke-width: 1.7;
+}
+body > header h1 {
+  font-size: var(--text-title);
+}
+body > header p {
+  font-size: var(--text-body);
+}
+.utg-page :is(h3, h4),
+dialog.app-drawer :is(h3, h4) {
+  font-size: var(--text-body);
+  font-weight: 650;
+  line-height: 1.45;
+}
+.utg-page :is(input, select, textarea, label),
+dialog.app-drawer :is(input, select, textarea, label) {
+  font-size: var(--text-body);
+}
+dialog.app-drawer .ui-drawer-header :is(h2, h3) {
+  font-size: var(--text-title);
+}
+#utg-nav {
+  gap: 4px;
+  margin-bottom: 16px;
+  padding: 0 0 6px;
+}
+#utg-nav button {
+  min-height: 56px;
+  padding: 8px 10px 8px 42px;
+  gap: 2px;
+  border-radius: 6px 6px 0 0;
+  justify-content: center;
+}
+#utg-nav button > span {
+  font-size: var(--text-body);
+  line-height: 1.3;
+  font-weight: 600;
+  white-space: nowrap;
+}
+#utg-nav button > small {
+  font-size: var(--text-small);
+  line-height: 1.3;
+  font-weight: 400;
+}
+#utg-nav .app-step-icon {
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+}
+@media (max-width: 1100px) {
+  #utg-nav {
+    display: flex;
+    overflow-x: auto;
+  }
+  #utg-nav button {
+    flex: 0 0 190px;
+    min-width: 190px;
+  }
+}

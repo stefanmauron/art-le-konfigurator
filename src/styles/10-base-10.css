@@ -1,0 +1,4 @@
+/* v3.7.1: Legacy team selector is superseded by central CRUD management in register 2. Preserve DOM hooks for existing scripts. */
+.layout:has(> aside.panel #teams) {
+  display: none !important;
+}

@@ -1,0 +1,64 @@
+{
+  "version": "3.17",
+  "releaseStage": "RC1",
+  "date": "2026-11-06",
+  "status": "verified-in-available-environment",
+  "bundle": "dist/UTG-LE_Operating_Model_v3.17_RC1.html",
+  "bundleSha256": "827644997f5d838950b2d4e0e4a4399e2dafa5dbfec4ac301d495e8973267877",
+  "referenceSha256": "b034bcc892018a7b3b5c64f801b92f7589c99a7a8c4b8486fe81e241caabe6ab",
+  "bytes": 577802,
+  "referenceAndExistingRC2Unchanged": true,
+  "browser": {
+    "tested": "Chrome 156.0.8078.80 / macOS",
+    "notTested": [
+      "Edge / macOS",
+      "Chrome / Windows",
+      "Edge / Windows"
+    ]
+  },
+  "checks": {
+    "baseCasesPerVersion": 111,
+    "domainConfigurations": 128,
+    "domainAssertions": 2821,
+    "additionalUnitFlowGroups": 18,
+    "unitEdges": 68,
+    "unitRuleContracts": 55,
+    "browserParityChecks": 101,
+    "pixelIdenticalViewportComparisons": 45,
+    "browserFlowControl": 71,
+    "browserFlowEdges": 15,
+    "browserFlowGroups": 13,
+    "roundtripGroups": 50,
+    "matrixFields": 5120,
+    "flowCriteriaEditorSaves": 160,
+    "assessmentAgreementGroups": 44,
+    "uiAssessments": 180,
+    "uiConfirmations": 20,
+    "performanceActions": 6,
+    "performanceNonRegressionPassed": true
+  },
+  "knownMethodCases": 94,
+  "knownMethodFailuresPerVersion": 49,
+  "knownFindingsIdentical": true,
+  "scopeLimitations": [
+    "Original 22-family historical audit not rerun unchanged; active suites are listed individually.",
+    "Existing public API aliases, DOM enhancement observers and CSS cascade retained as documented compatibility bridges.",
+    "Windows and Edge not available; completion allowed by decision 8.",
+    "Scenario-based evidence is not a mathematical guarantee for every possible sequence."
+  ],
+  "evidenceSha256": {
+    "additional-unit-cases.json": "05542892b680565c9bce2dd1a11ca134c18ec16ee3cd33588a8eacd2ffccf4a4",
+    "assessments-and-agreements.json": "54fa5fbbb3ae32dd16823a14288b742f54b36095d8b1b3e1f765b6671ca7b3bb",
+    "browser-parity.json": "a4358920cdde778ec1e890a556088453b502931d20373ca753975613e495ac43",
+    "build-summary.json": "1645bf8cfbf73c8165ccca5e92fdc1b965fc92f6f3f1e683a035af08e9fd179c",
+    "domain-summary.json": "d3347ecca609d65a939351e2c4447fa011d75cd9c7447ab6e6864ff39ca7a2dc",
+    "flow-browser.json": "2a49aed6039083e92e69d1b03afc0b95610d3c871836f78c75638fde00e5defb",
+    "flow-control.json": "5c168908e086ef8bf5796bb4e03e5ca731dbf69c4f12ad5f3f53b14205482ccd",
+    "flow-edges.json": "f1a22a566c4430071c641b3d0149dc179b688f4606cf149e028c0ce8d1535f02",
+    "known-findings.json": "6ddb4f31fe0a439e46ded350bf90824d6d605aaaedf54dd6ab7d010cfeb82fd3",
+    "performance.json": "21b7250e41b3596ddeaf9cbc3dbe0f49759f005e70884fe08031127d3519bb48",
+    "roundtrip.json": "21d9281a711d85f81ffe689d7e6bbbffbf339833a48b179a3ad2b6ec5180a3a0",
+    "unit-summary.json": "cb72fd007fee01f1aca902f156f83865f3319377d74654a7b084ed1204d57bd8"
+  },
+  "commitAndPush": false
+}

@@ -1,0 +1,49 @@
+{
+  "inputDomainSha256": "4c1d8cb4e7d9c1314a1eb37fa4637b3d38699afb74b11f6c25646887e633204b",
+  "afterImportExportDomainSha256": "4c1d8cb4e7d9c1314a1eb37fa4637b3d38699afb74b11f6c25646887e633204b",
+  "domainEqual": true,
+  "excludedTechnicalFields": [
+    "exported",
+    "appVersion",
+    "releaseStage",
+    "v2.selected",
+    "v3.team",
+    "v3.product",
+    "v3.navigationEpoch",
+    "v3.updated"
+  ],
+  "teams": [
+    {
+      "id": "merge-team-1",
+      "name": "Team 1",
+      "products": [
+        "merge-product-1"
+      ],
+      "matrixEntries": 32
+    },
+    {
+      "id": "merge-team-2",
+      "name": "Team 2",
+      "products": [
+        "merge-product-2"
+      ],
+      "matrixEntries": 32
+    },
+    {
+      "id": "merge-team-3",
+      "name": "Team 3",
+      "products": [
+        "merge-product-3"
+      ],
+      "matrixEntries": 32
+    },
+    {
+      "id": "merge-team-4",
+      "name": "Team 4",
+      "products": [
+        "merge-product-4"
+      ],
+      "matrixEntries": 32
+    }
+  ]
+}

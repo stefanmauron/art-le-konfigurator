@@ -1,0 +1,7 @@
+{
+  "cases": 94,
+  "referenceFailures": 49,
+  "candidateFailures": 49,
+  "identical": true,
+  "productFindingsRemainOpen": true
+}

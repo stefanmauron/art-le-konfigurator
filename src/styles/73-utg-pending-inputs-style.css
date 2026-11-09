@@ -1,0 +1,16 @@
+#utg-pending-inputs[hidden] {
+  display: none !important;
+}
+#utg-pending-inputs {
+  border-color: #d8b779;
+  background: #fff7e8;
+  color: var(--ink);
+}
+#utg-pending-inputs p {
+  margin: 0 0 10px;
+}
+#utg-pending-inputs .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

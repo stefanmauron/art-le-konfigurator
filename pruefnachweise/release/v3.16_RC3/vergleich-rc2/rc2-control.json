@@ -1,0 +1,286 @@
+[
+  {
+    "id": "display:reference:Funnel",
+    "ok": true
+  },
+  {
+    "id": "display:reference:Analyzing",
+    "ok": true
+  },
+  {
+    "id": "display:reference:Backlog",
+    "ok": true
+  },
+  {
+    "id": "display:reference:Implementing",
+    "ok": true
+  },
+  {
+    "id": "display:reference:Validating",
+    "ok": true
+  },
+  {
+    "id": "display:reference:Deploying & Releasing",
+    "ok": true
+  },
+  {
+    "id": "display:reference:Done",
+    "ok": true
+  },
+  {
+    "id": "read-only:reference",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-a:Funnel",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-a:Analyzing",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-a:Backlog",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-a:Implementing",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-a:Validating",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-a:Deploying & Releasing",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-a:Done",
+    "ok": true
+  },
+  {
+    "id": "read-only:team:flow-a",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-b:Funnel",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-b:Analyzing",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-b:Backlog",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-b:Implementing",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-b:Validating",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-b:Deploying & Releasing",
+    "ok": true
+  },
+  {
+    "id": "display:team:flow-b:Done",
+    "ok": true
+  },
+  {
+    "id": "read-only:team:flow-b",
+    "ok": true
+  },
+  {
+    "id": "display:all:Funnel",
+    "ok": true
+  },
+  {
+    "id": "display:all:Analyzing",
+    "ok": true
+  },
+  {
+    "id": "display:all:Backlog",
+    "ok": true
+  },
+  {
+    "id": "display:all:Implementing",
+    "ok": true
+  },
+  {
+    "id": "display:all:Validating",
+    "ok": true
+  },
+  {
+    "id": "display:all:Deploying & Releasing",
+    "ok": true
+  },
+  {
+    "id": "display:all:Done",
+    "ok": true
+  },
+  {
+    "id": "read-only:all",
+    "ok": true
+  },
+  {
+    "id": "art-edit:Funnel",
+    "ok": true
+  },
+  {
+    "id": "art-edit:Analyzing",
+    "ok": true
+  },
+  {
+    "id": "art-edit:Backlog",
+    "ok": true
+  },
+  {
+    "id": "art-edit:Implementing",
+    "ok": true
+  },
+  {
+    "id": "art-edit:Validating",
+    "ok": true
+  },
+  {
+    "id": "art-edit:Deploying & Releasing",
+    "ok": true
+  },
+  {
+    "id": "art-edit:Done",
+    "ok": true
+  },
+  {
+    "id": "team-dor-isolation",
+    "ok": true
+  },
+  {
+    "id": "template-existing-new-team",
+    "ok": true
+  },
+  {
+    "id": "mode-no-data-mutation",
+    "ok": true
+  },
+  {
+    "id": "same-window-live-update",
+    "ok": true
+  },
+  {
+    "id": "scroll-and-focus-after-editor",
+    "ok": true
+  },
+  {
+    "id": "policy-concurrent-edit",
+    "ok": true
+  },
+  {
+    "id": "policy-save-failure-retry",
+    "ok": true
+  },
+  {
+    "id": "missing-rule-repair",
+    "ok": true
+  },
+  {
+    "id": "storage-card",
+    "ok": true
+  },
+  {
+    "id": "storage-grid",
+    "ok": true
+  },
+  {
+    "id": "storage-drawer",
+    "ok": true
+  },
+  {
+    "id": "storage-reopen-fresh",
+    "ok": true
+  },
+  {
+    "id": "create-missing:Funnel",
+    "ok": true
+  },
+  {
+    "id": "create-missing:Analyzing",
+    "ok": true
+  },
+  {
+    "id": "create-missing:Backlog",
+    "ok": true
+  },
+  {
+    "id": "create-missing:Implementing",
+    "ok": true
+  },
+  {
+    "id": "create-missing:Validating",
+    "ok": true
+  },
+  {
+    "id": "create-missing:Deploying & Releasing",
+    "ok": true
+  },
+  {
+    "id": "create-missing:Done",
+    "ok": true
+  },
+  {
+    "id": "create-cancel-no-write",
+    "ok": true
+  },
+  {
+    "id": "create-retry-no-duplicate",
+    "ok": true
+  },
+  {
+    "id": "create-without-policy-catalogue",
+    "ok": true
+  },
+  {
+    "id": "create-id-collision",
+    "ok": true
+  },
+  {
+    "id": "concurrent-create-conflict",
+    "ok": true
+  },
+  {
+    "id": "handoff:return",
+    "ok": true
+  },
+  {
+    "id": "handoff:throw",
+    "ok": true
+  },
+  {
+    "id": "handoff:reuse",
+    "ok": true
+  },
+  {
+    "id": "storage-dirty-policy-conflict",
+    "ok": true
+  },
+  {
+    "id": "storage-other-team-draft-preserved",
+    "ok": true
+  },
+  {
+    "id": "storage-unrelated-key",
+    "ok": true
+  },
+  {
+    "id": "storage-team-removed-with-draft",
+    "ok": true
+  },
+  {
+    "id": "no-unhandled-page-errors",
+    "ok": true
+  }
+]

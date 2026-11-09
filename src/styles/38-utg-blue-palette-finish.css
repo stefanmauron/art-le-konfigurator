@@ -1,0 +1,14 @@
+:root {
+  --accent: #2d6079;
+  --accent-dark: #244e65;
+  --success: #2d6079;
+  --success-soft: #edf4f8;
+}
+::selection {
+  background: #dcebf5;
+  color: #203449;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--accent);
+}

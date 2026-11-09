@@ -1,0 +1,113 @@
+body > header h1 .app-about-trigger {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  white-space: nowrap;
+  padding: 5px 9px;
+  min-height: 30px;
+  font-weight: 500;
+}
+body > header h1 .app-about-trigger svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+}
+body > header h1 .app-about-trigger + .app-version {
+  margin-left: 0;
+}
+#utg-about-dialog {
+  width: 640px;
+  max-width: calc(100vw - 32px) !important;
+  max-height: 85dvh;
+  padding: 0 !important;
+  border: 1px solid var(--line);
+  border-radius: var(--radius) !important;
+  color: var(--ink);
+  background: var(--surface);
+  box-shadow: 0 16px 64px #142e4333;
+  font-family: inherit;
+  font-size: var(--text-body);
+}
+#utg-about-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+#utg-about-dialog::backdrop {
+  background: #142e4366;
+}
+#utg-about-dialog .app-about-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: var(--density-card) var(--density-section);
+  flex: 0 0 auto;
+  border-bottom: 1px solid var(--line);
+}
+#utg-about-dialog h2 {
+  margin: 0;
+  font-size: var(--text-title);
+  line-height: 1.3;
+}
+#utg-about-dialog .app-about-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  min-height: 32px;
+  padding: 0;
+  flex: 0 0 32px;
+}
+#utg-about-dialog .app-about-close svg {
+  width: 16px;
+  height: 16px;
+}
+#utg-about-dialog .app-about-content {
+  padding: var(--density-card) var(--density-section);
+  line-height: 1.6;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+#utg-about-dialog p {
+  margin: 0 0 14px;
+}
+#utg-about-dialog ul {
+  margin: 0 0 16px;
+  padding-left: 20px;
+}
+#utg-about-dialog li + li {
+  margin-top: 8px;
+}
+#utg-about-dialog .app-about-note {
+  color: var(--muted);
+  margin-bottom: 0;
+}
+#utg-about-dialog .app-about-changelog {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+#utg-about-dialog h3 {
+  margin: 0 0 10px;
+  font-size: var(--text-body);
+  font-weight: 650;
+}
+#utg-about-changelog {
+  min-height: 20px;
+}
+#utg-about-dialog .app-about-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px var(--density-section);
+  flex: 0 0 auto;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 600px) {
+  body > header h1 .app-about-trigger {
+    margin-left: 0;
+  }
+}

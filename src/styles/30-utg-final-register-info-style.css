@@ -1,0 +1,30 @@
+:is(#utg-page-4, #utg-page-5) .app-context-info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 0;
+  margin: 0 0 0 6px;
+  border: 1px solid #607d8c;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  font-size: var(--text-small) !important;
+  line-height: 1 !important;
+  font-weight: 600;
+  cursor: default;
+  letter-spacing: 0;
+}
+:is(#utg-page-4, #utg-page-5) .app-context-info:hover,
+:is(#utg-page-4, #utg-page-5) .app-context-info:focus-visible {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+#utg-model-overview-info {
+  white-space: pre-line;
+}

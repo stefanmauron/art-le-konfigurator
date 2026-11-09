@@ -1,0 +1,109 @@
+.flow-criteria-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 12px 0 18px;
+  padding: 12px 14px;
+  background: #edf4f8;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.flow-criteria-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.flow-criteria-group > strong {
+  font-size: var(--text-small);
+  color: var(--muted);
+  font-weight: 600;
+}
+.flow-team-agreements {
+  border-left: 1px solid var(--line);
+  padding-left: 20px;
+}
+.flow-criteria-panel .utg33-tools {
+  margin: 0;
+  gap: 8px;
+}
+.flow-criteria-panel button[data-edit-flow="Phase"] {
+  border-width: 2px;
+  margin-right: 12px;
+  min-width: 180px;
+}
+.flow-criteria-panel button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 88px;
+  justify-content: center;
+}
+.flow-criteria-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 4px;
+  border-radius: 10px;
+  background: #d8e7f1;
+  font-size: var(--text-small);
+  font-weight: 400;
+}
+@media (max-width: 600px) {
+  .flow-criteria-group {
+    width: 100%;
+  }
+  .flow-team-agreements {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+    padding-top: 12px;
+  }
+  .flow-criteria-panel .utg33-tools {
+    width: 100%;
+  }
+  .flow-criteria-panel button {
+    flex: 1;
+  }
+}
+.flow-criteria-list {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+.flow-criteria-item {
+  padding: 12px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+.flow-criteria-item p {
+  margin: 6px 0;
+}
+.flow-criteria-item small {
+  display: block;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.flow-criteria-editor {
+  border: 1px solid var(--line);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+.flow-criteria-editor label {
+  display: block;
+  margin: 8px 0 4px;
+}
+.flow-criteria-editor textarea,
+.flow-criteria-editor input,
+.flow-criteria-editor select {
+  width: 100%;
+  box-sizing: border-box;
+}
+.flow-criteria-editor textarea {
+  min-height: 72px;
+}

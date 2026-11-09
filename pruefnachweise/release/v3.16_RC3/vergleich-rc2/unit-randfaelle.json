@@ -1,0 +1,686 @@
+{
+  "reference": [
+    {
+      "id": "phase:Funnel",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "phase:Analyzing",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "phase:Backlog",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "phase:Implementing",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "phase:Validating",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "phase:Deploying & Releasing",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "phase:Done",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "revision:2",
+      "name": "supported revision survives initialization",
+      "ok": true
+    },
+    {
+      "id": "revision:3",
+      "name": "supported revision survives initialization",
+      "ok": true
+    },
+    {
+      "id": "revision:4",
+      "name": "supported revision survives initialization",
+      "ok": true
+    },
+    {
+      "id": "description:",
+      "name": "invalid description rejected without source mutation",
+      "ok": true
+    },
+    {
+      "id": "description: ",
+      "name": "invalid description rejected without source mutation",
+      "ok": true
+    },
+    {
+      "id": "description:null",
+      "name": "invalid description rejected without source mutation",
+      "ok": true
+    },
+    {
+      "id": "description:42",
+      "name": "invalid description rejected without source mutation",
+      "ok": true
+    },
+    {
+      "id": "criterion-field:owner",
+      "name": "invalid field rejected",
+      "ok": true
+    },
+    {
+      "id": "criterion-field:contributors",
+      "name": "invalid field rejected",
+      "ok": true
+    },
+    {
+      "id": "criterion-field:evidence",
+      "name": "invalid field rejected",
+      "ok": true
+    },
+    {
+      "id": "duplicate-id",
+      "name": "duplicate IDs rejected",
+      "ok": true
+    },
+    {
+      "id": "shared-scope",
+      "name": "edit through any phase affects same catalogue only",
+      "ok": true
+    },
+    {
+      "id": "fresh-standard-comparison",
+      "name": "fresh current standard must not report any adoption differences",
+      "ok": true
+    },
+    {
+      "id": "json-order",
+      "name": "identical data with reordered object keys must not produce differences",
+      "ok": true
+    },
+    {
+      "id": "criteria-kind-roundtrip",
+      "name": "entry changed to execution and back must restore original gate",
+      "ok": true
+    },
+    {
+      "id": "whitespace-governance",
+      "name": "whitespace fields cannot count as an agreement",
+      "ok": true
+    },
+    {
+      "id": "unsupported-revision",
+      "name": "unknown revision rejected",
+      "ok": true
+    },
+    {
+      "id": "stale-selection",
+      "name": "already adopted comparison IDs cannot silently apply again",
+      "ok": true
+    },
+    {
+      "id": "all-policies-atomic",
+      "name": "unknown adoption ID cannot partially change policy",
+      "ok": true
+    },
+    {
+      "id": "wip:{\"bad\":1}",
+      "name": "malformed WIP rejected by actual import validation",
+      "ok": true
+    },
+    {
+      "id": "wip:[]",
+      "name": "malformed WIP rejected by actual import validation",
+      "ok": true
+    },
+    {
+      "id": "wip:true",
+      "name": "malformed WIP rejected by actual import validation",
+      "ok": true
+    },
+    {
+      "id": "wip:-1",
+      "name": "malformed WIP rejected by actual import validation",
+      "ok": true
+    },
+    {
+      "id": "wip:\"-3\"",
+      "name": "malformed WIP rejected by actual import validation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip",
+      "name": "valid positive WIP string accepted",
+      "ok": true
+    },
+    {
+      "id": "meaningful-changes",
+      "name": "real text and array-order changes remain visible without writes",
+      "ok": true
+    },
+    {
+      "id": "empty-optionals",
+      "name": "missing and empty optional fields compare equally, nonempty ones survive",
+      "ok": true
+    },
+    {
+      "id": "provenance:Funnel",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "provenance:Analyzing",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "provenance:Backlog",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "provenance:Implementing",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "provenance:Validating",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "provenance:Deploying & Releasing",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "provenance:Done",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:undefined",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip: ",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:1",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:20",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:2",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:02",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:2.0",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:1e2",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:null",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:0",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:0",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:1.5",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:1.5",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:NaN",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:Infinity",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:0x10",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:9007199254740992",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "previous-version-unchanged",
+      "name": "loading customized previous-version criteria never migrates them to new lists",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Funnel",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Analyzing",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Backlog",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Implementing",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Validating",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Deploying & Releasing",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Done",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "criteria-order",
+      "name": "array order alone remains a meaningful difference",
+      "ok": true
+    }
+  ],
+  "candidate": [
+    {
+      "id": "phase:Funnel",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "phase:Analyzing",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "phase:Backlog",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "phase:Implementing",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "phase:Validating",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "phase:Deploying & Releasing",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "phase:Done",
+      "name": "entry and exit have roles and evidence",
+      "ok": true
+    },
+    {
+      "id": "revision:2",
+      "name": "supported revision survives initialization",
+      "ok": true
+    },
+    {
+      "id": "revision:3",
+      "name": "supported revision survives initialization",
+      "ok": true
+    },
+    {
+      "id": "revision:4",
+      "name": "supported revision survives initialization",
+      "ok": true
+    },
+    {
+      "id": "description:",
+      "name": "invalid description rejected without source mutation",
+      "ok": true
+    },
+    {
+      "id": "description: ",
+      "name": "invalid description rejected without source mutation",
+      "ok": true
+    },
+    {
+      "id": "description:null",
+      "name": "invalid description rejected without source mutation",
+      "ok": true
+    },
+    {
+      "id": "description:42",
+      "name": "invalid description rejected without source mutation",
+      "ok": true
+    },
+    {
+      "id": "criterion-field:owner",
+      "name": "invalid field rejected",
+      "ok": true
+    },
+    {
+      "id": "criterion-field:contributors",
+      "name": "invalid field rejected",
+      "ok": true
+    },
+    {
+      "id": "criterion-field:evidence",
+      "name": "invalid field rejected",
+      "ok": true
+    },
+    {
+      "id": "duplicate-id",
+      "name": "duplicate IDs rejected",
+      "ok": true
+    },
+    {
+      "id": "shared-scope",
+      "name": "edit through any phase affects same catalogue only",
+      "ok": true
+    },
+    {
+      "id": "fresh-standard-comparison",
+      "name": "fresh current standard must not report any adoption differences",
+      "ok": true
+    },
+    {
+      "id": "json-order",
+      "name": "identical data with reordered object keys must not produce differences",
+      "ok": true
+    },
+    {
+      "id": "criteria-kind-roundtrip",
+      "name": "entry changed to execution and back must restore original gate",
+      "ok": true
+    },
+    {
+      "id": "whitespace-governance",
+      "name": "whitespace fields cannot count as an agreement",
+      "ok": true
+    },
+    {
+      "id": "unsupported-revision",
+      "name": "unknown revision rejected",
+      "ok": true
+    },
+    {
+      "id": "stale-selection",
+      "name": "already adopted comparison IDs cannot silently apply again",
+      "ok": true
+    },
+    {
+      "id": "all-policies-atomic",
+      "name": "unknown adoption ID cannot partially change policy",
+      "ok": true
+    },
+    {
+      "id": "wip:{\"bad\":1}",
+      "name": "malformed WIP rejected by actual import validation",
+      "ok": true
+    },
+    {
+      "id": "wip:[]",
+      "name": "malformed WIP rejected by actual import validation",
+      "ok": true
+    },
+    {
+      "id": "wip:true",
+      "name": "malformed WIP rejected by actual import validation",
+      "ok": true
+    },
+    {
+      "id": "wip:-1",
+      "name": "malformed WIP rejected by actual import validation",
+      "ok": true
+    },
+    {
+      "id": "wip:\"-3\"",
+      "name": "malformed WIP rejected by actual import validation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip",
+      "name": "valid positive WIP string accepted",
+      "ok": true
+    },
+    {
+      "id": "meaningful-changes",
+      "name": "real text and array-order changes remain visible without writes",
+      "ok": true
+    },
+    {
+      "id": "empty-optionals",
+      "name": "missing and empty optional fields compare equally, nonempty ones survive",
+      "ok": true
+    },
+    {
+      "id": "provenance:Funnel",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "provenance:Analyzing",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "provenance:Backlog",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "provenance:Implementing",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "provenance:Validating",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "provenance:Deploying & Releasing",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "provenance:Done",
+      "name": "unchanged historical rule gates retain their original source",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:undefined",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip: ",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:1",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:20",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:2",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:02",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:2.0",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "valid-wip:1e2",
+      "name": "valid or empty legacy WIP validates without mutation",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:null",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:0",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:0",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:1.5",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:1.5",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:NaN",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:Infinity",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:0x10",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "invalid-wip:9007199254740992",
+      "name": "invalid WIP fails before storage changes",
+      "ok": true
+    },
+    {
+      "id": "previous-version-unchanged",
+      "name": "loading customized previous-version criteria never migrates them to new lists",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Funnel",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Analyzing",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Backlog",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Implementing",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Validating",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Deploying & Releasing",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "gate-roundtrip:Done",
+      "name": "entry to execution and back restores its gate and original rule list",
+      "ok": true
+    },
+    {
+      "id": "criteria-order",
+      "name": "array order alone remains a meaningful difference",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+.app-file-actions {
+  width: max-content;
+  min-width: 300px;
+  max-width: calc(100vw - 32px);
+}
+.app-file-actions > button,
+.app-file-actions > .filebtn {
+  white-space: nowrap;
+}

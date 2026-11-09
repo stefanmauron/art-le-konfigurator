@@ -1,0 +1,5 @@
+# Regenerierbare visuelle und vollständige Roundtrip-Arbeitsnachweise.
+test-results/*.png
+test-results/nach-import-export.json
+test-results/beide-teams-import-export.json
+test-results/browser-failure.json

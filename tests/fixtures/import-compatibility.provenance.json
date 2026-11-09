@@ -1,0 +1,5 @@
+{
+  "originalPath": "testdaten/v3.14.8/testkonfiguration-export.json",
+  "sha256": "9f998dc6111dd7084eb164e5fcd4f88150d187701e5d049c724534d97750a7c2",
+  "purpose": "v3.17 import compatibility and reproducible load data"
+}

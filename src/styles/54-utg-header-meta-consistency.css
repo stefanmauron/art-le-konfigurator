@@ -1,0 +1,33 @@
+body > header h1 {
+  column-gap: 12px;
+}
+body > header h1 .app-about-trigger {
+  height: 30px;
+  min-height: 30px;
+  padding: 0 10px;
+  font-size: 12px !important;
+  line-height: 1 !important;
+  border-radius: 6px;
+  font-weight: 500;
+}
+body > header h1 .app-about-trigger svg {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+}
+body > header h1 .app-about-trigger + .app-version {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  box-sizing: border-box;
+  margin-left: 0;
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid #ffffff40;
+  background: #ffffff0a;
+  color: #d4e3eb;
+}

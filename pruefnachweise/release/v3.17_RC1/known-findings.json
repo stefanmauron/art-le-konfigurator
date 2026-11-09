@@ -1,0 +1,1034 @@
+{
+  "cases": 94,
+  "referenceFailures": 49,
+  "candidateFailures": 49,
+  "identical": true,
+  "productFindingsRemainOpen": true,
+  "checks": [
+    {
+      "id": "M00-valid-complete-context",
+      "area": "positive",
+      "expectation": "Eine vollständige kontextspezifische Vereinbarung darf keine Fehlwarnung auslösen.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M01-default-phase:Funnel",
+      "area": "standard",
+      "expectation": "Phasenregel enthält die unabhängig festgelegten Entscheid- und Nachweisaspekte.",
+      "ok": true
+    },
+    {
+      "id": "M02-policy-kind:Funnel",
+      "area": "phase-kind",
+      "expectation": "ART-Regel: Abschluss nur für Done; davor Übergang oder eine explizit abweichend modellierte Regel.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Funnel:owner",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Funnel:evidence",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M04-incomplete-criterion:Funnel",
+      "area": "criterion",
+      "expectation": "Fehlende Nachweisrolle eines Teamkriteriums muss als Finding erscheinen.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Funnel · Eintritt & Übergang · Verantwortliche Rolle fehlt: Feature-Anliegen mit betroffenen Nutzern und zuständiger Person erfass",
+            "target": {
+              "kind": "criteria",
+              "stage": "Funnel",
+              "team": "alpha",
+              "type": "Phase"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M05-isolated-phase-edit:Funnel",
+      "area": "isolation",
+      "expectation": "Team-Phasenänderung verändert keine andere Phase, kein anderes Team und keine Standardvorlage.",
+      "ok": true
+    },
+    {
+      "id": "M01-default-phase:Analyzing",
+      "area": "standard",
+      "expectation": "Phasenregel enthält die unabhängig festgelegten Entscheid- und Nachweisaspekte.",
+      "ok": true
+    },
+    {
+      "id": "M02-policy-kind:Analyzing",
+      "area": "phase-kind",
+      "expectation": "ART-Regel: Abschluss nur für Done; davor Übergang oder eine explizit abweichend modellierte Regel.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Analyzing:owner",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Analyzing:evidence",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M04-incomplete-criterion:Analyzing",
+      "area": "criterion",
+      "expectation": "Fehlende Nachweisrolle eines Teamkriteriums muss als Finding erscheinen.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Analyzing · Eintritt & Übergang · Verantwortliche Rolle fehlt: Analyse ausgewählt; Kapazität und benötigte Rollen verfügbar.",
+            "target": {
+              "kind": "criteria",
+              "stage": "Analyzing",
+              "team": "alpha",
+              "type": "Phase"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M05-isolated-phase-edit:Analyzing",
+      "area": "isolation",
+      "expectation": "Team-Phasenänderung verändert keine andere Phase, kein anderes Team und keine Standardvorlage.",
+      "ok": true
+    },
+    {
+      "id": "M01-default-phase:Backlog",
+      "area": "standard",
+      "expectation": "Phasenregel enthält die unabhängig festgelegten Entscheid- und Nachweisaspekte.",
+      "ok": true
+    },
+    {
+      "id": "M02-policy-kind:Backlog",
+      "area": "phase-kind",
+      "expectation": "ART-Regel: Abschluss nur für Done; davor Übergang oder eine explizit abweichend modellierte Regel.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Backlog:owner",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Backlog:evidence",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M04-incomplete-criterion:Backlog",
+      "area": "criterion",
+      "expectation": "Fehlende Nachweisrolle eines Teamkriteriums muss als Finding erscheinen.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Backlog · Eintritt & Übergang · Verantwortliche Rolle fehlt: Feature mit Ziel, Umfang, AC, Risiken und Abhängigkeiten analysiert.",
+            "target": {
+              "kind": "criteria",
+              "stage": "Backlog",
+              "team": "alpha",
+              "type": "Phase"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M05-isolated-phase-edit:Backlog",
+      "area": "isolation",
+      "expectation": "Team-Phasenänderung verändert keine andere Phase, kein anderes Team und keine Standardvorlage.",
+      "ok": true
+    },
+    {
+      "id": "M01-default-phase:Implementing",
+      "area": "standard",
+      "expectation": "Phasenregel enthält die unabhängig festgelegten Entscheid- und Nachweisaspekte.",
+      "ok": true
+    },
+    {
+      "id": "M02-policy-kind:Implementing",
+      "area": "phase-kind",
+      "expectation": "ART-Regel: Abschluss nur für Done; davor Übergang oder eine explizit abweichend modellierte Regel.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Implementing:owner",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Implementing:evidence",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M04-incomplete-criterion:Implementing",
+      "area": "criterion",
+      "expectation": "Fehlende Nachweisrolle eines Teamkriteriums muss als Finding erscheinen.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Implementing · Eintritt & Übergang · Verantwortliche Rolle fehlt: Priorisiertes Feature gezogen; nächster Schritt bereit, Kapazität und ",
+            "target": {
+              "kind": "criteria",
+              "stage": "Implementing",
+              "team": "alpha",
+              "type": "Phase"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M05-isolated-phase-edit:Implementing",
+      "area": "isolation",
+      "expectation": "Team-Phasenänderung verändert keine andere Phase, kein anderes Team und keine Standardvorlage.",
+      "ok": true
+    },
+    {
+      "id": "M01-default-phase:Validating",
+      "area": "standard",
+      "expectation": "Phasenregel enthält die unabhängig festgelegten Entscheid- und Nachweisaspekte.",
+      "ok": true
+    },
+    {
+      "id": "M02-policy-kind:Validating",
+      "area": "phase-kind",
+      "expectation": "ART-Regel: Abschluss nur für Done; davor Übergang oder eine explizit abweichend modellierte Regel.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Validating:owner",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Validating:evidence",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M04-incomplete-criterion:Validating",
+      "area": "criterion",
+      "expectation": "Fehlende Nachweisrolle eines Teamkriteriums muss als Finding erscheinen.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Validating · Eintritt & Übergang · Verantwortliche Rolle fehlt: Integriertes Ergebnis nach erfolgreichen frühen Prüfungen mit Testdate",
+            "target": {
+              "kind": "criteria",
+              "stage": "Validating",
+              "team": "alpha",
+              "type": "Phase"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M05-isolated-phase-edit:Validating",
+      "area": "isolation",
+      "expectation": "Team-Phasenänderung verändert keine andere Phase, kein anderes Team und keine Standardvorlage.",
+      "ok": true
+    },
+    {
+      "id": "M01-default-phase:Deploying & Releasing",
+      "area": "standard",
+      "expectation": "Phasenregel enthält die unabhängig festgelegten Entscheid- und Nachweisaspekte.",
+      "ok": true
+    },
+    {
+      "id": "M02-policy-kind:Deploying & Releasing",
+      "area": "phase-kind",
+      "expectation": "ART-Regel: Abschluss nur für Done; davor Übergang oder eine explizit abweichend modellierte Regel.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Deploying & Releasing:owner",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Deploying & Releasing:evidence",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M04-incomplete-criterion:Deploying & Releasing",
+      "area": "criterion",
+      "expectation": "Fehlende Nachweisrolle eines Teamkriteriums muss als Finding erscheinen.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Deploying & Releasing · Eintritt & Übergang · Verantwortliche Rolle fehlt: DoD am integrierten Ergebnis erfüllt; keine auslieferungsblockierenden",
+            "target": {
+              "kind": "criteria",
+              "stage": "Deploying & Releasing",
+              "team": "alpha",
+              "type": "Phase"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M05-isolated-phase-edit:Deploying & Releasing",
+      "area": "isolation",
+      "expectation": "Team-Phasenänderung verändert keine andere Phase, kein anderes Team und keine Standardvorlage.",
+      "ok": true
+    },
+    {
+      "id": "M01-default-phase:Done",
+      "area": "standard",
+      "expectation": "Phasenregel enthält die unabhängig festgelegten Entscheid- und Nachweisaspekte.",
+      "ok": true
+    },
+    {
+      "id": "M02-policy-kind:Done",
+      "area": "phase-kind",
+      "expectation": "ART-Regel: Abschluss nur für Done; davor Übergang oder eine explizit abweichend modellierte Regel.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Done:owner",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M03-policy-placeholder:Done:evidence",
+      "area": "placeholder",
+      "expectation": "Ein explizit offener Entscheid oder Nachweis muss sichtbar offen bleiben.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M04-incomplete-criterion:Done",
+      "area": "criterion",
+      "expectation": "Fehlende Nachweisrolle eines Teamkriteriums muss als Finding erscheinen.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Done · Eintritt & Übergang · Verantwortliche Rolle fehlt: Bereitstellung, Nutzungsfreigabe und Betriebsübernahme nachgewiesen.",
+            "target": {
+              "kind": "criteria",
+              "stage": "Done",
+              "team": "alpha",
+              "type": "Phase"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M05-isolated-phase-edit:Done",
+      "area": "isolation",
+      "expectation": "Team-Phasenänderung verändert keine andere Phase, kein anderes Team und keine Standardvorlage.",
+      "ok": true
+    },
+    {
+      "id": "M20-handoff:Funnel:Analyzing",
+      "area": "handoff",
+      "expectation": "Ausgangsvereinbarung und nächster Eintritt referenzieren denselben fachlichen Übergabezustand.",
+      "ok": true
+    },
+    {
+      "id": "M20-handoff:Analyzing:Backlog",
+      "area": "handoff",
+      "expectation": "Ausgangsvereinbarung und nächster Eintritt referenzieren denselben fachlichen Übergabezustand.",
+      "ok": true
+    },
+    {
+      "id": "M20-handoff:Backlog:Implementing",
+      "area": "handoff",
+      "expectation": "Ausgangsvereinbarung und nächster Eintritt referenzieren denselben fachlichen Übergabezustand.",
+      "ok": true
+    },
+    {
+      "id": "M20-handoff:Implementing:Validating",
+      "area": "handoff",
+      "expectation": "Ausgangsvereinbarung und nächster Eintritt referenzieren denselben fachlichen Übergabezustand.",
+      "ok": true
+    },
+    {
+      "id": "M20-handoff:Validating:Deploying & Releasing",
+      "area": "handoff",
+      "expectation": "Ausgangsvereinbarung und nächster Eintritt referenzieren denselben fachlichen Übergabezustand.",
+      "ok": true
+    },
+    {
+      "id": "M20-handoff:Deploying & Releasing:Done",
+      "area": "handoff",
+      "expectation": "Ausgangsvereinbarung und nächster Eintritt referenzieren denselben fachlichen Übergabezustand.",
+      "ok": true
+    },
+    {
+      "id": "M06-dor-purpose",
+      "area": "standard",
+      "expectation": "DoR beschreibt die Bereitschaft des nächsten Schritts und verlangt keine fertige Lösung.",
+      "ok": true
+    },
+    {
+      "id": "M07-dod-purpose",
+      "area": "standard",
+      "expectation": "DoD enthält überprüfbare Ergebnisqualität, Integration, Tests, Schutz und Migrationsfolgen.",
+      "ok": true
+    },
+    {
+      "id": "M08-release-is-not-dod",
+      "area": "standard",
+      "expectation": "Auslieferbarkeit, tatsächliche Nutzungsfreigabe und spätere Wirkung bleiben getrennt.",
+      "ok": true
+    },
+    {
+      "id": "M09-product-minimum-quality",
+      "area": "standard",
+      "expectation": "Team-DoD konkretisiert ein gemeinsames Produktminimum statt es zu ersetzen.",
+      "ok": true
+    },
+    {
+      "id": "M10-agreed-placeholder:workItem",
+      "area": "governance-placeholder",
+      "expectation": "Vereinbart mit explizitem Platzhalter muss abgelehnt oder als offener Punkt ausgewiesen werden.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M10-agreed-placeholder:pull",
+      "area": "governance-placeholder",
+      "expectation": "Vereinbart mit explizitem Platzhalter muss abgelehnt oder als offener Punkt ausgewiesen werden.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M10-agreed-placeholder:wip",
+      "area": "governance-placeholder",
+      "expectation": "Vereinbart mit explizitem Platzhalter muss abgelehnt oder als offener Punkt ausgewiesen werden.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M10-agreed-placeholder:blocked",
+      "area": "governance-placeholder",
+      "expectation": "Vereinbart mit explizitem Platzhalter muss abgelehnt oder als offener Punkt ausgewiesen werden.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M10-agreed-placeholder:aging",
+      "area": "governance-placeholder",
+      "expectation": "Vereinbart mit explizitem Platzhalter muss abgelehnt oder als offener Punkt ausgewiesen werden.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M10-agreed-placeholder:exceptions",
+      "area": "governance-placeholder",
+      "expectation": "Vereinbart mit explizitem Platzhalter muss abgelehnt oder als offener Punkt ausgewiesen werden.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M10-agreed-placeholder:measurementStart",
+      "area": "governance-placeholder",
+      "expectation": "Vereinbart mit explizitem Platzhalter muss abgelehnt oder als offener Punkt ausgewiesen werden.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M10-agreed-placeholder:measurementEnd",
+      "area": "governance-placeholder",
+      "expectation": "Vereinbart mit explizitem Platzhalter muss abgelehnt oder als offener Punkt ausgewiesen werden.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M10-agreed-placeholder:sle",
+      "area": "governance-placeholder",
+      "expectation": "Vereinbart mit explizitem Platzhalter muss abgelehnt oder als offener Punkt ausgewiesen werden.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M10-agreed-placeholder:qualityMinimum",
+      "area": "governance-placeholder",
+      "expectation": "Vereinbart mit explizitem Platzhalter muss abgelehnt oder als offener Punkt ausgewiesen werden.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M10-agreed-placeholder:decisionRole",
+      "area": "governance-placeholder",
+      "expectation": "Vereinbart mit explizitem Platzhalter muss abgelehnt oder als offener Punkt ausgewiesen werden.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M10-agreed-placeholder:evidence",
+      "area": "governance-placeholder",
+      "expectation": "Vereinbart mit explizitem Platzhalter muss abgelehnt oder als offener Punkt ausgewiesen werden.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M11-sle:110% in 10 Tagen",
+      "area": "sle",
+      "expectation": "Eine offensichtlich unmögliche SLE darf nicht unbeanstandet als vereinbart gelten.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M11-sle:-5% in 10 Tagen",
+      "area": "sle",
+      "expectation": "Eine offensichtlich unmögliche SLE darf nicht unbeanstandet als vereinbart gelten.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M11-sle:85% in -3 Tagen",
+      "area": "sle",
+      "expectation": "Eine offensichtlich unmögliche SLE darf nicht unbeanstandet als vereinbart gelten.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M11-sle:85% in 0 Tagen",
+      "area": "sle",
+      "expectation": "Eine offensichtlich unmögliche SLE darf nicht unbeanstandet als vereinbart gelten.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M11-sle:100% garantiert, unabhängig von Kapazität",
+      "area": "sle",
+      "expectation": "Eine offensichtlich unmögliche SLE darf nicht unbeanstandet als vereinbart gelten.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M12-wip:0 Features",
+      "area": "wip",
+      "expectation": "Eine offensichtlich fehlende oder nicht positive WIP-Begrenzung muss erkennbar offen sein.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M12-wip:-2 Features",
+      "area": "wip",
+      "expectation": "Eine offensichtlich fehlende oder nicht positive WIP-Begrenzung muss erkennbar offen sein.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M12-wip:unbegrenzt",
+      "area": "wip",
+      "expectation": "Eine offensichtlich fehlende oder nicht positive WIP-Begrenzung muss erkennbar offen sein.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M12-wip:Keine WIP-Begrenzung",
+      "area": "wip",
+      "expectation": "Eine offensichtlich fehlende oder nicht positive WIP-Begrenzung muss erkennbar offen sein.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M13-measurement:Eintritt in Done:Eintritt in Implementing",
+      "area": "measurement",
+      "expectation": "Identische Ereignisse oder umgekehrte Grenzen dürfen keine belastbare Durchlaufzeit behaupten.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M13-measurement:Eintritt in Implementing:Eintritt in Implementing",
+      "area": "measurement",
+      "expectation": "Identische Ereignisse oder umgekehrte Grenzen dürfen keine belastbare Durchlaufzeit behaupten.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M14-criterion-placeholder:",
+      "area": "positive-detection",
+      "expectation": "Fehlende Kriterienrolle wird unabhängig vom sichtbaren Platzhalter erkannt.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Team-DoD · Verantwortliche Rolle fehlt: Die vereinbarten AC sind nachweislich erfüllt.",
+            "target": {
+              "kind": "criteria",
+              "stage": "Funnel",
+              "team": "alpha",
+              "type": "DoD"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M14-criterion-placeholder:Noch zu klären",
+      "area": "positive-detection",
+      "expectation": "Fehlende Kriterienrolle wird unabhängig vom sichtbaren Platzhalter erkannt.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Team-DoD · Verantwortliche Rolle fehlt: Die vereinbarten AC sind nachweislich erfüllt.",
+            "target": {
+              "kind": "criteria",
+              "stage": "Funnel",
+              "team": "alpha",
+              "type": "DoD"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M14-criterion-placeholder:Noch zu vereinbaren",
+      "area": "positive-detection",
+      "expectation": "Fehlende Kriterienrolle wird unabhängig vom sichtbaren Platzhalter erkannt.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Team-DoD · Verantwortliche Rolle fehlt: Die vereinbarten AC sind nachweislich erfüllt.",
+            "target": {
+              "kind": "criteria",
+              "stage": "Funnel",
+              "team": "alpha",
+              "type": "DoD"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M15-wrong-catalogue-kind:commonDoR",
+      "area": "criterion",
+      "expectation": "DoD und DoR dürfen nicht im jeweils anderen Katalog verschwinden.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Team-DoR · Unpassende Kriterienart: Ziel, Nutzen und Umfang sind verstanden.",
+            "target": {
+              "kind": "criteria",
+              "stage": "Funnel",
+              "team": "alpha",
+              "type": "DoR"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M15-wrong-catalogue-kind:commonDoD",
+      "area": "criterion",
+      "expectation": "DoD und DoR dürfen nicht im jeweils anderen Katalog verschwinden.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Team-DoD · Unpassende Kriterienart: Die vereinbarten AC sind nachweislich erfüllt.",
+            "target": {
+              "kind": "criteria",
+              "stage": "Funnel",
+              "team": "alpha",
+              "type": "DoD"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M16-empty-quality-catalogue:commonDoR",
+      "area": "criterion",
+      "expectation": "Gelöschter Teamkatalog bleibt gelöscht, aber der fachliche Mangel muss sichtbar sein.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Team-DoR · Keine Kriterien vereinbart.",
+            "target": {
+              "kind": "criteria",
+              "stage": "Funnel",
+              "team": "alpha",
+              "type": "DoR"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M16-empty-quality-catalogue:commonDoD",
+      "area": "criterion",
+      "expectation": "Gelöschter Teamkatalog bleibt gelöscht, aber der fachliche Mangel muss sichtbar sein.",
+      "ok": true,
+      "observed": {
+        "rejected": null,
+        "findings": [
+          {
+            "message": "Team Team Alpha · Team-DoD · Keine Kriterien vereinbart.",
+            "target": {
+              "kind": "criteria",
+              "stage": "Funnel",
+              "team": "alpha",
+              "type": "DoD"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "M17-reference-integrity:unknown-activity-phase",
+      "area": "references",
+      "expectation": "Strukturell widersprüchliche Referenzen werden abgelehnt oder im fachlichen Review angezeigt.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M17-reference-integrity:unknown-accompanying-phase",
+      "area": "references",
+      "expectation": "Strukturell widersprüchliche Referenzen werden abgelehnt oder im fachlichen Review angezeigt.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M17-reference-integrity:unknown-matrix-activity",
+      "area": "references",
+      "expectation": "Strukturell widersprüchliche Referenzen werden abgelehnt oder im fachlichen Review angezeigt.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M17-reference-integrity:orphan-team-flow",
+      "area": "references",
+      "expectation": "Strukturell widersprüchliche Referenzen werden abgelehnt oder im fachlichen Review angezeigt.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M17-reference-integrity:unknown-matrix-status",
+      "area": "references",
+      "expectation": "Strukturell widersprüchliche Referenzen werden abgelehnt oder im fachlichen Review angezeigt.",
+      "ok": false,
+      "error": "Widerspruch wird weder beim Validieren abgelehnt noch als Finding angezeigt.",
+      "observed": {
+        "rejected": null,
+        "findings": []
+      }
+    },
+    {
+      "id": "M17-reference-integrity:unknown-product-membership",
+      "area": "references",
+      "expectation": "Strukturell widersprüchliche Referenzen werden abgelehnt oder im fachlichen Review angezeigt.",
+      "ok": true,
+      "observed": {
+        "rejected": "Unbekanntes oder mehrfach zugeordnetes Produkt",
+        "findings": []
+      }
+    },
+    {
+      "id": "M17-reference-integrity:duplicate-product-owner",
+      "area": "references",
+      "expectation": "Strukturell widersprüchliche Referenzen werden abgelehnt oder im fachlichen Review angezeigt.",
+      "ok": true,
+      "observed": {
+        "rejected": "Unbekanntes oder mehrfach zugeordnetes Produkt",
+        "findings": []
+      }
+    },
+    {
+      "id": "M17-reference-integrity:duplicate-activity-id",
+      "area": "references",
+      "expectation": "Strukturell widersprüchliche Referenzen werden abgelehnt oder im fachlichen Review angezeigt.",
+      "ok": true,
+      "observed": {
+        "rejected": "Doppelte IDs: Tätigkeiten",
+        "findings": []
+      }
+    },
+    {
+      "id": "M17-reference-integrity:unsafe-product-url",
+      "area": "references",
+      "expectation": "Strukturell widersprüchliche Referenzen werden abgelehnt oder im fachlichen Review angezeigt.",
+      "ok": true,
+      "observed": {
+        "rejected": "Produkt «Produkt a»: Der Wiki-Link muss eine gültige HTTP- oder HTTPS-Adresse sein.",
+        "findings": []
+      }
+    },
+    {
+      "id": "M18-draft-is-not-rejected",
+      "area": "positive",
+      "expectation": "Unvollständige Governance bleibt als Entwurf speicherbar und als Vorschlag sichtbar.",
+      "ok": true
+    },
+    {
+      "id": "M19-reading-never-confirms",
+      "area": "non-interference",
+      "expectation": "Wiederholte Prüfung verändert weder Status noch Kriterien, Zeitstempel oder Bestätigung.",
+      "ok": true
+    }
+  ]
+}

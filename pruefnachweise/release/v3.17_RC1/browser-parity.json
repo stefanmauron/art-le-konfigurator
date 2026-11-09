@@ -1,0 +1,412 @@
+{
+  "browser": "chrome",
+  "platform": "darwin",
+  "bundleSha256": "827644997f5d838950b2d4e0e4a4399e2dafa5dbfec4ac301d495e8973267877",
+  "checks": [
+    {
+      "name": "First-start persisted data equivalent",
+      "ok": true
+    },
+    {
+      "name": "Candidate leaves native dialog prototypes intact",
+      "ok": true
+    },
+    {
+      "name": "Candidate import does not alter RC2 local data",
+      "ok": true
+    },
+    {
+      "name": "20 teams / 40 products: all persisted fields equivalent",
+      "ok": true
+    },
+    {
+      "name": "Unknown extension field retained",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 1440 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 1440 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 1440 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 1440 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 1440 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 1440 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 1440 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 1440 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 1440 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 1440 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 1440 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 1440 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 1440 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 1440 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 1440 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 1440 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 1440 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 1440 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 1440 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 1440 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 1440 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 1440 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 1440 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 1440 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 1440 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 1440 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 1440 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 1440 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 1440 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 1440 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 768 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 768 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 768 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 768 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 768 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 768 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 768 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 768 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 768 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 768 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 768 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 768 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 768 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 768 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 768 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 768 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 768 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 768 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 768 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 768 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 768 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 768 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 768 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 768 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 768 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 768 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 768 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 768 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 768 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 768 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 390 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 390 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 390 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 390 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 390 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 390 / tab 0",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 390 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 390 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 390 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 390 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 390 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 390 / tab 1",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 390 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 390 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 390 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 390 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 390 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 390 / tab 2",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 390 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 390 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 390 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 390 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 390 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 390 / tab 3",
+      "ok": true
+    },
+    {
+      "name": "Visible text identical 390 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Identical computed styles 390 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Identical layout geometry 390 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical viewport screenshot 390 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical middle screenshot 390 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Pixel-identical bottom screenshot 390 / tab 4",
+      "ok": true
+    },
+    {
+      "name": "Candidate export carries v3.17 RC1 metadata",
+      "ok": true
+    },
+    {
+      "name": "Candidate export accepted by RC2 without loss",
+      "ok": true
+    },
+    {
+      "name": "Candidate tabs synchronize with logical storage keys",
+      "ok": true
+    },
+    {
+      "name": "Direct offline HTML start has no external requests",
+      "ok": true
+    },
+    {
+      "name": "Direct offline start has 11 embedded services",
+      "ok": true
+    },
+    {
+      "name": "No unhandled browser errors",
+      "ok": true
+    }
+  ],
+  "errors": []
+}

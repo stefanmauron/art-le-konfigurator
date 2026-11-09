@@ -1,0 +1,43 @@
+#utg-contract-team,
+#model-view {
+  min-width: 0;
+  max-width: 100%;
+}
+#crud-management .crud-columns > div,
+#crud-management .crud-entry {
+  min-width: 0;
+}
+#crud-management .crud-entry-head strong {
+  min-width: 0;
+  max-width: 100%;
+}
+#crud-management .app-searchbar {
+  align-items: flex-end;
+  gap: 8px;
+}
+#crud-management .app-searchbar label {
+  min-width: 0;
+}
+#crud-management .app-searchbar .app-result-count {
+  padding-top: 0;
+  min-height: var(--density-control-height);
+  display: inline-flex;
+  align-items: center;
+}
+#crud-management .app-searchbar > button {
+  width: auto;
+  margin: 0;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  #crud-management .app-searchbar {
+    flex-wrap: wrap;
+  }
+  #crud-management .app-searchbar label {
+    flex-basis: calc(100% - 60px);
+  }
+  #crud-management .crud-entry-head strong {
+    flex: 1 1 100%;
+  }
+}

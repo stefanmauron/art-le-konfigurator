@@ -1,0 +1,6 @@
+.utg-activity-actions {
+  align-items: center;
+}
+.utg-activity-actions > #utg-activity-count {
+  margin: 0;
+}

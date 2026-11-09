@@ -1,0 +1,142 @@
+/* Rule reading and criteria editing are distinct tasks. */
+#utg-rule-details .rule-header-copy {
+  flex: 1;
+  min-width: 0;
+}
+#utg-rule-details .rule-eyebrow {
+  display: block;
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+#utg-rule-details .ui-drawer-header h2 {
+  font-size: 24px;
+}
+#utg-rule-details .ui-drawer-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+#utg-rule-details .rule-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+#utg-rule-details h3 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 650;
+}
+#utg-rule-details h4 {
+  font-size: var(--text-small);
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-weight: 600;
+}
+#utg-rule-details .rule-type {
+  font-size: var(--text-small);
+  padding: 4px 8px;
+  border-radius: 5px;
+  background: var(--soft);
+  color: var(--muted);
+}
+#utg-rule-details .rule-section-hint {
+  font-size: var(--text-small);
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 6px 0 16px;
+}
+#utg-rule-details .rule-agreement {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 16px;
+  line-height: 1.55;
+  border-left: 3px solid var(--accent);
+  padding: 12px 14px;
+  background: var(--soft);
+  border-radius: 0 6px 6px 0;
+}
+#utg-rule-details .rule-facts {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 16px;
+  margin: 18px 0;
+}
+#utg-rule-details dt {
+  font-size: var(--text-small);
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+#utg-rule-details dd {
+  margin: 0;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+#utg-rule-details .rule-empty {
+  color: var(--muted);
+  font-size: var(--text-small);
+}
+#utg-rule-details .rule-interface p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+#utg-rule-details .rule-legacy-scope {
+  font-size: var(--text-small);
+  color: var(--muted);
+  line-height: 1.5;
+}
+#utg-rule-details .flow-criteria-panel {
+  display: block;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  padding: 22px 0 0;
+  margin: 24px 0 0;
+}
+#utg-rule-details .rule-criteria-context {
+  font-weight: 600;
+  margin: 12px 0 0;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+#utg-rule-details .flow-criteria-group {
+  display: block;
+  margin: 16px 0 0;
+}
+#utg-rule-details .flow-team-agreements {
+  border: 0;
+  padding: 0;
+}
+#utg-rule-details .flow-criteria-group .utg33-tools {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin: 0;
+}
+#utg-rule-details [data-edit-flow] {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  background: white;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+}
+#utg-rule-details [data-edit-flow]:hover {
+  background: var(--soft);
+  border-color: var(--button-line);
+}
+#utg-rule-details .flow-criteria-count {
+  flex: 0 0 auto;
+  min-width: 24px;
+  text-align: center;
+}

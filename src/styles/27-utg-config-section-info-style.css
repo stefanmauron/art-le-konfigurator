@@ -1,0 +1,65 @@
+.app-section-info-popup {
+  position: fixed;
+  z-index: 160;
+  width: 460px;
+  max-width: calc(100vw - 24px);
+  max-height: 70vh;
+  overflow: auto;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--ink);
+  box-shadow: 0 8px 28px #2034492b;
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+.app-section-info-popup[hidden] {
+  display: none;
+}
+.app-section-info-popup p,
+.app-section-info-popup .utg-config-hint {
+  font-size: var(--text-body);
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+.app-section-info-popup > :last-child {
+  margin-bottom: 0;
+}
+.app-section-info-popup h3 {
+  font-size: var(--text-section);
+  margin: 16px 0 8px;
+}
+:is(#utg-page-2, #v3matrix) h2 .app-section-info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 0;
+  margin: 0 0 0 6px;
+  border: 1px solid #607d8c;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--muted);
+  font-size: var(--text-small) !important;
+  line-height: 1 !important;
+  font-weight: 600;
+  cursor: default;
+  letter-spacing: 0;
+}
+:is(#utg-page-2, #v3matrix) h2 .app-section-info:hover,
+:is(#utg-page-2, #v3matrix) h2 .app-section-info:focus-visible {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+@media print {
+  .app-section-info-popup {
+    display: none !important;
+  }
+}

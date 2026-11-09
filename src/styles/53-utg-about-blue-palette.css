@@ -1,0 +1,48 @@
+#utg-about-dialog {
+  background: #fff;
+  color: #203449;
+  border-color: #dee6eb;
+  color-scheme: light;
+}
+#utg-about-dialog .app-about-header {
+  background: var(--surface);
+  color: var(--ink);
+  border-bottom-color: var(--line);
+}
+#utg-about-dialog :is(h2, h3) {
+  color: var(--ink);
+}
+#utg-about-dialog .app-about-content {
+  background: #fff;
+  color: #203449;
+}
+#utg-about-dialog .app-about-content :is(p, li, strong) {
+  color: inherit;
+}
+#utg-about-dialog .app-about-content .app-about-note {
+  color: #526879;
+}
+#utg-about-dialog .app-about-changelog {
+  border-top-color: #dee6eb;
+}
+#utg-about-dialog .app-about-footer {
+  background: #fafcfd;
+  border-top-color: var(--line);
+}
+#utg-about-dialog button {
+  background-color: var(--button-bg) !important;
+  color: var(--button-ink) !important;
+  border: 1px solid var(--button-line);
+}
+#utg-about-dialog button:hover {
+  background-color: var(--button-hover) !important;
+  color: #203f54 !important;
+  border-color: #8faec0 !important;
+}
+#utg-about-dialog button:focus-visible {
+  outline: 2px solid var(--button-focus);
+  outline-offset: 3px;
+}
+#utg-about-dialog::backdrop {
+  background: #142e4366;
+}

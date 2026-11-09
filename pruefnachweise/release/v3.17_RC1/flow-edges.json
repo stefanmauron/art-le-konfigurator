@@ -1,0 +1,80 @@
+{
+  "bundleSha256": "827644997f5d838950b2d4e0e4a4399e2dafa5dbfec4ac301d495e8973267877",
+  "checks": [
+    {
+      "id": "fresh-compare",
+      "name": "fresh current standard must show no adoption changes",
+      "ok": true
+    },
+    {
+      "id": "cancel-dirty",
+      "name": "Escape dismissal retains unsaved criteria until discard is accepted",
+      "ok": true
+    },
+    {
+      "id": "stale-criteria",
+      "name": "concurrent criteria edit is rejected and draft retained",
+      "ok": true
+    },
+    {
+      "id": "criterion-type",
+      "name": "entry moved to execution and back must restore entry gate",
+      "ok": true
+    },
+    {
+      "id": "agreement-status",
+      "name": "changed agreement must require renewed explicit agreement",
+      "ok": true
+    },
+    {
+      "id": "escaped-policy",
+      "name": "HTML in stored policy is rendered as text",
+      "ok": true
+    },
+    {
+      "id": "narrow-long-text",
+      "name": "long rules and evidence do not overflow at 320px",
+      "ok": true
+    },
+    {
+      "id": "governance-draft",
+      "name": "incomplete draft can save but cannot be marked agreed",
+      "ok": true
+    },
+    {
+      "id": "agreement-noop",
+      "name": "unchanged agreement retains its agreed state",
+      "ok": true
+    },
+    {
+      "id": "agreement-renewal",
+      "name": "changed agreement requires explicit renewal before agreed save",
+      "ok": true
+    },
+    {
+      "id": "agreement-storage-failure",
+      "name": "failed draft save preserves old agreed data and can retry",
+      "ok": true
+    },
+    {
+      "id": "wip-file-import",
+      "name": "invalid WIP file is rejected unchanged and positive numeric legacy value imports",
+      "ok": true
+    },
+    {
+      "id": "wip-editor",
+      "name": "policy editor rejects unsafe WIP and retains draft before valid retry",
+      "ok": true
+    },
+    {
+      "id": "invalid-existing-wip",
+      "name": "invalid existing WIP is preserved on reload and can be repaired explicitly",
+      "ok": true
+    },
+    {
+      "id": "agreement-explicit-draft",
+      "name": "explicit demotion cannot be silently promoted by a harmless field edit",
+      "ok": true
+    }
+  ]
+}

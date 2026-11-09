@@ -1,0 +1,446 @@
+{
+  "reference": [
+    {
+      "id": "complete-reference-and-teams",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Funnel",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Funnel",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Funnel",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Funnel",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Analyzing",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Analyzing",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Analyzing",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Analyzing",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Backlog",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Backlog",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Backlog",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Backlog",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Implementing",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Implementing",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Implementing",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Implementing",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Validating",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Validating",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Validating",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Validating",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Done",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Done",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Done",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Done",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Funnel",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Analyzing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Backlog",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Implementing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Validating",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Done",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Funnel",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Analyzing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Backlog",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Implementing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Validating",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Done",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Funnel",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Analyzing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Backlog",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Implementing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Validating",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Done",
+      "ok": true
+    },
+    {
+      "id": "missing-ac-guidance:",
+      "ok": true
+    },
+    {
+      "id": "missing-ac-guidance:a",
+      "ok": true
+    },
+    {
+      "id": "missing-ac-guidance:b",
+      "ok": true
+    },
+    {
+      "id": "proposal-is-not-agreement",
+      "ok": true
+    },
+    {
+      "id": "unknown-state-is-visible",
+      "ok": true
+    }
+  ],
+  "candidate": [
+    {
+      "id": "complete-reference-and-teams",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Funnel",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Funnel",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Funnel",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Funnel",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Analyzing",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Analyzing",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Analyzing",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Analyzing",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Backlog",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Backlog",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Backlog",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Backlog",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Implementing",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Implementing",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Implementing",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Implementing",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Validating",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Validating",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Validating",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Validating",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "missing-policy:Done",
+      "ok": true
+    },
+    {
+      "id": "duplicate-policy:Done",
+      "ok": true
+    },
+    {
+      "id": "missing-policy-text:Done",
+      "ok": true
+    },
+    {
+      "id": "missing-decision-role:Done",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Funnel",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Analyzing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Backlog",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Implementing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Validating",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry::Done",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Funnel",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Analyzing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Backlog",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Implementing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Validating",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:a:Done",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Funnel",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Analyzing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Backlog",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Implementing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Validating",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Deploying & Releasing",
+      "ok": true
+    },
+    {
+      "id": "missing-entry:b:Done",
+      "ok": true
+    },
+    {
+      "id": "missing-ac-guidance:",
+      "ok": true
+    },
+    {
+      "id": "missing-ac-guidance:a",
+      "ok": true
+    },
+    {
+      "id": "missing-ac-guidance:b",
+      "ok": true
+    },
+    {
+      "id": "proposal-is-not-agreement",
+      "ok": true
+    },
+    {
+      "id": "unknown-state-is-visible",
+      "ok": true
+    }
+  ]
+}

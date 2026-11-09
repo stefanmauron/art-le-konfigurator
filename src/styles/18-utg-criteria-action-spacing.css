@@ -1,0 +1,11 @@
+dialog.app-drawer .flow-criteria-editor {
+  padding: 16px;
+  margin-bottom: 20px;
+}
+dialog.app-drawer .flow-criteria-editor > button[data-remove] {
+  margin-top: 16px;
+}
+dialog.app-drawer #flow-add {
+  margin-top: 4px;
+  margin-bottom: 16px;
+}

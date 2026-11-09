@@ -1,0 +1,67 @@
+.flow-governance-summary {
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  margin-top: 24px;
+}
+.flow-governance-summary details {
+  margin: 14px 0;
+}
+.flow-governance-summary summary {
+  cursor: pointer;
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+.flow-governance-summary dd {
+  margin: 6px 0 18px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.flow-governance-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.flow-rule-kind {
+  font-size: var(--text-small);
+  font-weight: 650;
+  color: var(--accent-dark);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  margin: 0 0 16px;
+}
+.flow-standard-diff {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  margin: 16px 0;
+}
+.flow-standard-diff pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: inherit;
+  font-size: var(--text-small);
+  line-height: 1.6;
+  background: var(--soft);
+  padding: 12px;
+  border-radius: 6px;
+}
+.flow-standard-diff h3 {
+  font-size: 16px;
+}
+.flow-standard-diff summary {
+  cursor: pointer;
+}
+.app-drawer label.flow-standard-choice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0;
+}
+.flow-standard-choice input {
+  margin: 3px 0 0;
+  flex: 0 0 auto;
+}
+.flow-standard-diff .muted {
+  margin: 8px 0 12px;
+}

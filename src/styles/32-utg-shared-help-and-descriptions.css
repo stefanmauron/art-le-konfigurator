@@ -1,0 +1,116 @@
+/* One visual language for information and free-text previews, including drawers. */
+body
+  button:is(
+    .app-column-info,
+    .app-section-info,
+    .app-matrix-info,
+    .app-context-info
+  ) {
+  width: 14px !important;
+  height: 14px !important;
+  min-width: 14px !important;
+  min-height: 14px !important;
+  padding: 0 !important;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  flex-shrink: 0;
+  border: 1px solid #607d8c;
+  background: transparent;
+  color: var(--muted);
+  font-family: inherit !important;
+  font-size: 10px !important;
+  font-weight: 600;
+  line-height: 1 !important;
+  letter-spacing: 0;
+  cursor: default;
+  box-shadow: none;
+}
+body
+  button:is(
+    .app-column-info,
+    .app-section-info,
+    .app-matrix-info,
+    .app-context-info
+  ):is(:hover, :focus-visible) {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+  box-shadow: none;
+}
+.app-column-tooltip,
+.app-section-info-popup {
+  width: 420px;
+  max-width: calc(100vw - 24px);
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: var(--text-body);
+  font-weight: 400;
+  line-height: 1.5;
+  box-shadow: 0 8px 28px #2034492b;
+  white-space: pre-line;
+}
+.app-section-info-popup p,
+.app-section-info-popup .utg-config-hint {
+  color: var(--ink);
+}
+.app-activity-description {
+  color: #607587;
+  font-size: var(--text-small);
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: left;
+}
+body button.app-description-toggle {
+  display: inline-flex;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  min-height: 24px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: var(--accent-dark);
+  font-size: 16px !important;
+  line-height: 1 !important;
+}
+body button.app-description-toggle[hidden] {
+  display: none;
+}
+body button.app-description-toggle:hover {
+  background: var(--soft);
+}
+#crud-products small {
+  display: block;
+  min-width: 0;
+}
+#crud-products .crud-url {
+  display: inline-block;
+  margin-top: 4px;
+}
+@media print {
+  .app-column-tooltip,
+  .app-section-info-popup,
+  button:is(
+    .app-column-info,
+    .app-section-info,
+    .app-matrix-info,
+    .app-context-info,
+    .app-description-toggle
+  ) {
+    display: none !important;
+  }
+  .app-activity-description .app-description-text {
+    white-space: pre-wrap;
+    overflow: visible;
+  }
+}
