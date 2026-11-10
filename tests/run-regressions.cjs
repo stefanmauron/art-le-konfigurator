@@ -41,9 +41,9 @@ const cases = [
     "candidate-base",
     "regression-base.cjs",
     {
-      UTG_TEST_APP: "dist/UTG-LE_Operating_Model_v3.16_RC3.html",
+      UTG_TEST_APP: "dist/UTG-LE_Operating_Model_v3.16_RC4.html",
       UTG_EXPECT_VERSION: "3.16",
-      UTG_EXPECT_STAGE: "RC3",
+      UTG_EXPECT_STAGE: "RC4",
     },
   ],
 ];
@@ -62,7 +62,7 @@ for (const [name, file, env, args = []] of cases) {
   console.log(name + ": " + (result.status === 0 ? "PASS" : "FAIL"));
 }
 const bundle = fs.readFileSync(
-  path.join(root, "dist/UTG-LE_Operating_Model_v3.16_RC3.html"),
+  path.join(root, "dist/UTG-LE_Operating_Model_v3.16_RC4.html"),
 );
 fs.writeFileSync(
   path.join(root, ".test-output/unit-summary.json"),

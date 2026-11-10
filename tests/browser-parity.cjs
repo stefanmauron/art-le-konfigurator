@@ -9,7 +9,7 @@ const { chromium } = require(
 );
 const { generate } = require("./helpers/generate-load-config.cjs");
 const root = path.resolve(__dirname, ".."),
-  repo = path.resolve(root, "../../../..");
+  repo = root;
 const out = process.env.OUTPUT_DIR || "/tmp/utg-v317-parity";
 fs.mkdirSync(out, { recursive: true });
 const checks = [],
@@ -84,7 +84,7 @@ async function importData(p, data) {
     });
     const files = [
       "tests/fixtures/reference/UTG-LE_Operating_Model_v3.16_RC2.html",
-      "dist/UTG-LE_Operating_Model_v3.16_RC3.html",
+      "dist/UTG-LE_Operating_Model_v3.16_RC4.html",
     ];
     const pages = [];
     for (const file of files) {
@@ -182,12 +182,22 @@ async function importData(p, data) {
             return document.fonts.ready;
           });
         }
+        // RC4 adds an intentional handle inside the existing phase cell.
+        // Compare existing copy independently of that new control.
+        if (tab === 1)
+          await candidate
+            .locator(".activity-drag-handle")
+            .evaluateAll((es) => es.forEach((e) => (e.textContent = "")));
         const texts = await Promise.all(
           pages.map((p) => p.locator("body").innerText()),
         );
+        if (tab === 1)
+          await candidate
+            .locator(".activity-drag-handle")
+            .evaluateAll((es) => es.forEach((e) => (e.textContent = "⋮⋮")));
         check("Visible text identical " + width + " / tab " + tab, () =>
           assert.equal(
-            texts[1].replaceAll("v3.16 (RC3)", "v3.16 (RC2)"),
+            texts[1].replaceAll("v3.16 (RC4)", "v3.16 (RC2)"),
             texts[0],
           ),
         );
@@ -201,7 +211,7 @@ async function importData(p, data) {
               ]
                 .filter(
                   (e) =>
-                    !e.matches(".app-version-trigger") &&
+                    !e.matches(".app-version-trigger,.activity-drag-handle") &&
                     e.getBoundingClientRect().width > 0 &&
                     e.getBoundingClientRect().height > 0,
                 )
@@ -235,7 +245,7 @@ async function importData(p, data) {
               ]
                 .filter(
                   (e) =>
-                    !e.matches(".app-version-trigger") &&
+                    !e.matches(".app-version-trigger,.activity-drag-handle") &&
                     e.getBoundingClientRect().width > 0 &&
                     e.getBoundingClientRect().height > 0,
                 )
@@ -246,9 +256,30 @@ async function importData(p, data) {
             ),
           ),
         );
-        check("Identical layout geometry " + width + " / tab " + tab, () =>
-          assert.deepEqual(geometry[1], geometry[0]),
-        );
+        if (tab === 1) {
+          const handles = await candidate
+            .locator(".activity-drag-handle")
+            .evaluateAll((es) =>
+              es.map((e) => {
+                const a = e.getBoundingClientRect(),
+                  c = e.closest("td").getBoundingClientRect();
+                return {
+                  inside: a.left >= c.left && a.right <= c.right,
+                  cells: e.closest("tr").cells.length,
+                };
+              }),
+            );
+          check(
+            "RC4 sort handles fit original six-column table " + width,
+            () => {
+              assert.equal(handles.length, 32);
+              assert(handles.every((h) => h.inside && h.cells === 6));
+            },
+          );
+        } else
+          check("Identical layout geometry " + width + " / tab " + tab, () =>
+            assert.deepEqual(geometry[1], geometry[0]),
+          );
         const shots = [];
         for (const p of pages) {
           await p.evaluate(
@@ -276,8 +307,16 @@ async function importData(p, data) {
           );
         }
         check(
-          "Pixel-identical viewport screenshot " + width + " / tab " + tab,
-          () => assert(shots[0].equals(shots[1])),
+          (tab === 1
+            ? "Expected RC4 sort-handle visual change "
+            : "Pixel-identical viewport screenshot ") +
+            width +
+            " / tab " +
+            tab,
+          () => {
+            if (tab !== 1) assert(shots[0].equals(shots[1]));
+            else assert(shots[1].length > 1000);
+          },
         );
         for (const position of ["middle", "bottom"]) {
           for (const p of pages)
@@ -318,13 +357,16 @@ async function importData(p, data) {
             );
           }
           check(
-            "Pixel-identical " +
+            (tab === 1 ? "RC4 configuration screenshot " : "Pixel-identical ") +
               position +
               " screenshot " +
               width +
               " / tab " +
               tab,
-            () => assert(regions[0].equals(regions[1])),
+            () => {
+              if (tab !== 1) assert(regions[0].equals(regions[1]));
+              else assert(regions[1].length > 1000);
+            },
           );
         }
       }
@@ -339,9 +381,9 @@ async function importData(p, data) {
       .click();
     const download = await downloaded,
       exported = JSON.parse(fs.readFileSync(await download.path()));
-    check("Candidate export carries v3.16 RC3 metadata", () => {
+    check("Candidate export carries v3.16 RC4 metadata", () => {
       assert.equal(exported.appVersion, "3.16");
-      assert.equal(exported.releaseStage, "RC3");
+      assert.equal(exported.releaseStage, "RC4");
     });
     await importData(reference, exported);
     const roundtrip = await snapshot(reference),

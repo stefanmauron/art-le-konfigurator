@@ -13,7 +13,7 @@ const root = path.resolve(__dirname, ".."),
 fs.mkdirSync(out, { recursive: true });
 const targets = {
     reference: "tests/fixtures/reference/UTG-LE_Operating_Model_v3.16_RC2.html",
-    candidate: "dist/UTG-LE_Operating_Model_v3.16_RC3.html",
+    candidate: "dist/UTG-LE_Operating_Model_v3.16_RC4.html",
   },
   results = { reference: [], candidate: [] };
 const ready = (p) => p.waitForFunction(() => !!window.UTGFlowStandardUI);

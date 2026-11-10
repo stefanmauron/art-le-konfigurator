@@ -1,0 +1,19 @@
+{
+  "release": "v3.16 (RC4)",
+  "artifact": "dist/UTG-LE_Operating_Model_v3.16_RC4.html",
+  "artifactSha256": "19fba46f55ea2782ed42f06431508ea91913224ad6cd5997be8c18ed37726885",
+  "sourceArtifactSha256": "d2aa4d8e976e2298f378d5320206d2c780ab3bce0ae3d78e679e21011360aaeb",
+  "scriptAstCount": 57,
+  "scriptAstEqual": true,
+  "htmlAndStylesEqual": true,
+  "fixtureHash": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0",
+  "fixtureImportedHash": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0",
+  "afterSortAndAddHash": "2bb917838b74f30314e7c55b94e854a720aec31596bbbeb609ab63272f4fa956",
+  "exportHash": "2bb917838b74f30314e7c55b94e854a720aec31596bbbeb609ab63272f4fa956",
+  "reimportHash": "2bb917838b74f30314e7c55b94e854a720aec31596bbbeb609ab63272f4fa956",
+  "fixtureTeams": 20,
+  "fixtureProducts": 30,
+  "fixtureActivities": 34,
+  "existingMatrixEntriesPreserved": true,
+  "browserErrors": []
+}

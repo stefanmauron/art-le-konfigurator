@@ -118,8 +118,114 @@ export function initialize(app, browser = globalThis) {
 
     const css = document.createElement("style");
     css.textContent =
-      "#utg-activities table{min-width:1100px}#utg-activities .utg-secondary{min-width:230px;max-width:330px}#utg-activities .utg-secondary label{display:inline-flex;align-items:center;gap:3px;margin:2px 7px 2px 0;font-size:var(--text-small);white-space:nowrap}#utg-activities .utg-secondary input{width:auto;min-width:0}#utg-activities td:last-child{white-space:nowrap}#utg-activities td button{padding:6px 8px;margin-right:5px}#utg-activities .activity-name{font-weight:600}";
+      "#utg-activities td:first-child{white-space:nowrap}#utg-activities td:first-child select{width:calc(100% - 46px);min-width:130px}#utg-activities .activity-drag-handle{cursor:grab;touch-action:none}#utg-activities .activity-drag-handle:active{cursor:grabbing}#utg-activities tr.activity-drop-before>td{box-shadow:inset 0 3px #2563eb}#utg-activities tr.activity-drop-after>td{box-shadow:inset 0 -3px #2563eb}#utg-activities table{min-width:1100px}#utg-activities .utg-secondary{min-width:230px;max-width:330px}#utg-activities .utg-secondary label{display:inline-flex;align-items:center;gap:3px;margin:2px 7px 2px 0;font-size:var(--text-small);white-space:nowrap}#utg-activities .utg-secondary input{width:auto;min-width:0}#utg-activities td:last-child{white-space:nowrap}#utg-activities td button{padding:6px 8px;margin-right:5px}#utg-activities .activity-name{font-weight:600}";
     document.head.appendChild(css);
+    let draggedId = null;
+    let scrollSpeed = 0;
+    let scrollTimer = null;
+    const rows = document.getElementById("utg-activity-rows");
+    function clearDrag() {
+      draggedId = null;
+      scrollSpeed = 0;
+      window.clearInterval(scrollTimer);
+      scrollTimer = null;
+      rows
+        .querySelectorAll(".activity-drop-before, .activity-drop-after")
+        .forEach((row) =>
+          row.classList.remove("activity-drop-before", "activity-drop-after"),
+        );
+    }
+    function moveActivity(id, targetId, after) {
+      const d = read();
+      const from = d.activities.findIndex((item) => item.id === id);
+      if (
+        from < 0 ||
+        id === targetId ||
+        !d.activities.some((item) => item.id === targetId)
+      )
+        return;
+      const [item] = d.activities.splice(from, 1);
+      const target = d.activities.findIndex((item) => item.id === targetId);
+      d.activities.splice(target + (after ? 1 : 0), 0, item);
+      write(d);
+    }
+    rows.addEventListener("dragstart", (event) => {
+      const handle = event.target.closest(".activity-drag-handle");
+      if (!handle) {
+        event.preventDefault();
+        return;
+      }
+      draggedId = handle.closest("tr").dataset.id;
+      event.dataTransfer.effectAllowed = "move";
+      event.dataTransfer.setData("text/plain", draggedId);
+      scrollTimer = window.setInterval(() => {
+        if (scrollSpeed) window.scrollBy(0, scrollSpeed);
+      }, 30);
+    });
+    rows.addEventListener("dragover", (event) => {
+      if (!draggedId) return;
+      event.preventDefault();
+      event.dataTransfer.dropEffect = "move";
+      rows
+        .querySelectorAll(".activity-drop-before, .activity-drop-after")
+        .forEach((row) =>
+          row.classList.remove("activity-drop-before", "activity-drop-after"),
+        );
+      const row = event.target.closest("tr[data-id]");
+      if (row && row.dataset.id !== draggedId) {
+        const rect = row.getBoundingClientRect();
+        row.classList.add(
+          event.clientY < rect.top + rect.height / 2
+            ? "activity-drop-before"
+            : "activity-drop-after",
+        );
+      }
+      scrollSpeed =
+        event.clientY < 90
+          ? -18
+          : event.clientY > window.innerHeight - 90
+            ? 18
+            : 0;
+    });
+    rows.addEventListener("drop", (event) => {
+      if (!draggedId) return;
+      event.preventDefault();
+      const row = event.target.closest("tr[data-id]");
+      const id = draggedId;
+      const after = row?.classList.contains("activity-drop-after");
+      clearDrag();
+      if (row) moveActivity(id, row.dataset.id, after);
+      rows
+        .querySelector(
+          'tr[data-id="' + window.CSS.escape(id) + '"] .activity-drag-handle',
+        )
+        ?.focus();
+    });
+    document.addEventListener("dragend", clearDrag);
+    document.addEventListener("dragover", (event) => {
+      if (!rows.contains(event.target)) scrollSpeed = 0;
+    });
+    rows.addEventListener("keydown", (event) => {
+      if (
+        !event.target.matches(".activity-drag-handle") ||
+        !["ArrowUp", "ArrowDown"].includes(event.key)
+      )
+        return;
+      event.preventDefault();
+      const row = event.target.closest("tr");
+      const target =
+        event.key === "ArrowUp"
+          ? row.previousElementSibling
+          : row.nextElementSibling;
+      if (!target) return;
+      const id = row.dataset.id;
+      moveActivity(id, target.dataset.id, event.key === "ArrowDown");
+      rows
+        .querySelector(
+          'tr[data-id="' + window.CSS.escape(id) + '"] .activity-drag-handle',
+        )
+        ?.focus();
+    });
     function draw() {
       const d = read(),
         a = d.activities || [];
@@ -161,7 +267,9 @@ export function initialize(app, browser = globalThis) {
           (item, i) =>
             '<tr data-id="' +
             esc(item.id) +
-            '"><td><select data-field="phase">' +
+            '"><td><button type="button" class="activity-drag-handle" draggable="true" aria-label="' +
+            esc("Tätigkeit verschieben: " + item.name) +
+            '" title="Ziehen oder mit Pfeiltasten verschieben">⋮⋮</button><select data-field="phase">' +
             options(
               item.phase,
               stages.map((x) => ({ value: x, label: x })),

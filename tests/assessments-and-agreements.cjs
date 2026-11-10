@@ -8,7 +8,7 @@ const { chromium } = require(
 );
 const { generate } = require("./helpers/generate-load-config.cjs");
 const root = path.resolve(__dirname, ".."),
-  repo = path.resolve(root, "../../../.."),
+  repo = root,
   out = process.env.OUTPUT_DIR || "/tmp/utg-v317-assessments";
 fs.mkdirSync(out, { recursive: true });
 const checks = [],
@@ -46,7 +46,7 @@ function check(name, fn) {
       encodeURI(
         path.relative(repo, path.join(root, file)).split(path.sep).join("/"),
       );
-    await p.goto(url("dist/UTG-LE_Operating_Model_v3.16_RC3.html"));
+    await p.goto(url("dist/UTG-LE_Operating_Model_v3.16_RC4.html"));
     await ready(p);
     await p.evaluate(
       (b) => {
@@ -188,7 +188,7 @@ function check(name, fn) {
             .createHash("sha256")
             .update(
               fs.readFileSync(
-                path.join(root, "dist/UTG-LE_Operating_Model_v3.16_RC3.html"),
+                path.join(root, "dist/UTG-LE_Operating_Model_v3.16_RC4.html"),
               ),
             )
             .digest("hex"),

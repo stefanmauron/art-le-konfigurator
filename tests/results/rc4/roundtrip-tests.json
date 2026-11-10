@@ -1,0 +1,250 @@
+[
+  {
+    "name": "20 Teams und 30 Produkte über CRUD angelegt",
+    "ok": true
+  },
+  {
+    "name": "Roundtrip: 20 Teams / 30 Produkte angelegt",
+    "ok": true
+  },
+  {
+    "name": "Maus-Sortierung erhält sämtliche Inhalte: vor Befüllung",
+    "ok": true
+  },
+  {
+    "name": "Roundtrip: erste Sortierung",
+    "ok": true
+  },
+  {
+    "name": "Tätigkeit hinzugefügt ohne bestehende Daten zu ändern: Zusätzliche Tätigkeit A – Nachweisprüfung",
+    "ok": true
+  },
+  {
+    "name": "Tätigkeit hinzugefügt ohne bestehende Daten zu ändern: Zusätzliche Tätigkeit B – Übergabeprüfung",
+    "ok": true
+  },
+  {
+    "name": "Roundtrip: zwei neue Tätigkeiten",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 01",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 02",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 03",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 04",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 05",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 06",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 07",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 08",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 09",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 10",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 11",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 12",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 13",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 14",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 15",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 16",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 17",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 18",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 19",
+    "ok": true
+  },
+  {
+    "name": "Vollständige Matrix und 5 ISCeco / 1 BIT · Roundtrip-Team 20",
+    "ok": true
+  },
+  {
+    "name": "Roundtrip: alle 20 Matrizen mit 34 Tätigkeiten vollständig befüllt",
+    "ok": true
+  },
+  {
+    "name": "Maus-Sortierung erhält sämtliche Inhalte: nach Befüllung",
+    "ok": true
+  },
+  {
+    "name": "Roundtrip: Sortierung nach vollständiger Befüllung",
+    "ok": true
+  },
+  {
+    "name": "Vollständig geprüften Matrix-Zwischenstand per Import wiederhergestellt",
+    "ok": true
+  },
+  {
+    "name": "Alle 30 Produktansichten zeigen vollständige Team-Matrizen in neuer Reihenfolge",
+    "ok": true
+  },
+  {
+    "name": "10 Teams: alle 7 Phasen mit individuellen Phasenregeln und AC sowie Team-DoR/DoD",
+    "ok": true
+  },
+  {
+    "name": "ART-Regeln, Standardvorlage und übrige 10 Teamprofile unverändert",
+    "ok": true
+  },
+  {
+    "name": "Roundtrip: Kriterien und übrige Konfiguration vollständig",
+    "ok": true
+  },
+  {
+    "name": "Exportdatei enthält den vollständigen gespeicherten Datenbestand",
+    "ok": true
+  },
+  {
+    "name": "Export verändert keinen gespeicherten Wert",
+    "ok": true
+  },
+  {
+    "name": "Exportierter Navigationskontext entspricht dem aktiven Team",
+    "ok": true
+  },
+  {
+    "name": "Tatsächlicher Standard-Reset entfernt alle Szenariodaten",
+    "ok": true
+  },
+  {
+    "name": "Nach Reimport: alle fachlichen Daten exakt wie vor Export",
+    "ok": true
+  },
+  {
+    "name": "Nach zusätzlichem Reload weiterhin vollständige Gleichheit",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 01",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 02",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 03",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 04",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 05",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 06",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 07",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 08",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 09",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 10",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 11",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 12",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 13",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 14",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 15",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 16",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 17",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 18",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 19",
+    "ok": true
+  },
+  {
+    "name": "Reimportierte Matrix sichtbar · Roundtrip-Team 20",
+    "ok": true
+  },
+  {
+    "name": "Keine unbehandelten Browserfehler",
+    "ok": true
+  }
+]

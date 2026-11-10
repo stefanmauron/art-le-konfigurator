@@ -1,0 +1,78 @@
+{
+  "release": {
+    "version": "3.16",
+    "stage": "RC4",
+    "label": "v3.16 (RC4)",
+    "exportFilename": "UTG-LE_Konfiguration_v3.16_RC4.json",
+    "storageNamespace": "utg-le-v317:"
+  },
+  "checks": [
+    {
+      "name": "32 accessible draggable handles; form controls are not draggable",
+      "ok": true
+    },
+    {
+      "name": "Mouse 0 to after 2: exact order and unchanged content",
+      "ok": true
+    },
+    {
+      "name": "Mouse 2 to before 0: exact order and unchanged content",
+      "ok": true
+    },
+    {
+      "name": "Keyboard ArrowUp at 0: exact order",
+      "ok": true
+    },
+    {
+      "name": "Keyboard ArrowDown at 0: exact order",
+      "ok": true
+    },
+    {
+      "name": "Keyboard ArrowUp at 1: exact order",
+      "ok": true
+    },
+    {
+      "name": "Keyboard ArrowDown at 31: exact order",
+      "ok": true
+    },
+    {
+      "name": "Keyboard ArrowUp at 31: exact order",
+      "ok": true
+    },
+    {
+      "name": "Keyboard ArrowDown at 30: exact order",
+      "ok": true
+    },
+    {
+      "name": "Reload retains exact order",
+      "ok": true
+    },
+    {
+      "name": "Native drag scrolls at lower edge and Escape cancels without data changes",
+      "ok": true
+    },
+    {
+      "name": "Matrix follows exact catalog order",
+      "ok": true
+    },
+    {
+      "name": "Adding an activity preserves existing populated team assignments",
+      "ok": true
+    },
+    {
+      "name": "New activity can be moved without changing existing assignments",
+      "ok": true
+    },
+    {
+      "name": "Actual JSON download preserves catalog order",
+      "ok": true
+    },
+    {
+      "name": "No unhandled browser errors",
+      "ok": true
+    }
+  ],
+  "errors": [],
+  "passed": 16,
+  "failed": 0
+}

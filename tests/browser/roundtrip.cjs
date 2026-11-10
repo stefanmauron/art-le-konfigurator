@@ -88,6 +88,108 @@ function check(name, fn) {
     const tab = async (i) => {
       await p.locator("#utg-nav button").nth(i).click();
     };
+    let roundtripIndex = 0;
+    async function cycle(label) {
+      const before = await snap();
+      await p.evaluate(() => {
+        window.showSaveFilePicker = undefined;
+      });
+      const wait = p.waitForEvent("download");
+      await p
+        .getByRole("button", { name: "Konfiguration exportieren", exact: true })
+        .click();
+      const download = await wait;
+      const filename = path.join(out, `cycle-${++roundtripIndex}.json`);
+      await download.saveAs(filename);
+      const exported = JSON.parse(fs.readFileSync(filename));
+      assert.deepEqual(dataPayload(exported), dataPayload(before));
+      assert.deepEqual(await snap(), before, "Export must not write any field");
+      await p.locator("#import").setInputFiles(filename);
+      await Promise.all([
+        p.waitForNavigation(),
+        p
+          .getByRole("button", {
+            name: "Konfiguration importieren",
+            exact: true,
+          })
+          .click(),
+      ]);
+      await ready();
+      const imported = await snap();
+      assert.deepEqual(dataPayload(imported), dataPayload(before));
+      await p.reload();
+      await ready();
+      assert.deepEqual(await snap(), imported);
+      write(`cycle-${roundtripIndex}-comparison.json`, {
+        label,
+        before: hash(dataPayload(before)),
+        exported: hash(dataPayload(exported)),
+        imported: hash(dataPayload(imported)),
+        reloaded: hash(dataPayload(await snap())),
+        excludedContextFields: [
+          "v2.selected",
+          "v3.team",
+          "v3.product",
+          "v3.navigationEpoch",
+        ],
+      });
+      check("Roundtrip: " + label, () =>
+        assert.deepEqual(dataPayload(imported), dataPayload(before)),
+      );
+    }
+    async function addActivity(name) {
+      const before = await snap();
+      await tab(1);
+      await p.locator("#utg-activity-add").click();
+      await p.locator("#utg-name-drawer-input").fill(name);
+      await p
+        .locator("#utg-activity-description")
+        .fill("Neue Tätigkeit äöü & <Nachweis>\nZweite Zeile");
+      await p.getByRole("button", { name: "Übernehmen", exact: true }).click();
+      const after = await snap();
+      assert.deepEqual(after.v3.activities.slice(0, -1), before.v3.activities);
+      assert.deepEqual(after.v3.configs, before.v3.configs);
+      assert.equal(after.v3.activities.at(-1).name, name);
+      check(
+        "Tätigkeit hinzugefügt ohne bestehende Daten zu ändern: " + name,
+        () =>
+          assert.equal(
+            after.v3.activities.length,
+            before.v3.activities.length + 1,
+          ),
+      );
+    }
+    async function moveFirst(label, reverse = false) {
+      await tab(1);
+      const before = await snap();
+      const rows = p.locator("#utg-activity-rows tr");
+      await rows.first().scrollIntoViewIfNeeded();
+      const from = reverse ? 2 : 0,
+        to = reverse ? 0 : 2;
+      await rows
+        .nth(from)
+        .locator(".activity-drag-handle")
+        .dragTo(rows.nth(to).locator(".activity-drag-handle"));
+      const after = await snap();
+      assert.notDeepEqual(
+        after.v3.activities.map((a) => a.id),
+        before.v3.activities.map((a) => a.id),
+      );
+      const expected = structuredClone(before);
+      expected.v3.activities = after.v3.activities;
+      assert.deepEqual(
+        dataPayload(after),
+        dataPayload(expected),
+        "Only activity order may change",
+      );
+      assert.deepEqual(
+        [...after.v3.activities].sort((a, b) => a.id.localeCompare(b.id)),
+        [...before.v3.activities].sort((a, b) => a.id.localeCompare(b.id)),
+      );
+      check("Maus-Sortierung erhält sämtliche Inhalte: " + label, () =>
+        assert.deepEqual(after.v3.configs, before.v3.configs),
+      );
+    }
     async function saveCrud() {
       await p.getByRole("button", { name: "Übernehmen", exact: true }).click();
       await p.waitForLoadState("load");
@@ -109,201 +211,340 @@ function check(name, fn) {
     await ready();
     let teams;
     if (!process.env.UTG_ROUNDTRIP_CHECKPOINT) {
-      // Empty synthetic scaffold only; every requested record is created through the real UI.
-      await p.evaluate(() => {
-        const b = UTGDefaults.baseline();
-        b.v2 = { teams: [], selected: "" };
-        b.v3.products = [];
-        b.v3.configs = {};
-        b.v3.team = "";
-        b.v3.product = "";
-        for (const key of [
-          "teamDesignCriteria",
-          "teamDesignAssessments",
-          "teamContracts",
-          "agreementConfirmations",
-        ])
-          b.v3[key] = {};
-        b.v3.flowCriteria.profiles = {};
-        b.v3.flowCriteria.teams = {};
-        UTGStorage.restore(b);
-      });
-      await p.reload();
-      await ready();
-      await tab(1);
-      for (let i = 0; i < 40; i++) {
-        const product = {
-          name: "Roundtrip-Produkt " + String(i + 1).padStart(2, "0"),
-          description:
-            "Produkt " +
-            (i + 1) +
-            " unterstützt die Geschäftsführung. Freitext mit Umlauten äöü, «Nachweis», & sowie Zeilenumbruch.\nEigener Umfang " +
-            (i + 1) +
-            ".",
-          wikiUrl:
-            "https://example.invalid/produkte/" +
-            (i + 1) +
-            "?sprache=de&kontext=roundtrip#nachweis",
-        };
-        await p.locator("#crud-add-product").click();
-        await p.locator("#crud-name").fill(product.name);
-        await p.locator("#crud-description").fill(product.description);
-        await p.locator("#crud-wiki").fill(product.wikiUrl);
-        await saveCrud();
-        expected.products.push(product);
-        console.log("PRODUCT " + (i + 1));
-      }
-      const products = (await snap()).v3.products,
-        assignment = shuffle(products.map((x) => x.id));
-      for (let i = 0; i < 20; i++) {
-        const team = {
-          name: "Roundtrip-Team " + String(i + 1).padStart(2, "0"),
-          productIds: assignment.slice(i * 2, i * 2 + 2),
-        };
-        await p.locator("#crud-add-team").click();
-        await p.locator("#crud-name").fill(team.name);
-        for (const id of team.productIds)
-          await p
-            .locator("#crud-memberships input")
-            .filter({ visible: true })
-            .evaluateAll((es, id) => {
-              const e = es.find((x) => x.value === id);
-              if (!e) throw Error("Produkt fehlt " + id);
-              e.click();
-            }, id);
-        await saveCrud();
-        expected.teams.push(team);
-        console.log("TEAM " + (i + 1));
-      }
-      let s = await snap();
-      teams = s.v2.teams;
-      check("20 Teams und 40 Produkte über CRUD angelegt", () => {
-        assert.equal(teams.length, 20);
-        assert.equal(s.v3.products.length, 40);
-        assert.equal(new Set(teams.flatMap((t) => t.productIds)).size, 40);
-        assert.equal(teams.flatMap((t) => t.productIds).length, 40);
-        for (const t of teams)
-          assert.deepEqual(
-            [...t.productIds].sort(),
-            [
-              ...expected.teams.find((x) => x.name === t.name).productIds,
-            ].sort(),
-          );
-        for (const product of s.v3.products)
-          assert.deepEqual(
-            {
-              name: product.name,
-              description: product.description,
-              wikiUrl: product.wikiUrl,
-            },
-            expected.products.find((x) => x.name === product.name),
-          );
-      });
-      const template = structuredClone(s.v3.flowCriteria),
-        policies = structuredClone(s.v3.policies);
-      await tab(2);
-      for (const [ti, t] of teams.entries()) {
-        await p.locator("#v3team").selectOption(t.id);
-        const n = await p.locator("#v3rows tr[data-i]").count();
-        assert.equal(n, 32);
-        const indices = shuffle(Array.from({ length: n }, (_, i) => i));
-        const isc = new Set(indices.slice(0, 5)),
-          bit = indices[5];
-        // DOM events invoke the same handlers as manual editing. Each save rerenders the table,
-        // so query the current control anew for every field; never mutate stored matrix data.
-        const plan = await p.evaluate(
-          ({ ti, isc, bit }) =>
-            Array.from(document.querySelectorAll("#v3rows tr[data-i]")).map(
-              (row, ri) => {
-                const fields = {};
-                for (const f of [
-                  "org",
-                  "embedding",
-                  "interaction",
-                  "business",
-                  "technical",
-                  "operations",
-                  "service",
-                  "note",
-                ]) {
-                  const el = row.querySelector(
-                    '[data-f="' + f + '"] input,[data-f="' + f + '"] select',
-                  );
-                  if (f === "org")
-                    fields[f] = isc.includes(ri)
-                      ? "ISCeco"
-                      : ri === bit
-                        ? "BIT"
-                        : "UTG-ART";
-                  else if (el.tagName === "SELECT") {
-                    const options = [...el.options].filter(
-                      (o) =>
-                        o.value &&
-                        !/Noch zu klären|Nicht erforderlich/.test(o.value),
+      if (!process.env.UTG_ROUNDTRIP_MATRIX_CHECKPOINT) {
+        // Empty synthetic scaffold only; every requested record is created through the real UI.
+        await p.evaluate(() => {
+          const b = UTGDefaults.baseline();
+          b.v2 = { teams: [], selected: "" };
+          b.v3.products = [];
+          b.v3.configs = {};
+          b.v3.team = "";
+          b.v3.product = "";
+          for (const key of [
+            "teamDesignCriteria",
+            "teamDesignAssessments",
+            "teamContracts",
+            "agreementConfirmations",
+          ])
+            b.v3[key] = {};
+          b.v3.flowCriteria.profiles = {};
+          b.v3.flowCriteria.teams = {};
+          UTGStorage.restore(b);
+        });
+        await p.reload();
+        await ready();
+        await tab(1);
+        for (let i = 0; i < 30; i++) {
+          const product = {
+            name: "Roundtrip-Produkt " + String(i + 1).padStart(2, "0"),
+            description:
+              "Produkt " +
+              (i + 1) +
+              " unterstützt die Geschäftsführung. Freitext mit Umlauten äöü, «Nachweis», & sowie Zeilenumbruch.\nEigener Umfang " +
+              (i + 1) +
+              ".",
+            wikiUrl:
+              "https://example.invalid/produkte/" +
+              (i + 1) +
+              "?sprache=de&kontext=roundtrip#nachweis",
+          };
+          await p.locator("#crud-add-product").click();
+          await p.locator("#crud-name").fill(product.name);
+          await p.locator("#crud-description").fill(product.description);
+          await p.locator("#crud-wiki").fill(product.wikiUrl);
+          await saveCrud();
+          expected.products.push(product);
+          console.log("PRODUCT " + (i + 1));
+        }
+        const products = (await snap()).v3.products,
+          assignment = shuffle(products.map((x) => x.id));
+        for (let i = 0; i < 20; i++) {
+          const team = {
+            name: "Roundtrip-Team " + String(i + 1).padStart(2, "0"),
+            productIds: [
+              assignment[i],
+              ...(i < 10 ? [assignment[20 + i]] : []),
+            ],
+          };
+          await p.locator("#crud-add-team").click();
+          await p.locator("#crud-name").fill(team.name);
+          for (const id of team.productIds)
+            await p
+              .locator("#crud-memberships input")
+              .filter({ visible: true })
+              .evaluateAll((es, id) => {
+                const e = es.find((x) => x.value === id);
+                if (!e) throw Error("Produkt fehlt " + id);
+                e.click();
+              }, id);
+          await saveCrud();
+          expected.teams.push(team);
+          console.log("TEAM " + (i + 1));
+        }
+        let s = await snap();
+        teams = s.v2.teams;
+        check("20 Teams und 30 Produkte über CRUD angelegt", () => {
+          assert.equal(teams.length, 20);
+          assert.equal(s.v3.products.length, 30);
+          assert.equal(new Set(teams.flatMap((t) => t.productIds)).size, 30);
+          assert.equal(teams.flatMap((t) => t.productIds).length, 30);
+          for (const t of teams)
+            assert.deepEqual(
+              [...t.productIds].sort(),
+              [
+                ...expected.teams.find((x) => x.name === t.name).productIds,
+              ].sort(),
+            );
+          for (const product of s.v3.products)
+            assert.deepEqual(
+              {
+                name: product.name,
+                description: product.description,
+                wikiUrl: product.wikiUrl,
+              },
+              expected.products.find((x) => x.name === product.name),
+            );
+        });
+        await cycle("20 Teams / 30 Produkte angelegt");
+        await moveFirst("vor Befüllung");
+        await cycle("erste Sortierung");
+        await addActivity("Zusätzliche Tätigkeit A – Nachweisprüfung");
+        await addActivity("Zusätzliche Tätigkeit B – Übergabeprüfung");
+        await cycle("zwei neue Tätigkeiten");
+        s = await snap();
+        await tab(2);
+        for (const [ti, t] of teams.entries()) {
+          await p.locator("#v3team").selectOption(t.id);
+          const n = await p.locator("#v3rows tr[data-i]").count();
+          assert.equal(n, 34);
+          const indices = shuffle(Array.from({ length: n }, (_, i) => i));
+          const isc = new Set(indices.slice(0, 5)),
+            bit = indices[5];
+          // DOM events invoke the same handlers as manual editing. Each save rerenders the table,
+          // so query the current control anew for every field; never mutate stored matrix data.
+          const plan = await p.evaluate(
+            ({ ti, isc, bit }) =>
+              Array.from(document.querySelectorAll("#v3rows tr[data-i]")).map(
+                (row, ri) => {
+                  const fields = {};
+                  for (const f of [
+                    "org",
+                    "embedding",
+                    "interaction",
+                    "business",
+                    "technical",
+                    "operations",
+                    "service",
+                    "note",
+                  ]) {
+                    const el = row.querySelector(
+                      '[data-f="' + f + '"] input,[data-f="' + f + '"] select',
                     );
-                    if (f === "service") {
-                      const provider = fields.org;
-                      const services = UTGStorage.snapshot().v3.services;
-                      const match = options.find((o) =>
-                        services.some(
-                          (s) =>
-                            s.id === o.value &&
-                            (s.provider === provider || s.org === provider),
-                        ),
+                    if (f === "org")
+                      fields[f] = isc.includes(ri)
+                        ? "ISCeco"
+                        : ri === bit
+                          ? "BIT"
+                          : "UTG-ART";
+                    else if (el.tagName === "SELECT") {
+                      const options = [...el.options].filter(
+                        (o) =>
+                          o.value &&
+                          !/Noch zu klären|Nicht erforderlich/.test(o.value),
                       );
-                      fields[f] = match?.value || options[0]?.value || "";
+                      if (f === "service") {
+                        const provider = fields.org;
+                        const services = UTGStorage.snapshot().v3.services;
+                        const match = options.find((o) =>
+                          services.some(
+                            (s) =>
+                              s.id === o.value &&
+                              (s.provider === provider || s.org === provider),
+                          ),
+                        );
+                        fields[f] = match?.value || options[0]?.value || "";
+                      } else
+                        fields[f] =
+                          options[(ti + ri) % options.length]?.value || "";
                     } else
                       fields[f] =
-                        options[(ti + ri) % options.length]?.value || "";
-                  } else
-                    fields[f] =
-                      "Team " +
-                      (ti + 1) +
-                      " · " +
-                      row.cells[1].textContent +
-                      " · " +
-                      f +
-                      " · äöü & Nachweis";
-                }
-                return { name: row.cells[1].textContent, fields };
-              },
-            ),
-          { ti, isc: [...isc], bit },
+                        "Team " +
+                        (ti + 1) +
+                        " · " +
+                        row.cells[1].textContent +
+                        " · " +
+                        f +
+                        " · äöü & Nachweis";
+                  }
+                  return { name: row.cells[1].textContent, fields };
+                },
+              ),
+            { ti, isc: [...isc], bit },
+          );
+          await p.evaluate((plan) => {
+            for (const [ri, item] of plan.entries())
+              for (const [field, value] of Object.entries(item.fields)) {
+                const el = document
+                  .querySelectorAll("#v3rows tr[data-i]")
+                  [
+                    ri
+                  ].querySelector('[data-f="' + field + '"] input,[data-f="' + field + '"] select');
+                el.value = value;
+                el.dispatchEvent(new Event("change", { bubbles: true }));
+                if (document.querySelector('[aria-invalid="true"]'))
+                  throw Error("Speicherfehler " + field);
+              }
+          }, plan);
+          expected.matrix[t.id] = plan;
+          const saved = (await snap()).v3.configs[t.id + "::flow"].entries;
+          check("Vollständige Matrix und 5 ISCeco / 1 BIT · " + t.name, () => {
+            assert.equal(Object.keys(saved).length, 34);
+            assert.equal(
+              Object.values(saved).filter((e) => e.org === "ISCeco").length,
+              5,
+            );
+            assert.equal(
+              Object.values(saved).filter((e) => e.org === "BIT").length,
+              1,
+            );
+            for (const item of plan)
+              for (const [field, value] of Object.entries(item.fields)) {
+                assert.equal(saved[item.name][field], value);
+                assert(value, "Leeres Matrixfeld " + field);
+              }
+          });
+          console.log("MATRIX " + (ti + 1));
+        }
+        await cycle("alle 20 Matrizen mit 34 Tätigkeiten vollständig befüllt");
+        await moveFirst("nach Befüllung", true);
+        const order = (await snap()).v3.activities.map((a) => a.name);
+        for (const t of teams)
+          expected.matrix[t.id].sort(
+            (a, b) => order.indexOf(a.name) - order.indexOf(b.name),
+          );
+        await cycle("Sortierung nach vollständiger Befüllung");
+      } else {
+        const checkpoint = path.resolve(
+          appRoot,
+          process.env.UTG_ROUNDTRIP_MATRIX_CHECKPOINT,
         );
-        await p.evaluate((plan) => {
-          for (const [ri, item] of plan.entries())
-            for (const [field, value] of Object.entries(item.fields)) {
-              const el = document
-                .querySelectorAll("#v3rows tr[data-i]")
-                [
-                  ri
-                ].querySelector('[data-f="' + field + '"] input,[data-f="' + field + '"] select');
-              el.value = value;
-              el.dispatchEvent(new Event("change", { bubbles: true }));
-              if (document.querySelector('[aria-invalid="true"]'))
-                throw Error("Speicherfehler " + field);
-            }
-        }, plan);
-        expected.matrix[t.id] = plan;
-        const saved = (await snap()).v3.configs[t.id + "::flow"].entries;
-        check("Vollständige Matrix und 5 ISCeco / 1 BIT · " + t.name, () => {
-          assert.equal(Object.keys(saved).length, 32);
-          assert.equal(
-            Object.values(saved).filter((e) => e.org === "ISCeco").length,
-            5,
+        const original = JSON.parse(
+          fs.readFileSync(path.join(checkpoint, "cycle-5.json")),
+        );
+        const previous = JSON.parse(
+          fs.readFileSync(path.join(checkpoint, "checks.json")),
+        );
+        const ok = previous.filter((c) => c.ok);
+        assert.equal(
+          ok.filter((c) => c.name.startsWith("Vollständige Matrix")).length,
+          20,
+        );
+        for (let i = 1; i <= 5; i++) {
+          const proof = JSON.parse(
+            fs.readFileSync(
+              path.join(checkpoint, `cycle-${i}-comparison.json`),
+            ),
           );
           assert.equal(
-            Object.values(saved).filter((e) => e.org === "BIT").length,
+            new Set(
+              ["before", "exported", "imported", "reloaded"].map(
+                (k) => proof[k],
+              ),
+            ).size,
             1,
           );
-          for (const item of plan)
-            for (const [field, value] of Object.entries(item.fields)) {
-              assert.equal(saved[item.name][field], value);
-              assert(value, "Leeres Matrixfeld " + field);
-            }
+          for (const suffix of [".json", "-comparison.json"])
+            fs.copyFileSync(
+              path.join(checkpoint, `cycle-${i}${suffix}`),
+              path.join(out, `cycle-${i}${suffix}`),
+            );
+        }
+        const proof = JSON.parse(
+          fs.readFileSync(path.join(checkpoint, "cycle-5-comparison.json")),
+        );
+        assert.equal(hash(dataPayload(original)), proof.exported);
+        await p
+          .locator("#import")
+          .setInputFiles(path.join(checkpoint, "cycle-5.json"));
+        await Promise.all([
+          p.waitForNavigation(),
+          p
+            .getByRole("button", {
+              name: "Konfiguration importieren",
+              exact: true,
+            })
+            .click(),
+        ]);
+        await ready();
+        const loaded = await snap();
+        assert.deepEqual(dataPayload(loaded), dataPayload(original));
+        teams = loaded.v2.teams;
+        expected.products = structuredClone(original.v3.products);
+        expected.teams = structuredClone(original.v2.teams);
+        const fields = [
+          "org",
+          "embedding",
+          "interaction",
+          "business",
+          "technical",
+          "operations",
+          "service",
+          "note",
+        ];
+        for (const t of teams)
+          expected.matrix[t.id] = original.v3.activities.map((a) => ({
+            name: a.name,
+            fields: Object.fromEntries(
+              fields.map((f) => [
+                f,
+                original.v3.configs[t.id + "::flow"].entries[a.name][f],
+              ]),
+            ),
+          }));
+        checks.push(...ok);
+        roundtripIndex = 5;
+        check(
+          "Vollständig geprüften Matrix-Zwischenstand per Import wiederhergestellt",
+          () => assert.equal(teams.length, 20),
+        );
+        write("matrix-setup-checkpoint.json", {
+          path: checkpoint,
+          sourceHash: hash(dataPayload(original)),
+          importedHash: hash(dataPayload(loaded)),
+          verifiedMatrixGroups: 20,
+          originalHarnessFailure: previous.find((c) => !c.ok)?.error,
         });
-        console.log("MATRIX " + (ti + 1));
       }
+      const setup = await snap();
+      const template = structuredClone(setup.v3.flowCriteria),
+        policies = structuredClone(setup.v3.policies);
+      await tab(2);
+      for (const t of teams) {
+        await p.locator("#v3team").selectOption(t.id);
+        const productIds = t.productIds;
+        for (const productId of productIds) {
+          await p
+            .locator("#v3product")
+            .selectOption(productId, { force: true });
+          const visible = await p
+            .locator("#v3rows tr[data-i]")
+            .evaluateAll((rows) =>
+              rows.map((row) => ({
+                name: row.cells[1].textContent,
+                fields: Object.fromEntries(
+                  [
+                    ...row.querySelectorAll("[data-f] input,[data-f] select"),
+                  ].map((el) => [el.closest("[data-f]").dataset.f, el.value]),
+                ),
+              })),
+            );
+          assert.deepEqual(visible, expected.matrix[t.id]);
+        }
+      }
+      check(
+        "Alle 30 Produktansichten zeigen vollständige Team-Matrizen in neuer Reihenfolge",
+        () => assert.equal(teams.flatMap((t) => t.productIds).length, 30),
+      );
       await tab(3);
       const stages = await p.evaluate(() => UTGFlow.states);
       for (const [ti, t] of teams.slice(0, 10).entries()) {
@@ -399,7 +640,7 @@ function check(name, fn) {
           assert.deepEqual(criteriaDiffs, []);
         },
       );
-      s = await snap();
+      const s = await snap();
       check(
         "ART-Regeln, Standardvorlage und übrige 10 Teamprofile unverändert",
         () => {
@@ -480,7 +721,7 @@ function check(name, fn) {
         "Verifizierten UI-Aufbau aus Checkpoint vollständig wiederhergestellt",
         () => {
           assert.equal(teams.length, 20);
-          assert.equal(loaded.v3.products.length, 40);
+          assert.equal(loaded.v3.products.length, 30);
           assert.equal(expected.criteria.length, 160);
         },
       );
@@ -491,6 +732,7 @@ function check(name, fn) {
         loadedPayloadHash: hash(dataPayload(loaded)),
       });
     }
+    await cycle("Kriterien und übrige Konfiguration vollständig");
     // Freeze navigation before the baseline. Compare complete stored payload, not just edited fields.
     await p.reload();
     await ready();
@@ -599,6 +841,7 @@ function check(name, fn) {
         .update(fs.readFileSync(__filename))
         .digest("hex"),
       resumedSetup: !!process.env.UTG_ROUNDTRIP_CHECKPOINT,
+      resumedMatrixSetup: !!process.env.UTG_ROUNDTRIP_MATRIX_CHECKPOINT,
       rawPayloadHashes: {
         beforeExport: hash(before),
         exportFile: hash(payload(exported)),
@@ -623,12 +866,13 @@ function check(name, fn) {
         .digest("hex"),
       seed: expected.seed,
       teams: 20,
-      products: 40,
-      activitiesPerTeam: 32,
-      matrixFields: 5120,
+      products: 30,
+      activitiesPerTeam: 34,
+      matrixFields: 5440,
       changedTeamProfiles: 10,
       changedPhases: 70,
       criteriaEditorsSaved: 160,
+      repeatedRoundtrips: roundtripIndex,
       checks: checks.length,
       failed: 0,
       payloadHashes: {
@@ -650,6 +894,7 @@ function check(name, fn) {
 })().catch((e) => {
   checks.push({ name: "Szenario abgeschlossen", ok: false, error: e.message });
   write("checks.json", checks);
+  write("expected-inputs.json", expected);
   console.error(e);
   process.exitCode = 1;
 });

@@ -1,6 +1,6 @@
 require("./helpers/paths.cjs");
 // Regression checks run the actual scripts from the current standalone app.
-// Run from the repository root: npm test
+// Run from the repository root: node scripts/test_utg_operating_model.cjs
 const fs = require("node:fs"),
   vm = require("node:vm"),
   assert = require("node:assert/strict");
@@ -1543,7 +1543,9 @@ test("about dialog opens and closes in all five register contexts including Esca
   assert.equal(trigger.attrs["aria-haspopup"], "dialog");
   assert.ok(
     dialog.innerHTML.includes(
-      process.env.UTG_EXPECT_STAGE === "RC3"
+      process.env.UTG_EXPECT_STAGE === "RC4"
+        ? "v3.16 (RC4) – Tätigkeiten sortieren"
+        : process.env.UTG_EXPECT_STAGE === "RC3"
         ? "v3.16 (RC3) – Technische Überarbeitung"
         : process.env.UTG_EXPECT_STAGE === "RC2"
           ? "v3.16 · RC2 – Verbesserungen gegenüber v3.15"
@@ -1552,7 +1554,7 @@ test("about dialog opens and closes in all five register contexts including Esca
   );
   assert.ok(
     dialog.innerHTML.includes(
-      ["RC3", "RC2"].includes(process.env.UTG_EXPECT_STAGE)
+      ["RC4", "RC3", "RC2"].includes(process.env.UTG_EXPECT_STAGE)
         ? "Zusammenarbeit klären. Gemeinsam liefern."
         : "Flow-Regeln gestalten:",
     ),
@@ -3489,7 +3491,9 @@ test("storage status retains early failures and successful retry clears them", (
   assert.ok(html.includes("Hinterlegte Geltungsbeschreibung"));
   assert.ok(
     html.includes(
-      process.env.UTG_EXPECT_STAGE === "RC3"
+      process.env.UTG_EXPECT_STAGE === "RC4"
+        ? "v3.16 (RC4) – Tätigkeiten sortieren"
+        : process.env.UTG_EXPECT_STAGE === "RC3"
         ? "v3.16 (RC3) – Technische Überarbeitung"
         : process.env.UTG_EXPECT_STAGE === "RC2"
           ? "v3.16 · RC2 – Verbesserungen gegenüber v3.15"

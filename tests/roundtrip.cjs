@@ -1,7 +1,7 @@
 const path = require("node:path"),
   fs = require("node:fs");
 const root = path.resolve(__dirname, "..");
-process.env.UTG_TEST_APP ||= "dist/UTG-LE_Operating_Model_v3.16_RC3.html";
+process.env.UTG_TEST_APP ||= "dist/UTG-LE_Operating_Model_v3.16_RC4.html";
 process.env.BASE_URL ||= "http://127.0.0.1:8773";
 process.env.OUTPUT_DIR ||= path.join(root, ".test-output/roundtrip");
 process.on("exit", () => {

@@ -1,0 +1,100 @@
+{
+  "release": {
+    "version": "3.16",
+    "stage": "RC4",
+    "label": "v3.16 (RC4)",
+    "exportFilename": "UTG-LE_Konfiguration_v3.16_RC4.json",
+    "storageNamespace": "utg-le-v317:"
+  },
+  "artifact": "dist/UTG-LE_Operating_Model_v3.16_RC4.html",
+  "artifactSha256": "19fba46f55ea2782ed42f06431508ea91913224ad6cd5997be8c18ed37726885",
+  "started": "2026-11-10T16:20:50.912Z",
+  "suites": [
+    {
+      "script": "verify",
+      "exitCode": 0,
+      "durationMs": 395,
+      "log": ".test-output/all-rc4/verify.log",
+      "output": ".test-output/all-rc4/verify"
+    },
+    {
+      "script": "test",
+      "exitCode": 0,
+      "durationMs": 5049,
+      "log": ".test-output/all-rc4/test.log",
+      "output": ".test-output/all-rc4/test"
+    },
+    {
+      "script": "test:activities",
+      "exitCode": 0,
+      "durationMs": 4366,
+      "log": ".test-output/all-rc4/test-activities.log",
+      "output": ".test-output/all-rc4/test-activities"
+    },
+    {
+      "script": "test:flow-basic",
+      "exitCode": 0,
+      "durationMs": 6302,
+      "log": ".test-output/all-rc4/test-flow-basic.log",
+      "output": ".test-output/all-rc4/test-flow-basic"
+    },
+    {
+      "script": "test:flow",
+      "exitCode": 0,
+      "durationMs": 56891,
+      "log": ".test-output/all-rc4/test-flow.log",
+      "output": ".test-output/all-rc4/test-flow"
+    },
+    {
+      "script": "test:edges",
+      "exitCode": 0,
+      "durationMs": 9166,
+      "log": ".test-output/all-rc4/test-edges.log",
+      "output": ".test-output/all-rc4/test-edges"
+    },
+    {
+      "script": "test:assessments",
+      "exitCode": 0,
+      "durationMs": 28803,
+      "log": ".test-output/all-rc4/test-assessments.log",
+      "output": ".test-output/all-rc4/test-assessments"
+    },
+    {
+      "script": "test:browser",
+      "exitCode": 0,
+      "durationMs": 13233,
+      "log": ".test-output/all-rc4/test-browser.log",
+      "output": ".test-output/all-rc4/test-browser"
+    },
+    {
+      "script": "test:compare-versions",
+      "exitCode": 0,
+      "durationMs": 16159,
+      "log": ".test-output/all-rc4/test-compare-versions.log",
+      "output": ".test-output/all-rc4/test-compare-versions"
+    },
+    {
+      "script": "test:performance",
+      "exitCode": 0,
+      "durationMs": 24749,
+      "log": ".test-output/all-rc4/test-performance.log",
+      "output": ".test-output/all-rc4/test-performance"
+    },
+    {
+      "script": "test:merge",
+      "exitCode": 0,
+      "durationMs": 16877,
+      "log": ".test-output/all-rc4/test-merge.log",
+      "output": ".test-output/all-rc4/test-merge"
+    },
+    {
+      "script": "test:release",
+      "exitCode": 0,
+      "durationMs": 1148,
+      "log": ".test-output/all-rc4/test-release.log",
+      "output": ".test-output/all-rc4/test-release"
+    }
+  ],
+  "finished": "2026-11-10T16:23:54.168Z",
+  "failed": 0
+}

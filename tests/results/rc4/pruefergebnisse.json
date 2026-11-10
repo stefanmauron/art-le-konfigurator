@@ -1,0 +1,270 @@
+{
+  "release": {
+    "version": "3.16",
+    "stage": "RC4",
+    "label": "v3.16 (RC4)",
+    "exportFilename": "UTG-LE_Konfiguration_v3.16_RC4.json",
+    "storageNamespace": "utg-le-v317:"
+  },
+  "artifact": "dist/UTG-LE_Operating_Model_v3.16_RC4.html",
+  "artifactSha256": "d2aa4d8e976e2298f378d5320206d2c780ab3bce0ae3d78e679e21011360aaeb",
+  "families": [
+    {
+      "script": "verify",
+      "exitCode": 0,
+      "durationMs": 480,
+      "log": ".test-output/all-rc4/verify.log",
+      "output": ".test-output/all-rc4/verify"
+    },
+    {
+      "script": "test",
+      "exitCode": 0,
+      "durationMs": 5475,
+      "log": ".test-output/all-rc4/test.log",
+      "output": ".test-output/all-rc4/test"
+    },
+    {
+      "script": "test:flow-basic",
+      "exitCode": 0,
+      "durationMs": 6817,
+      "log": ".test-output/all-rc4/test-flow-basic.log",
+      "output": ".test-output/all-rc4/test-flow-basic"
+    },
+    {
+      "script": "test:flow",
+      "exitCode": 0,
+      "durationMs": 59194,
+      "log": ".test-output/all-rc4/test-flow.log",
+      "output": ".test-output/all-rc4/test-flow"
+    },
+    {
+      "script": "test:edges",
+      "exitCode": 0,
+      "durationMs": 10337,
+      "log": ".test-output/all-rc4/test-edges.log",
+      "output": ".test-output/all-rc4/test-edges"
+    },
+    {
+      "script": "test:assessments",
+      "exitCode": 0,
+      "durationMs": 33700,
+      "log": ".test-output/all-rc4/test-assessments.log",
+      "output": ".test-output/all-rc4/test-assessments"
+    },
+    {
+      "script": "test:browser",
+      "exitCode": 0,
+      "durationMs": 13456,
+      "log": ".test-output/all-rc4/test-browser.log",
+      "output": ".test-output/all-rc4/test-browser"
+    },
+    {
+      "script": "test:compare-versions",
+      "exitCode": 0,
+      "durationMs": 21080,
+      "log": ".test-output/all-rc4/test-compare-versions.log",
+      "output": ".test-output/all-rc4/test-compare-versions"
+    },
+    {
+      "script": "test:performance",
+      "exitCode": 0,
+      "durationMs": 35845,
+      "log": ".test-output/all-rc4/test-performance.log",
+      "output": ".test-output/all-rc4/test-performance"
+    },
+    {
+      "script": "test:merge",
+      "exitCode": 0,
+      "durationMs": 25192,
+      "log": ".test-output/all-rc4/test-merge.log",
+      "output": ".test-output/all-rc4/test-merge"
+    },
+    {
+      "script": "test:release",
+      "exitCode": 0,
+      "durationMs": 1635,
+      "log": ".test-output/all-rc4/test-release.log",
+      "output": ".test-output/all-rc4/test-release"
+    },
+    {
+      "script": "test:activities",
+      "exitCode": 0,
+      "checks": 16,
+      "output": ".test-output/activities"
+    },
+    {
+      "script": "test:roundtrip",
+      "exitCode": 0,
+      "checks": 62,
+      "output": ".test-output/roundtrip"
+    }
+  ],
+  "familiesPassed": 13,
+  "familiesFailed": 0,
+  "knownNegativeChecks": {
+    "cases": 94,
+    "referenceFailures": 49,
+    "candidateFailures": 49,
+    "identical": true,
+    "productFindingsRemainOpen": true
+  },
+  "dataset": {
+    "teams": 20,
+    "products": 30,
+    "activities": 34,
+    "matrixRows": 680,
+    "filledMatrixFields": 5440,
+    "seed": 20261106,
+    "fixture": "tests/fixtures/rc4/20-teams-30-produkte.json",
+    "fixtureSha256": "b8bd03fb3332d96960fb581baefbef63ebe94ba0c8771b3d30ff38747c9aba73"
+  },
+  "matrixSetupCheckpointProof": {
+    "path": "/Users/stefanmauron/Documents/ngGEVER/version 3.3/40 Misc/03 UTG-Transformation/02_art-le_konfigurator/.test-output/roundtrip-matrix-checkpoint",
+    "sourceHash": "9075b6efca93ff6969bbad4179f5d81eb640ec37000c19de6adef7523c71a1cc",
+    "importedHash": "9075b6efca93ff6969bbad4179f5d81eb640ec37000c19de6adef7523c71a1cc",
+    "verifiedMatrixGroups": 20,
+    "originalHarnessFailure": "locator.selectOption: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#v3product')\u001b[22m\n\u001b[2m    - locator resolved to <select id=\"v3product\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    30 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying select option action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+  },
+  "roundtrips": [
+    {
+      "label": "20 Teams / 30 Produkte angelegt",
+      "before": "6ee57a65e3eb24730c0ef187aad38e6ecc5d47a1d3429ae15436aead9f83b4ca",
+      "exported": "6ee57a65e3eb24730c0ef187aad38e6ecc5d47a1d3429ae15436aead9f83b4ca",
+      "imported": "6ee57a65e3eb24730c0ef187aad38e6ecc5d47a1d3429ae15436aead9f83b4ca",
+      "reloaded": "6ee57a65e3eb24730c0ef187aad38e6ecc5d47a1d3429ae15436aead9f83b4ca",
+      "excludedContextFields": [
+        "v2.selected",
+        "v3.team",
+        "v3.product",
+        "v3.navigationEpoch"
+      ]
+    },
+    {
+      "label": "erste Sortierung",
+      "before": "047fbebcee5593f9431d898de1e59ea26a9b95b32e1ce390ba88ef7c378e8f33",
+      "exported": "047fbebcee5593f9431d898de1e59ea26a9b95b32e1ce390ba88ef7c378e8f33",
+      "imported": "047fbebcee5593f9431d898de1e59ea26a9b95b32e1ce390ba88ef7c378e8f33",
+      "reloaded": "047fbebcee5593f9431d898de1e59ea26a9b95b32e1ce390ba88ef7c378e8f33",
+      "excludedContextFields": [
+        "v2.selected",
+        "v3.team",
+        "v3.product",
+        "v3.navigationEpoch"
+      ]
+    },
+    {
+      "label": "zwei neue Tätigkeiten",
+      "before": "e4a0a2321b9bb88b0314a6dcd2b6f218d024b0aa3093b2f083ffee5229ff8828",
+      "exported": "e4a0a2321b9bb88b0314a6dcd2b6f218d024b0aa3093b2f083ffee5229ff8828",
+      "imported": "e4a0a2321b9bb88b0314a6dcd2b6f218d024b0aa3093b2f083ffee5229ff8828",
+      "reloaded": "e4a0a2321b9bb88b0314a6dcd2b6f218d024b0aa3093b2f083ffee5229ff8828",
+      "excludedContextFields": [
+        "v2.selected",
+        "v3.team",
+        "v3.product",
+        "v3.navigationEpoch"
+      ]
+    },
+    {
+      "label": "alle 20 Matrizen mit 34 Tätigkeiten vollständig befüllt",
+      "before": "cac036636a7afe40fe62cd0ed7e4e399bb7e2eed3d93f215435c73c7f3879568",
+      "exported": "cac036636a7afe40fe62cd0ed7e4e399bb7e2eed3d93f215435c73c7f3879568",
+      "imported": "cac036636a7afe40fe62cd0ed7e4e399bb7e2eed3d93f215435c73c7f3879568",
+      "reloaded": "cac036636a7afe40fe62cd0ed7e4e399bb7e2eed3d93f215435c73c7f3879568",
+      "excludedContextFields": [
+        "v2.selected",
+        "v3.team",
+        "v3.product",
+        "v3.navigationEpoch"
+      ]
+    },
+    {
+      "label": "Sortierung nach vollständiger Befüllung",
+      "before": "9075b6efca93ff6969bbad4179f5d81eb640ec37000c19de6adef7523c71a1cc",
+      "exported": "9075b6efca93ff6969bbad4179f5d81eb640ec37000c19de6adef7523c71a1cc",
+      "imported": "9075b6efca93ff6969bbad4179f5d81eb640ec37000c19de6adef7523c71a1cc",
+      "reloaded": "9075b6efca93ff6969bbad4179f5d81eb640ec37000c19de6adef7523c71a1cc",
+      "excludedContextFields": [
+        "v2.selected",
+        "v3.team",
+        "v3.product",
+        "v3.navigationEpoch"
+      ]
+    },
+    {
+      "label": "Kriterien und übrige Konfiguration vollständig",
+      "before": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0",
+      "exported": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0",
+      "imported": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0",
+      "reloaded": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0",
+      "excludedContextFields": [
+        "v2.selected",
+        "v3.team",
+        "v3.product",
+        "v3.navigationEpoch"
+      ]
+    },
+    {
+      "label": "Export → Standard-Reset → Import → Neuladen",
+      "before": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0",
+      "exported": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0",
+      "imported": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0",
+      "reloaded": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0"
+    }
+  ],
+  "dataDifferences": 0,
+  "contextFieldsExcluded": [
+    "v2.selected",
+    "v3.team",
+    "v3.product",
+    "v3.navigationEpoch"
+  ],
+  "originalRc3Unchanged": true,
+  "roundtripManifest": {
+    "testSha256": "ee2861e8a97ac003ffe3dfb9f140502fd7709aafc7d1fb8673bbf65cc0dc2397",
+    "resumedSetup": false,
+    "resumedMatrixSetup": true,
+    "rawPayloadHashes": {
+      "beforeExport": "49cf2e13e75060a3d66a5566a76d5b83ab6cb78a54aa749168bea3484bf76583",
+      "exportFile": "49cf2e13e75060a3d66a5566a76d5b83ab6cb78a54aa749168bea3484bf76583",
+      "afterExport": "49cf2e13e75060a3d66a5566a76d5b83ab6cb78a54aa749168bea3484bf76583",
+      "afterImport": "0c8036dcf9caa4d51e51063ea3d16e5c53ddb71d24ffd5c998f5ad5c3ef00edd",
+      "afterImportReload": "0c8036dcf9caa4d51e51063ea3d16e5c53ddb71d24ffd5c998f5ad5c3ef00edd"
+    },
+    "excludedContextFields": [
+      "v2.selected",
+      "v3.team",
+      "v3.product",
+      "v3.navigationEpoch"
+    ],
+    "appVersion": "3.16",
+    "appSha256": "d2aa4d8e976e2298f378d5320206d2c780ab3bce0ae3d78e679e21011360aaeb",
+    "seed": 20261106,
+    "teams": 20,
+    "products": 30,
+    "activitiesPerTeam": 34,
+    "matrixFields": 5440,
+    "changedTeamProfiles": 10,
+    "changedPhases": 70,
+    "criteriaEditorsSaved": 160,
+    "repeatedRoundtrips": 6,
+    "checks": 62,
+    "failed": 0,
+    "payloadHashes": {
+      "beforeExport": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0",
+      "exportFile": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0",
+      "afterExport": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0",
+      "afterReset": "716fb67460f68cdebb60c64810ffcc1f0b584ec6124dd89c6f40dfadcf7ca6d5",
+      "afterImport": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0",
+      "afterImportReload": "4fc84081c8fdc816eb935edb77bd05154f9a660ea07d25bfb20ec36749a222d0"
+    },
+    "errors": [],
+    "historicalDriverVersion": "3.16",
+    "targetFile": "dist/UTG-LE_Operating_Model_v3.16_RC4.html"
+  },
+  "testSourceSha256": {
+    "tests/browser/roundtrip.cjs": "ee2861e8a97ac003ffe3dfb9f140502fd7709aafc7d1fb8673bbf65cc0dc2397",
+    "tests/activity-order.cjs": "a557063a34e0d91f9a014b92065ce9986b211c232161e29dbea14bb712336a30",
+    "tests/run-all.cjs": "2b975b107ee397dde7a4c8a2dc88c0924d3deb9bbc3aa8fd596298df95930c3a"
+  }
+}

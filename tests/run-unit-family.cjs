@@ -14,7 +14,7 @@ const family = process.argv[2];
 if (!files[family]) throw Error("Unknown unit family");
 const root = path.resolve(__dirname, ".."),
   target =
-    process.env.UTG_TEST_APP || "dist/UTG-LE_Operating_Model_v3.16_RC3.html";
+    process.env.UTG_TEST_APP || "dist/UTG-LE_Operating_Model_v3.16_RC4.html";
 process.env.OUTPUT_DIR ||= path.join(root, ".test-output", family);
 const filename = path.join(root, "tests/unit", files[family]);
 const facade = new Proxy(fs, {

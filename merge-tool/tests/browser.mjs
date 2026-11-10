@@ -13,8 +13,8 @@ const { chromium } = require(
 );
 const root = fileURLToPath(new URL("../../", import.meta.url)),
   tool = fileURLToPath(new URL("../", import.meta.url));
-const fixtures = path.join(tool, "tests/fixtures"),
-  out = path.join(tool, "test-results");
+const out = process.env.OUTPUT_DIR || path.join(root, ".test-output/merge");
+const fixtures = path.join(out, "fixtures");
 await fs.mkdir(fixtures, { recursive: true });
 await fs.mkdir(out, { recursive: true });
 const results = [],
@@ -35,7 +35,10 @@ const functional = (x) => {
   return { v2: b.v2, v3: b.v3, organisations: b.organisations };
 };
 const appURL = pathToFileURL(
-  path.join(root, "dist/UTG-LE_Operating_Model_v3.16_RC3.html"),
+  path.join(
+    root,
+    process.env.UTG_TEST_APP || "dist/UTG-LE_Operating_Model_v3.16_RC4.html",
+  ),
 ).href;
 const toolFile = path.join(
   root,

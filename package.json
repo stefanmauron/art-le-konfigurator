@@ -1,6 +1,6 @@
 {
   "name": "utg-le-configurator",
-  "version": "3.16.0-rc.3",
+  "version": "3.16.0-rc.4",
   "private": true,
   "type": "module",
   "scripts": {
@@ -18,7 +18,10 @@
     "test:release": "node tests/release-smoke.cjs",
     "test:compare-versions": "node tests/compare-user-versions.cjs",
     "build:merge": "node merge-tool/build.mjs",
-    "test:merge": "node merge-tool/test.mjs"
+    "test:merge": "node merge-tool/test.mjs",
+    "test:activities": "node tests/activity-order.cjs",
+    "test:flow-basic": "node tests/run-browser-family.cjs flow",
+    "test:all": "node tests/run-all.cjs"
   },
   "devDependencies": {
     "acorn": "8.15.0",

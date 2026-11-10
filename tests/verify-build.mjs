@@ -20,7 +20,7 @@ const referenceBytes = await read(
   "tests/fixtures/reference/UTG-LE_Operating_Model_v3.16_RC2.html",
 );
 check(() => assert.equal(digest(referenceBytes), reference.sha256));
-const filename = "dist/UTG-LE_Operating_Model_v3.16_RC3.html",
+const filename = "dist/UTG-LE_Operating_Model_v3.16_RC4.html",
   before = await read(filename);
 execFileSync(process.execPath, [path.join(root, "scripts/build.mjs")], {
   stdio: "pipe",

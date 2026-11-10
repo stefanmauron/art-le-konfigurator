@@ -6,7 +6,7 @@ const repoRoot = appRoot;
 function appFile() {
   const selected = path.resolve(
     appRoot,
-    process.env.UTG_TEST_APP || "dist/UTG-LE_Operating_Model_v3.16_RC3.html",
+    process.env.UTG_TEST_APP || "dist/UTG-LE_Operating_Model_v3.16_RC4.html",
   );
   if (
     !selected.startsWith(appRoot + path.sep) ||

@@ -18,7 +18,7 @@ const files = [
       root,
       "tests/fixtures/reference/UTG-LE_Operating_Model_v3.16_RC2.html",
     ),
-  path.join(root, "dist/UTG-LE_Operating_Model_v3.16_RC3.html"),
+  path.join(root, "dist/UTG-LE_Operating_Model_v3.16_RC4.html"),
 ];
 const hash = (b) => crypto.createHash("sha256").update(b).digest("hex"),
   stable = (x) =>
@@ -352,7 +352,7 @@ async function importData(p, b) {
       },
     ];
     console.log("PASS Actual exported functional contents equal");
-    await compare("RC3 export imported by both versions", (p) =>
+    await compare("RC4 export imported by both versions", (p) =>
       importData(p, exports[1].body),
     );
     await compare("RC2 export imported by both versions", (p) =>

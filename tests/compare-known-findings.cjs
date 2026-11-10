@@ -6,7 +6,7 @@ const root = path.resolve(__dirname, ".."),
   out = path.join(root, ".test-output/method-parity");
 const runs = {
   reference: "tests/fixtures/reference/UTG-LE_Operating_Model_v3.16_RC2.html",
-  candidate: "dist/UTG-LE_Operating_Model_v3.16_RC3.html",
+  candidate: "dist/UTG-LE_Operating_Model_v3.16_RC4.html",
 };
 const checks = {};
 for (const [name, target] of Object.entries(runs)) {
